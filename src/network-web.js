@@ -5,9 +5,14 @@
   if (!payload || !mount) return;
   let graph;
   try { graph = JSON.parse(payload.textContent); } catch { return; }
-  const nodes = new Map(graph.nodes.map(node => [node.id, node]));
-  const edges = graph.edges.map((edge, index) => ({ ...edge, id: edge.id || `relationship-${index}`, source: edge.source || edge.from, target: edge.target || edge.to, type: edge.relationship_type || edge.type || 'relationship' })).filter(edge => nodes.has(edge.source) && nodes.has(edge.target));
+  let briefs = {};
+  try { briefs = JSON.parse(document.getElementById('web-briefs')?.textContent || '{}'); } catch { /* Labels are optional. */ }
+  const aliases = { ...(graph.alias_map || {}), ...(briefs.aliases || {}) };
+  const nodes = new Map(graph.nodes.map(node => [node.id, { ...node, originalLabel: node.label, label: briefs.display_labels?.[node.id] || node.label }]));
+  const edges = graph.edges.map((edge, index) => ({ ...edge, id: edge.id || `relationship-${index}`, originalLabel: edge.label, label: briefs.edge_explanations?.[edge.id]?.display_label || edge.label, source: edge.source || edge.from, target: edge.target || edge.to, type: edge.relationship_type || edge.type || 'relationship' })).filter(edge => nodes.has(edge.source) && nodes.has(edge.target));
   const edgesById = new Map(edges.map(edge => [edge.id, edge]));
+  const neighbors = new Map([...nodes.keys()].map(id => [id, new Set()]));
+  edges.forEach(edge => { neighbors.get(edge.source).add(edge.target); neighbors.get(edge.target).add(edge.source); });
   const SVG = 'http://www.w3.org/2000/svg';
   const categories = { ownership: 'Ownership', money: 'Money', family: 'Family', politics: 'Politics', other: 'Other' };
   const colors = { ownership: '#d6b87a', money: '#9fc79f', family: '#c6a7ce', politics: '#83c3d0', other: '#a6b3ac' };
@@ -18,6 +23,7 @@
   const politics = new Set(['reported_advocacy', 'documented_advocacy', 'reported_policy_advocacy', 'potential_policy_benefit', 'public_office', 'former_public_office', 'presidential_pardon', 'official_intervention', 'former_chair_of', 'chair_of', 'member_of']);
   function category(edge) { return ownership.has(edge.type) ? 'ownership' : family.has(edge.type) ? 'family' : politics.has(edge.type) ? 'politics' : money.has(edge.type) || edge.is_money_flow ? 'money' : 'other'; }
   function nodeKind(node) {
+    if (briefs.display_types?.[node.id]) return briefs.display_types[node.id];
     if (/household/i.test(node.label)) return 'Household';
     if (node.type === 'person_or_family') return /family|descendants/i.test(node.label) ? 'Family' : 'Person';
     if (/person|official/.test(node.type)) return 'Person';
@@ -35,9 +41,16 @@
   }
   function emit(type, detail) { document.dispatchEvent(new CustomEvent(type, { detail })); }
   const rootSelect = document.getElementById('tree-root');
-  const requested = new URLSearchParams(location.search).get('node');
+  const requestedId = new URLSearchParams(location.search).get('node');
+  const requested = aliases[requestedId] || requestedId;
   let root = nodes.has(requested) ? requested : nodes.has(graph.root) ? graph.root : graph.nodes[0]?.id;
   if (!root) return;
+  const initialRoot = root;
+  const explored = new Set();
+  const expanded = new Set();
+  const anchors = new Set([root]);
+  const discoveryParent = new Map();
+  const discoveryDepth = new Map();
   let scope = 2;
   let selectedNode = root;
   let selectedEdge = null;
@@ -62,8 +75,8 @@
   scopes.setAttribute('role', 'group'); scopes.setAttribute('aria-label', 'Network reach');
   const scopeButtons = new Map();
   for (const [value, label] of [[2, 'Nearby'], [3, 'Wider'], [Infinity, 'All connected']]) {
-    const item = button(label, `${label} relationships`, () => { scope = value; rebuild(); }, 'web-scope-button');
-    item.setAttribute('aria-pressed', String(value === scope)); scopes.append(item); scopeButtons.set(value, item);
+    const item = button(label, `Add ${label.toLowerCase()} relationships without removing the explored web`, () => { scope = value; const added = exploreFrom(selectedNode || root, value); rebuild(); announce(`${added.size} new ${added.size === 1 ? 'entry' : 'entries'} added. `); }, 'web-scope-button');
+    item.dataset.reach = String(value); scopes.append(item); scopeButtons.set(value, item);
   }
   const filters = html('div', '', 'web-filters');
   filters.setAttribute('role', 'group'); filters.setAttribute('aria-label', 'Relationship types');
@@ -86,12 +99,12 @@
   search.addEventListener('submit', event => {
     event.preventDefault(); const query = normalize(searchInput.value); searchResults.replaceChildren(); searchResults.hidden = true;
     if (!query) { searchInput.focus(); return; }
-    const exact = [...nodes.values()].filter(node => normalize(node.label) === query);
-    const matches = exact.length ? exact : [...nodes.values()].filter(node => query.split(/\s+/).every(term => normalize(node.label).includes(term)));
+    const exact = [...nodes.values()].filter(node => normalize(node.label) === query || normalize(node.originalLabel) === query);
+    const matches = exact.length ? exact : [...nodes.values()].filter(node => query.split(/\s+/).every(term => normalize(node.label + ' ' + node.originalLabel).includes(term)));
     if (matches.length === 1) { searchInput.value = matches[0].label; focusNode(matches[0].id); return; }
     status.textContent = matches.length ? `${matches.length} matching entries. Choose a name below the search field.` : 'No matching entry in this web. Try a surname or company name.';
     if (matches.length) {
-      for (const node of matches.slice(0, 12)) searchResults.append(button(node.label, `Focus connections for ${node.label}`, () => { searchInput.value = node.label; searchResults.hidden = true; focusNode(node.id); }, 'web-search-result'));
+      for (const node of matches.slice(0, 12)) searchResults.append(button(node.label, `Add and explore ${node.label}`, () => { searchInput.value = node.label; searchResults.hidden = true; focusNode(node.id); }, 'web-search-result'));
       searchResults.hidden = false;
     }
   });
@@ -113,25 +126,36 @@
   const navigation = html('div', '', 'web-navigation');
   navigation.setAttribute('role', 'group'); navigation.setAttribute('aria-label', 'Map controls');
   navigation.append(button('+', 'Zoom in', () => zoomAt(camera.k * 1.25), 'web-zoom'), button('−', 'Zoom out', () => zoomAt(camera.k / 1.25), 'web-zoom'), button('Fit', 'Fit visible relationships', () => { fit(); announce(); }, 'web-fit'));
+  navigation.append(button('Reset web', 'Reset the web to its original starting point', resetWeb, 'web-fit'));
   for (const [glyph, label, dx, dy] of [['←', 'Pan left', 90, 0], ['↑', 'Pan up', 0, 90], ['↓', 'Pan down', 0, -90], ['→', 'Pan right', -90, 0]]) navigation.append(button(glyph, label, () => { camera.x += dx; camera.y += dy; applyCamera(); }, 'web-pan'));
   viewport.append(navigation);
   const footer = html('div', '', 'web-footer');
-  const help = html('p', 'Select a name or line. Drag to rearrange; use the map controls to explore.', 'web-help'); help.id = 'web-help';
-  const keyboard = html('details', '', 'web-keyboard'); keyboard.append(html('summary', 'Keyboard controls'), html('p', 'Tab to a name or connection, then press Enter or Space to inspect it. Alt + arrow keys move a focused name. On the map background, arrow keys pan and + or − zoom. Use Fit to restore the view.'));
+  const help = html('p', 'Click a name to open its next connections. +N shows unopened neighbors. Reach controls add to your web; filters hide connections without forgetting them.', 'web-help'); help.id = 'web-help';
+  const keyboard = html('details', '', 'web-keyboard'); keyboard.append(html('summary', 'Keyboard controls'), html('p', 'Tab to a name and press Enter or Space to open its next connections and explanation. Connection lines open their evidence. Alt + arrow keys move a focused name. On the map background, arrow keys pan and + or − zoom. Fit shows your explored web; Reset web starts again.'));
   footer.append(help, keyboard); if (!status.isConnected) footer.append(status);
   mount.append(toolbar, viewport, footer);
 
   function announce(prefix = '') { status.textContent = `${prefix}${shownNodes.length} ${shownNodes.length === 1 ? 'entry' : 'entries'} · ${shownEdges.length} ${shownEdges.length === 1 ? 'connection' : 'connections'} · ${nodes.get(root).label}`; }
-  function visibleGraph() {
-    const eligible = edges.filter(edge => enabled.has(category(edge)));
-    const adjacency = new Map([...nodes.keys()].map(id => [id, []]));
-    eligible.forEach(edge => { adjacency.get(edge.source).push(edge.target); adjacency.get(edge.target).push(edge.source); });
-    const distance = new Map([[root, 0]]); const queue = [root];
+  function exploreFrom(nodeId, reach = 1) {
+    const added = new Set(); const seen = new Set([nodeId]); const queue = [{ id: nodeId, depth: 0, parent: null }];
     for (let i = 0; i < queue.length; i++) {
-      const id = queue[i]; if (distance.get(id) >= scope) continue;
-      for (const neighbor of adjacency.get(id)) if (!distance.has(neighbor)) { distance.set(neighbor, distance.get(id) + 1); queue.push(neighbor); }
+      const entry = queue[i];
+      if (!explored.has(entry.id)) {
+        explored.add(entry.id); added.add(entry.id); discoveryParent.set(entry.id, entry.parent);
+        discoveryDepth.set(entry.id, entry.parent ? (discoveryDepth.get(entry.parent) || 0) + 1 : 0);
+      }
+      if (entry.depth >= reach) continue;
+      expanded.add(entry.id);
+      for (const neighbor of neighbors.get(entry.id)) if (!seen.has(neighbor)) { seen.add(neighbor); queue.push({ id: neighbor, depth: entry.depth + 1, parent: entry.id }); }
     }
-    return { nodes: graph.nodes.filter(node => distance.has(node.id)), edges: eligible.filter(edge => distance.has(edge.source) && distance.has(edge.target)), distance };
+    return added;
+  }
+  function unopenedCount(nodeId) { return [...neighbors.get(nodeId)].filter(id => !explored.has(id)).length; }
+  function visibleGraph() {
+    const eligible = edges.filter(edge => explored.has(edge.source) && explored.has(edge.target) && enabled.has(category(edge)));
+    const visible = new Set(anchors); if (selectedNode && explored.has(selectedNode)) visible.add(selectedNode);
+    eligible.forEach(edge => { visible.add(edge.source); visible.add(edge.target); });
+    return { nodes: [...nodes.values()].filter(node => visible.has(node.id)), edges: eligible, distance: discoveryDepth };
   }
   function wrapLabel(label) {
     const words = label.split(/\s+/); const lines = []; let line = '';
@@ -140,6 +164,37 @@
     return lines;
   }
   function hash(text) { let value = 2166136261; for (let i = 0; i < text.length; i++) value = Math.imul(value ^ text.charCodeAt(i), 16777619); return value >>> 0; }
+  function dimensions(nodeId) {
+    const lines = wrapLabel(nodes.get(nodeId).label);
+    return { id: nodeId, width: Math.max(158, Math.min(224, Math.max(...lines.map(s => s.length)) * 7.7 + 30)), height: 34 + lines.length * 20, lines };
+  }
+  function placeNewNodes() {
+    // Existing and manually dragged positions are immutable during expansion.
+    for (const id of explored) {
+      if (layout.has(id)) continue;
+      const point = { ...dimensions(id), x: 0, y: 0, vx: 0, vy: 0 };
+      const parent = layout.get(discoveryParent.get(id));
+      const existing = [...layout.values()];
+      if (!parent) {
+        point.x = existing.length ? Math.max(...existing.map(p => p.x + p.width / 2)) + point.width / 2 + 100 : 0;
+        point.y = existing.length ? existing.reduce((sum, p) => sum + p.y, 0) / existing.length : 0;
+      } else {
+        const outward = Math.atan2(parent.y, parent.x) + (hash(id) % 100) / 150;
+        let placed = false;
+        for (let ring = 0; ring < 28 && !placed; ring++) {
+          const radius = 210 + ring * 65;
+          for (let slot = 0; slot < 24; slot++) {
+            const angle = outward + slot * 2.399963229728653;
+            const x = parent.x + Math.cos(angle) * radius; const y = parent.y + Math.sin(angle) * radius;
+            const collision = existing.some(p => Math.abs(x - p.x) < (point.width + p.width) / 2 + 22 && Math.abs(y - p.y) < (point.height + p.height) / 2 + 22);
+            if (!collision) { point.x = x; point.y = y; placed = true; break; }
+          }
+        }
+        if (!placed) { point.x = Math.max(...existing.map(p => p.x + p.width / 2)) + point.width / 2 + 80; point.y = parent.y; }
+      }
+      layout.set(id, point);
+    }
+  }
   function calculateLayout(visible) {
     const count = visible.nodes.length;
     const positions = visible.nodes.map((node, i) => {
@@ -189,7 +244,7 @@
   function applyCamera() { scene.setAttribute('transform', `translate(${camera.x} ${camera.y}) scale(${camera.k})`); }
   function zoomAt(value, center = { x: width / 2, y: height / 2 }, anchor = world(center)) { camera.k = Math.max(.12, Math.min(2.8, value)); camera.x = center.x - anchor.x * camera.k; camera.y = center.y - anchor.y * camera.k; applyCamera(); }
   function fit(readable = false) {
-    const points = [...layout.values()]; if (!points.length) return;
+    const points = shownNodes.map(node => layout.get(node.id)).filter(Boolean); if (!points.length) return;
     const left = Math.min(...points.map(p => p.x - p.width / 2)); const right = Math.max(...points.map(p => p.x + p.width / 2));
     const top = Math.min(...points.map(p => p.y - p.height / 2)); const bottom = Math.max(...points.map(p => p.y + p.height / 2));
     camera.k = Math.min(1.15, (width - 80) / Math.max(200, right - left), (height - 100) / Math.max(140, bottom - top));
@@ -228,17 +283,40 @@
     for (const [id, item] of nodeElements) { item.classList.toggle('is-selected', id === selectedNode); item.classList.toggle('is-neighbor', active.has(id)); item.classList.toggle('is-dimmed', active.size > 0 && !active.has(id)); item.setAttribute('aria-pressed', String(id === selectedNode)); }
     for (const [id, item] of edgeElements) { item.classList.toggle('is-selected', id === selectedEdge); item.classList.toggle('is-neighbor', activeEdges.has(id)); item.classList.toggle('is-dimmed', active.size > 0 && !activeEdges.has(id)); item.setAttribute('aria-pressed', String(id === selectedEdge)); }
   }
-  function selectNode(nodeId) { if (!nodes.has(nodeId)) return; selectedNode = nodeId; selectedEdge = null; highlight(); emit('sg:node-select', { nodeId }); announce(`${nodes.get(nodeId).label} selected. `); }
+  function selectNode(nodeId) {
+    nodeId = aliases[nodeId] || nodeId; if (!nodes.has(nodeId)) return;
+    selectedNode = nodeId; selectedEdge = null;
+    const added = exploreFrom(nodeId, 1);
+    if (added.size || !nodeElements.has(nodeId)) rebuild();
+    else { nodeElements.get(nodeId)?.setAttribute('aria-expanded', 'true'); highlight(); }
+    emit('sg:node-select', { nodeId, addedNodeIds: [...added] });
+    announce(`${nodes.get(nodeId).label}: ${added.size ? `${added.size} new ${added.size === 1 ? 'entry' : 'entries'} added` : 'all immediate connections already open'}. `);
+  }
   function selectEdge(edgeId) { if (!edgesById.has(edgeId)) return; selectedEdge = edgeId; selectedNode = null; highlight(); emit('sg:edge-select', { edgeId }); announce('Connection selected. '); }
   function focusNode(nodeId) {
-    if (!nodes.has(nodeId)) return;
-    root = nodeId; selectedNode = nodeId; selectedEdge = null; if (rootSelect) rootSelect.value = nodeId;
+    nodeId = aliases[nodeId] || nodeId; if (!nodes.has(nodeId)) return;
+    anchors.add(nodeId); if (rootSelect) rootSelect.value = nodeId;
     const url = new URL(location.href); url.searchParams.set('node', nodeId); history.replaceState(null, '', url);
-    rebuild(); selectNode(nodeId);
+    selectNode(nodeId); ensureVisible(nodeId);
   }
-  function rebuild() {
+  function resetWeb() {
+    root = initialRoot; scope = 2; selectedNode = root; selectedEdge = null;
+    explored.clear(); expanded.clear(); anchors.clear(); anchors.add(root); discoveryParent.clear(); discoveryDepth.clear(); layout.clear();
+    enabled.clear(); Object.keys(categories).forEach(key => { enabled.add(key); filterButtons.get(key).setAttribute('aria-pressed', 'true'); });
+    searchInput.value = ''; searchResults.hidden = true; if (rootSelect) rootSelect.value = root;
+    const url = new URL(location.href); url.searchParams.set('node', root); history.replaceState(null, '', url);
+    exploreFrom(root, 2); rebuild({ initial: true }); emit('sg:node-select', { nodeId: root }); announce('Web reset. ');
+  }
+  function rebuild({ initial = false } = {}) {
+    const activeId = document.activeElement?.getAttribute('data-node-id');
+    const activeEdgeId = document.activeElement?.getAttribute('data-edge-id');
+    const oldNodeIds = new Set(nodeElements.keys());
     hoveredNode = null; hoveredEdge = null;
-    const visible = visibleGraph(); shownNodes = visible.nodes; shownEdges = visible.edges; layout = calculateLayout(visible);
+    if (!layout.size) {
+      const initialGraph = { nodes: [...nodes.values()].filter(node => explored.has(node.id)), edges: edges.filter(edge => explored.has(edge.source) && explored.has(edge.target)), distance: discoveryDepth };
+      layout = calculateLayout(initialGraph);
+    } else placeNewNodes();
+    const visible = visibleGraph(); shownNodes = visible.nodes; shownEdges = visible.edges;
     nodeElements = new Map(); edgeElements = new Map(); edgeLayer.replaceChildren(); nodeLayer.replaceChildren();
     for (const edge of shownEdges) {
       const key = category(edge); const item = svg('g', { class: 'web-edge', 'data-edge-id': edge.id, 'data-category': key, role: 'button', tabindex: 0, 'aria-label': `${nodes.get(edge.source).label} to ${nodes.get(edge.target).label}: ${edge.label || edge.type.replaceAll('_', ' ')}`, 'aria-pressed': 'false' });
@@ -252,15 +330,17 @@
       edgeLayer.append(item); edgeElements.set(edge.id, item);
     }
     for (const node of shownNodes) {
-      const point = layout.get(node.id); const kind = nodeKind(node);
-      const item = svg('g', { class: `web-node${node.id === root ? ' is-root' : ''}`, 'data-node-id': node.id, 'data-kind': kind.toLowerCase().replaceAll(' ', '-'), role: 'button', tabindex: 0, 'aria-label': `${node.label}, ${kind}. Select to inspect; Alt and arrow keys move.`, 'aria-pressed': 'false' });
+      const point = layout.get(node.id); const kind = nodeKind(node); const unopened = unopenedCount(node.id);
+      const item = svg('g', { class: `web-node${node.id === root ? ' is-root' : ''}${!oldNodeIds.has(node.id) ? ' is-new' : ''}`, 'data-node-id': node.id, 'data-kind': kind.toLowerCase().replaceAll(' ', '-'), role: 'button', tabindex: 0, 'aria-label': `${node.label}, ${kind}. ${unopened ? `Open ${unopened} new ${unopened === 1 ? 'neighbor' : 'neighbors'} and inspect` : 'Inspect open connections'}; Alt and arrow keys move.`, 'aria-pressed': 'false', 'aria-expanded': String(expanded.has(node.id)) });
       const attrs = { x: -point.width / 2, y: -point.height / 2, width: point.width, height: point.height, rx: 20 };
       item.append(svg('rect', { ...attrs, class: 'web-node-halo', x: attrs.x - 5, y: attrs.y - 5, width: attrs.width + 10, height: attrs.height + 10, rx: 25 }), svg('rect', { ...attrs, class: 'web-node-body' }));
       item.append(svg('circle', { class: 'web-node-dot', cx: -point.width / 2 + 14, cy: point.height / 2 - 15, r: 3 }));
       const text = svg('text', { class: 'web-node-label', x: 0, y: -point.height / 2 + 23, 'text-anchor': 'middle' });
       point.lines.forEach((line, i) => { const span = svg('tspan', { x: 0, dy: i ? 20 : 0 }); span.textContent = line; text.append(span); });
-      const sub = svg('text', { class: 'web-node-type', x: -point.width / 2 + 23, y: point.height / 2 - 11 }); sub.textContent = node.id === root ? `${kind} · Focus` : kind;
-      item.append(text, sub); item.style.touchAction = 'none';
+      const sub = svg('text', { class: 'web-node-type', x: -point.width / 2 + 23, y: point.height / 2 - 11 }); sub.textContent = node.id === root ? `${kind} · Start` : kind;
+      item.append(text, sub);
+      if (unopened) { const more = svg('text', { class: 'web-node-type web-node-more', x: point.width / 2 - 12, y: point.height / 2 - 11, 'text-anchor': 'end', 'aria-hidden': 'true' }); more.textContent = `+${unopened}`; item.append(more); }
+      item.style.touchAction = 'none';
       item.addEventListener('click', () => { if (performance.now() > clickSuppressedUntil) selectNode(node.id); });
       keyboardActivate(item, () => selectNode(node.id));
       item.addEventListener('keydown', event => {
@@ -272,8 +352,9 @@
       item.addEventListener('focus', () => { ensureVisible(node.id); hoveredNode = node.id; highlight(); }); item.addEventListener('blur', () => { hoveredNode = null; highlight(); });
       nodeLayer.append(item); nodeElements.set(node.id, item);
     }
-    for (const [value, item] of scopeButtons) item.setAttribute('aria-pressed', String(scope === value));
-    drawPositions(); fit(true); highlight(); announce();
+    drawPositions(); if (initial) fit(true); highlight(); announce();
+    if (activeId && nodeElements.has(activeId)) nodeElements.get(activeId).focus({ preventScroll: true });
+    else if (activeEdgeId && edgeElements.has(activeEdgeId)) edgeElements.get(activeEdgeId).focus({ preventScroll: true });
   }
 
   const pointers = new Map(); let gesture = null; let pinch = null;
@@ -318,17 +399,21 @@
     else if (event.key === '-') { event.preventDefault(); zoomAt(camera.k / 1.2); }
     else if (['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(event.key)) { event.preventDefault(); camera.x += event.key === 'ArrowRight' ? -70 : event.key === 'ArrowLeft' ? 70 : 0; camera.y += event.key === 'ArrowDown' ? -70 : event.key === 'ArrowUp' ? 70 : 0; applyCamera(); }
   });
-  function resize() { const rect = canvas.getBoundingClientRect(); width = Math.max(280, rect.width || 900); height = Math.max(420, rect.height || 640); canvas.setAttribute('viewBox', `0 0 ${width} ${height}`); fit(true); }
+  function resize() {
+    const center = world({ x: width / 2, y: height / 2 }); const rect = canvas.getBoundingClientRect();
+    width = Math.max(280, rect.width || 900); height = Math.max(420, rect.height || 640); canvas.setAttribute('viewBox', `0 0 ${width} ${height}`);
+    camera.x = width / 2 - center.x * camera.k; camera.y = height / 2 - center.y * camera.k; applyCamera();
+  }
   if ('ResizeObserver' in window) new ResizeObserver(() => { cancelAnimationFrame(resizeFrame); resizeFrame = requestAnimationFrame(resize); }).observe(viewport);
   else window.addEventListener('resize', resize, { passive: true });
   rootSelect?.addEventListener('change', () => focusNode(rootSelect.value));
   document.addEventListener('sg:focus', event => focusNode(event.detail?.nodeId));
-  window.addEventListener('popstate', () => { const id = new URLSearchParams(location.search).get('node'); if (nodes.has(id)) { root = id; if (rootSelect) rootSelect.value = id; selectedNode = id; selectedEdge = null; rebuild(); selectNode(id); } });
+  window.addEventListener('popstate', () => { const requested = new URLSearchParams(location.search).get('node'); const id = aliases[requested] || requested; if (nodes.has(id)) { anchors.add(id); if (rootSelect) rootSelect.value = id; selectNode(id); ensureVisible(id); } });
   if (rootSelect) rootSelect.value = root;
   document.querySelector('.tree-explorer')?.removeAttribute('hidden');
   const fallback = document.querySelector('.relationship-list'); if (fallback) fallback.open = false;
-  resize(); rebuild();
-  window.SignalGraphWeb = { graph: { ...graph, edges }, nodes, focusNode, selectNode, selectEdge, getVisibleGraph: () => ({ nodes: shownNodes, edges: shownEdges, root, scope, enabledCategories: [...enabled] }) };
+  exploreFrom(root, 2); resize(); rebuild({ initial: true });
+  window.SignalGraphWeb = { graph: { ...graph, edges }, nodes, focusNode, selectNode, selectEdge, resetWeb, getVisibleGraph: () => ({ nodes: shownNodes, edges: shownEdges, root, initialRoot, scope, enabledCategories: [...enabled], exploredNodeIds: [...explored], expandedNodeIds: [...expanded], positions: Object.fromEntries([...layout].map(([id, point]) => [id, { x: point.x, y: point.y }])), camera: { ...camera } }) };
   const ready = () => { emit('sg:ready', { graph: window.SignalGraphWeb.graph, nodes }); selectNode(root); };
   if (document.readyState === 'complete') setTimeout(ready, 0); else document.addEventListener('DOMContentLoaded', ready, { once: true });
 })();

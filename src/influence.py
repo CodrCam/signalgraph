@@ -13,11 +13,17 @@ def canonical_graph():
     return json.loads((ROOT / 'data' / 'influence-graph.json').read_text())
 
 
+@lru_cache(maxsize=1)
+def ownership_language():
+    return json.loads((ROOT / 'data' / 'ownership-explanations.json').read_text())
+
+
 def connection_link(node, prefix=''):
     graph = canonical_graph()
     node_id = graph['alias_map'].get(node['id'], node['id'])
     assert any(n['id'] == node_id for n in graph['nodes']), f'Unknown linked node: {node_id}'
-    return f'<a class="case-node-link" href="{prefix}connections.html?node={esc(node_id,quote=True)}" aria-label="{esc("Explore connections for " + node["label"],quote=True)}">{esc(node["label"])}</a>'
+    label = ownership_language()['display_labels'].get(node_id, node['label'])
+    return f'<a class="case-node-link" href="{prefix}connections.html?node={esc(node_id,quote=True)}" aria-label="{esc("Explore connections for " + label,quote=True)}">{esc(label)}</a>'
 
 
 def relationship_period(edge):
@@ -132,6 +138,7 @@ def fmt_amount(m):
 def build_influence(dist, shell, people, companies):
     cases, sources = load_cases()
     canonical = canonical_graph()
+    graph_edges = [{**e, 'type': e.get('relationship_type', e.get('type', 'relationship')), 'period': relationship_period(e), 'status': e.get('evidence_status') or 'Source-linked relationship'} for e in canonical['edges']]
     web = build_web_evidence(dist, shell, canonical, cases, sources, people, companies)
     brief_script = '<script id="web-briefs" type="application/json">' + json.dumps(web['briefs'], ensure_ascii=False).replace('<', '\\u003c') + '</script>'
     def cites(ids):
@@ -149,8 +156,8 @@ def build_influence(dist, shell, people, companies):
         if c['historical']: body+='<p class="historical-note">Historical money. Excluded from FY2023–FY2026 receipt totals.</p>'
         body+='</aside></header><nav class="case-jumps" aria-label="Case sections"><a href="#connections">Connections</a><a href="#findings">Findings</a><a href="#money">Money</a><a href="#response">Response</a><a href="#sources">Sources</a></nav>'
         nodes={n['id']: n for n in c['nodes']}
-        graph={'nodes':c['nodes'], 'edges':c['edges'], 'root':c['root'], 'sources':{s:sources[s] for s in c['source_ids'] if s in sources}}
-        body+='''<section class="connection-section" id="connections"><div class="influence-section-head"><div><span class="eyebrow">Follow the relationship</span><h2>Connections</h2></div><div class="tree-control" hidden><label for="tree-root">Start with</label><select id="tree-root">'''+''.join(f'<option value="{esc(n["id"],quote=True)}"'+(' selected' if n['id']==c['root'] else '')+'>'+esc(n['label'])+'</option>' for n in c['nodes'])+'''</select></div></div><p class="tree-hint">Explore the people and businesses. Select a name or connection for the evidence.</p><div class="tree-explorer" hidden><div id="connection-tree"></div><aside class="edge-evidence" id="edge-evidence" aria-label="Selected relationship evidence"><h3>Explore</h3><p>Select a name or connection.</p></aside></div><details class="relationship-list" open><summary>All relationships</summary><ul>'''
+        graph={'nodes':canonical['nodes'], 'edges':graph_edges, 'root':canonical['alias_map'].get(c['root'], c['root']), 'sources':canonical['sources']}
+        body+='''<section class="connection-section" id="connections"><div class="influence-section-head"><div><span class="eyebrow">Follow the relationship</span><h2>Connections</h2></div><div class="tree-control" hidden><label for="tree-root">Start with</label><select id="tree-root">'''+''.join(f'<option value="{esc(n["id"],quote=True)}"'+(' selected' if n['id']==c['root'] else '')+'>'+esc(n['label'])+'</option>' for n in c['nodes'])+'''</select></div></div><p class="tree-hint">Click a name to grow the web. Select a line to read the evidence.</p><div class="tree-explorer" hidden><div id="connection-tree"></div><aside class="edge-evidence" id="edge-evidence" aria-label="Selected relationship evidence"><h3>Explore</h3><p>Select a name or connection.</p></aside></div><details class="relationship-list" open><summary>All relationships</summary><ul>'''
         for e in c['edges']:
             body+=f'<li><strong>{connection_link(nodes[e["source"]], prefix="../")}</strong> → <strong>{connection_link(nodes[e["target"]], prefix="../")}</strong><br>{esc(e["label"])} <span class="case-period">· {esc(str(e["period"]))}</span>{cites(e.get("source_ids",[]))}</li>'
         canonical_root=canonical['alias_map'].get(c['root'],c['root'])
@@ -189,7 +196,7 @@ def build_influence(dist, shell, people, companies):
     graph_sources=canonical['sources']
     graph_edges=[{**e,'type':e.get('relationship_type',e.get('type','relationship')),'period':e.get('period') or e.get('date') or e.get('as_of') or 'Date follows the cited record','status':e.get('evidence_status') or 'Source-linked relationship'} for e in canonical['edges']]
     graph={'nodes':graph_nodes,'edges':graph_edges,'sources':graph_sources,'root':'IND_DONALD_TRUMP','connected_only':True,'max_depth':3}
-    body='<div class="wrap influence-intro"><div class="eyebrow-line"><span>Business · Family · Power</span><span>Source-linked relationships</span></div><h1 id="content" tabindex="-1">The Web</h1><p class="deck">Trace the links between officials, families and businesses.</p></div><section class="wrap network-page"><h2 class="visually-hidden">Relationship explorer</h2><div class="tree-control" hidden><label for="tree-root">Start with</label><select id="tree-root">'+''.join(f'<option value="{esc(n["id"],quote=True)}"'+(' selected' if n['id']==graph['root'] else '')+'>'+esc(n['label'])+'</option>' for n in sorted(graph_nodes,key=lambda n:n['label'].casefold()))+'</select></div><p class="tree-hint">Follow a connection. Open the evidence. Find the next question.</p><div class="tree-explorer" hidden><div id="connection-tree"></div><aside class="edge-evidence" id="edge-evidence" aria-label="Selected relationship evidence"><h3>Explore</h3></aside></div><details class="relationship-list" open><summary>All documented relationships</summary><ul>'
+    body='<div class="wrap influence-intro"><div class="eyebrow-line"><span>Business · Family · Power</span><span>Source-linked relationships</span></div><h1 id="content" tabindex="-1">The Web</h1><p class="deck">Trace the links between officials, families and businesses.</p></div><section class="wrap network-page"><h2 class="visually-hidden">Relationship explorer</h2><div class="tree-control" hidden><label for="tree-root">Start with</label><select id="tree-root">'+''.join(f'<option value="{esc(n["id"],quote=True)}"'+(' selected' if n['id']==graph['root'] else '')+'>'+esc(n['label'])+'</option>' for n in sorted(graph_nodes,key=lambda n:n['label'].casefold()))+'</select></div><p class="tree-hint">Click a name to reveal more connections. Your web grows as you explore.</p><div class="tree-explorer" hidden><div id="connection-tree"></div><aside class="edge-evidence" id="edge-evidence" aria-label="Selected relationship evidence"><h3>Explore</h3></aside></div><details class="relationship-list" open><summary>All documented relationships</summary><ul>'
     graph_node_map={n['id']:n for n in graph_nodes}
     for e in graph_edges:
         links=' '.join(f'<a href="evidence/{safe_source_id(s)}.html">{esc(graph_sources[s]["title"])} →</a>' for s in e.get('source_ids',[]) if s in graph_sources)

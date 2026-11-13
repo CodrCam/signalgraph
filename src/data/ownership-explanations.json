@@ -1,0 +1,437 @@
+{
+  "schema_version": "1.0",
+  "review_date": "2026-11-13",
+  "period": "Calendar 2025; disclosure filed June 2026",
+  "purpose": "Presentation-only explanations of existing source-backed ownership links. Stable graph IDs, edges and money records remain unchanged.",
+  "verification": {
+    "source_id": "TR_OGE_2026",
+    "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/69AEAA9D7455ACD585258E27002DDEE1/$FILE/Donald-J-Trump-2026-278ANNUAL.pdf",
+    "local_archive_sha256": "84b5987e4c8a418188600bea1e1ba6b44e0d5735cdd757cee5aba551977ca402",
+    "checked_pdf_pages": [
+      4,
+      848,
+      850,
+      854,
+      855,
+      856
+    ],
+    "method": "Read original OGE disclosure text and ownership rows; checked against existing canonical edges. Percentages are holdings as disclosed, not inferred personal cash, voting power or complete legal agreements.",
+    "exact_entity_names": [
+      "DT Marks SC LLC",
+      "DT Marks SC Member Corp",
+      "DT Marks Defi LLC",
+      "DT Marks Defi Member Corp",
+      "DTTM Operations LLC",
+      "DTTM Operations Managing Member Corp"
+    ],
+    "family_group_basis": "The original filing uses Trump Family Members at rows 114 and 124 without naming the members or allocating their collective share."
+  },
+  "display_labels": {
+    "GROUP_TRUMP_FAMILY_UNALLOCATED_INTERESTS": "Other Trump family owners"
+  },
+  "display_types": {
+    "GROUP_TRUMP_FAMILY_UNALLOCATED_INTERESTS": "Group of relatives"
+  },
+  "nodes": {
+    "GROUP_TRUMP_FAMILY_UNALLOCATED_INTERESTS": {
+      "display_name": "Other Trump family owners",
+      "display_type": "Group of relatives",
+      "facts": [
+        {
+          "text": "This label groups relatives listed collectively as Trump Family Members in the disclosure. Together, they hold 30% of DT Marks Defi LLC and 30% of DT Marks SC LLC.",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "locator": "Schedule 1 rows 114 and 124 · PDF pages 854–855",
+          "kind": "ownership_explanation"
+        },
+        {
+          "text": "The filing does not identify those relatives, divide the 30% among them or state their personal cash distributions. The percentage applies to each DT Marks company, not directly to World Liberty Financial.",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "locator": "Schedule 1 rows 114 and 124 · PDF pages 854–855",
+          "kind": "ownership_explanation"
+        }
+      ],
+      "source_ids": [
+        "TR_OGE_2026"
+      ],
+      "original_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/69AEAA9D7455ACD585258E27002DDEE1/$FILE/Donald-J-Trump-2026-278ANNUAL.pdf#page=854",
+      "locator": "Schedule 1 rows 114 and 124 · PDF pages 854–855",
+      "period": "Calendar 2025 · disclosure filed June 2026",
+      "group_not_legal_entity": true,
+      "individual_members_disclosed": false
+    },
+    "ENT_DT_MARKS_SC": {
+      "display_name": "DT Marks SC LLC",
+      "display_type": "Company",
+      "facts": [
+        {
+          "text": "This company holds a disclosed 38.25% stake in Stablecoin Holdco LLC. Its filing also records proceeds from new capital and a sale of interests in that holding company.",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "locator": "Schedule 1 rows 114–115 · PDF page 854",
+          "kind": "ownership_explanation"
+        },
+        {
+          "text": "The three owners below together account for this company’s ownership. The 30% family entry is collective; the filing does not name those relatives or show their individual payouts.",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "locator": "Schedule 1 rows 114–115 · PDF page 854",
+          "kind": "ownership_explanation"
+        }
+      ],
+      "source_ids": [
+        "TR_OGE_2026"
+      ],
+      "original_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/69AEAA9D7455ACD585258E27002DDEE1/$FILE/Donald-J-Trump-2026-278ANNUAL.pdf#page=854",
+      "locator": "Schedule 1 rows 114–115 · PDF page 854",
+      "period": "Calendar 2025 · disclosure filed June 2026",
+      "ownership_breakdown": [
+        {
+          "owner_id": "ENT_DTTM_OPERATIONS",
+          "owner": "DTTM Operations LLC",
+          "percent": 69,
+          "owner_type": "Company"
+        },
+        {
+          "owner_id": "ENT_DT_MARKS_SC_MEMBER",
+          "owner": "DT Marks SC Member Corp",
+          "percent": 1,
+          "owner_type": "Company"
+        },
+        {
+          "owner_id": "GROUP_TRUMP_FAMILY_UNALLOCATED_INTERESTS",
+          "owner": "Other Trump family owners",
+          "percent": 30,
+          "owner_type": "Group of relatives"
+        }
+      ],
+      "ownership_note": "Ownership percentages are not a personal-profit calculation or a description of voting rights."
+    },
+    "ENT_DT_MARKS_DEFI": {
+      "display_name": "DT Marks Defi LLC",
+      "display_type": "Company",
+      "facts": [
+        {
+          "text": "This company holds a disclosed 38.25% stake in WLF Holdco LLC. The filing records equity-sale and World Liberty token-sale proceeds received by this company.",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "locator": "Schedule 1 row 124 and subrows · PDF pages 855–856",
+          "kind": "ownership_explanation"
+        },
+        {
+          "text": "The three owners below together account for this company’s ownership. The family’s collective 30% is a stake in DT Marks Defi LLC; it does not identify any relative’s individual share of World Liberty Financial.",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "locator": "Schedule 1 row 124 and subrows · PDF pages 855–856",
+          "kind": "ownership_explanation"
+        }
+      ],
+      "source_ids": [
+        "TR_OGE_2026"
+      ],
+      "original_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/69AEAA9D7455ACD585258E27002DDEE1/$FILE/Donald-J-Trump-2026-278ANNUAL.pdf#page=855",
+      "locator": "Schedule 1 row 124 and subrows · PDF pages 855–856",
+      "period": "Calendar 2025 · disclosure filed June 2026",
+      "ownership_breakdown": [
+        {
+          "owner_id": "ENT_DTTM_OPERATIONS",
+          "owner": "DTTM Operations LLC",
+          "percent": 69,
+          "owner_type": "Company"
+        },
+        {
+          "owner_id": "ENT_DT_MARKS_DEFI_MEMBER",
+          "owner": "DT Marks Defi Member Corp",
+          "percent": 1,
+          "owner_type": "Company"
+        },
+        {
+          "owner_id": "GROUP_TRUMP_FAMILY_UNALLOCATED_INTERESTS",
+          "owner": "Other Trump family owners",
+          "percent": 30,
+          "owner_type": "Group of relatives"
+        }
+      ],
+      "ownership_note": "Company receipts do not establish how much cash was distributed to each owner."
+    },
+    "ENT_DT_MARKS_SC_MEMBER": {
+      "display_name": "DT Marks SC Member Corp",
+      "display_type": "Company",
+      "facts": [
+        {
+          "text": "This is the company that holds the 1% stake in DT Marks SC LLC. DTTM Operations Managing Member Corp owns all of this member corporation.",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "locator": "Schedule 1 rows 114–115 · PDF page 854",
+          "kind": "ownership_explanation"
+        },
+        {
+          "text": "It is a separate ownership link from DTTM Operations LLC’s 69% stake. The disclosure does not explain this corporation’s operating duties or voting powers, or show a personal payout from its 1% stake.",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "locator": "Schedule 1 rows 114–115 · PDF page 854",
+          "kind": "ownership_explanation"
+        }
+      ],
+      "source_ids": [
+        "TR_OGE_2026"
+      ],
+      "original_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/69AEAA9D7455ACD585258E27002DDEE1/$FILE/Donald-J-Trump-2026-278ANNUAL.pdf#page=854",
+      "locator": "Schedule 1 rows 114–115 · PDF page 854",
+      "period": "Calendar 2025 · disclosure filed June 2026"
+    },
+    "ENT_DT_MARKS_DEFI_MEMBER": {
+      "display_name": "DT Marks Defi Member Corp",
+      "display_type": "Company",
+      "facts": [
+        {
+          "text": "This company holds the 1% stake in DT Marks Defi LLC. DTTM Operations Managing Member Corp owns all of this member corporation.",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "locator": "Schedule 1 rows 124–125 · PDF pages 855–856",
+          "kind": "ownership_explanation"
+        },
+        {
+          "text": "The filing identifies it as the former DT Tower II Member Corp. Its 1% is separate from DTTM Operations LLC’s 69%; the disclosure does not establish its voting powers or an individual’s cash receipts.",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "locator": "Schedule 1 rows 124–125 · PDF pages 855–856",
+          "kind": "ownership_explanation"
+        }
+      ],
+      "source_ids": [
+        "TR_OGE_2026"
+      ],
+      "original_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/69AEAA9D7455ACD585258E27002DDEE1/$FILE/Donald-J-Trump-2026-278ANNUAL.pdf#page=856",
+      "locator": "Schedule 1 rows 124–125 · PDF pages 855–856",
+      "period": "Calendar 2025 · disclosure filed June 2026"
+    },
+    "ENT_DTTM_OPERATIONS": {
+      "display_name": "DTTM Operations LLC",
+      "display_type": "Company",
+      "facts": [
+        {
+          "text": "DTTM Operations LLC owns 69% of DT Marks Defi LLC and 69% of DT Marks SC LLC. It also lists interests in other companies, trademarks, copyrights and World Liberty governance tokens.",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "locator": "Schedule 1 rows 114, 124 and 133 · PDF pages 854–856",
+          "kind": "ownership_explanation"
+        },
+        {
+          "text": "DJT Holdings LLC owns 99% of DTTM Operations; DTTM Operations Managing Member Corp owns the other 1%. These are ownership links. They do not show that company receipts were paid through to Donald Trump personally.",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "locator": "Schedule 1 rows 114, 124 and 133 · PDF pages 854–856",
+          "kind": "ownership_explanation"
+        }
+      ],
+      "source_ids": [
+        "TR_OGE_2026"
+      ],
+      "original_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/69AEAA9D7455ACD585258E27002DDEE1/$FILE/Donald-J-Trump-2026-278ANNUAL.pdf#page=856",
+      "locator": "Schedule 1 rows 114, 124 and 133 · PDF pages 854–856",
+      "period": "Calendar 2025 · disclosure filed June 2026"
+    },
+    "ENT_DTTM_OPERATIONS_MANAGING_MEMBER": {
+      "display_name": "DTTM Operations Managing Member Corp",
+      "display_type": "Company",
+      "facts": [
+        {
+          "text": "This corporation owns the DT Marks SC and Defi member corporations, which each hold a 1% stake in the corresponding DT Marks LLC. It separately owns 1% of DTTM Operations LLC.",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "locator": "Schedule 1 rows 115, 125, 133–134 · PDF pages 854–856",
+          "kind": "ownership_explanation"
+        },
+        {
+          "text": "DJT Holdings Managing Member LLC owns all of this corporation. The disclosure documents those stakes; it does not describe this corporation’s day-to-day duties or detailed voting and distribution rights.",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "locator": "Schedule 1 rows 115, 125, 133–134 · PDF pages 854–856",
+          "kind": "ownership_explanation"
+        }
+      ],
+      "source_ids": [
+        "TR_OGE_2026"
+      ],
+      "original_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/69AEAA9D7455ACD585258E27002DDEE1/$FILE/Donald-J-Trump-2026-278ANNUAL.pdf#page=856",
+      "locator": "Schedule 1 rows 115, 125, 133–134 · PDF pages 854–856",
+      "period": "Calendar 2025 · disclosure filed June 2026"
+    },
+    "TRUST_DONALD_TRUMP_REVOCABLE": {
+      "display_name": "Donald J. Trump Revocable Trust",
+      "display_type": "Trust",
+      "facts": [
+        {
+          "text": "Donald Trump identifies himself as this trust’s sole beneficiary. The filing lists the trust as owner of CIC Digital and of interests in the DJT Holdings companies above DTTM in the ownership chain.",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "locator": "Part 3 · PDF page 4; Schedule 1 rows 21 and 31–32 · PDF pages 848 and 850",
+          "kind": "ownership_explanation"
+        },
+        {
+          "text": "The trust directly owns 99% of DJT Holdings LLC and all of DJT Holdings Managing Member LLC, which owns the remaining 1%. Being the beneficiary connects Trump to these assets, but does not establish a personal cash payout from every company below them.",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "locator": "Part 3 · PDF page 4; Schedule 1 rows 21 and 31–32 · PDF pages 848 and 850",
+          "kind": "ownership_explanation"
+        }
+      ],
+      "source_ids": [
+        "TR_OGE_2026"
+      ],
+      "original_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/69AEAA9D7455ACD585258E27002DDEE1/$FILE/Donald-J-Trump-2026-278ANNUAL.pdf#page=850",
+      "locator": "Part 3 · PDF page 4; Schedule 1 rows 21 and 31–32 · PDF pages 848 and 850",
+      "period": "Calendar 2025 · disclosure filed June 2026"
+    },
+    "ENT_DJT_HOLDINGS": {
+      "display_name": "DJT Holdings LLC",
+      "display_type": "Company",
+      "facts": [
+        {
+          "text": "This company owns 99% of DTTM Operations LLC. Its other disclosed assets include interests in many Trump businesses and bank accounts.",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "locator": "Schedule 1 rows 31–32 and 133 · PDF pages 850 and 856",
+          "kind": "ownership_explanation"
+        },
+        {
+          "text": "The Trump revocable trust owns 99% of DJT Holdings; DJT Holdings Managing Member LLC owns the other 1%. The trust also owns that member company, creating two documented ownership routes rather than a record of payments.",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "locator": "Schedule 1 rows 31–32 and 133 · PDF pages 850 and 856",
+          "kind": "ownership_explanation"
+        }
+      ],
+      "source_ids": [
+        "TR_OGE_2026"
+      ],
+      "original_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/69AEAA9D7455ACD585258E27002DDEE1/$FILE/Donald-J-Trump-2026-278ANNUAL.pdf#page=850",
+      "locator": "Schedule 1 rows 31–32 and 133 · PDF pages 850 and 856",
+      "period": "Calendar 2025 · disclosure filed June 2026"
+    },
+    "ENT_DJT_HOLDINGS_MANAGING_MEMBER": {
+      "display_name": "DJT Holdings Managing Member LLC",
+      "display_type": "Company",
+      "facts": [
+        {
+          "text": "The Trump revocable trust owns all of this company. It holds 1% of DJT Holdings LLC and all of DTTM Operations Managing Member Corp.",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "locator": "Schedule 1 rows 31–32 and 134 · PDF pages 850 and 856",
+          "kind": "ownership_explanation"
+        },
+        {
+          "text": "This is the branch that leads to the 1% member-corporation stakes in the two DT Marks LLCs. The disclosed percentages do not specify the voting rules or how cash is distributed through the chain.",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "locator": "Schedule 1 rows 31–32 and 134 · PDF pages 850 and 856",
+          "kind": "ownership_explanation"
+        }
+      ],
+      "source_ids": [
+        "TR_OGE_2026"
+      ],
+      "original_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/69AEAA9D7455ACD585258E27002DDEE1/$FILE/Donald-J-Trump-2026-278ANNUAL.pdf#page=850",
+      "locator": "Schedule 1 rows 31–32 and 134 · PDF pages 850 and 856",
+      "period": "Calendar 2025 · disclosure filed June 2026"
+    }
+  },
+  "edges": {
+    "TR_E6": {
+      "display_label": "30% collective family stake",
+      "text": "Trump’s disclosure assigns 30% of DT Marks Defi LLC to Trump Family Members as a group. It does not say which relatives hold that stake or how it is divided.",
+      "qualification": "This is a stake in the named DT Marks company. It is not 30% for each relative, a direct 30% stake in World Liberty Financial, or a verified personal payout.",
+      "source_ids": [
+        "TR_OGE_2026"
+      ],
+      "locator": "Schedule 1 row 124 · PDF page 855",
+      "original_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/69AEAA9D7455ACD585258E27002DDEE1/$FILE/Donald-J-Trump-2026-278ANNUAL.pdf#page=855"
+    },
+    "TR_E7": {
+      "display_label": "30% collective family stake",
+      "text": "Trump’s disclosure assigns 30% of DT Marks SC LLC to Trump Family Members as a group. It does not say which relatives hold that stake or how it is divided.",
+      "qualification": "This is a stake in the named DT Marks company. It is not 30% for each relative, a direct 30% stake in World Liberty Financial, or a verified personal payout.",
+      "source_ids": [
+        "TR_OGE_2026"
+      ],
+      "locator": "Schedule 1 row 114 · PDF page 854",
+      "original_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/69AEAA9D7455ACD585258E27002DDEE1/$FILE/Donald-J-Trump-2026-278ANNUAL.pdf#page=854"
+    },
+    "TR_E4": {
+      "text": "DTTM Operations LLC directly owns 69% of DT Marks Defi LLC. DT Marks Defi Member Corp separately holds 1%, and unnamed Trump family members collectively hold 30%.",
+      "qualification": "The 69% and 1% follow separate company links in the trust’s ownership chain. They are not two payments and cannot be used alone to calculate personal profit or voting power.",
+      "source_ids": [
+        "TR_OGE_2026"
+      ],
+      "locator": "Schedule 1 row 124 · PDF page 855",
+      "original_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/69AEAA9D7455ACD585258E27002DDEE1/$FILE/Donald-J-Trump-2026-278ANNUAL.pdf#page=855"
+    },
+    "TR_E5": {
+      "text": "DTTM Operations LLC directly owns 69% of DT Marks SC LLC. DT Marks SC Member Corp separately holds 1%, and unnamed Trump family members collectively hold 30%.",
+      "qualification": "The 69% and 1% follow separate company links in the trust’s ownership chain. They are not two payments and cannot be used alone to calculate personal profit or voting power.",
+      "source_ids": [
+        "TR_OGE_2026"
+      ],
+      "locator": "Schedule 1 row 114 · PDF page 854",
+      "original_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/69AEAA9D7455ACD585258E27002DDEE1/$FILE/Donald-J-Trump-2026-278ANNUAL.pdf#page=854"
+    },
+    "TR_E20": {
+      "text": "DT Marks Defi Member Corp owns 1% of DT Marks Defi LLC. DTTM Operations Managing Member Corp owns the member corporation.",
+      "qualification": "This 1% belongs to a company, not to a separately identified person. Ownership alone does not establish a cash payment or the holder’s voting rights.",
+      "source_ids": [
+        "TR_OGE_2026"
+      ],
+      "locator": "Schedule 1 rows 124–125 · PDF pages 855–856",
+      "original_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/69AEAA9D7455ACD585258E27002DDEE1/$FILE/Donald-J-Trump-2026-278ANNUAL.pdf#page=855"
+    },
+    "TR_E22": {
+      "text": "DT Marks SC Member Corp owns 1% of DT Marks SC LLC. DTTM Operations Managing Member Corp owns the member corporation.",
+      "qualification": "This 1% belongs to a company, not to a separately identified person. Ownership alone does not establish a cash payment or the holder’s voting rights.",
+      "source_ids": [
+        "TR_OGE_2026"
+      ],
+      "locator": "Schedule 1 rows 114–115 · PDF page 854",
+      "original_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/69AEAA9D7455ACD585258E27002DDEE1/$FILE/Donald-J-Trump-2026-278ANNUAL.pdf#page=854"
+    },
+    "TR_E19": {
+      "text": "DTTM Operations Managing Member Corp owns all of DT Marks Defi Member Corp. That member corporation, in turn, owns 1% of DT Marks Defi LLC.",
+      "qualification": "The 100% applies to the member corporation; it does not mean 100% ownership of the underlying DT Marks LLC.",
+      "source_ids": [
+        "TR_OGE_2026"
+      ],
+      "locator": "Schedule 1 row 125 · PDF page 856",
+      "original_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/69AEAA9D7455ACD585258E27002DDEE1/$FILE/Donald-J-Trump-2026-278ANNUAL.pdf#page=856"
+    },
+    "TR_E21": {
+      "text": "DTTM Operations Managing Member Corp owns all of DT Marks SC Member Corp. That member corporation, in turn, owns 1% of DT Marks SC LLC.",
+      "qualification": "The 100% applies to the member corporation; it does not mean 100% ownership of the underlying DT Marks LLC.",
+      "source_ids": [
+        "TR_OGE_2026"
+      ],
+      "locator": "Schedule 1 row 115 · PDF page 854",
+      "original_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/69AEAA9D7455ACD585258E27002DDEE1/$FILE/Donald-J-Trump-2026-278ANNUAL.pdf#page=854"
+    }
+  }
+}

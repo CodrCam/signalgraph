@@ -91,12 +91,20 @@ def build_web_evidence(dist, shell, canonical, cases, sources, people, companies
     """
     dist = Path(dist)
     nodes = {n['id']: n for n in canonical.get('nodes', [])}
+    overlay_path = Path(__file__).resolve().parent / 'data' / 'ownership-explanations.json'
+    ownership = json.loads(overlay_path.read_text()) if overlay_path.exists() else {}
+    display_labels = ownership.get('display_labels', {})
+    display_types = ownership.get('display_types', {})
+    display_name = lambda nid: display_labels.get(nid, nodes[nid]['label'])
     aliases = dict(canonical.get('alias_map', {}))
     for node in nodes.values():
         aliases.update({alias: node['id'] for alias in node.get('alias_ids', [])})
     resolve = lambda value: aliases.get(value, value)
     source_map = dict(sources or {})
     source_map.update(canonical.get('sources', {}))
+    edge_ids = {edge['id'] for edge in canonical.get('edges', [])}
+    assert set(ownership.get('nodes', {})).issubset(nodes), 'Ownership explanation references an unknown node'
+    assert set(ownership.get('edges', {})).issubset(edge_ids), 'Ownership explanation references an unknown edge'
     case_map = {c['id']: c for c in cases}
     people = people.get('people', []) if isinstance(people, dict) else people
     company_rows = companies.get('companies', []) if isinstance(companies, dict) else companies
@@ -156,7 +164,7 @@ def build_web_evidence(dist, shell, canonical, cases, sources, people, companies
             continue
         incident[a].append(edge)
         incident[b].append(edge)
-        text = f'{nodes[a]["label"]} → {nodes[b]["label"]}: {_text(edge.get("label") or edge.get("description"))}.'
+        text = f'{display_name(a)} → {display_name(b)}: {_text(edge.get("label") or edge.get("description"))}.'
         period = _period(edge)
         if period:
             text += ' ' + period + '.'
@@ -211,7 +219,7 @@ def build_web_evidence(dist, shell, canonical, cases, sources, people, companies
             b = resolve(edge.get('target', edge.get('to')))
             if role and _text(edge.get('label')) == role:
                 continue
-            text = f'{nodes[a]["label"]} → {nodes[b]["label"]}: {_text(edge.get("label") or edge.get("description"))}.'
+            text = f'{display_name(a)} → {display_name(b)}: {_text(edge.get("label") or edge.get("description"))}.'
             money = edge.get('money_record') or {}
             value = _amount(money)
             if value and value not in text:
@@ -236,10 +244,29 @@ def build_web_evidence(dist, shell, canonical, cases, sources, people, companies
             if case and case.get('slug'):
                 links.append({'label': _text(case.get('title') or case.get('name') or 'Investigation'),
                               'url': '/influence/' + quote(case['slug']) + '.html'})
-        node_briefs[nid] = {'name': node['label'], 'type': _friendly_type(node.get('type')),
+        node_briefs[nid] = {'name': display_name(nid), 'type': display_types.get(nid, _friendly_type(node.get('type'))),
                             'role': role, 'facts': facts[:3], 'links': links[:5],
                             'source_ids': list(dict.fromkeys(node_sources + [sid for f in facts for sid in f['source_ids']])),
                             'case_ids': node_cases[nid]}
+        explanation = ownership.get('nodes', {}).get(nid)
+        if explanation:
+            for fact in explanation.get('facts', []):
+                assert fact.get('source_ids') and all(sid in source_map for sid in fact['source_ids']), 'Unresolved ownership source'
+            breakdown = explanation.get('ownership_breakdown', [])
+            if breakdown:
+                assert sum(row['percent'] for row in breakdown) == 100, 'Ownership breakdown must describe the complete disclosed split'
+                assert all(row['owner_id'] in nodes for row in breakdown), 'Unknown owner in ownership breakdown'
+            node_briefs[nid].update({
+                'name': explanation.get('display_name', display_name(nid)),
+                'type': explanation.get('display_type', node_briefs[nid]['type']),
+                'facts': explanation.get('facts', [])[:3],
+                'source_ids': explanation.get('source_ids', []),
+                'ownership_breakdown': breakdown,
+                'ownership_note': explanation.get('ownership_note', ''),
+                'original_url': _url(explanation.get('original_url')),
+                'locator': explanation.get('locator', ''),
+                'period': explanation.get('period', ''),
+            })
 
     (dist / 'evidence').mkdir(parents=True, exist_ok=True)
     support_count = 0
@@ -290,13 +317,17 @@ def build_web_evidence(dist, shell, canonical, cases, sources, people, companies
                 label = _text(case.get('name') or case.get('person') or case.get('title'))
                 body += '<li><a href="../influence/' + escape(case['slug'], quote=True) + '.html">' + escape(label) + ' · ' + escape(case.get('title', 'Investigation')) + '</a></li>'
             for node in related_nodes[:8]:
-                body += '<li><a href="../connections.html?node=' + quote(node['id']) + '">' + escape(node['label']) + '</a></li>'
+                body += '<li><a href="../connections.html?node=' + quote(node['id']) + '">' + escape(display_name(node['id'])) + '</a></li>'
             body += '</ul></section>'
         body += '<p class="small-note">This brief summarizes the cited connection. Ownership, family ties, commitments and payments retain their separate meanings.</p></article>'
         shell('evidence/' + safe_source_id(sid) + '.html', brief['title'], body, 'influence.html', 1,
               description='Evidence and source context for ' + brief['title'])
 
-    briefs = {'version': 1, 'nodes': node_briefs, 'sources': source_briefs, 'aliases': aliases}
+    for explanation in ownership.get('edges', {}).values():
+        assert explanation.get('source_ids') and all(sid in source_map for sid in explanation['source_ids']), 'Unresolved ownership-edge source'
+    briefs = {'version': 2, 'nodes': node_briefs, 'sources': source_briefs, 'aliases': aliases,
+              'display_labels': display_labels, 'display_types': display_types,
+              'edge_explanations': ownership.get('edges', {})}
     path = dist / 'web-briefs.json'
     path.write_text(json.dumps(briefs, ensure_ascii=False, separators=(',', ':')))
     return {'evidence_pages': len(source_briefs), 'node_briefs': len(node_briefs),

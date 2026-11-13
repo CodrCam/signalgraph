@@ -18,7 +18,7 @@
   const text = value => value == null ? '' : String(value).replace(/\s+/g, ' ').trim();
   const friendly = value => text(value).replace(/_/g, ' ').replace(/^./, c => c.toUpperCase());
   const canonicalId = id => briefs.aliases?.[id] || id;
-  const nodeLabel = id => nodes.get(id)?.label || briefs.nodes?.[canonicalId(id)]?.name || 'Related party';
+  const nodeLabel = id => briefs.display_labels?.[canonicalId(id)] || nodes.get(id)?.label || briefs.nodes?.[canonicalId(id)]?.name || 'Related party';
   const sourceRecord = id => briefs.sources?.[id] || graph.sources?.[id];
   const sourceLabel = source => {
     const publisher = text(source.publisher);
@@ -146,7 +146,8 @@
     const restoreFocus = panel.contains(document.activeElement);
     selection = { kind: 'node', id: node.id };
     const brief = briefs.nodes?.[canonicalId(node.id)];
-    begin(node.label, brief?.type || typeLabel(node.type));
+    const name = brief?.name || nodeLabel(node.id);
+    begin(name, brief?.type || typeLabel(node.type));
     const facts = nodeFacts(node);
     function factBlock(fact) {
       const block = element('div', '', 'web-fact');
@@ -157,11 +158,37 @@
     }
     for (const fact of facts.slice(0, 2)) panel.append(factBlock(fact));
     if (!facts.length) panel.append(element('p', 'Select a direct connection to inspect the relationship and its supporting record.'));
+    if (brief?.ownership_breakdown?.length) {
+      panel.append(element('h4', 'Ownership'));
+      const breakdown = element('dl', '', 'web-ownership-breakdown');
+      for (const owner of brief.ownership_breakdown) {
+        const term = element('dt');
+        const button = element('button', owner.owner, 'web-owner-link');
+        button.type = 'button';
+        button.setAttribute('aria-label', `Explore ${owner.owner}`);
+        button.addEventListener('click', () => {
+          if (window.SignalGraphWeb?.selectNode) window.SignalGraphWeb.selectNode(owner.owner_id);
+          else document.dispatchEvent(new CustomEvent('sg:focus', { detail: { nodeId: owner.owner_id } }));
+        });
+        term.append(button);
+        if (owner.owner_type) term.append(element('span', owner.owner_type, 'web-owner-type'));
+        breakdown.append(term, element('dd', `${owner.percent}%`));
+      }
+      panel.append(breakdown);
+      if (brief.ownership_note) panel.append(element('p', brief.ownership_note, 'small-note'));
+    }
+    if (brief?.original_url) {
+      const origin = element('div', '', 'web-ownership-source');
+      if (brief.period) origin.append(element('p', brief.period, 'case-period'));
+      if (brief.locator) origin.append(element('p', brief.locator, 'small-note'));
+      const original = link('Original disclosure ↗', brief.original_url, true);
+      if (original) origin.append(original);
+      panel.append(origin);
+    }
     const actions = element('div', '', 'web-brief-actions');
-    actions.append(focusButton(node.id));
     const links = brief?.links || (node.profile_url ? [{ label: 'Profile', url: '/' + node.profile_url.replace(/^\//, '') }] : []);
     for (const item of links) { const a = link(item.label, item.url); if (a) actions.append(a); }
-    panel.append(actions);
+    if (actions.childElementCount) panel.append(actions);
     if (facts.length > 2) {
       const more = element('details', '', 'web-more-context');
       more.append(element('summary', 'More context'));
@@ -181,16 +208,17 @@
       heading.tabIndex = -1;
       heading.focus({ preventScroll: true });
     }
-    announce(`Evidence selected: ${node.label}`);
+    announce(`Evidence selected: ${name}`);
   }
 
   function renderEdge(id) {
     const edge = edges.get(id);
     if (!edge) return;
     selection = { kind: 'edge', id };
+    const explanation = briefs.edge_explanations?.[id];
     const a = edge.source || edge.from, b = edge.target || edge.to;
     begin(`${nodeLabel(a)} → ${nodeLabel(b)}`, typeLabel(edge.relationship_type || edge.type));
-    panel.append(element('p', text(edge.label || edge.description), 'web-edge-meaning'));
+    panel.append(element('p', text(explanation?.text || edge.label || edge.description), 'web-edge-meaning'));
     if (period(edge)) panel.append(element('p', period(edge), 'case-period'));
     const money = edge.money_record && typeof edge.money_record === 'object' ? edge.money_record : {};
     const amount = dollars(edge.amount_usd) || moneyAmount(money);
@@ -204,16 +232,21 @@
       for (const [label, value] of rows) if (value) record.append(element('dt', label), element('dd', value));
       panel.append(record);
     }
-    const notes = [...new Set([edge.limitation, edge.qualification, money.cash_status || edge.cash_status,
+    const notes = [...new Set([edge.limitation, explanation?.qualification || edge.qualification, money.cash_status || edge.cash_status,
       money.personal_allocation, edge.date_precision].map(humanNote).filter(Boolean))];
     // Avoid duplicate composite qualification paragraphs while retaining the
     // complete original qualification and any genuinely additional detail.
     const distinct = notes.filter((note, index) => !notes.some((other, otherIndex) => otherIndex !== index && other.length > note.length && other.includes(note)));
     for (const note of distinct) panel.append(element('p', note, 'small-note'));
+    if (explanation?.locator) panel.append(element('p', explanation.locator, 'small-note'));
+    if (explanation?.original_url) {
+      const original = link('Original disclosure ↗', explanation.original_url, true);
+      if (original) panel.append(original);
+    }
     const status = text(edge.evidence_status || edge.status);
     if (/alleg|report|estimat|unresolved/i.test(status)) panel.append(element('p', typeLabel(status), 'case-status'));
     const sourceHeading = element('h4', 'Sources');
-    const ids = [...sourceIds(edge), ...sourceIds(money)];
+    const ids = [...sourceIds(edge), ...sourceIds(money), ...(explanation?.source_ids || [])];
     if (ids.some(id => sourceRecord(id))) { panel.append(sourceHeading); addSources(panel, ids); }
     const actions = element('div', '', 'web-brief-actions');
     actions.append(focusButton(a, `Explore ${nodeLabel(a)}`), focusButton(b, `Explore ${nodeLabel(b)}`));

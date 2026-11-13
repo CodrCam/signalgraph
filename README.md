@@ -38,7 +38,7 @@ Source URLs, dates and limitations accompany the relevant figures. Check the Evi
 
 Influence profiles distinguish disclosures, attributed reporting, allegations and adjudicated findings. Historical payments remain visible when later investigations fall within the period, but are excluded from the four-year receipt window. Relationship paths are not summed into personal-income estimates. The site builds without database access; its connection views use the reviewed public snapshot.
 
-The map distinguishes ownership, financial, family and political relationships. Selecting a node or line reveals its supporting records. Nearby and Wider views prioritize readable labels; Fit shows the complete visible network. A text relationship list remains available without JavaScript. Source briefs link to the original records and retain their qualifications.
+The map distinguishes ownership, financial, family and political relationships. Clicking a name adds its immediate connections to the explored web while preserving existing positions and zoom. The same click opens its explanation; ownership breakdowns link directly to their owners. Filters temporarily hide relationship types without forgetting exploration, Fit shows the explored network, and Reset web returns to the starting view. Investigation pages can expand through the full reviewed graph. A text relationship list remains available without JavaScript. Source briefs link to the original records and retain their qualifications.
 
 ## Deployment
 
