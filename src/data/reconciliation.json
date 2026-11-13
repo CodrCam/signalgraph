@@ -1,5 +1,5 @@
 {
-  "review_date": "2026-11-12",
+  "review_date": "2026-11-13",
   "window": {
     "start": "2022-10-01",
     "end": "2026-09-30"
@@ -12,7 +12,7 @@
       "id": "CHG-01",
       "title": "Represent the named people without losing existing profiles",
       "status": "Applied with corrections",
-      "decision": "Retained all 34 previously audited profiles. Added Danny Deep, Tommy Fisher, Robert Mauch, Steven Collis, Craig Abod, Stephen Budorick, Darrell Crate and Pat Gelsinger from the new people and company ledgers. Retained Shyam Sankar and the correct John Heller/Amentum identity. The result is 42 profiles and 39 indexed companies, not the package’s 39 people.",
+      "decision": "November 12 review: Retained all 34 previously audited profiles. Added Danny Deep, Tommy Fisher, Robert Mauch, Steven Collis, Craig Abod, Stephen Budorick, Darrell Crate and Pat Gelsinger from the new people and company ledgers. Retained Shyam Sankar and the correct John Heller/Amentum identity. The result is 42 profiles and 39 indexed companies, not the package’s 39 people.",
       "remaining": "This is a selected research cohort, not a census of government beneficiaries."
     },
     {
@@ -129,6 +129,19 @@
       "source_ids": [
         "FAR_COST_PRINCIPLES"
       ]
+    },
+    {
+      "id": "CHG-15",
+      "title": "Executive and director coverage",
+      "status": "Primary records checked",
+      "decision": "The November 13 expansion adds 23 profiles: five executives each at CoreCivic, GEO and JBG SMITH, two Rocket Lab executives, and six Rocket Lab directors. All 42 earlier profiles and their source-linked relationships remain. The directory now contains 65 profiles and 42 companies. Compensation, realized equity and company revenue remain separate measures.",
+      "remaining": "Complete four-year transaction histories, private economic ownership, and any traceable personal receipts attributable to government activity.",
+      "source_ids": [
+        "CORECIVIC_PROXY_2026",
+        "GEO_PROXY_2026",
+        "JBGS_PROXY_2026",
+        "SGOWN_RKLB_PROXY_2026"
+      ]
     }
   ],
   "additional_findings": [
@@ -177,6 +190,11 @@
       "title": "Map politicians and extended-family financial connections",
       "action": "Build dated official rosters and trace publicly documented family businesses, trusts, ownership and payments in both directions. Keep each kinship link, financial interest and official action separately sourced; preserve unknown personal amounts.",
       "status": "Expanded research brief prepared; political/family discovery remains open"
+    },
+    {
+      "title": "Consulting and material benefits",
+      "action": "Obtain payment records for GEO consulting agreements and the value of Negron’s car transfer; distinguish agreement entitlements from receipts. Reconcile any amounts already included in compensation tables.",
+      "status": "Open · source agreements identified"
     }
   ],
   "channels": [
@@ -220,9 +238,9 @@
       "company": "Intel’s amended CHIPS award",
       "display_value": "$7.865B",
       "measure": "Commercial-award disbursements · as of April 2026",
-      "finding": "GAO reports full commercial-award disbursement after Commerce removed remaining original project milestones in exchange for an equity arrangement. Original milestone-progress reporting ceased. Gelsinger had already departed before this change.",
+      "finding": "GAO reports $7.865B disbursed. The August 2025 amendment removed unachieved milestones across six projects and treated eligible costs already incurred as sufficient for completion. Commerce no longer requires progress reports on the removed milestones. Gelsinger had already departed before this change.",
       "question": "Which delivery and reporting safeguards still apply, and how is the government’s equity protected?",
-      "limits": "The $5.695B accelerated August 2025 payment is included in the $7.865B, not additional. Intel separately recognized $5.4B of FY2025 investment tax credits; recognition is not proof of cash realization. Gelsinger departed before the 2025 amendment.",
+      "limits": "The included $5.695B accelerated payment is not additional. Intel’s separate $5.4B FY2025 tax-credit recognition does not prove cash realization. Contractual completion does not establish factory completion or an individual’s proceeds; the reporting change does not show that all oversight ended.",
       "people_ids": [
         "IND_PAT_GELSINGER"
       ],
@@ -280,6 +298,66 @@
         "HANFORD_CY2024"
       ],
       "tone": "warm"
+    },
+    {
+      "channel": "Detention and corrections",
+      "company": "CoreCivic",
+      "display_value": "54%",
+      "measure": "Federal share of company revenue · FY2025",
+      "finding": "Federal correctional and detention authorities accounted for 54% of CoreCivic’s revenue. The five named executives each have a separate compensation profile.",
+      "question": "How do contract prices, occupancy terms and service outcomes compare across facilities?",
+      "limits": "This is a company revenue share. It is not a federal obligation total and cannot be applied to an executive’s pay as a traced taxpayer payment.",
+      "people_ids": [
+        "IND_DAMON_HININGER",
+        "IND_DAVID_GARFINKLE",
+        "IND_PATRICK_SWINDLE",
+        "IND_ANTHONY_GRANDE",
+        "IND_LUCIBETH_MAYBERRY"
+      ],
+      "source_ids": [
+        "CORECIVIC_10K_2025",
+        "CORECIVIC_PROXY_2026"
+      ]
+    },
+    {
+      "channel": "Detention and corrections",
+      "company": "GEO Group",
+      "display_value": "≈67%",
+      "measure": "Federal share of company revenue · FY2025",
+      "finding": "Various U.S. federal agencies accounted for approximately 67% of consolidated revenue. Executive compensation and later consulting terms are separately disclosed.",
+      "question": "Which contracts account for the revenue, and what do their inspection and performance records show?",
+      "limits": "A revenue concentration is not a finding of poor delivery. Consulting entitlements need payment evidence and must be separated from compensation already counted.",
+      "people_ids": [
+        "IND_GEORGE_ZOLEY",
+        "IND_DAVID_DONAHUE",
+        "IND_MARK_SUCHINSKI",
+        "IND_JOE_NEGRON",
+        "IND_PAUL_LAIRD"
+      ],
+      "source_ids": [
+        "GEO_10K_2025",
+        "GEO_PROXY_2026"
+      ]
+    },
+    {
+      "channel": "Federal property leases",
+      "company": "JBG SMITH",
+      "display_value": "$56.90M",
+      "measure": "Federal rental revenue · FY2025",
+      "finding": "The company reported $56.899 million of federal rental revenue, representing 11.4% of total revenue. Five named executives are linked below.",
+      "question": "Which buildings, federal tenants and lease terms account for these receipts?",
+      "limits": "Rental revenue is not retained profit or an executive’s personal receipts. Building-level lease reconciliation remains open.",
+      "people_ids": [
+        "IND_MATTHEW_KELLY",
+        "IND_MOINA_BANERJEE",
+        "IND_GEORGE_XANDERS",
+        "IND_EVAN_REGAN_LEVINE",
+        "IND_STEVEN_MUSELES"
+      ],
+      "source_ids": [
+        "JBGS_10K_2025",
+        "JBGS_PROXY_2026"
+      ]
     }
   ],
   "transaction_cards": [
@@ -288,7 +366,7 @@
       "title": "Thiel’s wholly owned seller",
       "display_value": "$289.71M",
       "period": "March 2, 2026 · 2M shares",
-      "description": "The SEC filing identifies Thiel as the LLC’s sole beneficial owner. The sale value clears the $500K inclusion threshold.",
+      "description": "The SEC filing identifies Thiel as the LLC’s sole beneficial owner. The sale value clears the $50,000 inclusion threshold.",
       "limit": "Gross sale value is not capital gain, net personal cash, or a government-funded payment.",
       "slug": "peter-thiel",
       "source_ids": [
@@ -323,12 +401,12 @@
     }
   ],
   "edition_counts": {
-    "people": 42,
-    "companies": 39,
-    "qualified": 32,
+    "people": 65,
+    "companies": 42,
+    "qualified": 55,
     "unquantified": 10,
-    "graph_nodes": 81,
-    "graph_edges": 43
+    "graph_nodes": 107,
+    "graph_edges": 66
   },
   "company_measures": [
     {
@@ -386,8 +464,8 @@
       "source_ids": [
         "gao_intel_2026"
       ],
-      "source_locator": "Commerce Disbursed $13 Billion as of April 2026: Intel bullet",
-      "qualification": "GAO's amount covers the amended commercial award, not Section 48D tax credits or all Secure Enclave funding. The August 2025 acceleration is included, not additive.",
+      "source_locator": "GAO-26-109121, “Commerce Disbursed $13 Billion as of April 2026,” Intel bullet; “Milestone Changes,” two paragraphs immediately after Figure 2 (HTML extracted lines 173–174 and 194).",
+      "qualification": "Amended commercial award only. The August 2025 acceleration is included. This excludes Section 48D tax credits and does not represent all Secure Enclave funding. Agreement completion was based on eligible costs already incurred; it does not establish completion of the original physical milestones.",
       "publishable": true
     },
     {

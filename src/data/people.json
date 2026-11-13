@@ -1,9 +1,9 @@
 {
-  "review_date": "2026-11-12",
+  "review_date": "2026-11-13",
   "window": "Federal FY2023–FY2026; individual metrics retain issuer fiscal periods",
   "threshold_usd": 50000,
   "threshold_basis": "At least one verified financial measure in its disclosed period; not government-attributed personal income",
-  "coverage": "42 selected individual/family profiles: original 34 retained plus eight named in the reconciliation people/company ledgers. Not all government-spending beneficiaries.",
+  "coverage": "65 selected individual/family profiles: all 42 previously reviewed entries retained, plus 23 executives and directors verified from SEC filings. Not all government-spending beneficiaries.",
   "sources": {
     "LMT_PROXY_2026": {
       "title": "Lockheed Martin 2026 proxy statement",
@@ -86,7 +86,7 @@
       ]
     },
     "SGOWN_RKLB_PROXY_2026": {
-      "title": "Rocket Lab 2026 definitive proxy statement",
+      "title": "Rocket Lab 2026 proxy statement",
       "publisher": "Rocket Lab / SEC EDGAR",
       "publication_date": "2026-04-06",
       "url": "https://www.sec.gov/Archives/edgar/data/1819994/000162828026023922/rklb-20260406.htm",
@@ -94,9 +94,12 @@
         "p.19 named executive officers",
         "p.31 2025 Summary Compensation Table and footnotes",
         "p.33 Option Exercises and Stock Vested in Fiscal Year 2025",
-        "p.46 Security Ownership table and footnotes 2-3"
+        "p.46 Security Ownership table and footnotes 2-3",
+        "Printed p.31, 2025 Summary Compensation Table; p.33, Option Exercises and Stock Vested; p.43, 2025 Director Compensation Table",
+        "p.17 Pledging Policy; p.46 ownership footnote (3)"
       ],
-      "verification": "Primary SEC filing read directly."
+      "verification": "Primary SEC filing read directly.",
+      "verified_on": "2026-11-13"
     },
     "SGOWN_RKLB_BECK_AMENDMENT": {
       "title": "Amendment to Peter Beck employment agreement, Exhibit 10.1",
@@ -553,6 +556,54 @@
       "url": "https://api.usaspending.gov/api/v2/search/spending_by_category/recipient/",
       "locators": [
         "Exact POST requests/responses preserved in spending-snapshot.json; single-UEI records"
+      ]
+    },
+    "CORECIVIC_PROXY_2026": {
+      "title": "CoreCivic 2026 proxy statement",
+      "url": "https://www.sec.gov/Archives/edgar/data/1070985/000114036126012100/ny20060006x1_def14a.htm",
+      "verified_on": "2026-11-13",
+      "locators": [
+        "Printed p.68, Summary Compensation Table; pp.37 and 39, executive positions"
+      ]
+    },
+    "GEO_PROXY_2026": {
+      "title": "GEO Group 2026 proxy statement",
+      "url": "https://www.sec.gov/Archives/edgar/data/923796/000119312526116014/d923546ddef14a.htm",
+      "verified_on": "2026-11-13",
+      "locators": [
+        "Printed p.36, Summary Compensation Table; pp.5–6, executive positions; pp.41–42, separation/consulting terms"
+      ]
+    },
+    "JBGS_PROXY_2026": {
+      "title": "JBG SMITH 2026 proxy statement",
+      "url": "https://www.sec.gov/Archives/edgar/data/1689796/000110465926030932/jbgs-20260430xdef14a.htm",
+      "verified_on": "2026-11-13",
+      "locators": [
+        "Printed p.59, Summary Compensation Table and footnotes (1)–(4)"
+      ]
+    },
+    "CORECIVIC_10K_2025": {
+      "title": "CoreCivic 2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1070985/000119312526060669/cxw-20251231.htm",
+      "verified_on": "2026-11-13",
+      "locators": [
+        "Item 1A, revenue concentration risk; financial statements, revenue concentration paragraph; MD&A Revenue table"
+      ]
+    },
+    "GEO_10K_2025": {
+      "title": "GEO Group 2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/923796/000119312526071747/geo-20251231.htm",
+      "verified_on": "2026-11-13",
+      "locators": [
+        "Printed p.23, Business Concentration table; also note 14 Business Concentration"
+      ]
+    },
+    "JBGS_10K_2025": {
+      "title": "JBG SMITH Properties 2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1689796/000110465926016450/jbgs-20251231x10k.htm",
+      "verified_on": "2026-11-13",
+      "locators": [
+        "Item 1, Significant Tenants; printed p.70, Note 1, federal government rental revenue table"
       ]
     }
   },
@@ -1516,7 +1567,7 @@
           "amount": 455090,
           "period": "Company FY2025 · ended December 31, 2025",
           "source_id": "SGOWN_RKLB_PROXY_2026",
-          "note": "Summary Compensation Table value includes grant-date equity and other components. It is not cash received or identified personal taxpayer income.",
+          "note": "The 2025 Summary Compensation Table total consists of salary and other compensation. It is not identified personal taxpayer income.",
           "components": [
             [
               "Salary",
@@ -1538,11 +1589,13 @@
       ],
       "unknowns": [
         "Reconcile the claimed 34 sale lines against Forms 4 and amendments; exclude duplicate amendments and non-sale dispositions.",
-        "Separate 2025 exercise/vesting values from later sales to avoid counting the same equity twice."
+        "Separate 2025 exercise/vesting values from later sales to avoid counting the same equity twice.",
+        "Obtain the pledged-share loan balance and terms; distinguish collateral, borrowing proceeds and later repayments from income."
       ],
       "input_locators": [
         "master_report.txt p.16, profile 7, lines 654-670",
-        "ownership_ledger.json people!A10:J10"
+        "ownership_ledger.json people!A10:J10",
+        "Rocket Lab 2026 proxy, p.17 Pledging Policy and p.46 ownership footnote (3)"
       ],
       "relationship": "Company executive",
       "history": {
@@ -1551,7 +1604,12 @@
         "2025": 455090
       },
       "slug": "adam-spice",
-      "qualifies": true
+      "qualifies": true,
+      "ownership": {
+        "headline": "622,452 shares pledged",
+        "detail": "The 2026 proxy identifies 622,452 shares pledged to Morgan Stanley Private Bank. Committee approval covered up to one million shares. Collateral is not income; the loan balance, proceeds and terms are not quantified here.",
+        "source_id": "SGOWN_RKLB_PROXY_2026"
+      }
     },
     {
       "id": "IND_PALMER_LUCKEY",
@@ -3344,6 +3402,1517 @@
       ],
       "history": {},
       "qualifies": false
+    },
+    {
+      "id": "IND_ARJUN_KAMPANI",
+      "name": "Arjun L. Kampani",
+      "company": "Rocket Lab",
+      "company_ids": [
+        "ENT_RKLB"
+      ],
+      "role": "SVP, general counsel and corporate secretary",
+      "role_scope": "Role as described in the cited 2026 proxy; not a November 2026 employment check.",
+      "relationship": "Company executive",
+      "slug": "arjun-l-kampani",
+      "qualifies": true,
+      "measurements": [
+        {
+          "kind": "compensation",
+          "measure_category": "Executive_SCT_Compensation",
+          "label": "2025 reported compensation",
+          "amount": 447460,
+          "currency": "USD",
+          "period": "Company FY2025 · ended December 31, 2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "source_id": "SGOWN_RKLB_PROXY_2026",
+          "source_locator": "Printed p.31, 2025 Summary Compensation Table; p.33, Option Exercises and Stock Vested; p.43, 2025 Director Compensation Table",
+          "note": "Summary Compensation Table total may include grant-date equity and other reported components. It is not all cash received or a traced amount of taxpayer-funded personal income.",
+          "components": [
+            [
+              "Salary",
+              436000
+            ],
+            [
+              "Other compensation",
+              11460
+            ]
+          ],
+          "government_attributable_usd": null
+        },
+        {
+          "kind": "equity",
+          "measure_category": "Equity_Option_or_Vesting_Realization",
+          "label": "2025 equity realization",
+          "amount": 7307224,
+          "currency": "USD",
+          "period": "Company FY2025 · ended December 31, 2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "source_id": "SGOWN_RKLB_PROXY_2026",
+          "source_locator": "Printed p.33, Option Exercises and Stock Vested",
+          "note": "Vesting-date value and/or option exercise spread; not verified stock-sale cash. Do not add to grant-date awards or later sales.",
+          "components": [
+            [
+              "Vested-stock value",
+              7307224
+            ]
+          ],
+          "government_attributable_usd": null
+        }
+      ],
+      "source_ids": [
+        "SGOWN_RKLB_PROXY_2026"
+      ],
+      "notes": [],
+      "unknowns": [
+        "Personal cash receipts and the portion, if any, attributable to government business require separate evidence.",
+        "Complete the four-year compensation and equity history, including amendments, forfeitures and any overlapping sales."
+      ],
+      "history": {
+        "2025": 447460,
+        "2024": 1845679,
+        "2023": 601634
+      },
+      "input_locators": [
+        "Printed p.31, 2025 Summary Compensation Table; p.33, Option Exercises and Stock Vested; p.43, 2025 Director Compensation Table"
+      ]
+    },
+    {
+      "id": "IND_FRANK_KLEIN",
+      "name": "Frank Klein",
+      "company": "Rocket Lab",
+      "company_ids": [
+        "ENT_RKLB"
+      ],
+      "role": "Chief operations officer",
+      "role_scope": "Role as described in the cited 2026 proxy; not a November 2026 employment check.",
+      "relationship": "Company executive",
+      "slug": "frank-klein",
+      "qualifies": true,
+      "measurements": [
+        {
+          "kind": "compensation",
+          "measure_category": "Executive_SCT_Compensation",
+          "label": "2025 reported compensation",
+          "amount": 426025,
+          "currency": "USD",
+          "period": "Company FY2025 · ended December 31, 2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "source_id": "SGOWN_RKLB_PROXY_2026",
+          "source_locator": "Printed p.31, 2025 Summary Compensation Table; p.33, Option Exercises and Stock Vested; p.43, 2025 Director Compensation Table",
+          "note": "Summary Compensation Table total may include grant-date equity and other reported components. It is not all cash received or a traced amount of taxpayer-funded personal income.",
+          "components": [
+            [
+              "Salary",
+              400000
+            ],
+            [
+              "Other compensation",
+              26025
+            ]
+          ],
+          "government_attributable_usd": null
+        },
+        {
+          "kind": "equity",
+          "measure_category": "Equity_Option_or_Vesting_Realization",
+          "label": "2025 equity realization",
+          "amount": 11314875,
+          "currency": "USD",
+          "period": "Company FY2025 · ended December 31, 2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "source_id": "SGOWN_RKLB_PROXY_2026",
+          "source_locator": "Printed p.33, Option Exercises and Stock Vested",
+          "note": "Vesting-date value and/or option exercise spread; not verified stock-sale cash. Do not add to grant-date awards or later sales.",
+          "components": [
+            [
+              "Vested-stock value",
+              11314875
+            ]
+          ],
+          "government_attributable_usd": null
+        }
+      ],
+      "source_ids": [
+        "SGOWN_RKLB_PROXY_2026"
+      ],
+      "notes": [],
+      "unknowns": [
+        "Personal cash receipts and the portion, if any, attributable to government business require separate evidence.",
+        "Complete the four-year compensation and equity history, including amendments, forfeitures and any overlapping sales."
+      ],
+      "history": {
+        "2025": 426025,
+        "2024": 9578445
+      },
+      "input_locators": [
+        "Printed p.31, 2025 Summary Compensation Table; p.33, Option Exercises and Stock Vested; p.43, 2025 Director Compensation Table"
+      ]
+    },
+    {
+      "id": "IND_DAMON_HININGER",
+      "name": "Damon T. Hininger",
+      "company": "CoreCivic",
+      "company_ids": [
+        "ENT_CORECIVIC"
+      ],
+      "role": "CEO through December 31, 2025",
+      "role_scope": "Role as described in the cited 2026 proxy; not a November 2026 employment check.",
+      "relationship": "Company executive",
+      "slug": "damon-t-hininger",
+      "qualifies": true,
+      "measurements": [
+        {
+          "kind": "compensation",
+          "measure_category": "Executive_SCT_Compensation",
+          "label": "2025 reported compensation",
+          "amount": 7203173,
+          "currency": "USD",
+          "period": "Company FY2025 · ended December 31, 2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "source_id": "CORECIVIC_PROXY_2026",
+          "source_locator": "Printed p.68, Summary Compensation Table; pp.37 and 39, executive positions",
+          "note": "Summary Compensation Table total may include grant-date equity and other reported components. It is not all cash received or a traced amount of taxpayer-funded personal income.",
+          "components": [
+            [
+              "Salary",
+              1110000
+            ],
+            [
+              "Restricted stock awards · grant-date value",
+              3000011
+            ],
+            [
+              "Non-equity incentive",
+              2775001
+            ],
+            [
+              "Deferred compensation earnings",
+              2055
+            ],
+            [
+              "Other compensation",
+              316106
+            ]
+          ],
+          "government_attributable_usd": null
+        }
+      ],
+      "source_ids": [
+        "CORECIVIC_PROXY_2026",
+        "CORECIVIC_10K_2025"
+      ],
+      "notes": [
+        "Federal correctional and detention authorities represented 54% of company FY2025 revenue. This is a company revenue measure, separate from this person’s compensation.",
+        "The proxy discloses $124,500 for personal security within 2025 other compensation. It is already included in the pay total, not an additional benefit to add."
+      ],
+      "unknowns": [
+        "Personal cash receipts and the portion, if any, attributable to government business require separate evidence.",
+        "Complete the four-year compensation and equity history, including amendments, forfeitures and any overlapping sales."
+      ],
+      "history": {
+        "2025": 7203173,
+        "2024": 7471923,
+        "2023": 5792037
+      },
+      "input_locators": [
+        "Printed p.68, Summary Compensation Table; pp.37 and 39, executive positions",
+        "CoreCivic 2026 proxy, all-other-compensation table, note (1)"
+      ],
+      "government_nexus_source_id": "CORECIVIC_10K_2025"
+    },
+    {
+      "id": "IND_DAVID_GARFINKLE",
+      "name": "David M. Garfinkle",
+      "company": "CoreCivic",
+      "company_ids": [
+        "ENT_CORECIVIC"
+      ],
+      "role": "EVP and chief financial officer",
+      "role_scope": "Role as described in the cited 2026 proxy; not a November 2026 employment check.",
+      "relationship": "Company executive",
+      "slug": "david-m-garfinkle",
+      "qualifies": true,
+      "measurements": [
+        {
+          "kind": "compensation",
+          "measure_category": "Executive_SCT_Compensation",
+          "label": "2025 reported compensation",
+          "amount": 3293765,
+          "currency": "USD",
+          "period": "Company FY2025 · ended December 31, 2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "source_id": "CORECIVIC_PROXY_2026",
+          "source_locator": "Printed p.68, Summary Compensation Table; pp.37 and 39, executive positions",
+          "note": "Summary Compensation Table total may include grant-date equity and other reported components. It is not all cash received or a traced amount of taxpayer-funded personal income.",
+          "components": [
+            [
+              "Salary",
+              593250
+            ],
+            [
+              "Restricted stock awards · grant-date value",
+              1404986
+            ],
+            [
+              "Non-equity incentive",
+              1186500
+            ],
+            [
+              "Deferred compensation earnings",
+              386
+            ],
+            [
+              "Other compensation",
+              108643
+            ]
+          ],
+          "government_attributable_usd": null
+        }
+      ],
+      "source_ids": [
+        "CORECIVIC_PROXY_2026",
+        "CORECIVIC_10K_2025"
+      ],
+      "notes": [
+        "Federal correctional and detention authorities represented 54% of company FY2025 revenue. This is a company revenue measure, separate from this person’s compensation."
+      ],
+      "unknowns": [
+        "Personal cash receipts and the portion, if any, attributable to government business require separate evidence.",
+        "Complete the four-year compensation and equity history, including amendments, forfeitures and any overlapping sales."
+      ],
+      "history": {
+        "2025": 3293765,
+        "2024": 2708079,
+        "2023": 2494973
+      },
+      "input_locators": [
+        "Printed p.68, Summary Compensation Table; pp.37 and 39, executive positions"
+      ],
+      "government_nexus_source_id": "CORECIVIC_10K_2025"
+    },
+    {
+      "id": "IND_PATRICK_SWINDLE",
+      "name": "Patrick D. Swindle",
+      "company": "CoreCivic",
+      "company_ids": [
+        "ENT_CORECIVIC"
+      ],
+      "role": "President and COO in 2025; president and CEO from January 1, 2026",
+      "role_scope": "Role as described in the cited 2026 proxy; not a November 2026 employment check.",
+      "relationship": "Company executive",
+      "slug": "patrick-d-swindle",
+      "qualifies": true,
+      "measurements": [
+        {
+          "kind": "compensation",
+          "measure_category": "Executive_SCT_Compensation",
+          "label": "2025 reported compensation",
+          "amount": 3488419,
+          "currency": "USD",
+          "period": "Company FY2025 · ended December 31, 2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "source_id": "CORECIVIC_PROXY_2026",
+          "source_locator": "Printed p.68, Summary Compensation Table; pp.37 and 39, executive positions",
+          "note": "Summary Compensation Table total may include grant-date equity and other reported components. It is not all cash received or a traced amount of taxpayer-funded personal income.",
+          "components": [
+            [
+              "Salary",
+              695999
+            ],
+            [
+              "Restricted stock awards · grant-date value",
+              1299999
+            ],
+            [
+              "Non-equity incentive",
+              1391997
+            ],
+            [
+              "Deferred compensation earnings",
+              181
+            ],
+            [
+              "Other compensation",
+              100243
+            ]
+          ],
+          "government_attributable_usd": null
+        }
+      ],
+      "source_ids": [
+        "CORECIVIC_PROXY_2026",
+        "CORECIVIC_10K_2025"
+      ],
+      "notes": [
+        "Federal correctional and detention authorities represented 54% of company FY2025 revenue. This is a company revenue measure, separate from this person’s compensation."
+      ],
+      "unknowns": [
+        "Personal cash receipts and the portion, if any, attributable to government business require separate evidence.",
+        "Complete the four-year compensation and equity history, including amendments, forfeitures and any overlapping sales."
+      ],
+      "history": {
+        "2025": 3488419,
+        "2024": 2584357,
+        "2023": 2388291
+      },
+      "input_locators": [
+        "Printed p.68, Summary Compensation Table; pp.37 and 39, executive positions"
+      ],
+      "government_nexus_source_id": "CORECIVIC_10K_2025"
+    },
+    {
+      "id": "IND_ANTHONY_GRANDE",
+      "name": "Anthony L. Grande",
+      "company": "CoreCivic",
+      "company_ids": [
+        "ENT_CORECIVIC"
+      ],
+      "role": "EVP and chief development officer",
+      "role_scope": "Role as described in the cited 2026 proxy; not a November 2026 employment check.",
+      "relationship": "Company executive",
+      "slug": "anthony-l-grande",
+      "qualifies": true,
+      "measurements": [
+        {
+          "kind": "compensation",
+          "measure_category": "Executive_SCT_Compensation",
+          "label": "2025 reported compensation",
+          "amount": 3321232,
+          "currency": "USD",
+          "period": "Company FY2025 · ended December 31, 2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "source_id": "CORECIVIC_PROXY_2026",
+          "source_locator": "Printed p.68, Summary Compensation Table; pp.37 and 39, executive positions",
+          "note": "Summary Compensation Table total may include grant-date equity and other reported components. It is not all cash received or a traced amount of taxpayer-funded personal income.",
+          "components": [
+            [
+              "Salary",
+              603268
+            ],
+            [
+              "Restricted stock awards · grant-date value",
+              1404986
+            ],
+            [
+              "Non-equity incentive",
+              1206537
+            ],
+            [
+              "Deferred compensation earnings",
+              650
+            ],
+            [
+              "Other compensation",
+              105791
+            ]
+          ],
+          "government_attributable_usd": null
+        }
+      ],
+      "source_ids": [
+        "CORECIVIC_PROXY_2026",
+        "CORECIVIC_10K_2025"
+      ],
+      "notes": [
+        "Federal correctional and detention authorities represented 54% of company FY2025 revenue. This is a company revenue measure, separate from this person’s compensation."
+      ],
+      "unknowns": [
+        "Personal cash receipts and the portion, if any, attributable to government business require separate evidence.",
+        "Complete the four-year compensation and equity history, including amendments, forfeitures and any overlapping sales."
+      ],
+      "history": {
+        "2025": 3321232,
+        "2024": 2732760,
+        "2023": 2521199
+      },
+      "input_locators": [
+        "Printed p.68, Summary Compensation Table; pp.37 and 39, executive positions"
+      ],
+      "government_nexus_source_id": "CORECIVIC_10K_2025"
+    },
+    {
+      "id": "IND_LUCIBETH_MAYBERRY",
+      "name": "Lucibeth N. Mayberry",
+      "company": "CoreCivic",
+      "company_ids": [
+        "ENT_CORECIVIC"
+      ],
+      "role": "EVP and chief strategy officer from May 2025; previously chief innovation officer",
+      "role_scope": "Role as described in the cited 2026 proxy; not a November 2026 employment check.",
+      "relationship": "Company executive",
+      "slug": "lucibeth-n-mayberry",
+      "qualifies": true,
+      "measurements": [
+        {
+          "kind": "compensation",
+          "measure_category": "Executive_SCT_Compensation",
+          "label": "2025 reported compensation",
+          "amount": 3196487,
+          "currency": "USD",
+          "period": "Company FY2025 · ended December 31, 2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "source_id": "CORECIVIC_PROXY_2026",
+          "source_locator": "Printed p.68, Summary Compensation Table; pp.37 and 39, executive positions",
+          "note": "Summary Compensation Table total may include grant-date equity and other reported components. It is not all cash received or a traced amount of taxpayer-funded personal income.",
+          "components": [
+            [
+              "Salary",
+              591653
+            ],
+            [
+              "Restricted stock awards · grant-date value",
+              1379999
+            ],
+            [
+              "Non-equity incentive",
+              1183307
+            ],
+            [
+              "Deferred compensation earnings",
+              249
+            ],
+            [
+              "Other compensation",
+              41279
+            ]
+          ],
+          "government_attributable_usd": null
+        }
+      ],
+      "source_ids": [
+        "CORECIVIC_PROXY_2026",
+        "CORECIVIC_10K_2025"
+      ],
+      "notes": [
+        "Federal correctional and detention authorities represented 54% of company FY2025 revenue. This is a company revenue measure, separate from this person’s compensation."
+      ],
+      "unknowns": [
+        "Personal cash receipts and the portion, if any, attributable to government business require separate evidence.",
+        "Complete the four-year compensation and equity history, including amendments, forfeitures and any overlapping sales."
+      ],
+      "history": {
+        "2025": 3196487,
+        "2024": 2540843,
+        "2023": 2354379
+      },
+      "input_locators": [
+        "Printed p.68, Summary Compensation Table; pp.37 and 39, executive positions"
+      ],
+      "government_nexus_source_id": "CORECIVIC_10K_2025"
+    },
+    {
+      "id": "IND_GEORGE_ZOLEY",
+      "name": "George C. Zoley",
+      "company": "The GEO Group",
+      "company_ids": [
+        "ENT_GEO_GROUP"
+      ],
+      "role": "Executive chairman in 2025; chairman and CEO from March 1, 2026",
+      "role_scope": "Role as described in the cited 2026 proxy; not a November 2026 employment check.",
+      "relationship": "Company executive",
+      "slug": "george-c-zoley",
+      "qualifies": true,
+      "measurements": [
+        {
+          "kind": "compensation",
+          "measure_category": "Executive_SCT_Compensation",
+          "label": "2025 reported compensation",
+          "amount": 14996950,
+          "currency": "USD",
+          "period": "Company FY2025 · ended December 31, 2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "source_id": "GEO_PROXY_2026",
+          "source_locator": "Printed p.36, Summary Compensation Table; pp.5–6, executive positions; pp.41–42, separation/consulting terms",
+          "note": "Summary Compensation Table total may include grant-date equity and other reported components. It is not all cash received or a traced amount of taxpayer-funded personal income.",
+          "components": [
+            [
+              "Salary",
+              1147363
+            ],
+            [
+              "Stock awards · grant-date value",
+              6763720
+            ],
+            [
+              "Non-equity incentive",
+              3100000
+            ],
+            [
+              "Pension/deferred earnings change",
+              3718950
+            ],
+            [
+              "Other compensation",
+              266917
+            ]
+          ],
+          "government_attributable_usd": null
+        }
+      ],
+      "source_ids": [
+        "GEO_PROXY_2026",
+        "GEO_10K_2025"
+      ],
+      "notes": [
+        "Various U.S. federal agencies accounted for approximately 67% of consolidated FY2025 revenue. This is a company revenue measure, separate from this person’s compensation."
+      ],
+      "unknowns": [
+        "Personal cash receipts and the portion, if any, attributable to government business require separate evidence.",
+        "Complete the four-year compensation and equity history, including amendments, forfeitures and any overlapping sales."
+      ],
+      "history": {
+        "2025": 14996950,
+        "2024": 6448667,
+        "2023": 5900740
+      },
+      "input_locators": [
+        "Printed p.36, Summary Compensation Table; pp.5–6, executive positions; pp.41–42, separation/consulting terms"
+      ],
+      "government_nexus_source_id": "GEO_10K_2025"
+    },
+    {
+      "id": "IND_DAVID_DONAHUE",
+      "name": "J. David Donahue",
+      "company": "The GEO Group",
+      "company_ids": [
+        "ENT_GEO_GROUP"
+      ],
+      "role": "Former CEO; retired February 28, 2026",
+      "role_scope": "Role as described in the cited 2026 proxy; not a November 2026 employment check.",
+      "relationship": "Company executive",
+      "slug": "j-david-donahue",
+      "qualifies": true,
+      "measurements": [
+        {
+          "kind": "compensation",
+          "measure_category": "Executive_SCT_Compensation",
+          "label": "2025 reported compensation",
+          "amount": 3257319,
+          "currency": "USD",
+          "period": "Company FY2025 · ended December 31, 2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "source_id": "GEO_PROXY_2026",
+          "source_locator": "Printed p.36, Summary Compensation Table; pp.5–6, executive positions; pp.41–42, separation/consulting terms",
+          "note": "Summary Compensation Table total may include grant-date equity and other reported components. It is not all cash received or a traced amount of taxpayer-funded personal income.",
+          "components": [
+            [
+              "Salary",
+              1000000
+            ],
+            [
+              "Stock awards · grant-date value",
+              2081438
+            ],
+            [
+              "Non-equity incentive",
+              0
+            ],
+            [
+              "Pension/deferred earnings change",
+              0
+            ],
+            [
+              "Other compensation",
+              175881
+            ]
+          ],
+          "government_attributable_usd": null
+        }
+      ],
+      "source_ids": [
+        "GEO_PROXY_2026",
+        "GEO_10K_2025"
+      ],
+      "notes": [
+        "Various U.S. federal agencies accounted for approximately 67% of consolidated FY2025 revenue. This is a company revenue measure, separate from this person’s compensation."
+      ],
+      "unknowns": [
+        "Personal cash receipts and the portion, if any, attributable to government business require separate evidence.",
+        "Complete the four-year compensation and equity history, including amendments, forfeitures and any overlapping sales.",
+        "Reconcile the $104,167 monthly consulting agreement beginning March 2026 with actual payments, and separate the portion after September 30, 2026."
+      ],
+      "history": {
+        "2025": 3257319
+      },
+      "input_locators": [
+        "Printed p.36, Summary Compensation Table; pp.5–6, executive positions; pp.41–42, separation/consulting terms"
+      ],
+      "government_nexus_source_id": "GEO_10K_2025"
+    },
+    {
+      "id": "IND_MARK_SUCHINSKI",
+      "name": "Mark J. Suchinski",
+      "company": "The GEO Group",
+      "company_ids": [
+        "ENT_GEO_GROUP"
+      ],
+      "role": "SVP and CFO during 2025; departure disclosed for March 31, 2026",
+      "role_scope": "Role as described in the cited 2026 proxy; not a November 2026 employment check.",
+      "relationship": "Company executive",
+      "slug": "mark-j-suchinski",
+      "qualifies": true,
+      "measurements": [
+        {
+          "kind": "compensation",
+          "measure_category": "Executive_SCT_Compensation",
+          "label": "2025 reported compensation",
+          "amount": 3011136,
+          "currency": "USD",
+          "period": "Company FY2025 · ended December 31, 2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "source_id": "GEO_PROXY_2026",
+          "source_locator": "Printed p.36, Summary Compensation Table; pp.5–6, executive positions; pp.41–42, separation/consulting terms",
+          "note": "Summary Compensation Table total may include grant-date equity and other reported components. It is not all cash received or a traced amount of taxpayer-funded personal income.",
+          "components": [
+            [
+              "Salary",
+              721000
+            ],
+            [
+              "Stock awards · grant-date value",
+              1387625
+            ],
+            [
+              "Non-equity incentive",
+              865200
+            ],
+            [
+              "Pension/deferred earnings change",
+              0
+            ],
+            [
+              "Other compensation",
+              37311
+            ]
+          ],
+          "government_attributable_usd": null
+        }
+      ],
+      "source_ids": [
+        "GEO_PROXY_2026",
+        "GEO_10K_2025"
+      ],
+      "notes": [
+        "Various U.S. federal agencies accounted for approximately 67% of consolidated FY2025 revenue. This is a company revenue measure, separate from this person’s compensation."
+      ],
+      "unknowns": [
+        "Personal cash receipts and the portion, if any, attributable to government business require separate evidence.",
+        "Complete the four-year compensation and equity history, including amendments, forfeitures and any overlapping sales."
+      ],
+      "history": {
+        "2025": 3011136,
+        "2024": 2067472
+      },
+      "input_locators": [
+        "Printed p.36, Summary Compensation Table; pp.5–6, executive positions; pp.41–42, separation/consulting terms"
+      ],
+      "government_nexus_source_id": "GEO_10K_2025"
+    },
+    {
+      "id": "IND_JOE_NEGRON",
+      "name": "Joe Negron",
+      "company": "The GEO Group",
+      "company_ids": [
+        "ENT_GEO_GROUP"
+      ],
+      "role": "Former SVP, general counsel and corporate secretary; retired December 31, 2025",
+      "role_scope": "Role as described in the cited 2026 proxy; not a November 2026 employment check.",
+      "relationship": "Company executive",
+      "slug": "joe-negron",
+      "qualifies": true,
+      "measurements": [
+        {
+          "kind": "compensation",
+          "measure_category": "Executive_SCT_Compensation",
+          "label": "2025 reported compensation",
+          "amount": 1917304,
+          "currency": "USD",
+          "period": "Company FY2025 · ended December 31, 2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "source_id": "GEO_PROXY_2026",
+          "source_locator": "Printed p.36, Summary Compensation Table; pp.5–6, executive positions; pp.41–42, separation/consulting terms",
+          "note": "Summary Compensation Table total may include grant-date equity and other reported components. It is not all cash received or a traced amount of taxpayer-funded personal income.",
+          "components": [
+            [
+              "Salary",
+              583495
+            ],
+            [
+              "Stock awards · grant-date value",
+              693813
+            ],
+            [
+              "Non-equity incentive",
+              437621
+            ],
+            [
+              "Pension/deferred earnings change",
+              159812
+            ],
+            [
+              "Other compensation",
+              42563
+            ]
+          ],
+          "government_attributable_usd": null
+        }
+      ],
+      "source_ids": [
+        "GEO_PROXY_2026",
+        "GEO_10K_2025"
+      ],
+      "notes": [
+        "Various U.S. federal agencies accounted for approximately 67% of consolidated FY2025 revenue. This is a company revenue measure, separate from this person’s compensation."
+      ],
+      "unknowns": [
+        "Personal cash receipts and the portion, if any, attributable to government business require separate evidence.",
+        "Complete the four-year compensation and equity history, including amendments, forfeitures and any overlapping sales.",
+        "Verify payments under the $48,625 monthly consulting agreement and value the company-car transfer/payoff entitlement; agreement terms do not establish actual receipts."
+      ],
+      "history": {
+        "2025": 1917304
+      },
+      "input_locators": [
+        "Printed p.36, Summary Compensation Table; pp.5–6, executive positions; pp.41–42, separation/consulting terms"
+      ],
+      "government_nexus_source_id": "GEO_10K_2025"
+    },
+    {
+      "id": "IND_PAUL_LAIRD",
+      "name": "Paul Laird",
+      "company": "The GEO Group",
+      "company_ids": [
+        "ENT_GEO_GROUP"
+      ],
+      "role": "SVP, Secure Services",
+      "role_scope": "Role as described in the cited 2026 proxy; not a November 2026 employment check.",
+      "relationship": "Company executive",
+      "slug": "paul-laird",
+      "qualifies": true,
+      "measurements": [
+        {
+          "kind": "compensation",
+          "measure_category": "Executive_SCT_Compensation",
+          "label": "2025 reported compensation",
+          "amount": 1804166,
+          "currency": "USD",
+          "period": "Company FY2025 · ended December 31, 2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "source_id": "GEO_PROXY_2026",
+          "source_locator": "Printed p.36, Summary Compensation Table; pp.5–6, executive positions; pp.41–42, separation/consulting terms",
+          "note": "Summary Compensation Table total may include grant-date equity and other reported components. It is not all cash received or a traced amount of taxpayer-funded personal income.",
+          "components": [
+            [
+              "Salary",
+              600000
+            ],
+            [
+              "Stock awards · grant-date value",
+              693813
+            ],
+            [
+              "Non-equity incentive",
+              450000
+            ],
+            [
+              "Pension/deferred earnings change",
+              0
+            ],
+            [
+              "Other compensation",
+              60353
+            ]
+          ],
+          "government_attributable_usd": null
+        }
+      ],
+      "source_ids": [
+        "GEO_PROXY_2026",
+        "GEO_10K_2025"
+      ],
+      "notes": [
+        "Various U.S. federal agencies accounted for approximately 67% of consolidated FY2025 revenue. This is a company revenue measure, separate from this person’s compensation."
+      ],
+      "unknowns": [
+        "Personal cash receipts and the portion, if any, attributable to government business require separate evidence.",
+        "Complete the four-year compensation and equity history, including amendments, forfeitures and any overlapping sales."
+      ],
+      "history": {
+        "2025": 1804166
+      },
+      "input_locators": [
+        "Printed p.36, Summary Compensation Table; pp.5–6, executive positions; pp.41–42, separation/consulting terms"
+      ],
+      "government_nexus_source_id": "GEO_10K_2025"
+    },
+    {
+      "id": "IND_MATTHEW_KELLY",
+      "name": "W. Matthew Kelly",
+      "company": "JBG SMITH Properties",
+      "company_ids": [
+        "ENT_JBGS"
+      ],
+      "role": "Chief executive officer",
+      "role_scope": "Role as described in the cited 2026 proxy; not a November 2026 employment check.",
+      "relationship": "Company executive",
+      "slug": "w-matthew-kelly",
+      "qualifies": true,
+      "measurements": [
+        {
+          "kind": "compensation",
+          "measure_category": "Executive_SCT_Compensation",
+          "label": "2025 reported compensation",
+          "amount": 5521861,
+          "currency": "USD",
+          "period": "Company FY2025 · ended December 31, 2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "source_id": "JBGS_PROXY_2026",
+          "source_locator": "Printed p.59, Summary Compensation Table and footnotes (1)–(4)",
+          "note": "Summary Compensation Table total may include grant-date equity and other reported components. It is not all cash received or a traced amount of taxpayer-funded personal income.",
+          "components": [
+            [
+              "Salary",
+              750000
+            ],
+            [
+              "Bonus",
+              1260000
+            ],
+            [
+              "Share awards · grant-date value",
+              3499994
+            ],
+            [
+              "Other compensation",
+              11867
+            ]
+          ],
+          "government_attributable_usd": null
+        }
+      ],
+      "source_ids": [
+        "JBGS_PROXY_2026",
+        "JBGS_10K_2025"
+      ],
+      "notes": [
+        "U.S. federal government rental revenue was $56.899 million, 11.4% of FY2025 total revenue. This is a company revenue measure, separate from this person’s compensation.",
+        "2025 bonus elected as LTIP units awarded January 2, 2026; do not label it cash received."
+      ],
+      "unknowns": [
+        "Personal cash receipts and the portion, if any, attributable to government business require separate evidence.",
+        "Complete the four-year compensation and equity history, including amendments, forfeitures and any overlapping sales."
+      ],
+      "history": {
+        "2025": 5521861,
+        "2024": 9179792,
+        "2023": 7884883
+      },
+      "input_locators": [
+        "Printed p.59, Summary Compensation Table and footnotes (1)–(4)"
+      ],
+      "government_nexus_source_id": "JBGS_10K_2025"
+    },
+    {
+      "id": "IND_MOINA_BANERJEE",
+      "name": "M. Moina Banerjee",
+      "company": "JBG SMITH Properties",
+      "company_ids": [
+        "ENT_JBGS"
+      ],
+      "role": "Chief financial officer; co-president from February 2026",
+      "role_scope": "Role as described in the cited 2026 proxy; not a November 2026 employment check.",
+      "relationship": "Company executive",
+      "slug": "m-moina-banerjee",
+      "qualifies": true,
+      "measurements": [
+        {
+          "kind": "compensation",
+          "measure_category": "Executive_SCT_Compensation",
+          "label": "2025 reported compensation",
+          "amount": 2273358,
+          "currency": "USD",
+          "period": "Company FY2025 · ended December 31, 2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "source_id": "JBGS_PROXY_2026",
+          "source_locator": "Printed p.59, Summary Compensation Table and footnotes (1)–(4)",
+          "note": "Summary Compensation Table total may include grant-date equity and other reported components. It is not all cash received or a traced amount of taxpayer-funded personal income.",
+          "components": [
+            [
+              "Salary",
+              550000
+            ],
+            [
+              "Bonus",
+              924000
+            ],
+            [
+              "Share awards · grant-date value",
+              787491
+            ],
+            [
+              "Other compensation",
+              11867
+            ]
+          ],
+          "government_attributable_usd": null
+        }
+      ],
+      "source_ids": [
+        "JBGS_PROXY_2026",
+        "JBGS_10K_2025"
+      ],
+      "notes": [
+        "U.S. federal government rental revenue was $56.899 million, 11.4% of FY2025 total revenue. This is a company revenue measure, separate from this person’s compensation."
+      ],
+      "unknowns": [
+        "Personal cash receipts and the portion, if any, attributable to government business require separate evidence.",
+        "Complete the four-year compensation and equity history, including amendments, forfeitures and any overlapping sales."
+      ],
+      "history": {
+        "2025": 2273358,
+        "2024": 2929089,
+        "2023": 2634885
+      },
+      "input_locators": [
+        "Printed p.59, Summary Compensation Table and footnotes (1)–(4)"
+      ],
+      "government_nexus_source_id": "JBGS_10K_2025"
+    },
+    {
+      "id": "IND_GEORGE_XANDERS",
+      "name": "George L. Xanders",
+      "company": "JBG SMITH Properties",
+      "company_ids": [
+        "ENT_JBGS"
+      ],
+      "role": "Chief investment officer; co-president from February 2026",
+      "role_scope": "Role as described in the cited 2026 proxy; not a November 2026 employment check.",
+      "relationship": "Company executive",
+      "slug": "george-l-xanders",
+      "qualifies": true,
+      "measurements": [
+        {
+          "kind": "compensation",
+          "measure_category": "Executive_SCT_Compensation",
+          "label": "2025 reported compensation",
+          "amount": 2151865,
+          "currency": "USD",
+          "period": "Company FY2025 · ended December 31, 2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "source_id": "JBGS_PROXY_2026",
+          "source_locator": "Printed p.59, Summary Compensation Table and footnotes (1)–(4)",
+          "note": "Summary Compensation Table total may include grant-date equity and other reported components. It is not all cash received or a traced amount of taxpayer-funded personal income.",
+          "components": [
+            [
+              "Salary",
+              500000
+            ],
+            [
+              "Bonus",
+              840000
+            ],
+            [
+              "Share awards · grant-date value",
+              799998
+            ],
+            [
+              "Other compensation",
+              11867
+            ]
+          ],
+          "government_attributable_usd": null
+        }
+      ],
+      "source_ids": [
+        "JBGS_PROXY_2026",
+        "JBGS_10K_2025"
+      ],
+      "notes": [
+        "U.S. federal government rental revenue was $56.899 million, 11.4% of FY2025 total revenue. This is a company revenue measure, separate from this person’s compensation.",
+        "2025 bonus elected as LTIP units awarded January 2, 2026; do not label it cash received."
+      ],
+      "unknowns": [
+        "Personal cash receipts and the portion, if any, attributable to government business require separate evidence.",
+        "Complete the four-year compensation and equity history, including amendments, forfeitures and any overlapping sales."
+      ],
+      "history": {
+        "2025": 2151865,
+        "2024": 2878463,
+        "2023": 2347389
+      },
+      "input_locators": [
+        "Printed p.59, Summary Compensation Table and footnotes (1)–(4)"
+      ],
+      "government_nexus_source_id": "JBGS_10K_2025"
+    },
+    {
+      "id": "IND_EVAN_REGAN_LEVINE",
+      "name": "Evan Regan-Levine",
+      "company": "JBG SMITH Properties",
+      "company_ids": [
+        "ENT_JBGS"
+      ],
+      "role": "Chief strategy officer",
+      "role_scope": "Role as described in the cited 2026 proxy; not a November 2026 employment check.",
+      "relationship": "Company executive",
+      "slug": "evan-regan-levine",
+      "qualifies": true,
+      "measurements": [
+        {
+          "kind": "compensation",
+          "measure_category": "Executive_SCT_Compensation",
+          "label": "2025 reported compensation",
+          "amount": 1458846,
+          "currency": "USD",
+          "period": "Company FY2025 · ended December 31, 2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "source_id": "JBGS_PROXY_2026",
+          "source_locator": "Printed p.59, Summary Compensation Table and footnotes (1)–(4)",
+          "note": "Summary Compensation Table total may include grant-date equity and other reported components. It is not all cash received or a traced amount of taxpayer-funded personal income.",
+          "components": [
+            [
+              "Salary",
+              400000
+            ],
+            [
+              "Bonus",
+              672000
+            ],
+            [
+              "Share awards · grant-date value",
+              374991
+            ],
+            [
+              "Other compensation",
+              11855
+            ]
+          ],
+          "government_attributable_usd": null
+        }
+      ],
+      "source_ids": [
+        "JBGS_PROXY_2026",
+        "JBGS_10K_2025"
+      ],
+      "notes": [
+        "U.S. federal government rental revenue was $56.899 million, 11.4% of FY2025 total revenue. This is a company revenue measure, separate from this person’s compensation."
+      ],
+      "unknowns": [
+        "Personal cash receipts and the portion, if any, attributable to government business require separate evidence.",
+        "Complete the four-year compensation and equity history, including amendments, forfeitures and any overlapping sales."
+      ],
+      "history": {
+        "2025": 1458846,
+        "2024": 1552201,
+        "2023": 1259889
+      },
+      "input_locators": [
+        "Printed p.59, Summary Compensation Table and footnotes (1)–(4)"
+      ],
+      "government_nexus_source_id": "JBGS_10K_2025"
+    },
+    {
+      "id": "IND_STEVEN_MUSELES",
+      "name": "Steven A. Museles",
+      "company": "JBG SMITH Properties",
+      "company_ids": [
+        "ENT_JBGS"
+      ],
+      "role": "Chief legal officer",
+      "role_scope": "Role as described in the cited 2026 proxy; not a November 2026 employment check.",
+      "relationship": "Company executive",
+      "slug": "steven-a-museles",
+      "qualifies": true,
+      "measurements": [
+        {
+          "kind": "compensation",
+          "measure_category": "Executive_SCT_Compensation",
+          "label": "2025 reported compensation",
+          "amount": 1681356,
+          "currency": "USD",
+          "period": "Company FY2025 · ended December 31, 2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "source_id": "JBGS_PROXY_2026",
+          "source_locator": "Printed p.59, Summary Compensation Table and footnotes (1)–(4)",
+          "note": "Summary Compensation Table total may include grant-date equity and other reported components. It is not all cash received or a traced amount of taxpayer-funded personal income.",
+          "components": [
+            [
+              "Salary",
+              400000
+            ],
+            [
+              "Bonus",
+              672000
+            ],
+            [
+              "Share awards · grant-date value",
+              597492
+            ],
+            [
+              "Other compensation",
+              11864
+            ]
+          ],
+          "government_attributable_usd": null
+        }
+      ],
+      "source_ids": [
+        "JBGS_PROXY_2026",
+        "JBGS_10K_2025"
+      ],
+      "notes": [
+        "U.S. federal government rental revenue was $56.899 million, 11.4% of FY2025 total revenue. This is a company revenue measure, separate from this person’s compensation."
+      ],
+      "unknowns": [
+        "Personal cash receipts and the portion, if any, attributable to government business require separate evidence.",
+        "Complete the four-year compensation and equity history, including amendments, forfeitures and any overlapping sales."
+      ],
+      "history": {
+        "2025": 1681356,
+        "2024": 2211530,
+        "2023": 1954883
+      },
+      "input_locators": [
+        "Printed p.59, Summary Compensation Table and footnotes (1)–(4)"
+      ],
+      "government_nexus_source_id": "JBGS_10K_2025"
+    },
+    {
+      "id": "IND_NINA_ARMAGNO",
+      "name": "Nina Armagno",
+      "company": "Rocket Lab",
+      "company_ids": [
+        "ENT_RKLB"
+      ],
+      "role": "Nonemployee director during 2025",
+      "role_scope": "Role as described in the cited 2026 proxy; not a November 2026 employment check.",
+      "relationship": "Company director",
+      "slug": "nina-armagno",
+      "qualifies": true,
+      "measurements": [
+        {
+          "kind": "compensation",
+          "measure_category": "Director_Compensation",
+          "label": "2025 director compensation",
+          "amount": 258205,
+          "currency": "USD",
+          "period": "Company FY2025 · ended December 31, 2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "source_id": "SGOWN_RKLB_PROXY_2026",
+          "source_locator": "Printed p.43, 2025 Director Compensation Table",
+          "note": "Director compensation includes fees and grant-date stock values. It is not all cash received or a traced amount of taxpayer-funded personal income.",
+          "components": [
+            [
+              "Cash fees earned or paid",
+              75055
+            ],
+            [
+              "Stock awards · grant-date value",
+              183150
+            ]
+          ],
+          "government_attributable_usd": null
+        }
+      ],
+      "source_ids": [
+        "SGOWN_RKLB_PROXY_2026"
+      ],
+      "notes": [],
+      "unknowns": [
+        "Personal cash receipts and the portion, if any, attributable to government business require separate evidence.",
+        "Trace annual director fees, equity vesting and any separately disclosed investment interests across the research window."
+      ],
+      "history": {
+        "2025": 258205
+      },
+      "input_locators": [
+        "Printed p.43, 2025 Director Compensation Table"
+      ]
+    },
+    {
+      "id": "IND_EDWARD_FRANK",
+      "name": "Edward Frank",
+      "company": "Rocket Lab",
+      "company_ids": [
+        "ENT_RKLB"
+      ],
+      "role": "Nonemployee director during 2025",
+      "role_scope": "Role as described in the cited 2026 proxy; not a November 2026 employment check.",
+      "relationship": "Company director",
+      "slug": "edward-frank",
+      "qualifies": true,
+      "measurements": [
+        {
+          "kind": "compensation",
+          "measure_category": "Director_Compensation",
+          "label": "2025 director compensation",
+          "amount": 263149,
+          "currency": "USD",
+          "period": "Company FY2025 · ended December 31, 2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "source_id": "SGOWN_RKLB_PROXY_2026",
+          "source_locator": "Printed p.43, 2025 Director Compensation Table",
+          "note": "Director compensation includes fees and grant-date stock values. It is not all cash received or a traced amount of taxpayer-funded personal income.",
+          "components": [
+            [
+              "Cash fees earned or paid",
+              79999
+            ],
+            [
+              "Stock awards · grant-date value",
+              183150
+            ]
+          ],
+          "government_attributable_usd": null
+        }
+      ],
+      "source_ids": [
+        "SGOWN_RKLB_PROXY_2026"
+      ],
+      "notes": [],
+      "unknowns": [
+        "Personal cash receipts and the portion, if any, attributable to government business require separate evidence.",
+        "Trace annual director fees, equity vesting and any separately disclosed investment interests across the research window."
+      ],
+      "history": {
+        "2025": 263149
+      },
+      "input_locators": [
+        "Printed p.43, 2025 Director Compensation Table"
+      ]
+    },
+    {
+      "id": "IND_JON_OLSON",
+      "name": "Jon Olson",
+      "company": "Rocket Lab",
+      "company_ids": [
+        "ENT_RKLB"
+      ],
+      "role": "Nonemployee director during 2025",
+      "role_scope": "Role as described in the cited 2026 proxy; not a November 2026 employment check.",
+      "relationship": "Company director",
+      "slug": "jon-olson",
+      "qualifies": true,
+      "measurements": [
+        {
+          "kind": "compensation",
+          "measure_category": "Director_Compensation",
+          "label": "2025 director compensation",
+          "amount": 260650,
+          "currency": "USD",
+          "period": "Company FY2025 · ended December 31, 2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "source_id": "SGOWN_RKLB_PROXY_2026",
+          "source_locator": "Printed p.43, 2025 Director Compensation Table",
+          "note": "Director compensation includes fees and grant-date stock values. It is not all cash received or a traced amount of taxpayer-funded personal income.",
+          "components": [
+            [
+              "Cash fees earned or paid",
+              77500
+            ],
+            [
+              "Stock awards · grant-date value",
+              183150
+            ]
+          ],
+          "government_attributable_usd": null
+        }
+      ],
+      "source_ids": [
+        "SGOWN_RKLB_PROXY_2026"
+      ],
+      "notes": [],
+      "unknowns": [
+        "Personal cash receipts and the portion, if any, attributable to government business require separate evidence.",
+        "Trace annual director fees, equity vesting and any separately disclosed investment interests across the research window."
+      ],
+      "history": {
+        "2025": 260650
+      },
+      "input_locators": [
+        "Printed p.43, 2025 Director Compensation Table"
+      ]
+    },
+    {
+      "id": "IND_KENNETH_POSSENRIEDE",
+      "name": "Kenneth Possenriede",
+      "company": "Rocket Lab",
+      "company_ids": [
+        "ENT_RKLB"
+      ],
+      "role": "Nonemployee director during 2025",
+      "role_scope": "Role as described in the cited 2026 proxy; not a November 2026 employment check.",
+      "relationship": "Company director",
+      "slug": "kenneth-possenriede",
+      "qualifies": true,
+      "measurements": [
+        {
+          "kind": "compensation",
+          "measure_category": "Director_Compensation",
+          "label": "2025 director compensation",
+          "amount": 250602,
+          "currency": "USD",
+          "period": "Company FY2025 · ended December 31, 2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "source_id": "SGOWN_RKLB_PROXY_2026",
+          "source_locator": "Printed p.43, 2025 Director Compensation Table",
+          "note": "Director compensation includes fees and grant-date stock values. It is not all cash received or a traced amount of taxpayer-funded personal income.",
+          "components": [
+            [
+              "Cash fees earned or paid",
+              67452
+            ],
+            [
+              "Stock awards · grant-date value",
+              183150
+            ]
+          ],
+          "government_attributable_usd": null
+        }
+      ],
+      "source_ids": [
+        "SGOWN_RKLB_PROXY_2026"
+      ],
+      "notes": [],
+      "unknowns": [
+        "Personal cash receipts and the portion, if any, attributable to government business require separate evidence.",
+        "Trace annual director fees, equity vesting and any separately disclosed investment interests across the research window."
+      ],
+      "history": {
+        "2025": 250602
+      },
+      "input_locators": [
+        "Printed p.43, 2025 Director Compensation Table"
+      ]
+    },
+    {
+      "id": "IND_MERLINE_SAINTIL",
+      "name": "Merline Saintil",
+      "company": "Rocket Lab",
+      "company_ids": [
+        "ENT_RKLB"
+      ],
+      "role": "Nonemployee director during 2025",
+      "role_scope": "Role as described in the cited 2026 proxy; not a November 2026 employment check.",
+      "relationship": "Company director",
+      "slug": "merline-saintil",
+      "qualifies": true,
+      "measurements": [
+        {
+          "kind": "compensation",
+          "measure_category": "Director_Compensation",
+          "label": "2025 director compensation",
+          "amount": 288150,
+          "currency": "USD",
+          "period": "Company FY2025 · ended December 31, 2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "source_id": "SGOWN_RKLB_PROXY_2026",
+          "source_locator": "Printed p.43, 2025 Director Compensation Table",
+          "note": "Director compensation includes fees and grant-date stock values. It is not all cash received or a traced amount of taxpayer-funded personal income.",
+          "components": [
+            [
+              "Cash fees earned or paid",
+              105000
+            ],
+            [
+              "Stock awards · grant-date value",
+              183150
+            ]
+          ],
+          "government_attributable_usd": null
+        }
+      ],
+      "source_ids": [
+        "SGOWN_RKLB_PROXY_2026"
+      ],
+      "notes": [],
+      "unknowns": [
+        "Personal cash receipts and the portion, if any, attributable to government business require separate evidence.",
+        "Trace annual director fees, equity vesting and any separately disclosed investment interests across the research window."
+      ],
+      "history": {
+        "2025": 288150
+      },
+      "input_locators": [
+        "Printed p.43, 2025 Director Compensation Table"
+      ]
+    },
+    {
+      "id": "IND_ALEX_SLUSKY",
+      "name": "Alex Slusky",
+      "company": "Rocket Lab",
+      "company_ids": [
+        "ENT_RKLB"
+      ],
+      "role": "Nonemployee director during 2025",
+      "role_scope": "Role as described in the cited 2026 proxy; not a November 2026 employment check.",
+      "relationship": "Company director",
+      "slug": "alex-slusky",
+      "qualifies": true,
+      "measurements": [
+        {
+          "kind": "compensation",
+          "measure_category": "Director_Compensation",
+          "label": "2025 director compensation",
+          "amount": 234199,
+          "currency": "USD",
+          "period": "Company FY2025 · ended December 31, 2025",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "source_id": "SGOWN_RKLB_PROXY_2026",
+          "source_locator": "Printed p.43, 2025 Director Compensation Table",
+          "note": "Director compensation includes fees and grant-date stock values. It is not all cash received or a traced amount of taxpayer-funded personal income.",
+          "components": [
+            [
+              "Cash fees earned or paid",
+              51049
+            ],
+            [
+              "Stock awards · grant-date value",
+              183150
+            ]
+          ],
+          "government_attributable_usd": null
+        }
+      ],
+      "source_ids": [
+        "SGOWN_RKLB_PROXY_2026"
+      ],
+      "notes": [],
+      "unknowns": [
+        "Personal cash receipts and the portion, if any, attributable to government business require separate evidence.",
+        "Trace annual director fees, equity vesting and any separately disclosed investment interests across the research window."
+      ],
+      "history": {
+        "2025": 234199
+      },
+      "input_locators": [
+        "Printed p.43, 2025 Director Compensation Table"
+      ]
     }
   ],
   "provenance_files": [
@@ -3352,7 +4921,8 @@
     "expanded_owners_sources.json",
     "verified-transactions.json",
     "verified-new-beneficiaries.json",
-    "reconciled-ledgers.json"
+    "reconciled-ledgers.json",
+    "SEC proxy and Form 10-K records cited per profile; reviewed 2026-11-13"
   ],
   "raw_verified_audits": {
     "executives": {
@@ -5760,6 +7330,12 @@
     "source_count": 55,
     "additional_people": 8,
     "report_site_changes": 14,
-    "financial_attribution": "No company obligation is assigned as a personal receipt."
+    "financial_attribution": "No company obligation is assigned as a personal receipt.",
+    "latest_expansion": {
+      "date": "2026-11-13",
+      "new_profiles": 23,
+      "new_companies": 3,
+      "basis": "Dated SEC compensation disclosures and separately sourced company government revenue connections."
+    }
   }
 }

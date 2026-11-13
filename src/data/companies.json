@@ -84,6 +84,25 @@
       ]
     },
     {
+      "id": "ENT_CORECIVIC",
+      "name": "CoreCivic, Inc.",
+      "slug": "corecivic",
+      "source_ids": [
+        "CORECIVIC_PROXY_2026",
+        "CORECIVIC_10K_2025"
+      ],
+      "note": "Federal correctional and detention authorities represented 54% of company FY2025 revenue. Company revenue differs from contract obligations and personal compensation.",
+      "government_nexus": {
+        "source_id": "CORECIVIC_10K_2025",
+        "locator": "Item 1A, revenue concentration risk; financial statements, revenue concentration paragraph; MD&A Revenue table",
+        "summary": "Federal correctional and detention authorities represented 54% of company FY2025 revenue.",
+        "federal_revenue_share_pct": 54,
+        "federal_revenue_amount_usd": null,
+        "period": "Company year ended December 31, 2025",
+        "measure_category": "Company_Revenue_or_Revenue_Share"
+      }
+    },
+    {
       "id": "ENT_DELOITTE",
       "name": "Deloitte LLP",
       "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
@@ -147,6 +166,25 @@
         "gao_intel_2026",
         "intel_10k_2025"
       ]
+    },
+    {
+      "id": "ENT_JBGS",
+      "name": "JBG SMITH Properties",
+      "slug": "jbg-smith-properties",
+      "source_ids": [
+        "JBGS_PROXY_2026",
+        "JBGS_10K_2025"
+      ],
+      "note": "U.S. federal government rental revenue was $56.899 million, 11.4% of FY2025 total revenue. Company revenue differs from contract obligations and personal compensation.",
+      "government_nexus": {
+        "source_id": "JBGS_10K_2025",
+        "locator": "Item 1, Significant Tenants; printed p.70, Note 1, federal government rental revenue table",
+        "summary": "U.S. federal government rental revenue was $56.899 million, 11.4% of FY2025 total revenue.",
+        "federal_revenue_share_pct": 11.4,
+        "federal_revenue_amount_usd": 56899000,
+        "period": "Company year ended December 31, 2025",
+        "measure_category": "Company_Revenue_or_Revenue_Share"
+      }
     },
     {
       "id": "ENT_LHX",
@@ -239,6 +277,25 @@
       "slug": "the-boeing-company"
     },
     {
+      "id": "ENT_GEO_GROUP",
+      "name": "The GEO Group, Inc.",
+      "slug": "the-geo-group",
+      "source_ids": [
+        "GEO_PROXY_2026",
+        "GEO_10K_2025"
+      ],
+      "note": "Various U.S. federal agencies accounted for approximately 67% of consolidated FY2025 revenue. Company revenue differs from contract obligations and personal compensation.",
+      "government_nexus": {
+        "source_id": "GEO_10K_2025",
+        "locator": "Printed p.23, Business Concentration table; also note 14 Business Concentration",
+        "summary": "Various U.S. federal agencies accounted for approximately 67% of consolidated FY2025 revenue.",
+        "federal_revenue_share_pct": 67,
+        "federal_revenue_amount_usd": null,
+        "period": "Company year ended December 31, 2025",
+        "measure_category": "Company_Revenue_or_Revenue_Share"
+      }
+    },
+    {
       "id": "ENT_TRIAD",
       "name": "Triad National Security, LLC",
       "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
@@ -257,5 +314,5 @@
       "slug": "unitedhealth-group-incorporated"
     }
   ],
-  "review_date": "2026-11-12"
+  "review_date": "2026-11-13"
 }

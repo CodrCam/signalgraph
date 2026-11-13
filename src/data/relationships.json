@@ -1,6 +1,6 @@
 {
   "schema_version": "2.2-reviewed",
-  "review_date": "2026-11-12",
+  "review_date": "2026-11-13",
   "window": {
     "start": "2022-10-01",
     "end": "2026-09-30"
@@ -492,6 +492,162 @@
       "type": "person_or_family",
       "label": "Craig Abod",
       "profile_url": "people/craig-abod.html"
+    },
+    {
+      "id": "ENT_CORECIVIC",
+      "type": "company",
+      "label": "CoreCivic, Inc.",
+      "profile_url": "government-spending.html#company-corecivic"
+    },
+    {
+      "id": "ENT_GEO_GROUP",
+      "type": "company",
+      "label": "The GEO Group, Inc.",
+      "profile_url": "government-spending.html#company-the-geo-group"
+    },
+    {
+      "id": "ENT_JBGS",
+      "type": "company",
+      "label": "JBG SMITH Properties",
+      "profile_url": "government-spending.html#company-jbg-smith-properties"
+    },
+    {
+      "id": "IND_ARJUN_KAMPANI",
+      "type": "person_or_family",
+      "label": "Arjun L. Kampani",
+      "profile_url": "people/arjun-l-kampani.html"
+    },
+    {
+      "id": "IND_FRANK_KLEIN",
+      "type": "person_or_family",
+      "label": "Frank Klein",
+      "profile_url": "people/frank-klein.html"
+    },
+    {
+      "id": "IND_DAMON_HININGER",
+      "type": "person_or_family",
+      "label": "Damon T. Hininger",
+      "profile_url": "people/damon-t-hininger.html"
+    },
+    {
+      "id": "IND_DAVID_GARFINKLE",
+      "type": "person_or_family",
+      "label": "David M. Garfinkle",
+      "profile_url": "people/david-m-garfinkle.html"
+    },
+    {
+      "id": "IND_PATRICK_SWINDLE",
+      "type": "person_or_family",
+      "label": "Patrick D. Swindle",
+      "profile_url": "people/patrick-d-swindle.html"
+    },
+    {
+      "id": "IND_ANTHONY_GRANDE",
+      "type": "person_or_family",
+      "label": "Anthony L. Grande",
+      "profile_url": "people/anthony-l-grande.html"
+    },
+    {
+      "id": "IND_LUCIBETH_MAYBERRY",
+      "type": "person_or_family",
+      "label": "Lucibeth N. Mayberry",
+      "profile_url": "people/lucibeth-n-mayberry.html"
+    },
+    {
+      "id": "IND_GEORGE_ZOLEY",
+      "type": "person_or_family",
+      "label": "George C. Zoley",
+      "profile_url": "people/george-c-zoley.html"
+    },
+    {
+      "id": "IND_DAVID_DONAHUE",
+      "type": "person_or_family",
+      "label": "J. David Donahue",
+      "profile_url": "people/j-david-donahue.html"
+    },
+    {
+      "id": "IND_MARK_SUCHINSKI",
+      "type": "person_or_family",
+      "label": "Mark J. Suchinski",
+      "profile_url": "people/mark-j-suchinski.html"
+    },
+    {
+      "id": "IND_JOE_NEGRON",
+      "type": "person_or_family",
+      "label": "Joe Negron",
+      "profile_url": "people/joe-negron.html"
+    },
+    {
+      "id": "IND_PAUL_LAIRD",
+      "type": "person_or_family",
+      "label": "Paul Laird",
+      "profile_url": "people/paul-laird.html"
+    },
+    {
+      "id": "IND_MATTHEW_KELLY",
+      "type": "person_or_family",
+      "label": "W. Matthew Kelly",
+      "profile_url": "people/w-matthew-kelly.html"
+    },
+    {
+      "id": "IND_MOINA_BANERJEE",
+      "type": "person_or_family",
+      "label": "M. Moina Banerjee",
+      "profile_url": "people/m-moina-banerjee.html"
+    },
+    {
+      "id": "IND_GEORGE_XANDERS",
+      "type": "person_or_family",
+      "label": "George L. Xanders",
+      "profile_url": "people/george-l-xanders.html"
+    },
+    {
+      "id": "IND_EVAN_REGAN_LEVINE",
+      "type": "person_or_family",
+      "label": "Evan Regan-Levine",
+      "profile_url": "people/evan-regan-levine.html"
+    },
+    {
+      "id": "IND_STEVEN_MUSELES",
+      "type": "person_or_family",
+      "label": "Steven A. Museles",
+      "profile_url": "people/steven-a-museles.html"
+    },
+    {
+      "id": "IND_NINA_ARMAGNO",
+      "type": "person_or_family",
+      "label": "Nina Armagno",
+      "profile_url": "people/nina-armagno.html"
+    },
+    {
+      "id": "IND_EDWARD_FRANK",
+      "type": "person_or_family",
+      "label": "Edward Frank",
+      "profile_url": "people/edward-frank.html"
+    },
+    {
+      "id": "IND_JON_OLSON",
+      "type": "person_or_family",
+      "label": "Jon Olson",
+      "profile_url": "people/jon-olson.html"
+    },
+    {
+      "id": "IND_KENNETH_POSSENRIEDE",
+      "type": "person_or_family",
+      "label": "Kenneth Possenriede",
+      "profile_url": "people/kenneth-possenriede.html"
+    },
+    {
+      "id": "IND_MERLINE_SAINTIL",
+      "type": "person_or_family",
+      "label": "Merline Saintil",
+      "profile_url": "people/merline-saintil.html"
+    },
+    {
+      "id": "IND_ALEX_SLUSKY",
+      "type": "person_or_family",
+      "label": "Alex Slusky",
+      "profile_url": "people/alex-slusky.html"
     }
   ],
   "edges": [
@@ -1227,6 +1383,397 @@
       ],
       "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
       "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_RKLB_IND_ARJUN_KAMPANI",
+      "source": "ENT_RKLB",
+      "target": "IND_ARJUN_KAMPANI",
+      "relationship_type": "documented_executive_connection",
+      "description": "SVP, general counsel and corporate secretary",
+      "source_ids": [
+        "SGOWN_RKLB_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1819994/000162828026023922/rklb-20260406.htm"
+      ],
+      "source_locator": "Printed p.31, 2025 Summary Compensation Table; p.33, Option Exercises and Stock Vested; p.43, 2025 Director Compensation Table",
+      "temporal_scope": "Company FY2025 service and dated changes described in the 2026 proxy; not assumed continuous throughout FY2023–FY2026.",
+      "evidence_status": "relationship_and_company_compensation_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_RKLB_IND_FRANK_KLEIN",
+      "source": "ENT_RKLB",
+      "target": "IND_FRANK_KLEIN",
+      "relationship_type": "documented_executive_connection",
+      "description": "Chief operations officer",
+      "source_ids": [
+        "SGOWN_RKLB_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1819994/000162828026023922/rklb-20260406.htm"
+      ],
+      "source_locator": "Printed p.31, 2025 Summary Compensation Table; p.33, Option Exercises and Stock Vested; p.43, 2025 Director Compensation Table",
+      "temporal_scope": "Company FY2025 service and dated changes described in the 2026 proxy; not assumed continuous throughout FY2023–FY2026.",
+      "evidence_status": "relationship_and_company_compensation_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_CORECIVIC_IND_DAMON_HININGER",
+      "source": "ENT_CORECIVIC",
+      "target": "IND_DAMON_HININGER",
+      "relationship_type": "documented_executive_connection",
+      "description": "CEO through December 31, 2025",
+      "source_ids": [
+        "CORECIVIC_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1070985/000114036126012100/ny20060006x1_def14a.htm"
+      ],
+      "source_locator": "Printed p.68, Summary Compensation Table; pp.37 and 39, executive positions",
+      "temporal_scope": "Company FY2025 service and dated changes described in the 2026 proxy; not assumed continuous throughout FY2023–FY2026.",
+      "evidence_status": "relationship_and_company_compensation_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_CORECIVIC_IND_DAVID_GARFINKLE",
+      "source": "ENT_CORECIVIC",
+      "target": "IND_DAVID_GARFINKLE",
+      "relationship_type": "documented_executive_connection",
+      "description": "EVP and chief financial officer",
+      "source_ids": [
+        "CORECIVIC_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1070985/000114036126012100/ny20060006x1_def14a.htm"
+      ],
+      "source_locator": "Printed p.68, Summary Compensation Table; pp.37 and 39, executive positions",
+      "temporal_scope": "Company FY2025 service and dated changes described in the 2026 proxy; not assumed continuous throughout FY2023–FY2026.",
+      "evidence_status": "relationship_and_company_compensation_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_CORECIVIC_IND_PATRICK_SWINDLE",
+      "source": "ENT_CORECIVIC",
+      "target": "IND_PATRICK_SWINDLE",
+      "relationship_type": "documented_executive_connection",
+      "description": "President and COO in 2025; president and CEO from January 1, 2026",
+      "source_ids": [
+        "CORECIVIC_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1070985/000114036126012100/ny20060006x1_def14a.htm"
+      ],
+      "source_locator": "Printed p.68, Summary Compensation Table; pp.37 and 39, executive positions",
+      "temporal_scope": "Company FY2025 service and dated changes described in the 2026 proxy; not assumed continuous throughout FY2023–FY2026.",
+      "evidence_status": "relationship_and_company_compensation_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_CORECIVIC_IND_ANTHONY_GRANDE",
+      "source": "ENT_CORECIVIC",
+      "target": "IND_ANTHONY_GRANDE",
+      "relationship_type": "documented_executive_connection",
+      "description": "EVP and chief development officer",
+      "source_ids": [
+        "CORECIVIC_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1070985/000114036126012100/ny20060006x1_def14a.htm"
+      ],
+      "source_locator": "Printed p.68, Summary Compensation Table; pp.37 and 39, executive positions",
+      "temporal_scope": "Company FY2025 service and dated changes described in the 2026 proxy; not assumed continuous throughout FY2023–FY2026.",
+      "evidence_status": "relationship_and_company_compensation_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_CORECIVIC_IND_LUCIBETH_MAYBERRY",
+      "source": "ENT_CORECIVIC",
+      "target": "IND_LUCIBETH_MAYBERRY",
+      "relationship_type": "documented_executive_connection",
+      "description": "EVP and chief strategy officer from May 2025; previously chief innovation officer",
+      "source_ids": [
+        "CORECIVIC_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1070985/000114036126012100/ny20060006x1_def14a.htm"
+      ],
+      "source_locator": "Printed p.68, Summary Compensation Table; pp.37 and 39, executive positions",
+      "temporal_scope": "Company FY2025 service and dated changes described in the 2026 proxy; not assumed continuous throughout FY2023–FY2026.",
+      "evidence_status": "relationship_and_company_compensation_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_GEO_GROUP_IND_GEORGE_ZOLEY",
+      "source": "ENT_GEO_GROUP",
+      "target": "IND_GEORGE_ZOLEY",
+      "relationship_type": "documented_executive_connection",
+      "description": "Executive chairman in 2025; chairman and CEO from March 1, 2026",
+      "source_ids": [
+        "GEO_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/923796/000119312526116014/d923546ddef14a.htm"
+      ],
+      "source_locator": "Printed p.36, Summary Compensation Table; pp.5–6, executive positions; pp.41–42, separation/consulting terms",
+      "temporal_scope": "Company FY2025 service and dated changes described in the 2026 proxy; not assumed continuous throughout FY2023–FY2026.",
+      "evidence_status": "relationship_and_company_compensation_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_GEO_GROUP_IND_DAVID_DONAHUE",
+      "source": "ENT_GEO_GROUP",
+      "target": "IND_DAVID_DONAHUE",
+      "relationship_type": "documented_executive_connection",
+      "description": "Former CEO; retired February 28, 2026",
+      "source_ids": [
+        "GEO_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/923796/000119312526116014/d923546ddef14a.htm"
+      ],
+      "source_locator": "Printed p.36, Summary Compensation Table; pp.5–6, executive positions; pp.41–42, separation/consulting terms",
+      "temporal_scope": "Company FY2025 service and dated changes described in the 2026 proxy; not assumed continuous throughout FY2023–FY2026.",
+      "evidence_status": "relationship_and_company_compensation_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_GEO_GROUP_IND_MARK_SUCHINSKI",
+      "source": "ENT_GEO_GROUP",
+      "target": "IND_MARK_SUCHINSKI",
+      "relationship_type": "documented_executive_connection",
+      "description": "SVP and CFO during 2025; departure disclosed for March 31, 2026",
+      "source_ids": [
+        "GEO_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/923796/000119312526116014/d923546ddef14a.htm"
+      ],
+      "source_locator": "Printed p.36, Summary Compensation Table; pp.5–6, executive positions; pp.41–42, separation/consulting terms",
+      "temporal_scope": "Company FY2025 service and dated changes described in the 2026 proxy; not assumed continuous throughout FY2023–FY2026.",
+      "evidence_status": "relationship_and_company_compensation_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_GEO_GROUP_IND_JOE_NEGRON",
+      "source": "ENT_GEO_GROUP",
+      "target": "IND_JOE_NEGRON",
+      "relationship_type": "documented_executive_connection",
+      "description": "Former SVP, general counsel and corporate secretary; retired December 31, 2025",
+      "source_ids": [
+        "GEO_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/923796/000119312526116014/d923546ddef14a.htm"
+      ],
+      "source_locator": "Printed p.36, Summary Compensation Table; pp.5–6, executive positions; pp.41–42, separation/consulting terms",
+      "temporal_scope": "Company FY2025 service and dated changes described in the 2026 proxy; not assumed continuous throughout FY2023–FY2026.",
+      "evidence_status": "relationship_and_company_compensation_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_GEO_GROUP_IND_PAUL_LAIRD",
+      "source": "ENT_GEO_GROUP",
+      "target": "IND_PAUL_LAIRD",
+      "relationship_type": "documented_executive_connection",
+      "description": "SVP, Secure Services",
+      "source_ids": [
+        "GEO_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/923796/000119312526116014/d923546ddef14a.htm"
+      ],
+      "source_locator": "Printed p.36, Summary Compensation Table; pp.5–6, executive positions; pp.41–42, separation/consulting terms",
+      "temporal_scope": "Company FY2025 service and dated changes described in the 2026 proxy; not assumed continuous throughout FY2023–FY2026.",
+      "evidence_status": "relationship_and_company_compensation_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_JBGS_IND_MATTHEW_KELLY",
+      "source": "ENT_JBGS",
+      "target": "IND_MATTHEW_KELLY",
+      "relationship_type": "documented_executive_connection",
+      "description": "Chief executive officer",
+      "source_ids": [
+        "JBGS_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1689796/000110465926030932/jbgs-20260430xdef14a.htm"
+      ],
+      "source_locator": "Printed p.59, Summary Compensation Table and footnotes (1)–(4)",
+      "temporal_scope": "Company FY2025 service and dated changes described in the 2026 proxy; not assumed continuous throughout FY2023–FY2026.",
+      "evidence_status": "relationship_and_company_compensation_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_JBGS_IND_MOINA_BANERJEE",
+      "source": "ENT_JBGS",
+      "target": "IND_MOINA_BANERJEE",
+      "relationship_type": "documented_executive_connection",
+      "description": "Chief financial officer; co-president from February 2026",
+      "source_ids": [
+        "JBGS_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1689796/000110465926030932/jbgs-20260430xdef14a.htm"
+      ],
+      "source_locator": "Printed p.59, Summary Compensation Table and footnotes (1)–(4)",
+      "temporal_scope": "Company FY2025 service and dated changes described in the 2026 proxy; not assumed continuous throughout FY2023–FY2026.",
+      "evidence_status": "relationship_and_company_compensation_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_JBGS_IND_GEORGE_XANDERS",
+      "source": "ENT_JBGS",
+      "target": "IND_GEORGE_XANDERS",
+      "relationship_type": "documented_executive_connection",
+      "description": "Chief investment officer; co-president from February 2026",
+      "source_ids": [
+        "JBGS_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1689796/000110465926030932/jbgs-20260430xdef14a.htm"
+      ],
+      "source_locator": "Printed p.59, Summary Compensation Table and footnotes (1)–(4)",
+      "temporal_scope": "Company FY2025 service and dated changes described in the 2026 proxy; not assumed continuous throughout FY2023–FY2026.",
+      "evidence_status": "relationship_and_company_compensation_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_JBGS_IND_EVAN_REGAN_LEVINE",
+      "source": "ENT_JBGS",
+      "target": "IND_EVAN_REGAN_LEVINE",
+      "relationship_type": "documented_executive_connection",
+      "description": "Chief strategy officer",
+      "source_ids": [
+        "JBGS_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1689796/000110465926030932/jbgs-20260430xdef14a.htm"
+      ],
+      "source_locator": "Printed p.59, Summary Compensation Table and footnotes (1)–(4)",
+      "temporal_scope": "Company FY2025 service and dated changes described in the 2026 proxy; not assumed continuous throughout FY2023–FY2026.",
+      "evidence_status": "relationship_and_company_compensation_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_JBGS_IND_STEVEN_MUSELES",
+      "source": "ENT_JBGS",
+      "target": "IND_STEVEN_MUSELES",
+      "relationship_type": "documented_executive_connection",
+      "description": "Chief legal officer",
+      "source_ids": [
+        "JBGS_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1689796/000110465926030932/jbgs-20260430xdef14a.htm"
+      ],
+      "source_locator": "Printed p.59, Summary Compensation Table and footnotes (1)–(4)",
+      "temporal_scope": "Company FY2025 service and dated changes described in the 2026 proxy; not assumed continuous throughout FY2023–FY2026.",
+      "evidence_status": "relationship_and_company_compensation_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_RKLB_IND_NINA_ARMAGNO",
+      "source": "ENT_RKLB",
+      "target": "IND_NINA_ARMAGNO",
+      "relationship_type": "documented_director_connection",
+      "description": "Nonemployee director during 2025",
+      "source_ids": [
+        "SGOWN_RKLB_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1819994/000162828026023922/rklb-20260406.htm"
+      ],
+      "source_locator": "Printed p.43, 2025 Director Compensation Table",
+      "temporal_scope": "Company FY2025 service and dated changes described in the 2026 proxy; not assumed continuous throughout FY2023–FY2026.",
+      "evidence_status": "relationship_and_company_compensation_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_RKLB_IND_EDWARD_FRANK",
+      "source": "ENT_RKLB",
+      "target": "IND_EDWARD_FRANK",
+      "relationship_type": "documented_director_connection",
+      "description": "Nonemployee director during 2025",
+      "source_ids": [
+        "SGOWN_RKLB_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1819994/000162828026023922/rklb-20260406.htm"
+      ],
+      "source_locator": "Printed p.43, 2025 Director Compensation Table",
+      "temporal_scope": "Company FY2025 service and dated changes described in the 2026 proxy; not assumed continuous throughout FY2023–FY2026.",
+      "evidence_status": "relationship_and_company_compensation_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_RKLB_IND_JON_OLSON",
+      "source": "ENT_RKLB",
+      "target": "IND_JON_OLSON",
+      "relationship_type": "documented_director_connection",
+      "description": "Nonemployee director during 2025",
+      "source_ids": [
+        "SGOWN_RKLB_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1819994/000162828026023922/rklb-20260406.htm"
+      ],
+      "source_locator": "Printed p.43, 2025 Director Compensation Table",
+      "temporal_scope": "Company FY2025 service and dated changes described in the 2026 proxy; not assumed continuous throughout FY2023–FY2026.",
+      "evidence_status": "relationship_and_company_compensation_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_RKLB_IND_KENNETH_POSSENRIEDE",
+      "source": "ENT_RKLB",
+      "target": "IND_KENNETH_POSSENRIEDE",
+      "relationship_type": "documented_director_connection",
+      "description": "Nonemployee director during 2025",
+      "source_ids": [
+        "SGOWN_RKLB_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1819994/000162828026023922/rklb-20260406.htm"
+      ],
+      "source_locator": "Printed p.43, 2025 Director Compensation Table",
+      "temporal_scope": "Company FY2025 service and dated changes described in the 2026 proxy; not assumed continuous throughout FY2023–FY2026.",
+      "evidence_status": "relationship_and_company_compensation_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_RKLB_IND_MERLINE_SAINTIL",
+      "source": "ENT_RKLB",
+      "target": "IND_MERLINE_SAINTIL",
+      "relationship_type": "documented_director_connection",
+      "description": "Nonemployee director during 2025",
+      "source_ids": [
+        "SGOWN_RKLB_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1819994/000162828026023922/rklb-20260406.htm"
+      ],
+      "source_locator": "Printed p.43, 2025 Director Compensation Table",
+      "temporal_scope": "Company FY2025 service and dated changes described in the 2026 proxy; not assumed continuous throughout FY2023–FY2026.",
+      "evidence_status": "relationship_and_company_compensation_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_RKLB_IND_ALEX_SLUSKY",
+      "source": "ENT_RKLB",
+      "target": "IND_ALEX_SLUSKY",
+      "relationship_type": "documented_director_connection",
+      "description": "Nonemployee director during 2025",
+      "source_ids": [
+        "SGOWN_RKLB_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1819994/000162828026023922/rklb-20260406.htm"
+      ],
+      "source_locator": "Printed p.43, 2025 Director Compensation Table",
+      "temporal_scope": "Company FY2025 service and dated changes described in the 2026 proxy; not assumed continuous throughout FY2023–FY2026.",
+      "evidence_status": "relationship_and_company_compensation_supported_personal_government_receipts_unquantified",
       "government_attributed_personal_receipts_usd": null
     }
   ]
