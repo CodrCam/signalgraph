@@ -1,0 +1,581 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "SignalGraph private source archive and evidence graph",
+  "Resources": {
+    "Sources": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketName": {
+          "Fn::Sub": "signalgraph-sources-${AWS::AccountId}-${AWS::Region}"
+        },
+        "VersioningConfiguration": {
+          "Status": "Enabled"
+        },
+        "BucketEncryption": {
+          "ServerSideEncryptionConfiguration": [
+            {
+              "ServerSideEncryptionByDefault": {
+                "SSEAlgorithm": "AES256"
+              }
+            }
+          ]
+        },
+        "PublicAccessBlockConfiguration": {
+          "BlockPublicAcls": true,
+          "BlockPublicPolicy": true,
+          "IgnorePublicAcls": true,
+          "RestrictPublicBuckets": true
+        },
+        "OwnershipControls": {
+          "Rules": [
+            {
+              "ObjectOwnership": "BucketOwnerEnforced"
+            }
+          ]
+        },
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "SignalGraph"
+          }
+        ]
+      },
+      "DeletionPolicy": "Retain",
+      "UpdateReplacePolicy": "Retain"
+    },
+    "SourcesPolicy": {
+      "Type": "AWS::S3::BucketPolicy",
+      "Properties": {
+        "Bucket": {
+          "Ref": "Sources"
+        },
+        "PolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Deny",
+              "Principal": "*",
+              "Action": "s3:*",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "Sources",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Fn::Sub": "${Sources.Arn}/*"
+                }
+              ],
+              "Condition": {
+                "Bool": {
+                  "aws:SecureTransport": "false"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "Network": {
+      "Type": "AWS::EC2::VPC",
+      "Properties": {
+        "CidrBlock": "10.81.0.0/16",
+        "EnableDnsSupport": true,
+        "EnableDnsHostnames": true,
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "SignalGraph"
+          }
+        ]
+      }
+    },
+    "Subnet0": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Ref": "Network"
+        },
+        "CidrBlock": "10.81.1.0/24",
+        "AvailabilityZone": {
+          "Fn::Select": [
+            0,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": false,
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "SignalGraph"
+          }
+        ]
+      }
+    },
+    "Subnet1": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Ref": "Network"
+        },
+        "CidrBlock": "10.81.2.0/24",
+        "AvailabilityZone": {
+          "Fn::Select": [
+            1,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": false,
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "SignalGraph"
+          }
+        ]
+      }
+    },
+    "Routes": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "Network"
+        },
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "SignalGraph"
+          }
+        ]
+      }
+    },
+    "RouteLink0": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "SubnetId": {
+          "Ref": "Subnet0"
+        },
+        "RouteTableId": {
+          "Ref": "Routes"
+        }
+      }
+    },
+    "RouteLink1": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "SubnetId": {
+          "Ref": "Subnet1"
+        },
+        "RouteTableId": {
+          "Ref": "Routes"
+        }
+      }
+    },
+    "S3Endpoint": {
+      "Type": "AWS::EC2::VPCEndpoint",
+      "Properties": {
+        "VpcId": {
+          "Ref": "Network"
+        },
+        "VpcEndpointType": "Gateway",
+        "ServiceName": {
+          "Fn::Sub": "com.amazonaws.${AWS::Region}.s3"
+        },
+        "RouteTableIds": [
+          {
+            "Ref": "Routes"
+          }
+        ],
+        "PolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": "*",
+              "Action": [
+                "s3:GetObject",
+                "s3:ListBucket"
+              ],
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "Sources",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Fn::Sub": "${Sources.Arn}/*"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "GraphGroup": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "Private SignalGraph Neptune",
+        "VpcId": {
+          "Ref": "Network"
+        },
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "SignalGraph"
+          }
+        ]
+      }
+    },
+    "ServiceGroup": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "SignalGraph query and import service",
+        "VpcId": {
+          "Ref": "Network"
+        },
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "SignalGraph"
+          }
+        ]
+      }
+    },
+    "GraphIngress": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "Properties": {
+        "GroupId": {
+          "Ref": "GraphGroup"
+        },
+        "IpProtocol": "tcp",
+        "FromPort": 8182,
+        "ToPort": 8182,
+        "SourceSecurityGroupId": {
+          "Ref": "ServiceGroup"
+        }
+      }
+    },
+    "GraphSubnets": {
+      "Type": "AWS::Neptune::DBSubnetGroup",
+      "Properties": {
+        "DBSubnetGroupDescription": "SignalGraph private subnets",
+        "SubnetIds": [
+          {
+            "Ref": "Subnet0"
+          },
+          {
+            "Ref": "Subnet1"
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "SignalGraph"
+          }
+        ]
+      }
+    },
+    "LoaderRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "rds.amazonaws.com"
+              },
+              "Action": "sts:AssumeRole"
+            }
+          ]
+        },
+        "Policies": [
+          {
+            "PolicyName": "ReadSignalGraphImport",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": "s3:ListBucket",
+                  "Resource": {
+                    "Fn::GetAtt": [
+                      "Sources",
+                      "Arn"
+                    ]
+                  },
+                  "Condition": {
+                    "StringLike": {
+                      "s3:prefix": [
+                        "neptune/*"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": "s3:GetObject",
+                  "Resource": {
+                    "Fn::Sub": "${Sources.Arn}/neptune/*"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "SignalGraph"
+          }
+        ]
+      }
+    },
+    "Graph": {
+      "Type": "AWS::Neptune::DBCluster",
+      "Properties": {
+        "DBClusterIdentifier": "signalgraph-main",
+        "DBSubnetGroupName": {
+          "Ref": "GraphSubnets"
+        },
+        "VpcSecurityGroupIds": [
+          {
+            "Ref": "GraphGroup"
+          }
+        ],
+        "StorageEncrypted": true,
+        "IamAuthEnabled": true,
+        "BackupRetentionPeriod": 7,
+        "DeletionProtection": true,
+        "DBPort": 8182,
+        "ServerlessScalingConfiguration": {
+          "MinCapacity": 1,
+          "MaxCapacity": 2.5
+        },
+        "AssociatedRoles": [
+          {
+            "RoleArn": {
+              "Fn::GetAtt": [
+                "LoaderRole",
+                "Arn"
+              ]
+            }
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "SignalGraph"
+          }
+        ]
+      },
+      "DeletionPolicy": "Snapshot",
+      "UpdateReplacePolicy": "Snapshot",
+      "DependsOn": [
+        "S3Endpoint",
+        "GraphIngress"
+      ]
+    },
+    "Writer": {
+      "Type": "AWS::Neptune::DBInstance",
+      "Properties": {
+        "DBInstanceIdentifier": "signalgraph-main-writer",
+        "DBInstanceClass": "db.serverless",
+        "DBClusterIdentifier": {
+          "Ref": "Graph"
+        },
+        "DBSubnetGroupName": {
+          "Ref": "GraphSubnets"
+        },
+        "PubliclyAccessible": false,
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "SignalGraph"
+          }
+        ]
+      }
+    },
+    "ServiceRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              },
+              "Action": "sts:AssumeRole"
+            }
+          ]
+        },
+        "Policies": [
+          {
+            "PolicyName": "SignalGraphService",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "logs:CreateLogStream",
+                    "logs:PutLogEvents"
+                  ],
+                  "Resource": {
+                    "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/signalgraph-graph-service:*"
+                  }
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "ec2:CreateNetworkInterface",
+                    "ec2:DescribeNetworkInterfaces",
+                    "ec2:DescribeSubnets",
+                    "ec2:DeleteNetworkInterface",
+                    "ec2:AssignPrivateIpAddresses",
+                    "ec2:UnassignPrivateIpAddresses"
+                  ],
+                  "Resource": "*"
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "neptune-db:StartLoaderJob",
+                    "neptune-db:GetLoaderJobStatus",
+                    "neptune-db:ReadDataViaQuery",
+                    "neptune-db:GetEngineStatus"
+                  ],
+                  "Resource": {
+                    "Fn::Sub": "arn:${AWS::Partition}:neptune-db:${AWS::Region}:${AWS::AccountId}:${Graph.ClusterResourceId}/*"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "SignalGraph"
+          }
+        ]
+      }
+    },
+    "Logs": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/signalgraph-graph-service",
+        "RetentionInDays": 30,
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "SignalGraph"
+          }
+        ]
+      }
+    },
+    "Service": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "FunctionName": "signalgraph-graph-service",
+        "Description": "Private SignalGraph evidence graph import and bounded read queries",
+        "Runtime": "python3.13",
+        "Handler": "index.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "ServiceRole",
+            "Arn"
+          ]
+        },
+        "MemorySize": 256,
+        "Timeout": 120,
+        "ReservedConcurrentExecutions": 2,
+        "Code": {
+          "ZipFile": "import json\nimport os\n\nimport boto3\nfrom botocore.config import Config\n\n\ndef handler(event, context):\n    client = boto3.client(\n        'neptunedata', endpoint_url='https://' + os.environ['GRAPH_ENDPOINT'] + ':8182',\n        config=Config(connect_timeout=10, read_timeout=90, retries={'max_attempts': 2}))\n    action = event.get('action', 'counts')\n    if action == 'load':\n        result = client.start_loader_job(\n            source='s3://' + os.environ['SOURCE_BUCKET'] + '/neptune/2026-11-13/',\n            format='csv', s3BucketRegion=os.environ['AWS_REGION'],\n            iamRoleArn=os.environ['LOADER_ROLE'], mode='AUTO', failOnError=True,\n            parallelism='LOW', updateSingleCardinalityProperties=True,\n            queueRequest=True)\n    elif action == 'status':\n        result = client.get_loader_job_status(loadId=event['load_id'], details=True, errors=True)\n    elif action == 'health':\n        result = client.get_engine_status()\n    elif action == 'counts':\n        result = {\n            'vertices': client.execute_open_cypher_query(openCypherQuery='MATCH (n) RETURN count(n) AS count')['results'],\n            'edges': client.execute_open_cypher_query(openCypherQuery='MATCH ()-[r]->() RETURN count(r) AS count')['results'],\n            'labels': client.execute_open_cypher_query(openCypherQuery='MATCH (n) RETURN labels(n) AS labels, count(*) AS count ORDER BY count DESC')['results']}\n    elif action == 'connections':\n        entity_id = event.get('entity_id', '')\n        if not isinstance(entity_id, str) or not 1 <= len(entity_id) <= 160:\n            raise ValueError('An entity ID is required')\n        result = client.execute_open_cypher_query(\n            openCypherQuery='MATCH (n)-[r]-(m) WHERE id(n) = $entity_id RETURN id(n) AS root, properties(n) AS person, type(r) AS relationship, properties(r) AS evidence, id(m) AS connected_id, properties(m) AS connected LIMIT 100',\n            parameters=json.dumps({'entity_id': entity_id}))\n    else:\n        raise ValueError('Unknown action')\n    result.pop('ResponseMetadata', None)\n    return json.loads(json.dumps(result, default=str))\n"
+        },
+        "Environment": {
+          "Variables": {
+            "GRAPH_ENDPOINT": {
+              "Fn::GetAtt": [
+                "Graph",
+                "Endpoint"
+              ]
+            },
+            "SOURCE_BUCKET": {
+              "Ref": "Sources"
+            },
+            "LOADER_ROLE": {
+              "Fn::GetAtt": [
+                "LoaderRole",
+                "Arn"
+              ]
+            }
+          }
+        },
+        "VpcConfig": {
+          "SecurityGroupIds": [
+            {
+              "Ref": "ServiceGroup"
+            }
+          ],
+          "SubnetIds": [
+            {
+              "Ref": "Subnet0"
+            },
+            {
+              "Ref": "Subnet1"
+            }
+          ]
+        },
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "SignalGraph"
+          }
+        ]
+      },
+      "DependsOn": [
+        "Logs",
+        "Writer"
+      ]
+    }
+  },
+  "Outputs": {
+    "Bucket": {
+      "Value": {
+        "Ref": "Sources"
+      }
+    },
+    "Cluster": {
+      "Value": {
+        "Ref": "Graph"
+      }
+    },
+    "Endpoint": {
+      "Value": {
+        "Fn::GetAtt": [
+          "Graph",
+          "Endpoint"
+        ]
+      }
+    },
+    "Service": {
+      "Value": {
+        "Ref": "Service"
+      }
+    },
+    "Region": {
+      "Value": {
+        "Ref": "AWS::Region"
+      }
+    }
+  }
+}

@@ -1,0 +1,1184 @@
+{
+  "schema_version": "signalgraph.publication-cases.v1",
+  "review_date": "2026-11-13",
+  "window": {
+    "start": "2022-10-01",
+    "end": "2026-09-30"
+  },
+  "sources": {
+    "TR_OGE_2026": {
+      "title": "Donald J. Trump — 2026 annual financial disclosure",
+      "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/69AEAA9D7455ACD585258E27002DDEE1/$FILE/Donald-J-Trump-2026-278ANNUAL.pdf",
+      "published": "2026-06-30",
+      "type": "primary_disclosure",
+      "locator": "PDF pages 4, 848, 850, 854–856; Schedule 1 rows 21, 21.6, 31–32, 114–115, 124–125, 133–134",
+      "period": "Calendar 2025; filed June 29 and certified June 30, 2026",
+      "access": "Original 927-page OGE PDF text inspected"
+    },
+    "TR_REUTERS_2026": {
+      "title": "Trump reports over $1.4 billion in income from crypto ventures",
+      "url": "https://www.investing.com/news/politics-news/trump-reports-over-14-billion-in-income-from-crypto-ventures-4809802",
+      "published": "2026-06-30",
+      "type": "original_reporting_syndicated",
+      "locator": "Article opening and White House response",
+      "publisher": "Reuters",
+      "metadata_note": "Reuters dateline June 30; syndication page timestamp July 23, 2026",
+      "access": "Full syndicated article inspected"
+    },
+    "TR_WSJ_UAE": {
+      "title": "Spy Sheikh Bought Secret Stake in Trump Company",
+      "url": "https://www.wsj.com/politics/policy/spy-sheikh-secret-stake-trump-crypto-tahnoon-ea4d97e8",
+      "published": "2026-01-31",
+      "type": "original_reporting",
+      "locator": "Opening four paragraphs; headline/subheadline",
+      "access": "Article opening inspected; no claim to full paywalled article access"
+    },
+    "TR_BLOCK_UAE": {
+      "title": "UAE Sheikh secretly acquired 49% of Trump’s World Liberty Financial days before inauguration: WSJ",
+      "url": "https://www.theblock.co/news/deals/2026-02-01-uae-sheikh-secretly-acquired-49-of-trumps-world-liberty-financial-days-before-inauguration-wsj-387931",
+      "published": "2026-02-01",
+      "type": "secondary_reporting",
+      "locator": "Quick Take and paragraphs 1–4",
+      "access": "Article inspected; attributes underlying documents to WSJ"
+    },
+    "TR_RESPONSE": {
+      "title": "President Trump says he was unaware of $500 million UAE investment in World Liberty Financial",
+      "url": "https://www.theblock.co/news/deals/2026-02-03-president-trump-says-he-was-unaware-of-500-million-uae-investment-in-world-liberty-financial-388191",
+      "published": "2026-02-03",
+      "type": "reported_response",
+      "locator": "Paragraphs 1–2; linked White House press conference",
+      "access": "Article inspected"
+    },
+    "KU_WYDEN_2024": {
+      "title": "Chairman Wyden to Affinity Partners",
+      "url": "https://www.finance.senate.gov/imo/media/doc/chairman_wyden_to_affinity_partnerspdf.pdf",
+      "published": "2024-09-24",
+      "type": "primary_oversight_letter",
+      "locator": "PDF pages 1–3: fee terms, ownership, foreign investors",
+      "access": "Original eight-page letter inspected",
+      "perspective": "Senator Ron Wyden; allegations and calculations are attributed, not adjudicated findings"
+    },
+    "KU_GARCIA_2026": {
+      "title": "Garcia and Wyden letter to Affinity Partners",
+      "url": "https://oversightdemocrats.house.gov/imo/media/doc/2026-03-19garciawydenlettertoaffinitypartnersrekushnerfundraisingfinal.pdf",
+      "published": "2026-03-19",
+      "type": "primary_oversight_letter",
+      "locator": "PDF page 3, opening paragraph: explicit 2025 fee estimates",
+      "access": "Original five-page letter inspected",
+      "perspective": "Democratic lawmakers; estimate, not audited cash receipts"
+    },
+    "KU_RESPONSE": {
+      "title": "My Response to The New Yorker — Jared Kushner",
+      "url": "https://jaredkushner.com/posts/new-yorker-response/",
+      "published": "2026-10-08",
+      "type": "subject_response",
+      "locator": "Sections 1, 2, 3 and 6",
+      "access": "Response inspected",
+      "outside_window_context": true
+    },
+    "KU_FAMILY": {
+      "title": "The double life of Jared Kushner, mixing business with politics",
+      "url": "https://www.lemonde.fr/en/economy/article/2025/10/07/the-double-life-of-jared-kushner-mixing-business-with-politics-as-emissary-for-his-father-in-law-donald-trump_6746194_19.html",
+      "published": "2025-10-07",
+      "type": "reporting",
+      "locator": "Opening description of Kushner as husband of Ivanka, Trump’s eldest daughter",
+      "access": "Search excerpt inspected; used for family identity only"
+    },
+    "JR_HOUSE_2026": {
+      "title": "Huffman and Garcia letter to Vulcan Elements",
+      "url": "https://oversightdemocrats.house.gov/imo/media/doc/2026-08-11_hnrc__ogr_to_vulcan_elements.pdf",
+      "published": "2026-08-11",
+      "type": "primary_oversight_letter",
+      "locator": "PDF pages 1–3: 1789 investment, Trump Jr. partnership, April meeting and responses",
+      "access": "Original seven-page letter inspected",
+      "perspective": "Democratic committee leaders; attributed account of staff meeting and investigation"
+    },
+    "JR_PP_2026": {
+      "title": "The White House Intervened to Get a $620 Million Deal for a Company Tied to Donald Trump Jr.",
+      "url": "https://www.propublica.org/article/donald-trump-jr-vulcan-deal-white-house",
+      "published": "2026-05-28",
+      "type": "original_investigative_reporting",
+      "locator": "Opening investigation; Pentagon records/interviews",
+      "access": "Article inspected",
+      "reuse_note": "Source has restrictive tool word limit; keep public paraphrase to the single short reporting sentence supplied here"
+    },
+    "JR_NIST_2025": {
+      "title": "Commerce announces CHIPS incentives letter of intent with Vulcan Elements",
+      "url": "https://www.nist.gov/news-events/news/2025/11/department-commerce-announces-chips-incentives-letter-intent-vulcan",
+      "published": "2025-11-03",
+      "type": "primary_agency_announcement",
+      "locator": "Opening paragraphs and joint conditional loan paragraph",
+      "updated": "2026-01-26",
+      "access": "Agency announcement inspected"
+    },
+    "JR_VULCAN_A": {
+      "title": "Vulcan Elements announces $65 million Series A",
+      "url": "https://vulcanelements.com/company/updates/vulcan-elements-announces-65-million-series-a-and-produces-high-performance-rare-earth-magnets-in-the-united-states",
+      "published": "2025-08-11",
+      "type": "company_announcement",
+      "locator": "Opening, production description and expansion targets",
+      "access": "Company announcement inspected"
+    }
+  },
+  "cases": [
+    {
+      "id": "INF_TRUMP_CRYPTO",
+      "title": "Crypto Income",
+      "person": "Donald Trump",
+      "party": "Republican",
+      "role": "U.S. president; business beneficiary",
+      "names": [
+        "Donald Trump",
+        "Eric Trump",
+        "Sheikh Tahnoon bin Zayed Al Nahyan"
+      ],
+      "headline_amount": "$1.42B",
+      "amount_usd": 1424379156,
+      "amount_label": "Selected 2025 crypto proceeds disclosed by Trump-linked companies",
+      "period": "Calendar 2025, within FY2023–FY2026",
+      "status": "Disclosed flows; reported influence concerns",
+      "summary": "Trump’s annual disclosure records about $1.42 billion across selected crypto royalty, token and equity-sale proceeds. The strongest direct ownership link is CIC Digital: $635.1 million in royalties in a company wholly owned by the trust of which Trump is sole beneficiary. These are identifiable business receipts, with mixed family ownership in other entities; they are not a verified personal net-profit total.",
+      "accountability": "The president retained a financial interest while his administration shaped cryptocurrency policy. A foreign official’s investment adds a named international counterparty to the money trail.",
+      "findings": [
+        {
+          "text": "Reuters reported the administration advanced industry-friendly stablecoin rules and reduced crypto enforcement while Trump-family businesses generated crypto income.",
+          "source_ids": [
+            "TR_REUTERS_2026"
+          ],
+          "type": "reported_context"
+        },
+        {
+          "text": "WSJ reported that Eric Trump signed a $500 million sale of 49% of World Liberty four days before inauguration; $187 million of the initial installment was directed to Trump-family entities. The buyer was backed by UAE national security adviser Sheikh Tahnoon, who sought U.S. AI chips.",
+          "source_ids": [
+            "TR_WSJ_UAE"
+          ],
+          "type": "attributed_document_reporting"
+        },
+        {
+          "text": "The Block identifies the investment vehicle as Aryam Investment 1. The reported $187 million initial payment must not be added to the annual disclosure’s equity proceeds without reconciliation.",
+          "source_ids": [
+            "TR_BLOCK_UAE"
+          ],
+          "type": "secondary_identification_and_accounting_caution"
+        }
+      ],
+      "money": [
+        {
+          "id": "TR_M1",
+          "label": "CIC Digital royalties",
+          "amount_usd": 635068835,
+          "currency": "USD",
+          "type": "disclosed_company_royalties",
+          "recipient": "CIC Digital LLC",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "period": "2025",
+          "locator": "PDF p.848; Schedule 1 row 21.6 (CIC ownership: row 21)",
+          "personal_allocation": "Company 100% owned by Trump’s revocable trust; personal distribution not separately stated"
+        },
+        {
+          "id": "TR_M2",
+          "label": "World Liberty token proceeds",
+          "amount_usd": 526810321,
+          "currency": "USD",
+          "type": "disclosed_company_token_proceeds",
+          "recipient": "DT Marks Defi LLC",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "period": "2025",
+          "locator": "PDF pp.855–856; Schedule 1 rows 124.3–124.12, excluding interest/reward rows 124.5a and 124.6a",
+          "calculation": [
+            236250000,
+            42250000,
+            56036445,
+            150606931,
+            33462160,
+            2754611,
+            2608773,
+            1930440,
+            810716,
+            100245
+          ],
+          "personal_allocation": "Entity ownership: DTTM Operations 69%, member corporation 1%, other Trump-family members 30%; no individual family allocation inferred"
+        },
+        {
+          "id": "TR_M3",
+          "label": "WLF Holdco equity proceeds",
+          "amount_usd": 65625000,
+          "currency": "USD",
+          "type": "disclosed_net_equity_sale_proceeds",
+          "recipient": "DT Marks Defi LLC",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "period": "2025",
+          "locator": "PDF p.855; Schedule 1 row 124.2",
+          "personal_allocation": "Entity receipts; personal distributions not identified"
+        },
+        {
+          "id": "TR_M4",
+          "label": "Stablecoin Holdco capital/equity proceeds",
+          "amount_usd": 196875000,
+          "currency": "USD",
+          "type": "disclosed_net_capital_and_equity_proceeds",
+          "recipient": "DT Marks SC LLC",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "period": "2025",
+          "locator": "PDF p.854; Schedule 1 row 114",
+          "personal_allocation": "Entity ownership: DTTM Operations 69%, member corporation 1%, other Trump-family members 30%"
+        },
+        {
+          "id": "TR_M5",
+          "label": "Aryam investment",
+          "amount_usd": 500000000,
+          "currency": "USD",
+          "type": "reported_equity_purchase_price",
+          "recipient": "World Liberty ownership interests",
+          "source_ids": [
+            "TR_WSJ_UAE",
+            "TR_BLOCK_UAE"
+          ],
+          "date": "2025-01-16",
+          "ownership_percent": 49,
+          "aggregation": "Context only: do not add to TR_M1–TR_M4",
+          "personal_allocation": "Deal value is not Trump’s personal proceeds"
+        },
+        {
+          "id": "TR_M6",
+          "label": "Initial payment directed to family entities",
+          "amount_usd": 187000000,
+          "currency": "USD",
+          "type": "reported_initial_payment",
+          "recipient": "Trump-family entities",
+          "source_ids": [
+            "TR_WSJ_UAE"
+          ],
+          "date": "2025-01",
+          "aggregation": "Overlapping deal component; excluded from headline sum",
+          "personal_allocation": "Entity-level allocation; no verified individual split"
+        }
+      ],
+      "calculation": "635068835 + 526810321 + 65625000 + 196875000 = 1424379156. Counts four separate disclosed receipt categories; excludes wallet balances and the overlapping reported Aryam payment.",
+      "response": {
+        "text": "Trump said he did not know about the UAE investment and that his sons handled the business. The White House told Reuters the family had no conflicts of interest and presidential actions served Americans.",
+        "source_ids": [
+          "TR_RESPONSE",
+          "TR_REUTERS_2026"
+        ]
+      },
+      "confidence_basis": "The receipts and named legal recipients are supported by the original OGE filing. The foreign investment account is attributed investigative reporting. A policy-for-payment agreement is not established by these records.",
+      "missing_fact": "The payment-level reconciliation between Aryam’s full consideration and the two disclosed equity proceeds, plus individual distributions and taxes.",
+      "nodes": [
+        {
+          "id": "P_TRUMP",
+          "label": "Donald Trump",
+          "type": "person"
+        },
+        {
+          "id": "P_ERIC",
+          "label": "Eric Trump",
+          "type": "person"
+        },
+        {
+          "id": "TR_TRUST",
+          "label": "Donald J. Trump Revocable Trust",
+          "type": "trust"
+        },
+        {
+          "id": "C_CIC",
+          "label": "CIC Digital LLC",
+          "type": "company"
+        },
+        {
+          "id": "C_CELEBRATION",
+          "label": "Celebration Coins",
+          "type": "counterparty"
+        },
+        {
+          "id": "C_DTTM",
+          "label": "DTTM Operations LLC",
+          "type": "company"
+        },
+        {
+          "id": "C_DEFI",
+          "label": "DT Marks Defi LLC",
+          "type": "company"
+        },
+        {
+          "id": "C_SC",
+          "label": "DT Marks SC LLC",
+          "type": "company"
+        },
+        {
+          "id": "G_FAMILY_INTERESTS",
+          "label": "Other Trump-family interests — allocation undisclosed",
+          "type": "ownership_group"
+        },
+        {
+          "id": "C_WLF",
+          "label": "World Liberty Financial / related holding structures",
+          "type": "business_group"
+        },
+        {
+          "id": "C_ARYAM",
+          "label": "Aryam Investment 1",
+          "type": "company"
+        },
+        {
+          "id": "P_TAHNOON",
+          "label": "Sheikh Tahnoon bin Zayed Al Nahyan",
+          "type": "foreign_official"
+        },
+        {
+          "id": "C_DJT_HOLD",
+          "label": "DJT Holdings LLC",
+          "type": "company"
+        },
+        {
+          "id": "C_DJT_MEMBER",
+          "label": "DJT Holdings Managing Member LLC",
+          "type": "company"
+        },
+        {
+          "id": "C_DTTM_MEMBER",
+          "label": "DTTM Operations Managing Member Corp",
+          "type": "company"
+        },
+        {
+          "id": "C_DEFI_MEMBER",
+          "label": "DT Marks Defi Member Corp",
+          "type": "company"
+        },
+        {
+          "id": "C_SC_MEMBER",
+          "label": "DT Marks SC Member Corp",
+          "type": "company"
+        },
+        {
+          "id": "C_WLF_HOLD",
+          "label": "WLF Holdco LLC",
+          "type": "company"
+        },
+        {
+          "id": "C_SC_HOLD",
+          "label": "Stablecoin Holdco LLC",
+          "type": "company"
+        }
+      ],
+      "edges": [
+        {
+          "id": "TR_E1",
+          "source": "P_TRUMP",
+          "target": "TR_TRUST",
+          "type": "beneficiary_of",
+          "label": "Sole beneficiary",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "as_of": "2025-12-31"
+        },
+        {
+          "id": "TR_E2",
+          "source": "TR_TRUST",
+          "target": "C_CIC",
+          "type": "owns",
+          "label": "100% ownership",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "ownership_percent": 100,
+          "as_of": "2025"
+        },
+        {
+          "id": "TR_E3",
+          "source": "C_CELEBRATION",
+          "target": "C_CIC",
+          "type": "royalties",
+          "label": "2025 royalties: $635.1M",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "amount_usd": 635068835,
+          "period": "2025",
+          "money_id": "TR_M1"
+        },
+        {
+          "id": "TR_E4",
+          "source": "C_DTTM",
+          "target": "C_DEFI",
+          "type": "owns",
+          "label": "69% ownership",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "ownership_percent": 69,
+          "as_of": "2025"
+        },
+        {
+          "id": "TR_E5",
+          "source": "C_DTTM",
+          "target": "C_SC",
+          "type": "owns",
+          "label": "69% ownership",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "ownership_percent": 69,
+          "as_of": "2025"
+        },
+        {
+          "id": "TR_E6",
+          "source": "G_FAMILY_INTERESTS",
+          "target": "C_DEFI",
+          "type": "owns",
+          "label": "30% family ownership; individuals unallocated",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "ownership_percent": 30,
+          "as_of": "2025"
+        },
+        {
+          "id": "TR_E7",
+          "source": "G_FAMILY_INTERESTS",
+          "target": "C_SC",
+          "type": "owns",
+          "label": "30% family ownership; individuals unallocated",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "ownership_percent": 30,
+          "as_of": "2025"
+        },
+        {
+          "id": "TR_E8",
+          "source": "C_WLF",
+          "target": "C_DEFI",
+          "type": "token_proceeds",
+          "label": "2025 token proceeds: $526.8M",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "amount_usd": 526810321,
+          "period": "2025",
+          "money_id": "TR_M2"
+        },
+        {
+          "id": "TR_E9",
+          "source": "P_TRUMP",
+          "target": "P_ERIC",
+          "type": "parent_of",
+          "label": "Father",
+          "source_ids": [
+            "TR_WSJ_UAE"
+          ]
+        },
+        {
+          "id": "TR_E10",
+          "source": "P_ERIC",
+          "target": "C_WLF",
+          "type": "signatory_for",
+          "label": "Signed reported January 2025 sale",
+          "source_ids": [
+            "TR_WSJ_UAE"
+          ],
+          "date": "2025-01-16"
+        },
+        {
+          "id": "TR_E11",
+          "source": "P_TAHNOON",
+          "target": "C_ARYAM",
+          "type": "backs",
+          "label": "Reported backing; exact ownership undisclosed",
+          "source_ids": [
+            "TR_BLOCK_UAE"
+          ],
+          "as_of": "2025-01"
+        },
+        {
+          "id": "TR_E12",
+          "source": "C_ARYAM",
+          "target": "C_WLF",
+          "type": "reported_equity_purchase",
+          "label": "49% acquired for reported $500M",
+          "source_ids": [
+            "TR_BLOCK_UAE"
+          ],
+          "amount_usd": 500000000,
+          "ownership_percent": 49,
+          "date": "2025-01-16",
+          "money_id": "TR_M5"
+        },
+        {
+          "id": "TR_E13",
+          "source": "TR_TRUST",
+          "target": "C_DJT_HOLD",
+          "type": "owns",
+          "label": "99% ownership",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "ownership_percent": 99,
+          "as_of": "2025",
+          "locator": "OGE PDF p.850"
+        },
+        {
+          "id": "TR_E14",
+          "source": "TR_TRUST",
+          "target": "C_DJT_MEMBER",
+          "type": "owns",
+          "label": "100% ownership",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "ownership_percent": 100,
+          "as_of": "2025",
+          "locator": "OGE PDF p.850"
+        },
+        {
+          "id": "TR_E15",
+          "source": "C_DJT_MEMBER",
+          "target": "C_DJT_HOLD",
+          "type": "owns",
+          "label": "1% ownership",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "ownership_percent": 1,
+          "as_of": "2025",
+          "locator": "OGE PDF p.850"
+        },
+        {
+          "id": "TR_E16",
+          "source": "C_DJT_HOLD",
+          "target": "C_DTTM",
+          "type": "owns",
+          "label": "99% ownership",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "ownership_percent": 99,
+          "as_of": "2025",
+          "locator": "OGE PDF p.856"
+        },
+        {
+          "id": "TR_E17",
+          "source": "C_DTTM_MEMBER",
+          "target": "C_DTTM",
+          "type": "owns",
+          "label": "1% ownership",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "ownership_percent": 1,
+          "as_of": "2025",
+          "locator": "OGE PDF p.856"
+        },
+        {
+          "id": "TR_E18",
+          "source": "C_DJT_MEMBER",
+          "target": "C_DTTM_MEMBER",
+          "type": "owns",
+          "label": "100% ownership",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "ownership_percent": 100,
+          "as_of": "2025",
+          "locator": "OGE PDF p.856"
+        },
+        {
+          "id": "TR_E19",
+          "source": "C_DTTM_MEMBER",
+          "target": "C_DEFI_MEMBER",
+          "type": "owns",
+          "label": "100% ownership",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "ownership_percent": 100,
+          "as_of": "2025",
+          "locator": "OGE PDF p.856"
+        },
+        {
+          "id": "TR_E20",
+          "source": "C_DEFI_MEMBER",
+          "target": "C_DEFI",
+          "type": "owns",
+          "label": "1% ownership",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "ownership_percent": 1,
+          "as_of": "2025",
+          "locator": "OGE PDF p.855"
+        },
+        {
+          "id": "TR_E21",
+          "source": "C_DTTM_MEMBER",
+          "target": "C_SC_MEMBER",
+          "type": "owns",
+          "label": "100% ownership",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "ownership_percent": 100,
+          "as_of": "2025",
+          "locator": "OGE PDF p.854"
+        },
+        {
+          "id": "TR_E22",
+          "source": "C_SC_MEMBER",
+          "target": "C_SC",
+          "type": "owns",
+          "label": "1% ownership",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "ownership_percent": 1,
+          "as_of": "2025",
+          "locator": "OGE PDF p.854"
+        },
+        {
+          "id": "TR_E23",
+          "source": "C_DEFI",
+          "target": "C_WLF_HOLD",
+          "type": "owns",
+          "label": "38.25% ownership",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "ownership_percent": 38.25,
+          "as_of": "2025",
+          "locator": "OGE PDF p.855"
+        },
+        {
+          "id": "TR_E24",
+          "source": "C_SC",
+          "target": "C_SC_HOLD",
+          "type": "owns",
+          "label": "38.25% ownership",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "ownership_percent": 38.25,
+          "as_of": "2025",
+          "locator": "OGE PDF p.854"
+        },
+        {
+          "id": "TR_E25",
+          "source": "C_WLF_HOLD",
+          "target": "C_WLF",
+          "type": "related_holding_structure",
+          "label": "World Liberty holding structure",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "as_of": "2025",
+          "locator": "OGE Schedule 1 row124 cross-reference to row405",
+          "note": "Business-group display edge, not ownership percentage"
+        },
+        {
+          "id": "TR_E26",
+          "source": "C_SC_HOLD",
+          "target": "C_WLF",
+          "type": "related_holding_structure",
+          "label": "Stablecoin holding structure",
+          "source_ids": [
+            "TR_OGE_2026"
+          ],
+          "as_of": "2025",
+          "locator": "OGE Schedule 1 row114 cross-reference to row204",
+          "note": "Business-group display edge, not ownership percentage"
+        }
+      ],
+      "calculation_review": {
+        "reviewed_at": "2026-11-13",
+        "method": "Visually inspected original PDF pages 848, 850, 854, 855 and 856. Row labels corrected after visual review; amounts unchanged.",
+        "result": "Four selected categories total 1424379156. Income Amount column used; Value column and wallet balances excluded. Token rows are separately listed distributions; equity proceeds are separate rows. No aggregate parent row was added.",
+        "restriction": "Some receipts are denominated as net proceeds; this does not establish personal after-tax profit. Recipient legal entities have separate ownership structures. Historical reporting of $187M is excluded to avoid overlap."
+      }
+    },
+    {
+      "id": "INF_KUSHNER_AFFINITY",
+      "title": "Foreign Fees",
+      "person": "Jared Kushner",
+      "party": null,
+      "role": "Trump’s son-in-law; Affinity owner; diplomatic adviser",
+      "names": [
+        "Jared Kushner",
+        "Ivanka Trump",
+        "Donald Trump"
+      ],
+      "headline_amount": ">$60M",
+      "amount_usd": 60000000,
+      "amount_operator": ">",
+      "amount_label": "Congressional estimate of Affinity’s 2025 foreign-investor fees",
+      "period": "Calendar 2025; earlier commitment shown as context",
+      "status": "Estimated firm fees; personal distributions undisclosed",
+      "summary": "Kushner’s private-equity firm earns management fees from foreign investors while he undertakes diplomacy for his father-in-law. Garcia and Wyden estimated more than $60 million in 2025 fees, including $39 million from Saudi investors. That is a concrete estimate of revenue to the business he owns, not a $2 billion personal gift.",
+      "accountability": "The issue is the overlap between foreign governments paying an adviser’s business and his influence over U.S. negotiations involving that region. The relationship warrants scrutiny without assuming every foreign investment bought a policy decision.",
+      "findings": [
+        {
+          "text": "The 2024 Senate letter identifies Kushner as Affinity’s sole owner and describes Saudi PIF’s $2 billion 2021 commitment and fee terms. UAE and Qatari sovereign investors also supplied capital. The $2 billion originated before this study window.",
+          "source_ids": [
+            "KU_WYDEN_2024"
+          ],
+          "type": "documented_oversight_account"
+        },
+        {
+          "text": "The March 2026 letter explicitly labels its 2025 fee figures as estimates; it does not supply bank-level proof of Kushner’s take-home income.",
+          "source_ids": [
+            "KU_GARCIA_2026"
+          ],
+          "type": "measurement_limit"
+        }
+      ],
+      "money": [
+        {
+          "id": "KU_M1",
+          "label": "Estimated 2025 foreign-investor fees",
+          "amount_usd": 60000000,
+          "currency": "USD",
+          "type": "congressional_fee_estimate",
+          "recipient": "Affinity Partners",
+          "source_ids": [
+            "KU_GARCIA_2026"
+          ],
+          "operator": ">",
+          "period": "2025",
+          "locator": "PDF p.3 opening paragraph",
+          "personal_allocation": "Wholly owned business; operating costs, tax and owner distributions not established"
+        },
+        {
+          "id": "KU_M2",
+          "label": "Saudi component of estimated fees",
+          "amount_usd": 39000000,
+          "currency": "USD",
+          "type": "congressional_fee_estimate_subset",
+          "recipient": "Affinity Partners",
+          "source_ids": [
+            "KU_GARCIA_2026"
+          ],
+          "period": "2025",
+          "aggregation": "Subset of KU_M1; do not add",
+          "personal_allocation": "Firm-level revenue estimate"
+        },
+        {
+          "id": "KU_M3",
+          "label": "Saudi capital commitment",
+          "amount_usd": 2000000000,
+          "currency": "USD",
+          "type": "committed_investment_capital",
+          "recipient": "Affinity-managed funds",
+          "source_ids": [
+            "KU_WYDEN_2024"
+          ],
+          "date": "2021",
+          "outside_window": true,
+          "aggregation": "Historical context only; not fees or personal wealth"
+        },
+        {
+          "id": "KU_M4",
+          "label": "Earlier aggregate fee claim",
+          "amount_usd": 157500000,
+          "currency": "USD",
+          "type": "disputed_oversight_fee_claim",
+          "recipient": "Affinity Partners",
+          "source_ids": [
+            "KU_WYDEN_2024",
+            "KU_RESPONSE"
+          ],
+          "period": "2021–September 2024",
+          "aggregation": "Crosses start boundary; excluded from in-window total",
+          "personal_allocation": "Kushner disputes the estimate; no individual distribution established"
+        }
+      ],
+      "response": {
+        "text": "Kushner’s October 2026 response disputes the $157 million fee estimate, says fees cover operations, denies using diplomacy to benefit investors, and says he stopped new fundraising conversations when asked to extend his volunteer role. He says outside and White House counsel reviewed compliance.",
+        "source_ids": [
+          "KU_RESPONSE"
+        ],
+        "date": "2026-10-08",
+        "outside_window_context": true
+      },
+      "confidence_basis": "Ownership and commercial relationships are identified; the $60 million amount is a named congressional estimate, not an independently audited total. No personal-distribution figure or policy quid pro quo is asserted.",
+      "missing_fact": "Annual investor-by-investor cash fees, expense deductions, Kushner distributions, and dated conflict-management records; these would turn the current revenue estimate into a reconciled personal-benefit figure.",
+      "nodes": [
+        {
+          "id": "P_TRUMP",
+          "label": "Donald Trump",
+          "type": "person"
+        },
+        {
+          "id": "P_IVANKA",
+          "label": "Ivanka Trump",
+          "type": "person"
+        },
+        {
+          "id": "P_KUSHNER",
+          "label": "Jared Kushner",
+          "type": "person"
+        },
+        {
+          "id": "C_AFFINITY",
+          "label": "Affinity Partners",
+          "type": "company"
+        },
+        {
+          "id": "F_AFFINITY",
+          "label": "Affinity-managed investment funds",
+          "type": "fund_group"
+        },
+        {
+          "id": "SWF_PIF",
+          "label": "Saudi Public Investment Fund",
+          "type": "sovereign_investor"
+        },
+        {
+          "id": "SWF_QATAR",
+          "label": "Qatari sovereign investors",
+          "type": "investor_group"
+        },
+        {
+          "id": "SWF_UAE",
+          "label": "UAE sovereign investors",
+          "type": "investor_group"
+        },
+        {
+          "id": "G_FOREIGN_LP",
+          "label": "Foreign investors — fee payers",
+          "type": "investor_group"
+        }
+      ],
+      "edges": [
+        {
+          "id": "KU_E1",
+          "source": "P_TRUMP",
+          "target": "P_IVANKA",
+          "type": "parent_of",
+          "label": "Father",
+          "source_ids": [
+            "KU_FAMILY"
+          ]
+        },
+        {
+          "id": "KU_E2",
+          "source": "P_IVANKA",
+          "target": "P_KUSHNER",
+          "type": "spouse_of",
+          "label": "Spouse",
+          "source_ids": [
+            "KU_FAMILY"
+          ]
+        },
+        {
+          "id": "KU_E3",
+          "source": "P_KUSHNER",
+          "target": "C_AFFINITY",
+          "type": "owns",
+          "label": "Sole owner, per Senate inquiry",
+          "source_ids": [
+            "KU_WYDEN_2024"
+          ],
+          "as_of": "2024-09-24",
+          "ownership_percent": 100
+        },
+        {
+          "id": "KU_E4",
+          "source": "SWF_PIF",
+          "target": "F_AFFINITY",
+          "type": "capital_commitment",
+          "label": "2021 commitment: $2B",
+          "source_ids": [
+            "KU_WYDEN_2024"
+          ],
+          "date": "2021",
+          "amount_usd": 2000000000,
+          "outside_window": true,
+          "money_id": "KU_M3"
+        },
+        {
+          "id": "KU_E5",
+          "source": "C_AFFINITY",
+          "target": "F_AFFINITY",
+          "type": "manages",
+          "label": "Investment management",
+          "source_ids": [
+            "KU_WYDEN_2024"
+          ],
+          "as_of": "2024-09"
+        },
+        {
+          "id": "KU_E6",
+          "source": "G_FOREIGN_LP",
+          "target": "C_AFFINITY",
+          "type": "estimated_management_fees",
+          "label": "2025 fees estimated above $60M",
+          "source_ids": [
+            "KU_GARCIA_2026"
+          ],
+          "period": "2025",
+          "amount_usd": 60000000,
+          "operator": ">",
+          "money_id": "KU_M1"
+        },
+        {
+          "id": "KU_E7",
+          "source": "SWF_PIF",
+          "target": "C_AFFINITY",
+          "type": "estimated_management_fees",
+          "label": "Saudi component estimated $39M",
+          "source_ids": [
+            "KU_GARCIA_2026"
+          ],
+          "period": "2025",
+          "amount_usd": 39000000,
+          "money_id": "KU_M2",
+          "aggregation": "Subset of KU_E6"
+        },
+        {
+          "id": "KU_E8",
+          "source": "SWF_QATAR",
+          "target": "F_AFFINITY",
+          "type": "invests_in",
+          "label": "Capital investor; exact share not asserted",
+          "source_ids": [
+            "KU_WYDEN_2024"
+          ],
+          "as_of": "2024-09"
+        },
+        {
+          "id": "KU_E9",
+          "source": "SWF_UAE",
+          "target": "F_AFFINITY",
+          "type": "invests_in",
+          "label": "Capital investor; exact share not asserted",
+          "source_ids": [
+            "KU_WYDEN_2024"
+          ],
+          "as_of": "2024-09"
+        }
+      ]
+    },
+    {
+      "id": "INF_TRUMPJR_VULCAN",
+      "title": "Family Capital",
+      "person": "Donald Trump Jr.",
+      "party": null,
+      "role": "President’s son; 1789 Capital partner",
+      "names": [
+        "Donald Trump Jr.",
+        "Donald Trump",
+        "John Maslin",
+        "Peter Navarro"
+      ],
+      "headline_amount": "$620M",
+      "amount_usd": 620000000,
+      "amount_label": "Federal loan commitment to a company in his firm’s portfolio",
+      "period": "Investment August 2025; federal announcement November 2025",
+      "status": "Portfolio financing; individual return unpriced",
+      "summary": "1789 Capital, where Donald Trump Jr. is a partner, invested in Vulcan shortly before the government announced a $620 million loan commitment for the magnet producer. The public financing can increase the value of a private investment, but the loan is owed by the company; it is not a $620 million payment to Trump Jr.",
+      "accountability": "This is a traceable route from presidential family connection, through an investment firm, to a federal financing decision. The unresolved financial question is his economic stake and the preferential-treatment question concerns how the financing was initiated and approved.",
+      "findings": [
+        {
+          "text": "ProPublica reported White House intervention in Vulcan’s financing, citing Pentagon records and interviews.",
+          "source_ids": [
+            "JR_PP_2026"
+          ],
+          "type": "attributed_investigative_reporting"
+        },
+        {
+          "text": "The August House letter says 1789 bought equity in August 2025 and recounts Maslin’s April 2026 denial that Vulcan benefited from political favoritism. These are the committee’s account and an attributed denial, not a court finding.",
+          "source_ids": [
+            "JR_HOUSE_2026"
+          ],
+          "type": "primary_oversight_record"
+        },
+        {
+          "text": "Vulcan announced its $65 million Series A in August 2025 and said it was producing magnets; Commerce identified supply-chain and defense applications for the proposed financing.",
+          "source_ids": [
+            "JR_VULCAN_A",
+            "JR_NIST_2025"
+          ],
+          "type": "company_and_agency_context"
+        }
+      ],
+      "money": [
+        {
+          "id": "JR_M1",
+          "label": "Vulcan loan commitment",
+          "amount_usd": 620000000,
+          "currency": "USD",
+          "type": "federal_loan_commitment",
+          "recipient": "Vulcan Elements",
+          "source_ids": [
+            "JR_HOUSE_2026",
+            "JR_NIST_2025"
+          ],
+          "date": "2025-11-03",
+          "personal_allocation": "Trump Jr. stake and proceeds not disclosed",
+          "cash_status": "Commitment; actual disbursements and repayment terms not reconciled"
+        },
+        {
+          "id": "JR_M2",
+          "label": "CHIPS incentives / government equity",
+          "amount_usd": 50000000,
+          "currency": "USD",
+          "type": "proposed_federal_incentive_for_equity",
+          "recipient": "Vulcan Elements",
+          "source_ids": [
+            "JR_NIST_2025"
+          ],
+          "date": "2025-11-03",
+          "cash_status": "Nonbinding preliminary letter of intent in this source; subsequent award status requires current ledger",
+          "personal_allocation": "Government receives equity; not personal cash"
+        },
+        {
+          "id": "JR_M3",
+          "label": "Private Series A round",
+          "amount_usd": 65000000,
+          "currency": "USD",
+          "type": "company_equity_fundraising",
+          "recipient": "Vulcan Elements",
+          "source_ids": [
+            "JR_VULCAN_A"
+          ],
+          "date": "2025-08-11",
+          "personal_allocation": "1789’s participation amount and Trump Jr.’s economics undisclosed",
+          "aggregation": "Private capital, not government spending"
+        }
+      ],
+      "response": {
+        "text": "Maslin told House committee staff that Vulcan had not benefited from political favoritism. The issuer describes an industrial expansion to supply U.S. and allied customers, and Commerce describes domestic supply-chain objectives.",
+        "source_ids": [
+          "JR_HOUSE_2026",
+          "JR_VULCAN_A",
+          "JR_NIST_2025"
+        ]
+      },
+      "confidence_basis": "Partnership, portfolio investment and the federal commitment establish a financial connection. The magnitude of Trump Jr.’s benefit remains unpriced; a company loan cannot establish his proceeds.",
+      "missing_fact": "1789’s Vulcan stake, Trump Jr.’s partnership ownership and carried interest, loan disbursements, decision chronology and conflict reviews.",
+      "nodes": [
+        {
+          "id": "P_TRUMP",
+          "label": "Donald Trump",
+          "type": "person"
+        },
+        {
+          "id": "P_TRUMPJR",
+          "label": "Donald Trump Jr.",
+          "type": "person"
+        },
+        {
+          "id": "C_1789",
+          "label": "1789 Capital",
+          "type": "investment_firm"
+        },
+        {
+          "id": "C_VULCAN",
+          "label": "Vulcan Elements",
+          "type": "company"
+        },
+        {
+          "id": "P_MASLIN",
+          "label": "John Maslin",
+          "type": "person"
+        },
+        {
+          "id": "A_OSC",
+          "label": "Office of Strategic Capital",
+          "type": "federal_agency"
+        },
+        {
+          "id": "A_COMMERCE",
+          "label": "U.S. Department of Commerce",
+          "type": "federal_agency"
+        }
+      ],
+      "edges": [
+        {
+          "id": "JR_E1",
+          "source": "P_TRUMP",
+          "target": "P_TRUMPJR",
+          "type": "parent_of",
+          "label": "Father",
+          "source_ids": [
+            "JR_HOUSE_2026"
+          ]
+        },
+        {
+          "id": "JR_E2",
+          "source": "P_TRUMPJR",
+          "target": "C_1789",
+          "type": "partner_at",
+          "label": "Partner; economic share undisclosed",
+          "source_ids": [
+            "JR_HOUSE_2026"
+          ],
+          "since": "2024-11"
+        },
+        {
+          "id": "JR_E3",
+          "source": "C_1789",
+          "target": "C_VULCAN",
+          "type": "equity_investor",
+          "label": "August 2025 equity investment; stake undisclosed",
+          "source_ids": [
+            "JR_HOUSE_2026"
+          ],
+          "date": "2025-08"
+        },
+        {
+          "id": "JR_E4",
+          "source": "A_OSC",
+          "target": "C_VULCAN",
+          "type": "loan_commitment",
+          "label": "Federal loan commitment: $620M",
+          "source_ids": [
+            "JR_HOUSE_2026",
+            "JR_NIST_2025"
+          ],
+          "date": "2025-11-03",
+          "amount_usd": 620000000,
+          "money_id": "JR_M1"
+        },
+        {
+          "id": "JR_E5",
+          "source": "A_COMMERCE",
+          "target": "C_VULCAN",
+          "type": "proposed_equity_financing",
+          "label": "Proposed CHIPS incentives: $50M",
+          "source_ids": [
+            "JR_NIST_2025"
+          ],
+          "date": "2025-11-03",
+          "amount_usd": 50000000,
+          "money_id": "JR_M2"
+        },
+        {
+          "id": "JR_E6",
+          "source": "P_MASLIN",
+          "target": "C_VULCAN",
+          "type": "chief_executive_of",
+          "label": "CEO",
+          "source_ids": [
+            "JR_VULCAN_A"
+          ],
+          "as_of": "2025-08-11"
+        }
+      ]
+    }
+  ],
+  "editorial_notes": [
+    "Three cases are ready for reviewable publication with amount types visible beside numbers. Do not place mixed firm receipts, capital commitments and individual proceeds in one personal-benefit ranking.",
+    "FY2023–FY2026 denotes the frozen study window, not a claim of complete four-year coverage for each person.",
+    "Family edges establish identity only; they do not assign money or wrongdoing. Group-level Trump-family ownership must not be divided among named relatives without evidence.",
+    "The Aryam equity sale may overlap the annual disclosure equity proceeds. Keep contextual deal values outside the headline sum.",
+    "UMAC is intentionally not quantified in this release because the 331,580-share legacy claim was not reconciled to a current original filing."
+  ]
+}

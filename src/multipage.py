@@ -8,11 +8,12 @@ import hashlib
 from reconciliation import channels, transactions, followups, audit
 from presentation import compact_headings
 from directory_ui import render_directory
+from influence import build_influence, home_feature, load_cases
 
 THRESHOLD = 50_000
 
 ROOT = Path(__file__).resolve().parent
-FILES = [('government-spending.html','Spending'),('individual-benefits.html','Beneficiaries'),('blind-spots.html','Blind Spots'),('methods.html','Evidence')]
+FILES = [('government-spending.html','Spending'),('individual-benefits.html','Beneficiaries'),('influence.html','Influence'),('blind-spots.html','Blind Spots'),('methods.html','Evidence')]
 
 def money(value):
     if value is None: return 'Unquantified'
@@ -31,12 +32,13 @@ def build_multipage(dist, evidence):
     companies=json.loads((ROOT/'data'/'companies.json').read_text())
     reconciliation=json.loads((ROOT/'data'/'reconciliation.json').read_text())
     people=directory['people']; source_map=directory['sources']
+    influence_cases, _ = load_cases()
     assets=dist/'assets'; assets.mkdir(exist_ok=True)
     base='\n'.join(re.findall(r'<style>(.*?)</style>', original,re.S)).replace("url('assets/","url('")
     (assets/'base.css').write_text(base)
-    for asset in ['pages.css','pages.js','theme.css','directory.css']:
+    for asset in ['pages.css','pages.js','theme.css','directory.css','influence.css','influence.js']:
         shutil.copy2(ROOT/asset, assets/asset)
-    asset_revision=hashlib.sha256(b''.join((assets/name).read_bytes() for name in ['base.css','pages.css','pages.js','theme.css','directory.css'])).hexdigest()[:12]
+    asset_revision=hashlib.sha256(b''.join((assets/name).read_bytes() for name in ['base.css','pages.css','pages.js','theme.css','directory.css','influence.css','influence.js'])).hexdigest()[:12]
     shutil.copy2(ROOT/'data'/'people.json',dist/'people-evidence.json')
     shutil.copy2(ROOT/'data'/'companies.json',dist/'company-index.json')
     for filename in ['relationships.json','transactions-evidence.json']:
@@ -67,15 +69,14 @@ def build_multipage(dist, evidence):
     def shell(filename,title,body,active='',depth=0,description=None):
         prefix='../'*depth
         body=compact_headings(body)
-        name_options=''.join('<option value="'+esc(p['name'],quote=True)+'"></option>' for p in sorted(people,key=lambda p:p['name'].casefold()))
-        name_search=f'<search class="site-search" data-site-search hidden aria-label="Site names"><form action="{prefix}individual-benefits.html#directory" method="get"><label for="site-name-search">Search names</label><input id="site-name-search" name="q" type="search" placeholder="Name or company" list="name-options" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="search"><button type="submit">Search</button><datalist id="name-options">{name_options}</datalist></form></search>'
-        if filename == 'individual-benefits.html':
-            name_search = ''
+        search_names=sorted(set([p['name'] for p in people]+[n['label'] for c in influence_cases for n in c['nodes']]),key=str.casefold)
+        name_options=''.join('<option value="'+esc(name,quote=True)+'"></option>' for name in search_names)
+        name_search=f'<search class="site-search" data-site-search aria-label="Site search"><form action="{prefix}search.html" method="get"><label for="site-name-search">Search everyone</label><input id="site-name-search" name="q" type="search" placeholder="Person, family or company" list="name-options" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="search"><button type="submit">Search</button><datalist id="name-options">{name_options}</datalist></form></search>'
         links=''.join(f'<a href="{prefix}{url}"'+(' aria-current="page"' if url==active else '')+f'>{label}</a>' for url,label in FILES)
         desc=description or 'Follow federal spending, named people, compensation, ownership and the gaps in the public record. Primary sources and dated evidence.'
-        html=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{esc(desc,quote=True)}"><meta name="theme-color" content="#0d1413"><meta name="color-scheme" content="dark"><title>{esc(title)} · SignalGraph</title><link rel="icon" href="{prefix}assets/signalgraph-mark.svg" type="image/svg+xml"><link rel="preload" href="{prefix}assets/lora-regular.ttf" as="font" type="font/ttf" crossorigin><link rel="preload" href="{prefix}assets/nunito-sans-regular.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="{prefix}assets/base.css"><link rel="stylesheet" href="{prefix}assets/pages.css"><link rel="stylesheet" href="{prefix}assets/theme.css"><link rel="stylesheet" href="{prefix}assets/directory.css"><script src="{prefix}assets/pages.js" defer></script></head><body><a class="skip" href="#content">Skip to the content</a><header class="topbar"><div class="wrap toprow"><a class="brand" href="{prefix}index.html" aria-label="SignalGraph home"><img class="brandmark" src="{prefix}assets/signalgraph-mark.svg" alt="" width="49" height="46">SignalGraph</a><nav class="nav" aria-label="Primary">{links}</nav>{name_search}</div><div class="reading-line" aria-hidden="true"></div></header><main>{body}</main><footer><div class="wrap footer-row"><span><strong>SignalGraph</strong> · Follow the money</span><nav class="foot-nav" aria-label="Footer"><a href="{prefix}methods.html">Evidence</a><a href="{prefix}blind-spots.html">Blind Spots</a></nav><span>Evidence reviewed November 12, 2026</span></div></footer></body></html>'''
+        html=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{esc(desc,quote=True)}"><meta name="theme-color" content="#0d1413"><meta name="color-scheme" content="dark"><title>{esc(title)} · SignalGraph</title><link rel="icon" href="{prefix}assets/signalgraph-mark.svg" type="image/svg+xml"><link rel="preload" href="{prefix}assets/lora-regular.ttf" as="font" type="font/ttf" crossorigin><link rel="preload" href="{prefix}assets/nunito-sans-regular.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="{prefix}assets/base.css"><link rel="stylesheet" href="{prefix}assets/pages.css"><link rel="stylesheet" href="{prefix}assets/theme.css"><link rel="stylesheet" href="{prefix}assets/directory.css"><link rel="stylesheet" href="{prefix}assets/influence.css"><script src="{prefix}assets/pages.js" defer></script><script src="{prefix}assets/influence.js" defer></script></head><body><a class="skip" href="#content">Skip to the content</a><header class="topbar"><div class="wrap toprow"><a class="brand" href="{prefix}index.html" aria-label="SignalGraph home"><img class="brandmark" src="{prefix}assets/signalgraph-mark.svg" alt="" width="49" height="46">SignalGraph</a><nav class="nav" aria-label="Primary">{links}</nav>{name_search}</div><div class="reading-line" aria-hidden="true"></div></header><main>{body}</main><footer><div class="wrap footer-row"><span><strong>SignalGraph</strong> · Follow the money</span><nav class="foot-nav" aria-label="Footer"><a href="{prefix}methods.html">Evidence</a><a href="{prefix}blind-spots.html">Blind Spots</a></nav><span>Evidence reviewed November 12, 2026</span></div></footer></body></html>'''
         html=html.replace('Evidence reviewed November 12, 2026','Evidence updated November 13, 2026')
-        html=re.sub(r'(assets/(?:base|pages|theme|directory)\.(?:css|js))"',lambda match: match[1]+'?v='+asset_revision+'"',html)
+        html=re.sub(r'(assets/(?:base|pages|theme|directory|influence)\.(?:css|js))"',lambda match: match[1]+'?v='+asset_revision+'"',html)
         path=dist/filename;path.parent.mkdir(exist_ok=True,parents=True);path.write_text(html)
 
     def spotlight(p):
@@ -99,11 +100,7 @@ def build_multipage(dist, evidence):
         ceiling=rows[0][1]['amount']
         return '<ol class="rank-list">'+''.join(f'<li><div class="rank-meta"><a href="people/{p["slug"]}.html">{esc(p["name"])}</a><strong>{money(m["amount"])}</strong></div><small>{esc(p["company"])} · {esc(m["period"])}</small><div class="rank-line" aria-hidden="true"><span style="--value:{100*m["amount"]/ceiling:.4f}%"></span></div></li>' for p,m in rows)+'</ol>'
 
-    # The overview deliberately points into two substantial branches.
-    home=heading('Following public money','Public spending.<br><em>Private benefit.</em>','Follow the money into companies, then examine the people, ownership structures and financial rewards behind them.',extra='<div class="journey"><span>Public agencies</span><i aria-hidden="true">→</i><span>Recipient companies</span><i aria-hidden="true">→</i><span>People &amp; owners</span></div>')
-    home+=f'''<div class="wrap"><div class="landing-grid"><article class="landing-card"><span class="eyebrow">01 · The public ledger</span><h2>Government<br>spending</h2><div><div class="landing-number">{money(total)}</div><p class="landing-caption">Reported net federal contract obligations across four fiscal years. FY2026 remains incomplete.</p></div><div class="mini-bars" aria-hidden="true"><span style="height:88%"><b>2023</b></span><span style="height:87%"><b>2024</b></span><span style="height:98%"><b>2025</b></span><span class="tentative" style="height:94%"><b>2026</b></span></div><p>Four years of recipient records, the companies named in the research, payment errors and unresolved oversight findings.</p><a class="action-link" href="government-spending.html">Explore government spending <span aria-hidden="true">→</span></a></article><article class="landing-card people-landing"><span class="eyebrow">02 · The people behind it</span><h2>Individual<br>benefits</h2><div><div class="landing-number">{len(people)}<span style="font:400 1.3rem var(--sans);letter-spacing:0"> entries</span></div><p class="landing-caption">Executives, owners and family groups linked to the companies in the spending index.</p></div><p>Compensation, equity and share-sale disclosures of $50,000 or more. Separate profiles for owners whose personal proceeds remain unresolved.</p><p class="small-note">{len(qualified)} have a qualifying documented financial measure. {len(unknown)} have unquantified ownership or leadership connections.</p><a class="action-link" href="individual-benefits.html">Meet the people <span aria-hidden="true">→</span></a></article></div><div class="insight-band"><h2>The most revealing gaps<br>are in the connections.</h2><div><p>A company award, an executive pay package and an owner’s proceeds answer different questions. Each page shows what the record establishes and what remains missing.</p><p><a href="blind-spots.html">Explore the open questions →</a></p></div></div></div>'''
-    home=re.sub(r'<div class="mini-bars" aria-hidden="true">.*?</div>', '<div class="mini-bars" aria-hidden="true">'+home_bars+'</div>',home,flags=re.S)
-    home+='<section class="wrap research-download"><span class="eyebrow">New evidence · November 2026 review</span><h2>What happens when the funding safeguards change?</h2><p>GAO documents changes to Intel’s CHIPS milestones and payment terms. New profiles also connect pharmaceutical distribution, construction and property leases to the people behind those companies.</p><a class="action-link" href="government-spending.html#spending-channels">Follow the newly examined routes →</a><p class="reconciliation-notice"><a href="reconciliation.html">Read the evidence review →</a></p></section>'
+    home=home_feature()
     shell('index.html','Accountability',home)
 
     # Government page: retain the audited case narratives and expand the raw record view.
@@ -142,6 +139,7 @@ def build_multipage(dist, evidence):
     comparisons='<section class="content-section wrap" id="comparisons"><div class="section-head"><h2>Compare like with like.</h2><p>These are the largest verified values in this selected report cohort. Each comparison uses one measure. Figures are not a government-paid personal-income ranking.</p></div><div class="metric-grid"><article class="metric-box warm"><span class="eyebrow">Equity vesting &amp; option exercise</span><h3>Value when equity becomes available</h3>'+rank_chart('equity')+'<p class="small-note">2025 gross vesting value plus exercise spread, before taxes. Stock sales are a separate event; adding them could count the same shares twice.</p></article><article class="metric-box"><span class="eyebrow">Reported compensation</span><h3>Annual pay-package disclosures</h3>'+rank_chart('compensation')+'<p class="small-note">Summary Compensation Table totals include grant-date values and can include awards later forfeited. Issuer fiscal-year labels are shown; these are not all cash received.</p></article></div></section>'
     comparisons+=transactions(reconciliation,source_map)
     benefits+=render_directory(people,person_card,THRESHOLD)
+    benefits+='<div class="wrap influence-prompt"><h2>Political Connections</h2><p>Officials, their families and the businesses connected to their financial interests.</p><a href="influence.html">Explore Influence →</a></div>'
     benefits+=comparisons
     benefits+='<div class="wrap research-download"><h2>What could change these profiles?</h2><p>Ownership records, complete stock-sale histories, private distributions, and personal allocation evidence could materially change the findings.</p><a class="action-link" href="blind-spots.html">See the next research questions →</a></div>'
     shell('individual-benefits.html','Beneficiaries',benefits,'individual-benefits.html')
@@ -172,6 +170,7 @@ def build_multipage(dist, evidence):
             body+='</tbody></table></div><p class="small-note">Years not shown have not been verified here. These disclosures are not a complete four-year personal cash-flow total.</p>'
         if not p['measurements'] and not p.get('ownership'):body+='<p>The cited records establish the relationship described above. Personal compensation, distributions, ownership percentages and liquidity proceeds remain unresolved.</p>'
         if p['notes']:body+='<ul class="fact-list">'+''.join(f'<li>{esc(note)}</li>' for note in p['notes'])+'</ul>'
+        if p['name'] == 'Tommy Fisher': body+='<div class="influence-prompt"><h2>Wall Contracts</h2><p>Family leadership, political access and the procurement challenge behind Fisher’s federal awards.</p><a href="../influence/fisher.html">Trace the Fisher connections →</a></div>'
         body+='</div><aside><h2>What is still missing.</h2><ul class="fact-list">'+''.join(f'<li>{esc(q)}</li>' for q in p['unknowns'])+'</ul><div class="evidence-note"><p>Government-attributed personal income is unverified. A company’s government-revenue share does not establish which dollars funded an individual’s compensation or gains.</p></div><h2>Sources for this profile.</h2><ul class="supporting-sources">'
         for sid in dict.fromkeys(p['source_ids']):
             s=source_map[sid];body+='<li>'+src(sid)+'<small>'+esc('; '.join(s.get('locators',[])))+'</small></li>'
@@ -195,11 +194,13 @@ def build_multipage(dist, evidence):
     ]
     def gaps(rows):
         return '<div class="blindspot-list">'+''.join(f'<article class="blindspot"><span class="gap-index">{i:02}</span><h3>{esc(title)}</h3><p>{esc(detail)}</p><p class="next-evidence"><strong>Next evidence:</strong> {esc(next_step)}</p></article>' for i,(title,detail,next_step) in enumerate(rows,1))+'</div>'
-    blind=heading('The next investigation','The gaps are<br><em>part of the story.</em>','Some evidence is missing. Other beneficiaries and spending routes may not yet have been identified. Both belong on the research agenda.')
-    blind+=section('visibility').replace('<b>03</b>','<b>01</b>',1)
+    blind=heading('Follow the next link','Open Questions','Named investigations show where the money leads and which records would resolve the remaining questions.')
+    blind+='<div class="wrap influence-prompt"><h2>Named Cases</h2><p>Start with the people: political families, company owners, foreign investors and the documented financial links between them.</p><a href="influence.html">Read the investigations →</a></div>'
+    historical_visibility=section('visibility').replace('<b>03</b>','<b>01</b>',1)
     blind+='<section class="content-section wrap"><div class="section-head"><h2>Known blind spots.</h2><p>Specific questions the current evidence cannot answer.</p></div>'+gaps(known)+'</section>'
     blind+='<section class="unknown-field"><div class="wrap"><h2>What have we not<br>thought to look for?</h2><p class="small-note">Questions about ownership, timing and spending channels that the current evidence does not resolve.</p>'+gaps(unexplored)+'</div></section>'
     blind+=followups(reconciliation)
+    blind+='<div class="wrap"><details class="historical-context"><summary>Historical reporting gaps · context</summary>'+historical_visibility+'</details></div>'
     shell('blind-spots.html','Blind spots & next research',blind,'blind-spots.html')
 
     methods=heading('Follow the records','Evidence that<br><em>can be checked.</em>','How the site separates government commitments, company disclosures, personal proceeds and unresolved ownership.')
@@ -218,7 +219,9 @@ def build_multipage(dist, evidence):
     shell('reconciliation.html','Reconciliation audit',audit_body+audit(reconciliation,source_map),'methods.html')
     evidence['expanded_directory']={'profile_count':len(people),'qualifying_documented_entries':len(qualified),'unquantified_entries':len(unknown),'threshold_usd':THRESHOLD,'evidence_file':'people-evidence.json','company_index_file':'company-index.json'}
     (dist/'evidence.json').write_text(json.dumps(evidence,indent=2,ensure_ascii=False))
+    influence_stats=build_influence(dist,shell,people,companies)
     result={'html_pages':len(list(dist.rglob('*.html'))),'profile_count':len(people),'qualifying_documented':len(qualified),'unquantified':len(unknown),'companies':len(companies['companies']),'primary_sources':len(unique)}
+    result.update(influence_stats)
     (dist/'edition.json').write_text(json.dumps(result,indent=2))
     with (dist/'audit-findings.txt').open('a') as notes:
         notes.write(f'\n\nRECONCILIATION REVIEW — NOVEMBER 2026\n{len(people)} selected profiles; {len(qualified)} qualify on a documented financial measure; {len(unknown)} remain unquantified. Threshold: $50,000 in the stated period, not established taxpayer receipts.\n')

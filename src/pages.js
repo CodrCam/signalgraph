@@ -82,7 +82,7 @@ if (filters) {
   }
   clear.addEventListener('click', resetFilters);
   document.querySelectorAll('[data-person-reset]').forEach(button => button.addEventListener('click', resetFilters));
-  if (siteSearch) siteSearch.querySelector('form').addEventListener('submit', event => {
+  if (siteSearch && siteSearch.querySelector('form').getAttribute('action').includes('individual-benefits.html')) siteSearch.querySelector('form').addEventListener('submit', event => {
     event.preventDefault(); search.value = globalSearch.value; company.value = 'all';
     categories.forEach(input => { input.checked = input.value === 'all'; });
     filterPeople();

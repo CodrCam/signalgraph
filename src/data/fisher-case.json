@@ -1,0 +1,379 @@
+{
+  "id": "fisher-contracts",
+  "title": "Wall Contracts",
+  "person": "Tommy Fisher",
+  "people": [
+    "Tommy Fisher",
+    "Grant Fisher",
+    "Ryan Fisher",
+    "Gene Fisher",
+    "Donald Trump",
+    "Jared Kushner",
+    "Kevin Cramer"
+  ],
+  "category": "Contracts",
+  "evidence_status": "Documented awards; reported access; disputed procurement",
+  "period": "FY2026 obligations; 2026 lawsuit; historical access context labeled separately",
+  "profile_url": "people/tommy-fisher.html",
+  "headline_amount": "$13.35B",
+  "amount_label": "Company net contract obligations · FY2026",
+  "amount_usd": 13353127851.7,
+  "amount_type": "government_company_net_obligations",
+  "legal_recipient": "Fisher Sand & Gravel Co.",
+  "personal_receipts_usd": null,
+  "summary": "Fisher Sand & Gravel recorded $13.35 billion in FY2026 net federal contract obligations. Its family leadership and documented political access make the allocation of those contracts a concrete accountability question.",
+  "money": [
+    {
+      "amount_usd": 13353127851.7,
+      "label": "Net federal contract obligations",
+      "legal_recipient": "Fisher Sand & Gravel Co.",
+      "period_start": "2025-10-01",
+      "period_end": "2026-09-30",
+      "uei": "XAVBDA4D13N7",
+      "source_ids": [
+        "FISHER_SNAPSHOT"
+      ],
+      "note": "Commitments to the company; outlays are null in the captured response. Not personal income, profit or completed construction."
+    }
+  ],
+  "findings": [
+    {
+      "label": "Family business",
+      "text": "The company identifies founder Gene Fisher, his son and company president Tommy Fisher, and Tommy’s sons Grant and Ryan as successive generations involved in the business. Their economic stakes and distributions are not disclosed here.",
+      "source_ids": [
+        "FISHER_ABOUT"
+      ]
+    },
+    {
+      "label": "Procurement challenge",
+      "text": "Posillico, one of eleven prequalified contractors, filed a May 2026 protest alleging ten challenged task orders exceeded the underlying contract’s scope. It sought declarations and bid-preparation costs. These are a competitor’s claims, not findings of fraud.",
+      "source_ids": [
+        "FISHER_LAWSUIT"
+      ]
+    },
+    {
+      "label": "Concentration",
+      "text": "The Texas Tribune and ProPublica reported the lawsuit’s allegation that roughly 73% of the relevant contract value went to Fisher and Barnard. CBP defended the process as fair and based on qualifications and reasonable prices. Fisher and Barnard did not respond to those reporters.",
+      "source_ids": [
+        "FISHER_TRIBUNE"
+      ]
+    },
+    {
+      "label": "Reported access",
+      "text": "Trump and Kushner reportedly advocated for Fisher in 2019.",
+      "source_ids": [
+        "FISHER_AXIOS"
+      ],
+      "period_scope": "Historical context; before the financial window"
+    },
+    {
+      "label": "Wealth reporting",
+      "text": "Bloomberg described the Fishers as a new billionaire family in March 2026. The accessible excerpt establishes that reported characterization, but does not expose a reproducible valuation or individual ownership split. It is not treated as billions personally paid from contracts.",
+      "source_ids": [
+        "FISHER_BLOOMBERG"
+      ],
+      "evidence_status": "Reported characterization; numeric valuation not reconstructed"
+    }
+  ],
+  "counterevidence": [
+    {
+      "text": "A historical DoD Inspector General review found no evidence of undue influence in the records it examined for the 2019 Yuma 3 award. But restrictions on questions about White House communications prevented the auditors from fully resolving that issue. This limited finding concerns one earlier procurement, not all FY2026 awards.",
+      "source_ids": [
+        "FISHER_IG"
+      ]
+    }
+  ],
+  "analysis": "The revealing pattern is a large concentration of awards to a politically connected family business, a specific procurement challenge and incomplete transparency around selection and delivery. Those facts support scrutiny of favoritism and value for money. They do not establish that Tommy Fisher personally received the contract total or that little construction proves fraud.",
+  "open_questions": [
+    "Who approved the challenged scope changes and selection decisions, and what comparative bids support value for money?",
+    "For each award, what has been obligated, paid, subcontracted, delivered and accepted against its own timetable?",
+    "What are the family ownership percentages, company margins and actual distributions?",
+    "What contributions or lobbying expenditures can be linked to exact people and legal entities through dated FEC/LDA records?"
+  ],
+  "publication_limits": [
+    "Do not present aggregate national wall mileage as Fisher-specific completion.",
+    "Do not assert a current final disposition of the May 2026 lawsuit; later docket outcome was not independently established in this bounded review.",
+    "Do not claim campaign funds were recycled from these contracts without a traced money path.",
+    "Do not replace company obligations with personalcash or compute family profit using an assumed margin."
+  ],
+  "sources": {
+    "FISHER_ABOUT": {
+      "title": "Fisher Industries · Company history",
+      "url": "https://www.fisherind.com/about-us",
+      "type": "company primary record",
+      "date": null,
+      "accessed": "2026-11-13",
+      "locator": "Our Story, paragraphs2–4; Gene, Tommy, Grant and Ryan",
+      "word_limit": 200
+    },
+    "FISHER_SNAPSHOT": {
+      "title": "USAspending · FY2026 recipient snapshot",
+      "url": "https://signalgraph-accountability.vercel.app/spending-snapshot.json",
+      "type": "captured government API response",
+      "date": "2026-11-12",
+      "accessed": "2026-11-13",
+      "locator": "recipients.2026.response.results[5]; UEI XAVBDA4D13N7; transaction-level award types A–D"
+    },
+    "FISHER_LAWSUIT": {
+      "title": "Posillico bid-protest complaint · May 13, 2026",
+      "url": "https://docketnexus.com/document/479038306/",
+      "type": "court filing reproduced by docket service",
+      "date": "2026-05-13",
+      "accessed": "2026-11-13",
+      "locator": "Complaint paragraphs1–10,15–18,28–35; CFC26-707",
+      "word_limit": 200
+    },
+    "FISHER_TRIBUNE": {
+      "title": "Texas Tribune / ProPublica · Border-wall procurement challenge",
+      "url": "https://www.texastribune.org/2026/05/21/trump-big-bend-border-wall-texas-contracts-tommy-fisher/",
+      "type": "original joint reporting",
+      "date": "2026-05-21",
+      "accessed": "2026-11-13",
+      "locator": "Procurement lawsuit; 11 prequalified vendors; approximately73% concentration; CBP response and no response from companies",
+      "word_limit": 200
+    },
+    "FISHER_AXIOS": {
+      "title": "Axios · Fisher advocacy",
+      "url": "https://www.axios.com/2019/05/24/trump-pushes-border-wall-contract-gop-donor",
+      "type": "reporting attributed to Washington Post",
+      "date": "2019-05-24",
+      "accessed": "2026-11-13",
+      "locator": "Main reporting and Kushner bullet; historical context",
+      "word_limit": 25
+    },
+    "FISHER_IG": {
+      "title": "DoD Inspector General · DODIG-2022-034",
+      "url": "https://www.oversight.gov/sites/default/files/documents/reports/2021-11/DODIG-2022-034.pdf",
+      "type": "government audit",
+      "date": "2021-11-15",
+      "accessed": "2026-11-13",
+      "locator": "Printed pp.22–24: reviewed emails, White House communications limits, Cramer advocacy",
+      "word_limit": 200,
+      "access_note": "Search extraction read exact relevant passages; direct PDF tool opening failed because of file size."
+    },
+    "FISHER_BLOOMBERG": {
+      "title": "Bloomberg · Fisher family wealth reporting",
+      "url": "https://news.bloomberglaw.com/immigration/trumps-border-wall-spending-creates-a-new-billionaire-family",
+      "type": "reported wealth characterization",
+      "date": "2026-03-18",
+      "accessed": "2026-11-13",
+      "locator": "Public headline and opening paragraphs; full valuation analysis subscription-gated",
+      "word_limit": 200
+    }
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": "GOV_FEDERAL",
+        "label": "Federal agencies",
+        "type": "government",
+        "source_ids": [
+          "FISHER_SNAPSHOT"
+        ]
+      },
+      {
+        "id": "ENT_FISHER_SAND",
+        "label": "Fisher Sand & Gravel / Fisher Industries",
+        "type": "company",
+        "source_ids": [
+          "FISHER_ABOUT",
+          "FISHER_SNAPSHOT"
+        ]
+      },
+      {
+        "id": "IND_TOMMY_FISHER",
+        "label": "Tommy Fisher",
+        "type": "person",
+        "role": "Company president",
+        "profile_url": "people/tommy-fisher.html",
+        "source_ids": [
+          "FISHER_ABOUT"
+        ]
+      },
+      {
+        "id": "IND_GENE_FISHER",
+        "label": "Gene Fisher",
+        "type": "person",
+        "role": "Founder; historical context",
+        "source_ids": [
+          "FISHER_ABOUT"
+        ]
+      },
+      {
+        "id": "IND_GRANT_FISHER",
+        "label": "Grant Fisher",
+        "type": "person",
+        "role": "Family member involved in business; financial stake unquantified",
+        "source_ids": [
+          "FISHER_ABOUT"
+        ]
+      },
+      {
+        "id": "IND_RYAN_FISHER",
+        "label": "Ryan Fisher",
+        "type": "person",
+        "role": "Family member involved in business; financial stake unquantified",
+        "source_ids": [
+          "FISHER_ABOUT"
+        ]
+      },
+      {
+        "id": "IND_DONALD_TRUMP",
+        "label": "Donald Trump",
+        "type": "official",
+        "role": "President; historical access link",
+        "source_ids": [
+          "FISHER_AXIOS"
+        ]
+      },
+      {
+        "id": "IND_JARED_KUSHNER",
+        "label": "Jared Kushner",
+        "type": "person",
+        "role": "Historical access link",
+        "source_ids": [
+          "FISHER_AXIOS"
+        ]
+      },
+      {
+        "id": "IND_KEVIN_CRAMER",
+        "label": "Kevin Cramer",
+        "type": "official",
+        "role": "Senator in cited 2019 procurement events",
+        "source_ids": [
+          "FISHER_IG"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "INF_FISHER_AWARD",
+        "source": "GOV_FEDERAL",
+        "target": "ENT_FISHER_SAND",
+        "type": "government_obligation",
+        "label": "$13.35B net obligations",
+        "period": "FY2026",
+        "amount_usd": 13353127851.7,
+        "source_ids": [
+          "FISHER_SNAPSHOT"
+        ],
+        "is_money_flow": true
+      },
+      {
+        "id": "INF_FISHER_LEADERSHIP",
+        "source": "IND_TOMMY_FISHER",
+        "target": "ENT_FISHER_SAND",
+        "type": "leadership",
+        "label": "President",
+        "period": "Company history accessed 2026-11-13",
+        "source_ids": [
+          "FISHER_ABOUT"
+        ],
+        "is_money_flow": false
+      },
+      {
+        "id": "INF_FISHER_FOUNDER",
+        "source": "IND_GENE_FISHER",
+        "target": "ENT_FISHER_SAND",
+        "type": "founded",
+        "label": "Founded 1952",
+        "period": "1952; historical context",
+        "source_ids": [
+          "FISHER_ABOUT"
+        ],
+        "is_money_flow": false
+      },
+      {
+        "id": "INF_FISHER_FAMILY_1",
+        "source": "IND_GENE_FISHER",
+        "target": "IND_TOMMY_FISHER",
+        "type": "family",
+        "label": "Father → son",
+        "source_ids": [
+          "FISHER_ABOUT"
+        ],
+        "is_money_flow": false
+      },
+      {
+        "id": "INF_FISHER_FAMILY_2",
+        "source": "IND_TOMMY_FISHER",
+        "target": "IND_GRANT_FISHER",
+        "type": "family",
+        "label": "Father → son",
+        "source_ids": [
+          "FISHER_ABOUT"
+        ],
+        "is_money_flow": false
+      },
+      {
+        "id": "INF_FISHER_FAMILY_3",
+        "source": "IND_TOMMY_FISHER",
+        "target": "IND_RYAN_FISHER",
+        "type": "family",
+        "label": "Father → son",
+        "source_ids": [
+          "FISHER_ABOUT"
+        ],
+        "is_money_flow": false
+      },
+      {
+        "id": "INF_FISHER_BUSINESS_1",
+        "source": "IND_GRANT_FISHER",
+        "target": "ENT_FISHER_SAND",
+        "type": "business_involvement",
+        "label": "Involved in business",
+        "source_ids": [
+          "FISHER_ABOUT"
+        ],
+        "is_money_flow": false
+      },
+      {
+        "id": "INF_FISHER_BUSINESS_2",
+        "source": "IND_RYAN_FISHER",
+        "target": "ENT_FISHER_SAND",
+        "type": "business_involvement",
+        "label": "Involved in business",
+        "source_ids": [
+          "FISHER_ABOUT"
+        ],
+        "is_money_flow": false
+      },
+      {
+        "id": "INF_FISHER_ACCESS_1",
+        "source": "IND_DONALD_TRUMP",
+        "target": "ENT_FISHER_SAND",
+        "type": "reported_advocacy",
+        "label": "Reported advocacy · 2019",
+        "period": "2019; historical context",
+        "source_ids": [
+          "FISHER_AXIOS"
+        ],
+        "is_money_flow": false
+      },
+      {
+        "id": "INF_FISHER_ACCESS_2",
+        "source": "IND_JARED_KUSHNER",
+        "target": "ENT_FISHER_SAND",
+        "type": "reported_advocacy",
+        "label": "Reported advocacy · 2019",
+        "period": "2019; historical context",
+        "source_ids": [
+          "FISHER_AXIOS"
+        ],
+        "is_money_flow": false
+      },
+      {
+        "id": "INF_FISHER_ACCESS_3",
+        "source": "IND_KEVIN_CRAMER",
+        "target": "ENT_FISHER_SAND",
+        "type": "documented_advocacy",
+        "label": "Advocated consideration",
+        "period": "2019; historical context",
+        "source_ids": [
+          "FISHER_IG"
+        ],
+        "is_money_flow": false
+      }
+    ]
+  }
+}
