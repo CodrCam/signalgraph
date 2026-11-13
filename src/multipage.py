@@ -39,7 +39,6 @@ def build_multipage(dist, evidence):
     asset_revision=hashlib.sha256(b''.join((assets/name).read_bytes() for name in ['base.css','pages.css','pages.js','theme.css','directory.css'])).hexdigest()[:12]
     shutil.copy2(ROOT/'data'/'people.json',dist/'people-evidence.json')
     shutil.copy2(ROOT/'data'/'companies.json',dist/'company-index.json')
-    (dist/'research-agent-prompt.txt').unlink(missing_ok=True)
     for filename in ['relationships.json','transactions-evidence.json']:
         shutil.copy2(ROOT/'data'/filename,dist/filename)
     shutil.copy2(ROOT/'data'/'reconciliation.json',dist/'reconciliation-audit.json')
