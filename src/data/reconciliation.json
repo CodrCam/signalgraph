@@ -1,0 +1,446 @@
+{
+  "review_date": "2026-11-12",
+  "window": {
+    "start": "2022-10-01",
+    "end": "2026-09-30"
+  },
+  "reference_title": "SignalGraph — Reconciled Ledgers, Claims & Calculations (Nov 2026)",
+  "reference_workbook": "https://docs.google.com/spreadsheets/d/1r0Hz3brly6_8lTlcP9VB0hj6wNRmGNexuE_e3f3L26w/edit",
+  "reference_memo": "https://docs.google.com/document/d/1qr9HvUkF5uXE5TSdEcKnZiFJLMJC42kHmPJIGBYIi1A/edit",
+  "site_changes": [
+    {
+      "id": "CHG-01",
+      "title": "Represent the named people without losing existing profiles",
+      "status": "Applied with corrections",
+      "decision": "Retained all 34 previously audited profiles. Added Danny Deep, Tommy Fisher, Robert Mauch, Steven Collis, Craig Abod, Stephen Budorick, Darrell Crate and Pat Gelsinger from the new people and company ledgers. Retained Shyam Sankar and the correct John Heller/Amentum identity. The result is 42 profiles and 39 indexed companies, not the package’s 39 people.",
+      "remaining": "This is a selected research cohort, not a census of government beneficiaries."
+    },
+    {
+      "id": "CHG-02",
+      "title": "Corporate parent totals and the McKesson discrepancy",
+      "status": "Partially supported",
+      "decision": "Retained the exact transaction-based USAspending snapshot. McKesson UEI S1RUKWWRYFL6 has $9,529,383,500.37 FY2023 net obligations. That record does not identify the source of the old negative $507.3M figure. The package provides no reproducible parent-membership bridge for the $64.726B Lockheed Martin or $25.405B UnitedHealth claims, so those consolidated totals remain withheld.",
+      "remaining": "Exact API requests/responses, dated subsidiary membership, transaction IDs and provenance of the negative McKesson rollup."
+    },
+    {
+      "id": "CHG-03",
+      "title": "Pfizer, PIP and malformed source rows",
+      "status": "Identity split retained; amounts held",
+      "decision": "The site already distinguishes ENT_PIP (PIP Manufacturing) and ENT_PFE (Pfizer). The new ledger does not establish the claimed $8.431B reallocation with a verified UEI/award bridge. Original malformed workbooks remain intact for provenance; their repair is not treated as proof that their financial values are correct.",
+      "remaining": "Primary identifiers and award-level evidence for PIP and Pfizer; a machine-readable source-row repair map."
+    },
+    {
+      "id": "CHG-04",
+      "title": "Separate ownership, funds and personal proceeds",
+      "status": "Applied with corrections",
+      "decision": "Unknown private compensation, distributions, stakes and carried interest remain null. Company obligations and managed client assets are not personal income. The 2021 Perspecta proxy supports historical Veritas Funds V/VII links, not a verified current Fund VIII allocation or Musallam’s personal carry.",
+      "remaining": "Dated fund-to-company ownership, economic allocations, distributions and private cap tables.",
+      "source_ids": [
+        "PERSPECTA_2021"
+      ]
+    },
+    {
+      "id": "CHG-05",
+      "title": "Bechtel National’s Hanford earned fee",
+      "status": "Applied with narrower scope",
+      "decision": "Published the $14,208,000 CY2024 earned award fee for the Hanford WTP High-Level Waste Facility portion, against a $15M available pool. Rejected the derived 0.34% “net margin”: the supplied obligation denominator is not reconciled to the same contract portion, period or accounting basis. An earned fee does not establish company net profit or a personal distribution.",
+      "remaining": "Matched cost, obligation and payment records; any allocation to Bechtel owners.",
+      "source_ids": [
+        "HANFORD_CY2024"
+      ]
+    },
+    {
+      "id": "CHG-06",
+      "title": "Longview’s dated portfolio transactions",
+      "status": "Applied with cutoff correction",
+      "decision": "Primary records place the transactions in 2026. The full exhibit spans September 1–October 1; only September’s 2,638,137 shares, about $930.69M at reported prices, fall inside the window. October 1’s 69,734 shares are excluded. The 2,546,119-share snapshot decline is a different calculation. No personal Crown-family proceeds are assigned.",
+      "remaining": "Client-level economic interests and actual distributions; net proceeds after expenses and taxes.",
+      "source_ids": [
+        "LONGVIEW_20261006_EXHIBIT_A",
+        "LONGVIEW_20260903_FORM4"
+      ]
+    },
+    {
+      "id": "CHG-07",
+      "title": "Palantir voting and Thiel’s March sale",
+      "status": "Applied",
+      "decision": "Retained joint Class F voting-control treatment. Added approximately $289.71M gross sale value from 2M shares sold March 2, 2026 by STS Holdings II LLC, whose sole beneficial owner is Thiel. It is a sale-value measure, separate from compensation, capital gain and net personal cash.",
+      "remaining": "Cost basis, taxes, fees, distributions and the rest of the four-year sale history.",
+      "source_ids": [
+        "THIEL_20260304_FORM4",
+        "PLTR_PROXY_2026"
+      ]
+    },
+    {
+      "id": "CHG-08",
+      "title": "Executive pay and Beck’s sale records",
+      "status": "Applied with corrections",
+      "decision": "Retained verified SCT totals instead of replacing them with the new ledger’s rounded or incorrect values. Beck’s March code-S tax-cover sale is about $1.31M. Equatorial Trust’s July sales are about $286.41M; the filing does not allocate the whole trust amount to Beck personally. These are separate records, not a $287.72M personal-cash total.",
+      "remaining": "Complete sale history, trust economic allocation and reconciliation of the older $429.6M claim.",
+      "source_ids": [
+        "BECK_20260304_FORM4",
+        "BECK_20260708_FORM4"
+      ]
+    },
+    {
+      "id": "CHG-09",
+      "title": "Spice’s compensation and realized equity",
+      "status": "Verified figures retained",
+      "decision": "Retained $455,090 FY2025 SCT compensation and $102,066,233 of option-exercise spread plus stock-vesting value. The latter does not prove shares were sold or cash received. Rejected the workbook’s label “Total Net Realized” and its claim that 99.6% of wealth came from stock appreciation.",
+      "remaining": "Original Form 4 rows reconciled by transaction type, date and amended filing; the $145.7M claim remains unresolved.",
+      "source_ids": [
+        "SGOWN_RKLB_PROXY_2026"
+      ]
+    },
+    {
+      "id": "CHG-10",
+      "title": "Build a graph that matches the published directory",
+      "status": "Rebuilt from audited records",
+      "decision": "The supplied JSON has 14 edges and no nodes, despite the workbook’s 78-node completeness claim. The site now generates a complete node index from its 42 profiles and 39 company entries, with typed, sourced company-to-person relationships. These links describe research relationships; they do not imply personal receipt of company awards.",
+      "remaining": "Verified ownership layers, joint-venture economics and agency-to-award links beyond the selected cohort."
+    },
+    {
+      "id": "CHG-11",
+      "title": "State incentive totals",
+      "status": "Replacement total withheld",
+      "decision": "The new $366.2M sum reclassifies source fields as state grants and tax abatements without primary state records. Arithmetic alone cannot validate that reclassification or resolve the original $40.320B discrepancy. Neither total is published as verified public incentives.",
+      "remaining": "Program-by-program primary records, jurisdiction, funding type, period and additive reconciliation."
+    },
+    {
+      "id": "CHG-12",
+      "title": "Date the oversight findings accurately",
+      "status": "Prior corrections retained",
+      "decision": "Retained the already-audited GAO coverage dates and definitions. The package again describes SBIR percentages as commercialization or transition rates; this does not replace the site’s source-based reporting-coverage interpretation. OTA reporting gaps are not established theft or personal benefit.",
+      "remaining": "Updated official follow-up reports and consistent definitions for each reporting gap."
+    },
+    {
+      "id": "CHG-13",
+      "title": "Add omitted recipients and spending channels",
+      "status": "Applied with source checks",
+      "decision": "Added six companies to the index and linked their named people. Highlighted Fisher and AmerisourceBergen’s exact single-UEI snapshot values. Added verified REIT compensation and Intel’s amended funding terms. Withheld unsubstantiated annual totals and UEIs for Carahsoft, COPT, Easterly and Intel. The proposed $27B discovery sum is not a supported additive total.",
+      "remaining": "Actual award/payment exports, GSA lease reconciliation, reseller pass-throughs and current recipient identifiers."
+    },
+    {
+      "id": "CHG-14",
+      "title": "Executive compensation cost allowability",
+      "status": "Unsupported calculation rejected",
+      "decision": "A compensation cost limit does not trace the funding of an executive’s pay. SEC SCT values and allowable contract costs have different definitions. Subtracting an assumed cap from SCT cannot show that 95%+ of pay came from commercial activity; company profit can also arise from government contracts.",
+      "remaining": "Applicable contract terms, year-specific rules, exceptions and actual cost-allocation/reimbursement records.",
+      "source_ids": [
+        "FAR_COST_PRINCIPLES"
+      ]
+    }
+  ],
+  "additional_findings": [
+    "The people ledger omits Shyam Sankar and misidentifies John Heller of Amentum as “Stephen Heller” at CACI. Those regressions were not imported.",
+    "Already-verified FY2025 SCT totals were preserved: Taiclet $23,453,308; Novakovic $25,924,082; Warden $25,357,443; Ortberg $23,581,389. The new ledger supplied different amounts without matching primary tables.",
+    "Danny Deep’s verified FY2025 SCT is $8,394,711, not $8.5M. His October 2026 CEO appointment is outside the spending window; the profile uses his in-window president/operating-executive role.",
+    "The memo’s $14.2B Hanford fee is a 1,000-fold unit error. The primary scorecard shows $14.208M for a defined facility portion.",
+    "Beck’s March filing uses transaction code S for sell-to-cover. Tax withholding purpose is preserved without relabeling the transaction as code F.",
+    "Beck’s 2025 vesting and 2026 trust sales are not added to form a personal-benefit total. Transaction events can relate to the same shares and different beneficial interests.",
+    "Intel’s $769M 2025 capital-incentive recognition is not its total CHIPS cash disbursement. The amended award and government share transaction require separate accounting.",
+    "The supplied negative-search log asserts searches but does not provide complete reproducible raw results. Its claims of exhaustive coverage, zero awards or active monitoring are not adopted.",
+    "The new company ledger contains unsupported round annual values and unverified identifiers. Only the precise existing USAspending snapshot observations and independently checked company disclosures are used."
+  ],
+  "followups": [
+    {
+      "title": "Close the FY2026 reporting gap",
+      "action": "Repeat the exact A–D transaction query after the defense-reporting lag, retain both snapshots, and explain changes by agency and transaction date. Do not assume a calendar milestone guarantees every correction is final.",
+      "status": "Pending a later data snapshot"
+    },
+    {
+      "title": "Reconcile the entire equity history",
+      "action": "Parse original SEC Form 4 and amendment records for Spice, Thiel and Beck. Separate sales, tax-cover trades, gifts, conversions, exercises and vesting; deduplicate and retain the legal holder. Resolve the $145.7M Spice claim without counting proxy vesting twice.",
+      "status": "Partial filings checked; full-window reconciliation open"
+    },
+    {
+      "title": "Find the people behind private entities",
+      "action": "Seek dated public records for Fisher, Carahsoft, Anduril, ADS, Veritas/Peraton, Bechtel and Crown-related trusts. Trace economic interests, distributions and carried interest; keep undisclosed fields null.",
+      "status": "Leadership links supported; personal allocations unresolved"
+    },
+    {
+      "title": "Test Intel’s revised safeguards",
+      "action": "Compare the original CHIPS milestones with amended payment, reporting, recovery and government-equity terms. Track project delivery and tax-credit cash realization separately, using GAO, Commerce and issuer filings.",
+      "status": "Amendment verified; performance follow-up open"
+    },
+    {
+      "title": "Follow pass-through spending",
+      "action": "Match resellers to software vendors and subcontractors, pharmaceutical distributors to suppliers, and lease-owning entities to buildings and beneficial owners. Separate gross receipts, retained fees, costs and distributions.",
+      "status": "New channels identified; retained economics unresolved"
+    },
+    {
+      "title": "Search for beneficiaries the cohort misses",
+      "action": "Screen the full recipient universe by agency, sector, contract concentration and year-over-year change. Check disaster recovery, logistics, infrastructure, loan guarantees, tax benefits and state/local programs. Return new names, counterevidence and reproducible negative searches.",
+      "status": "Discovery scope remains open"
+    },
+    {
+      "title": "Map politicians and extended-family financial connections",
+      "action": "Build dated official rosters and trace publicly documented family businesses, trusts, ownership and payments in both directions. Keep each kinship link, financial interest and official action separately sourced; preserve unknown personal amounts.",
+      "status": "Expanded research brief prepared; political/family discovery remains open"
+    }
+  ],
+  "channels": [
+    {
+      "channel": "Construction · prime contracts",
+      "company": "Fisher Sand & Gravel",
+      "display_value": "$13.35B",
+      "measure": "FY2026 observed net obligations · UEI XAVBDA4D13N7",
+      "finding": "Sixth in the annual single-recipient query. The company’s scale is visible; the owner’s personal take-home is not.",
+      "question": "How much is retained after construction costs and subcontracts, and how are later award changes recorded?",
+      "limits": "$13,353,127,851.70 from the November 12 snapshot. FY2026 reporting remains incomplete. Rank is within that query, not a consolidated corporate-parent ranking.",
+      "people_ids": [
+        "IND_TOMMY_FISHER"
+      ],
+      "source_ids": [
+        "USASPENDING_SNAPSHOT",
+        "FISHER_ABOUT"
+      ],
+      "tone": "warm"
+    },
+    {
+      "channel": "Pharmaceutical distribution",
+      "company": "Cencora / AmerisourceBergen",
+      "display_value": "$7.44B",
+      "measure": "FY2025 net obligations · recipient UEI KABZK8W6PQT3",
+      "finding": "AmerisourceBergen Drug Corp ranks eighth in the annual query. Cencora’s SEC subsidiary list establishes the parent connection.",
+      "question": "What share of these gross receipts pays drug suppliers, and what margin reaches the parent?",
+      "limits": "$7,442,279,749.80 applies to the named recipient record. Mauch’s and Collis’s pay is a separate parent-company disclosure; these records do not trace taxpayer funds to their compensation.",
+      "people_ids": [
+        "IND_ROBERT_MAUCH",
+        "IND_STEVEN_COLLIS"
+      ],
+      "source_ids": [
+        "USASPENDING_SNAPSHOT",
+        "cencora_ex21_2025",
+        "cencora_proxy_2026"
+      ]
+    },
+    {
+      "channel": "Semiconductor incentives",
+      "company": "Intel’s amended CHIPS award",
+      "display_value": "$7.865B",
+      "measure": "Commercial-award disbursements · as of April 2026",
+      "finding": "GAO reports full commercial-award disbursement after Commerce removed remaining original project milestones in exchange for an equity arrangement. Original milestone-progress reporting ceased. Gelsinger had already departed before this change.",
+      "question": "Which delivery and reporting safeguards still apply, and how is the government’s equity protected?",
+      "limits": "The $5.695B accelerated August 2025 payment is included in the $7.865B, not additional. Intel separately recognized $5.4B of FY2025 investment tax credits; recognition is not proof of cash realization. Gelsinger departed before the 2025 amendment.",
+      "people_ids": [
+        "IND_PAT_GELSINGER"
+      ],
+      "source_ids": [
+        "gao_intel_2026",
+        "intel_8k_closing_2025",
+        "intel_10k_2025"
+      ],
+      "tone": "dark"
+    },
+    {
+      "channel": "Software distribution",
+      "company": "Carahsoft’s reseller network",
+      "display_value": "A pass-through question",
+      "measure": "Company → software providers → reseller partners",
+      "finding": "Company disclosures establish the public-sector reseller channel. They do not establish how much of the reported gross volume was retained.",
+      "question": "Which vendors and intermediaries ultimately receive the money, and what margin stays with each?",
+      "limits": "The report’s $22.5B bookings and $1.79B federal-prime figures are not treated as interchangeable or published as independently reconciled totals. Craig Abod’s personal amount remains unquantified.",
+      "people_ids": [
+        "IND_CRAIG_ABOD"
+      ],
+      "source_ids": [
+        "CARAHSOFT_AWS_2022"
+      ]
+    },
+    {
+      "channel": "Government-related property leases",
+      "company": "COPT & Easterly",
+      "display_value": "Two layers of benefit",
+      "measure": "Tenant rent and corporate executive compensation",
+      "finding": "Leased buildings create a route from government or contractor tenants to property-owning entities. Budorick’s $7.58M and Crate’s $10.28M SCT totals are separately documented.",
+      "question": "Which buildings, ownership entities and joint ventures receive federal rent—and what remains after property costs?",
+      "limits": "These are annual reported pay packages, including grant-date awards. No federal rental total or share of pay funded by federal tenants has been established here.",
+      "people_ids": [
+        "IND_STEPHEN_BUDORICK",
+        "IND_DARRELL_CRATE"
+      ],
+      "source_ids": [
+        "copt_proxy_2026",
+        "easterly_proxy_2026"
+      ]
+    },
+    {
+      "channel": "Contract fees · a narrower measure",
+      "company": "Bechtel National at Hanford",
+      "display_value": "$14.208M",
+      "measure": "CY2024 earned award fee · HLW Facility portion",
+      "finding": "DOE awarded 94.7% of the $15M available fee pool for the specified portion of the project. A fee is closer to retained economics than a gross award, but it still is not personal income.",
+      "question": "What do matched cost and payment records show, and is any distribution to owners publicly documented?",
+      "limits": "This scorecard does not establish net profit, fee cash payment, a whole-contract margin, or Brendan Bechtel’s personal benefit. The report’s 0.34% margin was rejected.",
+      "people_ids": [
+        "IND_BRENDAN_BECHTEL"
+      ],
+      "source_ids": [
+        "HANFORD_CY2024"
+      ],
+      "tone": "warm"
+    }
+  ],
+  "transaction_cards": [
+    {
+      "holder": "STS Holdings II LLC",
+      "title": "Thiel’s wholly owned seller",
+      "display_value": "$289.71M",
+      "period": "March 2, 2026 · 2M shares",
+      "description": "The SEC filing identifies Thiel as the LLC’s sole beneficial owner. The sale value clears the $500K inclusion threshold.",
+      "limit": "Gross sale value is not capital gain, net personal cash, or a government-funded payment.",
+      "slug": "peter-thiel",
+      "source_ids": [
+        "THIEL_20260304_FORM4"
+      ]
+    },
+    {
+      "holder": "Equatorial Trust",
+      "title": "A trust linked to Beck",
+      "display_value": "$286.41M",
+      "period": "July 6–8, 2026 · 3.28M shares",
+      "description": "The trust sold shares under a trading plan. Beck has shared trustee control; his personal economic allocation is not disclosed.",
+      "limit": "The full amount stays at the trust level. Beck’s separate $1.31M March sell-to-cover transaction served tax withholding.",
+      "slug": "sir-peter-beck",
+      "source_ids": [
+        "BECK_20260708_FORM4",
+        "BECK_20260304_FORM4"
+      ]
+    },
+    {
+      "holder": "Longview-managed client accounts",
+      "title": "Portfolio sales ≠ family income",
+      "display_value": "$930.69M",
+      "period": "September 2026 · 2.64M shares",
+      "description": "The dated exhibit supports these in-window transactions. Longview says it has no pecuniary interest in the managed shares.",
+      "limit": "Crown-family proceeds remain unquantified. October 1’s $23.23M portfolio transaction value is excluded from this window.",
+      "slug": "crown-family",
+      "source_ids": [
+        "LONGVIEW_20261006_EXHIBIT_A",
+        "LONGVIEW_20260903_FORM4"
+      ]
+    }
+  ],
+  "edition_counts": {
+    "people": 42,
+    "companies": 39,
+    "qualified": 32,
+    "unquantified": 10,
+    "graph_nodes": 81,
+    "graph_edges": 43
+  },
+  "company_measures": [
+    {
+      "id": "bechtel-hanford-earned-fee-cy2024",
+      "company": "Bechtel National, Inc.",
+      "contract": "DE-AC27-01RV14136",
+      "project": "Hanford Waste Treatment and Immobilization Plant, High-Level Waste Facility portion",
+      "period": {
+        "label": "CY2024 award-fee period",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "metric": "Earned award fee",
+      "metric_type": "company_earned_fee",
+      "amount_usd": 14208000,
+      "available_fee_usd": 15000000,
+      "earned_percent": 94.72,
+      "reported_rounded_percent": 94.7,
+      "source_ids": [
+        "hanford_wtp_cy2024"
+      ],
+      "source_locator": "PDF p.1",
+      "qualifications": [
+        "This is the contractor's earned fee for the named portion and period, not evidence of cash payout, company net profit, or Brendan Bechtel's personal income.",
+        "The scorecard does not support treating the whole Hanford contract as a pass-through or claiming a profit margin against all contract obligations.",
+        "Its $250M work-scope assumption is not a verified actual-cost denominator."
+      ],
+      "report_locators": [
+        "reconciliation-memo.txt lines 243–246",
+        "reconciliation-memo.txt line 406"
+      ],
+      "publishable": true
+    },
+    {
+      "id": "intel-original-commercial-award",
+      "company": "Intel",
+      "metric": "Original commercial CHIPS direct-funding ceiling",
+      "metric_type": "award_ceiling",
+      "amount_usd": 7865000000,
+      "date": "2024-11-26",
+      "source_ids": [
+        "intel_commerce_award_2024"
+      ],
+      "source_locator": "Opening announcement",
+      "qualification": "Original terms called for milestone-based disbursement. This award ceiling is not an additional amount to add to subsequent cash received under that award.",
+      "publishable": true
+    },
+    {
+      "id": "intel-commercial-disbursements",
+      "company": "Intel",
+      "metric": "Commercial CHIPS disbursements reported by GAO",
+      "metric_type": "cumulative_disbursements",
+      "amount_usd": 7865000000,
+      "as_of": "2026-04",
+      "source_ids": [
+        "gao_intel_2026"
+      ],
+      "source_locator": "Commerce Disbursed $13 Billion as of April 2026: Intel bullet",
+      "qualification": "GAO's amount covers the amended commercial award, not Section 48D tax credits or all Secure Enclave funding. The August 2025 acceleration is included, not additive.",
+      "publishable": true
+    },
+    {
+      "id": "intel-accelerated-cash-closing",
+      "company": "Intel",
+      "metric": "Accelerated commercial CHIPS cash received at government investment closing",
+      "metric_type": "cash_receipt_for_equity_arrangement",
+      "amount_usd": 5695000000,
+      "date": "2025-08-27",
+      "source_ids": [
+        "intel_8k_closing_2025"
+      ],
+      "source_locator": "Item 1.01 closing paragraph",
+      "shares_issued_to_commerce": 274583000,
+      "warrant_max_shares": 240516150,
+      "secure_enclave_shares_issued_into_escrow": 158740000,
+      "qualification": "One component of cumulative commercial-award disbursements. Shares and a conditional warrant were issued; escrowed shares are tied to Secure Enclave disbursements.",
+      "publishable": true
+    },
+    {
+      "id": "intel-2025-investment-credit-recognition",
+      "company": "Intel",
+      "metric": "U.S. Advanced Manufacturing Investment Credit recognized",
+      "metric_type": "tax_credit_accounting_recognition",
+      "amount_usd": 5400000000,
+      "period": {
+        "label": "Intel FY2025",
+        "end": "2025-12-27"
+      },
+      "source_ids": [
+        "intel_10k_2025",
+        "irs_48d"
+      ],
+      "source_locator": "10-K printed p.80, Government Incentives",
+      "qualification": "Recognized capital-related tax credits, not a verified $5.4B cash receipt. Section 48D permits elective payment; Intel states credits exceeding outstanding tax liabilities may be refunded.",
+      "publishable": true
+    },
+    {
+      "id": "intel-2025-chips-incentive-recognition",
+      "company": "Intel",
+      "metric": "CHIPS capital-related incentives recognized",
+      "metric_type": "grant_accounting_recognition",
+      "amount_usd": 769000000,
+      "period": {
+        "label": "Intel FY2025",
+        "end": "2025-12-27"
+      },
+      "source_ids": [
+        "intel_10k_2025"
+      ],
+      "source_locator": "10-K printed p.80, Government Incentives",
+      "qualification": "Recognition, not annual or cumulative cash disbursements. Later Secure Enclave receipts under the August agreement use equity accounting.",
+      "publishable": true
+    }
+  ]
+}

@@ -1,0 +1,2556 @@
+{
+  "edition": "FY2023–FY2026 beneficiary review",
+  "review_date": "2026-11-12",
+  "window": {
+    "start": "2022-10-01",
+    "end": "2026-09-30"
+  },
+  "scope": "Selected verified recipients and people within a four-year contract-data window; not a census of all beneficiaries. Historical oversight cases retain their own periods.",
+  "spending": {
+    "totals": {
+      "retrieved_at": "2026-11-13T05:12:12.157527+00:00",
+      "endpoint": "https://api.usaspending.gov/api/v2/search/spending_over_time/",
+      "request": {
+        "group": "fiscal_year",
+        "spending_level": "transactions",
+        "filters": {
+          "time_period": [
+            {
+              "start_date": "2022-10-01",
+              "end_date": "2026-09-30"
+            }
+          ],
+          "award_type_codes": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      },
+      "response": {
+        "group": "fiscal_year",
+        "results": [
+          {
+            "aggregated_amount": 779838180481.92,
+            "time_period": {
+              "fiscal_year": "2023"
+            },
+            "Contract_Obligations": 779838180481.92,
+            "Direct_Obligations": 0,
+            "Grant_Obligations": 0,
+            "Idv_Obligations": 0,
+            "Loan_Obligations": 0,
+            "Other_Obligations": 0,
+            "total_outlays": null,
+            "Contract_Outlays": null,
+            "Direct_Outlays": null,
+            "Grant_Outlays": null,
+            "Idv_Outlays": null,
+            "Loan_Outlays": null,
+            "Other_Outlays": null
+          },
+          {
+            "aggregated_amount": 775936183029.17,
+            "time_period": {
+              "fiscal_year": "2024"
+            },
+            "Contract_Obligations": 775936183029.17,
+            "Direct_Obligations": 0,
+            "Grant_Obligations": 0,
+            "Idv_Obligations": 0,
+            "Loan_Obligations": 0,
+            "Other_Obligations": 0,
+            "total_outlays": null,
+            "Contract_Outlays": null,
+            "Direct_Outlays": null,
+            "Grant_Outlays": null,
+            "Idv_Outlays": null,
+            "Loan_Outlays": null,
+            "Other_Outlays": null
+          },
+          {
+            "aggregated_amount": 813802366796.83,
+            "time_period": {
+              "fiscal_year": "2025"
+            },
+            "Contract_Obligations": 813802366796.83,
+            "Direct_Obligations": 0,
+            "Grant_Obligations": 0,
+            "Idv_Obligations": 0,
+            "Loan_Obligations": 0,
+            "Other_Obligations": 0,
+            "total_outlays": null,
+            "Contract_Outlays": null,
+            "Direct_Outlays": null,
+            "Grant_Outlays": null,
+            "Idv_Outlays": null,
+            "Loan_Outlays": null,
+            "Other_Outlays": null
+          },
+          {
+            "aggregated_amount": 802424038595.8,
+            "time_period": {
+              "fiscal_year": "2026"
+            },
+            "Contract_Obligations": 802424038595.8,
+            "Direct_Obligations": 0,
+            "Grant_Obligations": 0,
+            "Idv_Obligations": 0,
+            "Loan_Obligations": 0,
+            "Other_Obligations": 0,
+            "total_outlays": null,
+            "Contract_Outlays": null,
+            "Direct_Outlays": null,
+            "Grant_Outlays": null,
+            "Idv_Outlays": null,
+            "Loan_Outlays": null,
+            "Other_Outlays": null
+          }
+        ],
+        "spending_level": "transactions",
+        "messages": [
+          "For searches, time period start and end dates are currently limited to an earliest date of 2007-10-01.  For data going back to 2000-10-01, use either the Custom Award Download feature on the website or one of our download or bulk_download API endpoints as listed on https://api.usaspending.gov/docs/endpoints. ",
+          "The 'subawards' field will be deprecated in the future. Set 'spending_level' to 'subawards' instead. See documentation for more information.",
+          "You may see additional month, quarter and year results when searching for Awards or Subawards. This is due to Awards or Subawards overlapping with the time period specified but having an 'action date' outside of that time period."
+        ]
+      }
+    },
+    "recipients": {
+      "2023": {
+        "retrieved_at": "2026-11-13T05:11:19.084160+00:00",
+        "endpoint": "https://api.usaspending.gov/api/v2/search/spending_by_category/recipient/",
+        "request": {
+          "filters": {
+            "time_period": [
+              {
+                "start_date": "2022-10-01",
+                "end_date": "2023-09-30"
+              }
+            ],
+            "award_type_codes": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ]
+          },
+          "limit": 10,
+          "page": 1,
+          "spending_level": "transactions"
+        },
+        "response": {
+          "category": "recipient",
+          "spending_level": "transactions",
+          "limit": 10,
+          "page_metadata": {
+            "page": 1,
+            "next": 2,
+            "previous": null,
+            "hasNext": true,
+            "hasPrevious": false
+          },
+          "results": [
+            {
+              "amount": 32469455955.61,
+              "recipient_id": "6cf5fb1b-4988-d087-5dc1-70939d8fc6c4-C",
+              "name": "LOCKHEED MARTIN CORPORATION",
+              "code": "008016958",
+              "uei": "G4KDGE4JFFK7",
+              "total_outlays": null
+            },
+            {
+              "amount": 16220323256.27,
+              "recipient_id": "41694631-0b0f-72ed-221b-29193c88f0d2-C",
+              "name": "OPTUM PUBLIC SECTOR SOLUTIONS, INC.",
+              "code": "785030714",
+              "uei": "XMUZGJN98231",
+              "total_outlays": null
+            },
+            {
+              "amount": 10832262197.66,
+              "recipient_id": "d5ab5f51-db3a-a26f-96a1-1b24c3e2802c-C",
+              "name": "ELECTRIC BOAT CORPORATION",
+              "code": "963737366",
+              "uei": "E7BEKJ4V9528",
+              "total_outlays": null
+            },
+            {
+              "amount": 9529383500.37,
+              "recipient_id": "b54de748-ee64-a1e6-546e-e7007b054797-C",
+              "name": "MCKESSON CORPORATION",
+              "code": "177667227",
+              "uei": "S1RUKWWRYFL6",
+              "total_outlays": null
+            },
+            {
+              "amount": 9495526504.11,
+              "recipient_id": "779b3e3e-364f-7cbc-28a4-a2b4484b86f4-C",
+              "name": "LOCKHEED MARTIN CORPORATION",
+              "code": "794571448",
+              "uei": "XFJMYSYFJEK4",
+              "total_outlays": null
+            },
+            {
+              "amount": 8221763120.47,
+              "recipient_id": "62e141b3-4887-5b39-6b75-eace9326395c-C",
+              "name": "RTX CORPORATION",
+              "code": "001447952",
+              "uei": "QN1BCFY7JDJ5",
+              "total_outlays": null
+            },
+            {
+              "amount": 7984754268.12,
+              "recipient_id": "bf1220c1-2373-042a-e8e1-33d5a29639d0-C",
+              "name": "TRIWEST HEALTHCARE ALLIANCE CORP",
+              "code": "945580587",
+              "uei": "J7M9HPTGJ1S9",
+              "total_outlays": null
+            },
+            {
+              "amount": 7812469739.21,
+              "recipient_id": "9ab85632-42cc-5fa4-2a9c-d734034ddd33-C",
+              "name": "THE BOEING COMPANY",
+              "code": "149879157",
+              "uei": "JJM4FRDZJDX1",
+              "total_outlays": null
+            },
+            {
+              "amount": 7779551423.4,
+              "recipient_id": "1068e466-707d-6b6f-367f-0255fab79b8c-C",
+              "name": "HUMANA GOVERNMENT BUSINESS INC",
+              "code": "805349198",
+              "uei": "ZE6ZM6NKSV43",
+              "total_outlays": null
+            },
+            {
+              "amount": 7672619499.01,
+              "recipient_id": "01c4a3a3-b4c5-ce4e-822b-d17f09985001-C",
+              "name": "RAYTHEON COMPANY",
+              "code": "794598573",
+              "uei": "VTEWM5QSE598",
+              "total_outlays": null
+            }
+          ],
+          "messages": [
+            "For searches, time period start and end dates are currently limited to an earliest date of 2007-10-01.  For data going back to 2000-10-01, use either the Custom Award Download feature on the website or one of our download or bulk_download API endpoints as listed on https://api.usaspending.gov/docs/endpoints. ",
+            "'subawards' will be deprecated in the future. Set ‘spending_level’ to ‘subawards’ instead. See documentation for more information. "
+          ]
+        }
+      },
+      "2024": {
+        "retrieved_at": "2026-11-13T05:11:18.964356+00:00",
+        "endpoint": "https://api.usaspending.gov/api/v2/search/spending_by_category/recipient/",
+        "request": {
+          "filters": {
+            "time_period": [
+              {
+                "start_date": "2023-10-01",
+                "end_date": "2024-09-30"
+              }
+            ],
+            "award_type_codes": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ]
+          },
+          "limit": 10,
+          "page": 1,
+          "spending_level": "transactions"
+        },
+        "response": {
+          "category": "recipient",
+          "spending_level": "transactions",
+          "limit": 10,
+          "page_metadata": {
+            "page": 1,
+            "next": 2,
+            "previous": null,
+            "hasNext": true,
+            "hasPrevious": false
+          },
+          "results": [
+            {
+              "amount": 20141580022.06,
+              "recipient_id": "41694631-0b0f-72ed-221b-29193c88f0d2-C",
+              "name": "OPTUM PUBLIC SECTOR SOLUTIONS, INC.",
+              "code": "785030714",
+              "uei": "XMUZGJN98231",
+              "total_outlays": null
+            },
+            {
+              "amount": 14364194466.06,
+              "recipient_id": "6cf5fb1b-4988-d087-5dc1-70939d8fc6c4-C",
+              "name": "LOCKHEED MARTIN CORPORATION",
+              "code": "008016958",
+              "uei": "G4KDGE4JFFK7",
+              "total_outlays": null
+            },
+            {
+              "amount": 9003907275.15,
+              "recipient_id": "b54de748-ee64-a1e6-546e-e7007b054797-C",
+              "name": "MCKESSON CORPORATION",
+              "code": "177667227",
+              "uei": "S1RUKWWRYFL6",
+              "total_outlays": null
+            },
+            {
+              "amount": 8599888294.4,
+              "recipient_id": "9ab85632-42cc-5fa4-2a9c-d734034ddd33-C",
+              "name": "THE BOEING COMPANY",
+              "code": "149879157",
+              "uei": "JJM4FRDZJDX1",
+              "total_outlays": null
+            },
+            {
+              "amount": 8584611346.92,
+              "recipient_id": "d5ab5f51-db3a-a26f-96a1-1b24c3e2802c-C",
+              "name": "ELECTRIC BOAT CORPORATION",
+              "code": "963737366",
+              "uei": "E7BEKJ4V9528",
+              "total_outlays": null
+            },
+            {
+              "amount": 8404038588.47,
+              "recipient_id": "779b3e3e-364f-7cbc-28a4-a2b4484b86f4-C",
+              "name": "LOCKHEED MARTIN CORPORATION",
+              "code": "794571448",
+              "uei": "XFJMYSYFJEK4",
+              "total_outlays": null
+            },
+            {
+              "amount": 8383006980.68,
+              "recipient_id": "bf1220c1-2373-042a-e8e1-33d5a29639d0-C",
+              "name": "TRIWEST HEALTHCARE ALLIANCE CORP",
+              "code": "945580587",
+              "uei": "J7M9HPTGJ1S9",
+              "total_outlays": null
+            },
+            {
+              "amount": 8029206899.38,
+              "recipient_id": "1068e466-707d-6b6f-367f-0255fab79b8c-C",
+              "name": "HUMANA GOVERNMENT BUSINESS INC",
+              "code": "805349198",
+              "uei": "ZE6ZM6NKSV43",
+              "total_outlays": null
+            },
+            {
+              "amount": 7833507918.59,
+              "recipient_id": "01c4a3a3-b4c5-ce4e-822b-d17f09985001-C",
+              "name": "RAYTHEON COMPANY",
+              "code": "794598573",
+              "uei": "VTEWM5QSE598",
+              "total_outlays": null
+            },
+            {
+              "amount": 7174236706.14,
+              "recipient_id": "ffca72e5-fba2-798a-6969-2a6c45e9f985-C",
+              "name": "BOOZ ALLEN HAMILTON INC",
+              "code": "006928857",
+              "uei": "JCBMLGPE6Z71",
+              "total_outlays": null
+            }
+          ],
+          "messages": [
+            "For searches, time period start and end dates are currently limited to an earliest date of 2007-10-01.  For data going back to 2000-10-01, use either the Custom Award Download feature on the website or one of our download or bulk_download API endpoints as listed on https://api.usaspending.gov/docs/endpoints. ",
+            "'subawards' will be deprecated in the future. Set ‘spending_level’ to ‘subawards’ instead. See documentation for more information. "
+          ]
+        }
+      },
+      "2025": {
+        "retrieved_at": "2026-11-13T05:11:19.182022+00:00",
+        "endpoint": "https://api.usaspending.gov/api/v2/search/spending_by_category/recipient/",
+        "request": {
+          "filters": {
+            "time_period": [
+              {
+                "start_date": "2024-10-01",
+                "end_date": "2025-09-30"
+              }
+            ],
+            "award_type_codes": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ]
+          },
+          "limit": 10,
+          "page": 1,
+          "spending_level": "transactions"
+        },
+        "response": {
+          "category": "recipient",
+          "spending_level": "transactions",
+          "limit": 10,
+          "page_metadata": {
+            "page": 1,
+            "next": 2,
+            "previous": null,
+            "hasNext": true,
+            "hasPrevious": false
+          },
+          "results": [
+            {
+              "amount": 34100007952.06,
+              "recipient_id": "6cf5fb1b-4988-d087-5dc1-70939d8fc6c4-C",
+              "name": "LOCKHEED MARTIN CORPORATION",
+              "code": "008016958",
+              "uei": "G4KDGE4JFFK7",
+              "total_outlays": null
+            },
+            {
+              "amount": 22490531833.8,
+              "recipient_id": "41694631-0b0f-72ed-221b-29193c88f0d2-C",
+              "name": "OPTUM PUBLIC SECTOR SOLUTIONS, INC.",
+              "code": "785030714",
+              "uei": "XMUZGJN98231",
+              "total_outlays": null
+            },
+            {
+              "amount": 21366142819.4,
+              "recipient_id": "d5ab5f51-db3a-a26f-96a1-1b24c3e2802c-C",
+              "name": "ELECTRIC BOAT CORPORATION",
+              "code": "963737366",
+              "uei": "E7BEKJ4V9528",
+              "total_outlays": null
+            },
+            {
+              "amount": 13374744670.22,
+              "recipient_id": "bf1220c1-2373-042a-e8e1-33d5a29639d0-C",
+              "name": "TRIWEST HEALTHCARE ALLIANCE CORP",
+              "code": "945580587",
+              "uei": "J7M9HPTGJ1S9",
+              "total_outlays": null
+            },
+            {
+              "amount": 12073585191.13,
+              "recipient_id": "01c4a3a3-b4c5-ce4e-822b-d17f09985001-C",
+              "name": "RAYTHEON COMPANY",
+              "code": "794598573",
+              "uei": "VTEWM5QSE598",
+              "total_outlays": null
+            },
+            {
+              "amount": 11870730004.52,
+              "recipient_id": "b54de748-ee64-a1e6-546e-e7007b054797-C",
+              "name": "MCKESSON CORPORATION",
+              "code": "177667227",
+              "uei": "S1RUKWWRYFL6",
+              "total_outlays": null
+            },
+            {
+              "amount": 11016914156.25,
+              "recipient_id": "779b3e3e-364f-7cbc-28a4-a2b4484b86f4-C",
+              "name": "LOCKHEED MARTIN CORPORATION",
+              "code": "794571448",
+              "uei": "XFJMYSYFJEK4",
+              "total_outlays": null
+            },
+            {
+              "amount": 7442279749.8,
+              "recipient_id": "edc402f7-abac-eafe-2aae-3fdcd8d1bb8a-C",
+              "name": "AMERISOURCEBERGEN DRUG CORP",
+              "code": "007914906",
+              "uei": "KABZK8W6PQT3",
+              "total_outlays": null
+            },
+            {
+              "amount": 7280696848.45,
+              "recipient_id": "62e141b3-4887-5b39-6b75-eace9326395c-C",
+              "name": "RTX CORPORATION",
+              "code": "001447952",
+              "uei": "QN1BCFY7JDJ5",
+              "total_outlays": null
+            },
+            {
+              "amount": 6704446937.55,
+              "recipient_id": "ffca72e5-fba2-798a-6969-2a6c45e9f985-C",
+              "name": "BOOZ ALLEN HAMILTON INC",
+              "code": "006928857",
+              "uei": "JCBMLGPE6Z71",
+              "total_outlays": null
+            }
+          ],
+          "messages": [
+            "For searches, time period start and end dates are currently limited to an earliest date of 2007-10-01.  For data going back to 2000-10-01, use either the Custom Award Download feature on the website or one of our download or bulk_download API endpoints as listed on https://api.usaspending.gov/docs/endpoints. ",
+            "'subawards' will be deprecated in the future. Set ‘spending_level’ to ‘subawards’ instead. See documentation for more information. "
+          ]
+        }
+      },
+      "2026": {
+        "retrieved_at": "2026-11-13T05:11:19.511265+00:00",
+        "endpoint": "https://api.usaspending.gov/api/v2/search/spending_by_category/recipient/",
+        "request": {
+          "filters": {
+            "time_period": [
+              {
+                "start_date": "2025-10-01",
+                "end_date": "2026-09-30"
+              }
+            ],
+            "award_type_codes": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ]
+          },
+          "limit": 10,
+          "page": 1,
+          "spending_level": "transactions"
+        },
+        "response": {
+          "category": "recipient",
+          "spending_level": "transactions",
+          "limit": 10,
+          "page_metadata": {
+            "page": 1,
+            "next": 2,
+            "previous": null,
+            "hasNext": true,
+            "hasPrevious": false
+          },
+          "results": [
+            {
+              "amount": 22494010526.18,
+              "recipient_id": "41694631-0b0f-72ed-221b-29193c88f0d2-C",
+              "name": "OPTUM PUBLIC SECTOR SOLUTIONS, INC.",
+              "code": "785030714",
+              "uei": "XMUZGJN98231",
+              "total_outlays": null
+            },
+            {
+              "amount": 18755712522.87,
+              "recipient_id": "779b3e3e-364f-7cbc-28a4-a2b4484b86f4-C",
+              "name": "LOCKHEED MARTIN CORPORATION",
+              "code": "794571448",
+              "uei": "XFJMYSYFJEK4",
+              "total_outlays": null
+            },
+            {
+              "amount": 16608760434.24,
+              "recipient_id": "bf1220c1-2373-042a-e8e1-33d5a29639d0-C",
+              "name": "TRIWEST HEALTHCARE ALLIANCE CORP",
+              "code": "945580587",
+              "uei": "J7M9HPTGJ1S9",
+              "total_outlays": null
+            },
+            {
+              "amount": 15348098449.2,
+              "recipient_id": "6cf5fb1b-4988-d087-5dc1-70939d8fc6c4-C",
+              "name": "LOCKHEED MARTIN CORPORATION",
+              "code": "008016958",
+              "uei": "G4KDGE4JFFK7",
+              "total_outlays": null
+            },
+            {
+              "amount": 14930332924.25,
+              "recipient_id": "b54de748-ee64-a1e6-546e-e7007b054797-C",
+              "name": "MCKESSON CORPORATION",
+              "code": "177667227",
+              "uei": "S1RUKWWRYFL6",
+              "total_outlays": null
+            },
+            {
+              "amount": 13353127851.7,
+              "recipient_id": "fa0b2d2c-6660-adbe-e0ea-4035b15e4cbd-C",
+              "name": "FISHER SAND & GRAVEL CO",
+              "code": "100832570",
+              "uei": "XAVBDA4D13N7",
+              "total_outlays": null
+            },
+            {
+              "amount": 12918290624.16,
+              "recipient_id": "d5ab5f51-db3a-a26f-96a1-1b24c3e2802c-C",
+              "name": "ELECTRIC BOAT CORPORATION",
+              "code": "963737366",
+              "uei": "E7BEKJ4V9528",
+              "total_outlays": null
+            },
+            {
+              "amount": 11397097087.79,
+              "recipient_id": "01c4a3a3-b4c5-ce4e-822b-d17f09985001-C",
+              "name": "RAYTHEON COMPANY",
+              "code": "794598573",
+              "uei": "VTEWM5QSE598",
+              "total_outlays": null
+            },
+            {
+              "amount": 10028214803.42,
+              "recipient_id": "62e141b3-4887-5b39-6b75-eace9326395c-C",
+              "name": "RTX CORPORATION",
+              "code": "001447952",
+              "uei": "QN1BCFY7JDJ5",
+              "total_outlays": null
+            },
+            {
+              "amount": 9184981996.46,
+              "recipient_id": "22d282c6-4508-7d30-97f1-7401ea73b12a-C",
+              "name": "THE BOEING COMPANY",
+              "code": "039267141",
+              "uei": "WZWRLY4G3PL8",
+              "total_outlays": null
+            }
+          ],
+          "messages": [
+            "For searches, time period start and end dates are currently limited to an earliest date of 2007-10-01.  For data going back to 2000-10-01, use either the Custom Award Download feature on the website or one of our download or bulk_download API endpoints as listed on https://api.usaspending.gov/docs/endpoints. ",
+            "'subawards' will be deprecated in the future. Set ‘spending_level’ to ‘subawards’ instead. See documentation for more information. "
+          ]
+        }
+      }
+    },
+    "last_updated": {
+      "retrieved_at": "2026-11-13T05:11:19.445289+00:00",
+      "endpoint": "https://api.usaspending.gov/api/v2/awards/last_updated/",
+      "request": null,
+      "response": {
+        "last_updated": "11/12/2026"
+      }
+    }
+  },
+  "people": {
+    "audit_date": "2026-11-12",
+    "status": "Bounded source audit; no allegation of misconduct inferred from compensation or ownership",
+    "sources": {
+      "LMT_PROXY_2026": {
+        "title": "Lockheed Martin 2026 proxy statement",
+        "url": "https://www.sec.gov/Archives/edgar/data/936468/000093646826000004/lmt-20260326.htm",
+        "locators": [
+          "Summary Compensation Table",
+          "p.66 Security Ownership of Management"
+        ]
+      },
+      "LMT_10K_2025": {
+        "title": "Lockheed Martin 2025 Form 10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/936468/000162828026004195/lmt-20251231.htm",
+        "locators": [
+          "Item 1A, dependence on U.S. Government",
+          "MD&A Overview"
+        ]
+      },
+      "GD_PROXY_2026": {
+        "title": "General Dynamics 2026 proxy statement",
+        "url": "https://www.sec.gov/Archives/edgar/data/40533/000130817926000168/gd014595-def14a.htm",
+        "locators": [
+          "p.71 Summary Compensation Table",
+          "p.72 grant-date value explanation",
+          "p.89 Security Ownership of Management",
+          "p.90 Other Beneficial Owners"
+        ]
+      },
+      "GD_10K_2025": {
+        "title": "General Dynamics 2025 Form 10-K",
+        "url": "https://s22.q4cdn.com/891946778/files/doc_financials/2025/q4/GD-2025-10-K.pdf",
+        "locators": [
+          "printed pp.15–16 Customers / U.S. Government (PDF pages 15–16)",
+          "Revenue by customer"
+        ]
+      },
+      "PLTR_PROXY_2026": {
+        "title": "Palantir 2026 proxy statement",
+        "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000019/pltr-20260423.htm",
+        "locators": [
+          "pp.16–17 Voting Structure and Arrangements",
+          "p.43 Option Exercises and Stock Vested",
+          "pp.55–56 Security Ownership"
+        ]
+      },
+      "PLTR_10K_2025": {
+        "title": "Palantir 2025 Form 10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000011/pltr-20251231.htm",
+        "locators": [
+          "p.6 Our Customers",
+          "MD&A Revenue comparison 2025 versus 2024"
+        ]
+      },
+      "RTX_PROXY_2026": {
+        "title": "RTX 2026 proxy statement",
+        "url": "https://investors.rtx.com/static-files/a494e9b4-834a-4d49-9a17-66a0cdd690fd",
+        "locators": [
+          "p.64 Summary Compensation Table (PDF page 68)",
+          "pp.43,53 Total Direct Compensation explanation"
+        ]
+      },
+      "SPACEX_424B4_2026": {
+        "title": "SpaceX final IPO prospectus, June 11, 2026 (filed June 12)",
+        "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026042639/spaceexplorationtechnologi.htm",
+        "locators": [
+          "cover and pp.14–15 founder control",
+          "pp.18–20 The Offering"
+        ]
+      },
+      "HILLIER_DOJ_2019": {
+        "title": "DOJ: Former CEO of Virginia-based defense contractor agrees to pay $20 million",
+        "url": "https://www.justice.gov/archives/opa/pr/former-ceo-virginia-based-defense-contractor-agrees-pay-20-million-settle-false-claims-act",
+        "locators": [
+          "2019 press release identifies majority owner/former CEO and settlement of allegations; not current stake percentage"
+        ]
+      }
+    },
+    "verified_examples": [
+      {
+        "id": "taiclet",
+        "name": "James D. Taiclet",
+        "company": "Lockheed Martin",
+        "confidence": "high",
+        "compensation": {
+          "period": "Company fiscal year ended December 31, 2025",
+          "type": "SEC Summary Compensation Table total",
+          "usd": 23453308,
+          "salary": 1751000,
+          "stock_awards_grant_date_fair_value": 13667645,
+          "non_equity_incentive": 5496300,
+          "other_compensation": 2538363,
+          "source": "LMT_PROXY_2026",
+          "cash_warning": "Includes grant-date fair values; not cash received and not a taxpayer payment to the executive."
+        },
+        "ownership": {
+          "as_of": "2026-03-02",
+          "common_stock_column": 78052,
+          "stock_units_column": 32298,
+          "reported_combined_total": 110349,
+          "source": "LMT_PROXY_2026",
+          "notes": "Proxy rounds totals. Common-stock column includes 1,188 vested director units payable in stock at termination. Separate 32,298 units comprise 831 cash-settled deferred units and 31,467 unvested RSUs; units carry no voting rights. Do not label combined total as currently owned voting shares. Proxy says individual/group holdings under 1%."
+        },
+        "company_government_revenue": {
+          "period": "2025",
+          "reported_us_government_pct": 72,
+          "reported_total_sales_usd_rounded": 75000000000,
+          "includes": "Prime and subcontract sales. Issuer places FMS in its international-customer category. Not USAspending obligations.",
+          "source": "LMT_10K_2025"
+        }
+      },
+      {
+        "id": "novakovic",
+        "name": "Phebe N. Novakovic",
+        "company": "General Dynamics",
+        "confidence": "high",
+        "compensation": {
+          "period": "Company fiscal year ended December 31, 2025",
+          "type": "SEC Summary Compensation Table total",
+          "usd": 25924082,
+          "salary": 1737500,
+          "stock_awards_grant_date_fair_value": 12539634,
+          "option_awards_grant_date_fair_value": 5220445,
+          "non_equity_incentive": 5729000,
+          "other_compensation": 697503,
+          "source": "GD_PROXY_2026",
+          "cash_warning": "Includes grant-date fair values; not cash received and not a taxpayer payment to the executive."
+        },
+        "ownership": {
+          "as_of": "2026-03-11",
+          "shares_owned": 802357,
+          "options_exercisable_within_60_days": 573565,
+          "sec_beneficial_total": 1375922,
+          "reported_pct": "<1%",
+          "source": "GD_PROXY_2026",
+          "notes": "Shares-owned column includes restricted shares and 401(k) holdings. Combined SEC beneficial total is broader than shares currently owned. Group of 25 officers/directors has 1.4%, directly contradicting report p.2 under-1% assertion."
+        },
+        "company_government_revenue": {
+          "period": "2025",
+          "reported_us_government_pct": 68,
+          "us_government_revenue_usd": 35757000000,
+          "total_revenue_usd": 52550000000,
+          "includes": "Includes $1.015B foreign military sales paid through U.S. Government; not USAspending obligations.",
+          "source": "GD_10K_2025"
+        }
+      },
+      {
+        "id": "palantir_founders",
+        "name": "Palantir founders: Alexander Karp, Stephen Cohen, Peter Thiel",
+        "company": "Palantir Technologies",
+        "confidence": "high",
+        "ownership": {
+          "as_of": "2026-04-06",
+          "joint_voting_cap_pct": 49.999999,
+          "source": "PLTR_PROXY_2026",
+          "joint_control_note": "Founder Voting Trust and agreement generally preserve up to 49.999999% joint voting power subject to threshold and proposal mechanics. Two matching founder instructions direct the trust; three independent 16.7% voting stakes would misstate this.",
+          "sec_beneficial_share_table": [
+            {
+              "person": "Alexander Karp",
+              "class_A": 6432258,
+              "class_B": 86907993,
+              "class_F_in_trust": 335000,
+              "record_class_A": 6432258,
+              "record_class_B": 51432993,
+              "class_B_options_exercisable_60days": 34500000,
+              "class_B_RSU_settlement_60days": 975000
+            },
+            {
+              "person": "Stephen Cohen",
+              "class_A": 592,
+              "class_B": 36048506,
+              "class_F_in_trust": 335000,
+              "record_class_A": 592,
+              "record_class_B": 13531938,
+              "class_B_options_exercisable_60days": 21841568,
+              "class_B_RSU_settlement_60days": 675000
+            },
+            {
+              "person": "Peter Thiel",
+              "class_A": 68871556,
+              "class_B": 29128444,
+              "class_F_in_trust": 335000
+            }
+          ],
+          "notes": "Keep SEC beneficial table (which includes options/RSUs due within60days) distinct from outstanding-share calculation. Thiel is sole beneficial owner of the listed affiliates per footnote9. ClassFtrust shares are not three autonomous equal voting blocks.",
+          "current_outstanding_share_basis": {
+            "founder_record_and_controlled_affiliate_shares": 170402781,
+            "all_outstanding_shares": 2397157109,
+            "derived_pct": 7.108536205667611,
+            "calculation": "(75,304,406 Class A + 94,093,375 Class B + 1,005,000 Class F) / (2,295,915,766 Class A + 100,236,343 Class B + 1,005,000 Class F)",
+            "as_of": "2026-04-06",
+            "source_locator": "2026 proxy p.18 capital-stock chart plus pp.55–56 footnotes",
+            "notes": "Excludes unexercised options and unsettled RSUs; includes controlled Thiel affiliate holdings. Supports report7.11% on this precise outstanding-share basis. Does not validate workbookindividualpercentages."
+          }
+        },
+        "equity_realizations": {
+          "period": "Company fiscal year ended December 31, 2025",
+          "source": "PLTR_PROXY_2026",
+          "metric_label": "Gross value at vesting and option-exercise value",
+          "rows": [
+            {
+              "person": "Alexander Karp",
+              "stock_vesting_value_usd": 547521000,
+              "option_exercise_value_usd": 0,
+              "combined_equity_value_usd": 547521000
+            },
+            {
+              "person": "Stephen Cohen",
+              "stock_vesting_value_usd": 379053000,
+              "option_exercise_value_usd": 318076626,
+              "combined_equity_value_usd": 697129626
+            },
+            {
+              "person": "Shyam Sankar",
+              "stock_vesting_value_usd": 210585000,
+              "option_exercise_value_usd": 131851838,
+              "combined_equity_value_usd": 342436838
+            }
+          ],
+          "notes": "Sankar is not one of the three founders in the Class F arrangement. Vesting uses gross shares times vest-date closing price; option value is market-minus-exercise-price spread. Some shares sold for tax withholding. These are not net sale cash or government payments; do not add to SCT grant-value totals or later sale proceeds without tracing individual awards."
+        },
+        "company_government_revenue": {
+          "period": "2025",
+          "reported_worldwide_government_pct": 54,
+          "reported_us_government_revenue_usd_rounded": 1900000000,
+          "reported_total_revenue_usd_rounded": 4500000000,
+          "source": "PLTR_10K_2025",
+          "notes": "54% is worldwide government segment, not U.S. federal share. Do not use report/workbook 55% as U.S. government attribution."
+        }
+      },
+      {
+        "id": "calio",
+        "name": "Christopher T. Calio",
+        "company": "RTX",
+        "confidence": "high",
+        "compensation": {
+          "period": "2025",
+          "type": "SEC Summary Compensation Table total",
+          "usd": 24846826,
+          "salary": 1525000,
+          "non_equity_incentive": 5100000,
+          "stock_awards_grant_date_fair_value": 10875391,
+          "option_awards_grant_date_fair_value": 6753909,
+          "pension_change": 48257,
+          "other_compensation": 544269,
+          "source": "RTX_PROXY_2026",
+          "notes": "Workbook benefit_estimates!F11=$27,650,000 is a different measure called total direct compensation that incorporates a February 2026 LTI award, not the 2025 SCT. Use $24,846,826 for comparable SCT chart."
+        }
+      },
+      {
+        "id": "musk_spacex_prospectus",
+        "name": "Elon Musk",
+        "company": "SpaceX",
+        "confidence": "high for dated prospectus terms; not a current-year or four-year benefit calculation",
+        "ownership": {
+          "as_of": "2026-06-11 prospectus; expected immediately after offering before over-allotment",
+          "class_A": 849494440,
+          "class_B": 5219053075,
+          "restricted_class_B_included": 1302072285,
+          "total_shares": 6068547515,
+          "company_total_after_offering_before_overallotment": 13075865175,
+          "derived_share_of_issued_shares_pct": 46.41029433832473,
+          "reported_voting_power_pct": 82.4,
+          "reported_voting_power_pct_full_overallotment": 82.3,
+          "source": "SPACEX_424B4_2026",
+          "notes": "Includes issued performance-restricted ClassB shares that can vote but have major vesting conditions. Report46.41%reconciles on this basis; workbook42%doesnot. Do not call this realized wealth or applyJune2026cap tabletoallFY2023–26contracts. Excluding restricted shares from both numerator and denominator yields40.48377%; different basis, not confidence range."
+        }
+      }
+    ],
+    "issues": [
+      {
+        "severity": "critical",
+        "input_location": "benefit_estimates!G2:G21; PDF pp.2,11–13,17,19",
+        "issue": "Multiplying executive compensation or stock sales by company government-revenue share does not trace the source of personal proceeds. Government revenue mixes differ by company; reporting periods, award timing, and subcontract/FMS scope differ.",
+        "action": "Hold government-attributed personal-pay ranking. Show company revenue context next to personal disclosures without multiplying."
+      },
+      {
+        "severity": "critical",
+        "input_location": "people!E3:J3; benefit_estimates!F3:I3; PDF pp.2,11,17",
+        "issue": "Crown personal/family block and $954M sales/$140M dividends not established by the cited compensation aggregator. Primary GD proxy p.90 identifies 27,060,944 Longview-managed client shares (10.0%), client accounts and disclaimers—not full personal Crown entitlement.",
+        "action": "Hold Crown-family benefit dollars and ranking. Can show Longview institutional voting/disposition block as a separate entity and unresolved ultimate ownership.",
+        "source": "GD_PROXY_2026"
+      },
+      {
+        "severity": "critical",
+        "input_location": "people!E8:H8; benefit_estimates!F9:I9; PDF pp.11,17–18",
+        "issue": "Workbook labels 85% Hillier holding documented/audited; PDF uses modeled 70% with 55–85% range. DOJ August20,2019 settlement establishes historical majority owner but not 2023–26 cap table, S-corp distribution amount or margin. $145M modeled value is placed in documented-pay column. PDF dates personal $20M settlement July2020; DOJ release is2019.",
+        "action": "Hold all exact ownership, distribution and ranked benefit claims pending dated primary cap table/distribution evidence. Historical settlement must be identified as allegations resolved, outside analysis window.",
+        "source": "HILLIER_DOJ_2019"
+      },
+      {
+        "severity": "critical",
+        "input_location": "people!E26:F26; ownership_edges!C11:F11; ownership_edges!C13:F14",
+        "issue": "100% Peraton economic/voting edge ends at Ramzi Musallam personally instead of sponsor funds. BlackRock client holdings point directly to Larry Fink despite note saying not personal.",
+        "action": "Remove these personal ownership edges. Use fund/asset-manager entities; no personal entitlement percentage absent look-through evidence."
+      },
+      {
+        "severity": "high",
+        "input_location": "PDF p.2; people!E16:F16",
+        "issue": "Report says all officers/directors of each large prime combined own under1%; GD proxy reports1.4%. Novakovic workbook.15% and PDF~.35% lack consistent denominator and options treatment.",
+        "action": "Use primary dated holdings components, not unsupported ownership percentages.",
+        "source": "GD_PROXY_2026"
+      },
+      {
+        "severity": "high",
+        "input_location": "people!J2,J13,J15; benefit_estimates!M4:M6,M10:M11; sources SEC URLs",
+        "issue": "Multiple supplied SEC addresses omit /Archives and use wrong accession/file names. Correct source URLs recovered independently above.",
+        "action": "Replace links and source IDs with namespaced primary sources; do not mark supplied provenance already verified."
+      },
+      {
+        "severity": "high",
+        "input_location": "benefit_estimates!F4:F6; PDF p.2",
+        "issue": "Mix of compensation, gross equity realization and cross-year sales. Karp PDF610.2M includesMay2026sale; workbook556.144M labeledFY2025. Potential double counting if vested stock later sold.",
+        "action": "Publish 2025 vest/exercise values separately using primary p.43, not combined personal cash rank.",
+        "source": "PLTR_PROXY_2026"
+      },
+      {
+        "severity": "high",
+        "input_location": "people!E4:F6; ownership_edges!E4:F6",
+        "issue": "Workbook assigns each founder16.7% voting, contrary to collective trust mechanics, and inconsistent individual economic percentages. The PDF7.11%combined outstanding-share figure DOES reconcile after excluding options and unsettled RSUs; it is supported on April6,2026basis.",
+        "action": "Publish7.11% of outstanding shares versus generally up-to49.999999%joint voting, datedApril6,2026, with explicit denominator. Remove independent16.7%edges and do not apply one snapshot toFY2023–26benefit.",
+        "source": "PLTR_PROXY_2026"
+      },
+      {
+        "severity": "high",
+        "input_location": "benefit_estimates!F11; people!G15",
+        "issue": "Calio27.65M uses2026award pay-decision measure, while otherCEOrows use2025SCT.",
+        "action": "For SCT comparison replace with24,846,826 and disaggregatecomponents.",
+        "source": "RTX_PROXY_2026"
+      },
+      {
+        "severity": "high",
+        "input_location": "people!E2; PDF pp.2,13,23,25",
+        "issue": "SpaceX42% workbook conflicts with46.41% PDF. Prospectus confirms different share/voting bases, with1,302,072,285 performance-restricted shares included in voting. AJune2026IPO snapshot cannot represent ownership consistently acrossFY2023–26.",
+        "action": "Can cite prospectus anticipated82.4% voting (82.3%fullunderwriteroption), explicitly dated/conditional. Do not use one stake to claim4yearpersonalbenefit.",
+        "source": "SPACEX_424B4_2026"
+      },
+      {
+        "severity": "high",
+        "input_location": "recipients!N2,N11,N26; benefits gov attribution",
+        "issue": "Reported government revenue shares inaccurate/mismatched:2025 LMT72%USgov not73%, GD68%not70%, PLTR54%worldwidegovernment not55%USgovernment.",
+        "action": "Use primary2025companyreport context; retainscope distinctions.",
+        "sources": [
+          "LMT_10K_2025",
+          "GD_10K_2025",
+          "PLTR_10K_2025"
+        ]
+      }
+    ],
+    "general_display_rule": "Company obligations, company revenue, personal compensation, vested/exercised equity and voting control are different measures. Keep their periods and units separate. Unknown personal distributions remain unknown, not zero. No cross-category or cross-period total/ranking."
+  },
+  "audit_findings": [
+    {
+      "id": "B01",
+      "topic": "The package is a selected sample",
+      "location": "Ownership Ledger: coverage!H6:J9, E18:G18; recipients!A2:A30; people!A2:A27",
+      "finding": "The main ledger has 29 recipient rows and 26 people; the separate export has 30 recipients. It does not supply the claimed 1,000-recipient universe. Macro outlays copied into both control and acquired columns do not establish recipient or ownership coverage.",
+      "decision": "Publish selected verified examples; withhold a universal beneficiary ranking."
+    },
+    {
+      "id": "B02",
+      "topic": "Recipient totals conflict",
+      "location": "Ownership Ledger recipients!K2,K3; recipients.xlsx Untitled!K2,K3; Master Report p.2",
+      "finding": "FY2025 Lockheed Martin is $68.4B in the ledger versus $64.726B in the export/report; UnitedHealth is $41.8B versus $25.405B. The packages lack a transaction-level reconciliation.",
+      "decision": "Replace these rankings with independently retrieved, dated USAspending recipient records and retain their UEIs."
+    },
+    {
+      "id": "B03",
+      "topic": "Entity and column errors",
+      "location": "Ownership Ledger recipients!A15:D15; recipients.xlsx Untitled!A15:D15, rows20,24–27; annual_rankings.xlsx row33",
+      "finding": "ENT_PIP identifies Pfizer in one file and PIP Manufacturing in another. Five exported recipient rows extend beyond the 19-column schema; the Musk ranking row also shifts columns. Several ledger UEIs look like placeholders and have no supplied registration evidence.",
+      "decision": "Do not merge the sheets or use the unverified identifiers."
+    },
+    {
+      "id": "B04",
+      "topic": "Personal ownership is overstated",
+      "location": "Ownership Ledger ownership_edges!C11:F11,C13:F14; people!E3:J3,E8:H8",
+      "finding": "Peraton sponsor ownership is assigned to Ramzi Musallam personally and BlackRock client holdings to Larry Fink. Longview-managed client shares do not establish Crown-family entitlement. Hillier is given an undocumented current percentage, with 85% in the workbook and a modeled 70% in the report.",
+      "decision": "Exclude these personal ownership amounts and benefit ranks; keep unresolved ownership explicit."
+    },
+    {
+      "id": "B05",
+      "topic": "Pay, vesting, and sales are mixed",
+      "location": "Ownership Ledger benefit_estimates!F3:F11; Master Report pp.2,11–13,17",
+      "finding": "Summary Compensation Table totals include grant-date values. Equity vesting, option exercise gains and later share sales can overlap. A modeled $145M Hillier distribution appears in the documented-pay column. Calio’s $27.65M measure differs from his 2025 SCT total of $24,846,826.",
+      "decision": "Publish comparable 2025 SCT figures separately from Palantir vesting/exercise values. No total of personal taxpayer receipts."
+    },
+    {
+      "id": "B06",
+      "topic": "Earnings formulas use the wrong input",
+      "location": "Ownership Ledger benefit_estimates!I2:I20; Master Report p.22",
+      "finding": "The workbook generally multiplies contract obligations by margins and ownership, while the report defines the earnings model using recognized government revenue. Obligations are commitments and can fund several years of work. Several FY2026 rows also reference FY2025 recipient column K.",
+      "decision": "Withhold these earnings estimates until revenue, period, ownership and margin inputs are reconciled."
+    },
+    {
+      "id": "B07",
+      "topic": "Ownership snapshots are not four-year holdings",
+      "location": "Ownership Ledger people!E2:F7; ownership_edges!F4:F6; Master Report pp.2,23",
+      "finding": "A 2026 stake cannot be applied unchanged across four years without ownership history. Palantir’s 7.11% outstanding-share calculation is supportable, but its founders’ voting authority is joint, not three independent 16.7% blocks. GD’s officer/director group is 1.4%, contradicting the blanket under-1% claim.",
+      "decision": "Use dated share and voting snapshots; do not convert them into cumulative personal proceeds."
+    },
+    {
+      "id": "B08",
+      "topic": "Sources and graph versions do not join",
+      "location": "Relationship JSON metadata and EDGE_08; Ownership Ledger coverage!O11:P12,O17:P17, spending_edges!L19:M20, claims!G6:H6",
+      "finding": "The attached 22-node/23-edge graph is schema1.1 for the earlier cases, not the schema2.0 beneficiary graph described in the report. Source IDs collide across packages and six ledger rows disagree with their source-registry URLs. EDGE_08 cites a DOJ settlement for a contract-obligation total it does not establish.",
+      "decision": "Use namespaced primary sources and separately verified relationship descriptions."
+    },
+    {
+      "id": "B09",
+      "topic": "State coverage does not reconcile",
+      "location": "Ownership Ledger coverage!E12:F12,N12; spending_edges!G19:G20",
+      "finding": "The $40.320B selected-state total does not follow from the listed $76.72M, $289.48M and $3.7B components. The last figure describes a private investment rather than a like-for-like government payment. The Medicaid sampling-frame amounts and URLs also differ from the original audits.",
+      "decision": "Hold the state aggregate; retain the original, qualified audit findings."
+    },
+    {
+      "id": "B10",
+      "topic": "Transparency statistics have different windows",
+      "location": "Ownership Ledger coverage!B10:P10; claims!C4:H5; Master Report pp.4,6,24–25",
+      "finding": "The $77.5B OTA gap covers FY2021–FY2025. The 70%/10% SBIR/STTR comparison concerns FY2019 awards, and the 49-of-152 agency count concerns FY2022. These do not measure FY2023–FY2026 completeness or establish that 90% of all subawards are missing.",
+      "decision": "Publish the OTA finding as dated historical context; do not add it to the four-year contract totals."
+    },
+    {
+      "id": "B11",
+      "topic": "A current snapshot differs from older totals",
+      "location": "Ownership Ledger coverage!E8:E9; primary USAspending API snapshot",
+      "finding": "The independently retrieved November12 snapshot gives $813.802B in FY2025 net contract obligations and $802.424B observed for FY2026. These differ from the supplied $778.4B and $842.35B, and from GAO’s earlier snapshot. Extraction date and scope require reconciliation; differences are not automatically new or missing money.",
+      "decision": "Show exact query windows, data timestamp and incomplete FY2026 reporting; avoid a final trend conclusion."
+    },
+    {
+      "id": "B12",
+      "topic": "Arithmetic works; evidence still needs repair",
+      "location": "Ownership Ledger: 107 formulas across coverage, recipients and benefit_estimates; Master Report pp.5–6",
+      "finding": "All 107 ledger formulas recompute to their cached results within rounding tolerance. CBO supports the four macro outlay figures. These successful checks do not validate the conflicting recipient inputs, ownership assumptions or personal-benefit labels.",
+      "decision": "Retain supported facts and keep unsupported modeled amounts outside the published comparisons."
+    }
+  ],
+  "audit_checks": {
+    "review_date": "2026-11-12",
+    "recipient_rows_main": 29,
+    "recipient_rows_export": 30,
+    "people_rows": 26,
+    "recipient_entity_id_conflicts": [
+      {
+        "id": "ENT_PIP",
+        "ledger": "Pfizer Inc.",
+        "export": "PIP Manufacturing Inc."
+      }
+    ],
+    "annual_value_mismatches": [
+      {
+        "id": "ENT_ADS",
+        "column": "I",
+        "ledger": 3100000000.0,
+        "export": 0.0
+      },
+      {
+        "id": "ENT_ADS",
+        "column": "J",
+        "ledger": 3400000000.0,
+        "export": 4623837497.0
+      },
+      {
+        "id": "ENT_ADS",
+        "column": "K",
+        "ledger": 3800000000.0,
+        "export": 6079118534.0
+      },
+      {
+        "id": "ENT_ADS",
+        "column": "L",
+        "ledger": 4100000000.0,
+        "export": 6200000000.0
+      },
+      {
+        "id": "ENT_AMTM",
+        "column": "I",
+        "ledger": 4200000000.0,
+        "export": 3200000000.0
+      },
+      {
+        "id": "ENT_AMTM",
+        "column": "J",
+        "ledger": 4800000000.0,
+        "export": 3439319953.0
+      },
+      {
+        "id": "ENT_AMTM",
+        "column": "K",
+        "ledger": 5400000000.0,
+        "export": 5665347842.0
+      },
+      {
+        "id": "ENT_AMTM",
+        "column": "L",
+        "ledger": 5900000000.0,
+        "export": 6100000000.0
+      },
+      {
+        "id": "ENT_ANDURIL",
+        "column": "I",
+        "ledger": 150000000.0,
+        "export": 450000000.0
+      },
+      {
+        "id": "ENT_ANDURIL",
+        "column": "J",
+        "ledger": 280000000.0,
+        "export": 820000000.0
+      },
+      {
+        "id": "ENT_ANDURIL",
+        "column": "K",
+        "ledger": 450000000.0,
+        "export": 1490000000.0
+      },
+      {
+        "id": "ENT_ANDURIL",
+        "column": "L",
+        "ledger": 720000000.0,
+        "export": 3200000000.0
+      },
+      {
+        "id": "ENT_BA",
+        "column": "I",
+        "ledger": 31800000000.0,
+        "export": 23777258572.0
+      },
+      {
+        "id": "ENT_BA",
+        "column": "J",
+        "ledger": 25178619623.0,
+        "export": 20734440859.0
+      },
+      {
+        "id": "ENT_BA",
+        "column": "K",
+        "ledger": 33800000000.0,
+        "export": 22546403604.0
+      },
+      {
+        "id": "ENT_BA",
+        "column": "L",
+        "ledger": 35200000000.0,
+        "export": 24100000000.0
+      },
+      {
+        "id": "ENT_BAE",
+        "column": "I",
+        "ledger": 6200000000.0,
+        "export": 5100000000.0
+      },
+      {
+        "id": "ENT_BAE",
+        "column": "J",
+        "ledger": 6700000000.0,
+        "export": 5406635803.0
+      },
+      {
+        "id": "ENT_BAE",
+        "column": "K",
+        "ledger": 7200000000.0,
+        "export": 7783635697.0
+      },
+      {
+        "id": "ENT_BAE",
+        "column": "L",
+        "ledger": 7700000000.0,
+        "export": 8100000000.0
+      },
+      {
+        "id": "ENT_BAH",
+        "column": "I",
+        "ledger": 6800000000.0,
+        "export": 7367454347.0
+      },
+      {
+        "id": "ENT_BAH",
+        "column": "J",
+        "ledger": 7400000000.0,
+        "export": 7450000000.0
+      },
+      {
+        "id": "ENT_BAH",
+        "column": "K",
+        "ledger": 8100000000.0,
+        "export": 7547783396.0
+      },
+      {
+        "id": "ENT_BAH",
+        "column": "L",
+        "ledger": 8700000000.0,
+        "export": 7900000000.0
+      },
+      {
+        "id": "ENT_BECHTEL",
+        "column": "I",
+        "ledger": 3400000000.0,
+        "export": 3598261413.0
+      },
+      {
+        "id": "ENT_BECHTEL",
+        "column": "K",
+        "ledger": 4100000000.0,
+        "export": 3850000000.0
+      },
+      {
+        "id": "ENT_BECHTEL",
+        "column": "L",
+        "ledger": 4500000000.0,
+        "export": 4000000000.0
+      },
+      {
+        "id": "ENT_CACI",
+        "column": "I",
+        "ledger": 3800000000.0,
+        "export": 4045698863.0
+      },
+      {
+        "id": "ENT_CACI",
+        "column": "J",
+        "ledger": 4200000000.0,
+        "export": 3377136805.0
+      },
+      {
+        "id": "ENT_CACI",
+        "column": "K",
+        "ledger": 4600000000.0,
+        "export": 4939643465.0
+      },
+      {
+        "id": "ENT_CACI",
+        "column": "L",
+        "ledger": 5000000000.0,
+        "export": 5300000000.0
+      },
+      {
+        "id": "ENT_DELOITTE",
+        "column": "I",
+        "ledger": 3200000000.0,
+        "export": 3711875825.0
+      },
+      {
+        "id": "ENT_DELOITTE",
+        "column": "J",
+        "ledger": 3600000000.0,
+        "export": 3528923107.0
+      },
+      {
+        "id": "ENT_DELOITTE",
+        "column": "K",
+        "ledger": 4000000000.0,
+        "export": 3669109539.0
+      },
+      {
+        "id": "ENT_DELOITTE",
+        "column": "L",
+        "ledger": 4400000000.0,
+        "export": 3800000000.0
+      },
+      {
+        "id": "ENT_FLR",
+        "column": "I",
+        "ledger": 5400000000.0,
+        "export": 4381001037.0
+      },
+      {
+        "id": "ENT_FLR",
+        "column": "J",
+        "ledger": 5800000000.0,
+        "export": 6371812245.0
+      },
+      {
+        "id": "ENT_FLR",
+        "column": "K",
+        "ledger": 6200000000.0,
+        "export": 6470269739.0
+      },
+      {
+        "id": "ENT_GD",
+        "column": "I",
+        "ledger": 21500000000.0,
+        "export": 0.0
+      },
+      {
+        "id": "ENT_GD",
+        "column": "J",
+        "ledger": 22800000000.0,
+        "export": 10078192163.0
+      },
+      {
+        "id": "ENT_GD",
+        "column": "K",
+        "ledger": 24200000000.0,
+        "export": 8958643563.0
+      },
+      {
+        "id": "ENT_GD",
+        "column": "L",
+        "ledger": 25600000000.0,
+        "export": 11500000000.0
+      },
+      {
+        "id": "ENT_GD_EB",
+        "column": "I",
+        "ledger": 13500000000.0,
+        "export": 0.0
+      },
+      {
+        "id": "ENT_GD_EB",
+        "column": "J",
+        "ledger": 15309062092.0,
+        "export": 3600371198.0
+      },
+      {
+        "id": "ENT_GD_EB",
+        "column": "K",
+        "ledger": 16800000000.0,
+        "export": 21366142819.0
+      },
+      {
+        "id": "ENT_GD_EB",
+        "column": "L",
+        "ledger": 18200000000.0,
+        "export": 22000000000.0
+      },
+      {
+        "id": "ENT_HII",
+        "column": "I",
+        "ledger": 11200000000.0,
+        "export": 9788941420.0
+      },
+      {
+        "id": "ENT_HII",
+        "column": "J",
+        "ledger": 13919634796.0,
+        "export": 6121093175.0
+      },
+      {
+        "id": "ENT_HII",
+        "column": "K",
+        "ledger": 14600000000.0,
+        "export": 10934408068.0
+      },
+      {
+        "id": "ENT_HII",
+        "column": "L",
+        "ledger": 15300000000.0,
+        "export": 11400000000.0
+      },
+      {
+        "id": "ENT_HUM",
+        "column": "I",
+        "ledger": 7900000000.0,
+        "export": 0.0
+      },
+      {
+        "id": "ENT_HUM",
+        "column": "J",
+        "ledger": 8500000000.0,
+        "export": 4963545212.0
+      },
+      {
+        "id": "ENT_HUM",
+        "column": "K",
+        "ledger": 9100000000.0,
+        "export": 6513706439.0
+      },
+      {
+        "id": "ENT_HUM",
+        "column": "L",
+        "ledger": 9700000000.0,
+        "export": 7100000000.0
+      },
+      {
+        "id": "ENT_LDOS",
+        "column": "I",
+        "ledger": 10400000000.0,
+        "export": 9365250348.0
+      },
+      {
+        "id": "ENT_LDOS",
+        "column": "J",
+        "ledger": 11145248232.0,
+        "export": 9485263422.0
+      },
+      {
+        "id": "ENT_LDOS",
+        "column": "K",
+        "ledger": 11800000000.0,
+        "export": 9137387797.0
+      },
+      {
+        "id": "ENT_LDOS",
+        "column": "L",
+        "ledger": 12400000000.0,
+        "export": 9600000000.0
+      },
+      {
+        "id": "ENT_LHX",
+        "column": "I",
+        "ledger": 8900000000.0,
+        "export": 7418303692.0
+      },
+      {
+        "id": "ENT_LHX",
+        "column": "J",
+        "ledger": 9500000000.0,
+        "export": 7239450671.0
+      },
+      {
+        "id": "ENT_LHX",
+        "column": "K",
+        "ledger": 10200000000.0,
+        "export": 7303753415.0
+      },
+      {
+        "id": "ENT_LHX",
+        "column": "L",
+        "ledger": 10800000000.0,
+        "export": 7800000000.0
+      },
+      {
+        "id": "ENT_LMT",
+        "column": "I",
+        "ledger": 65000000000.0,
+        "export": 35615327813.0
+      },
+      {
+        "id": "ENT_LMT",
+        "column": "J",
+        "ledger": 64184656149.0,
+        "export": 31639926821.0
+      },
+      {
+        "id": "ENT_LMT",
+        "column": "K",
+        "ledger": 68400000000.0,
+        "export": 64725692748.0
+      },
+      {
+        "id": "ENT_LMT",
+        "column": "L",
+        "ledger": 70500000000.0,
+        "export": 68500000000.0
+      },
+      {
+        "id": "ENT_MCK",
+        "column": "I",
+        "ledger": -507300000.0,
+        "export": -507314290.0
+      },
+      {
+        "id": "ENT_MCK",
+        "column": "J",
+        "ledger": 14457497184.0,
+        "export": 6526920887.0
+      },
+      {
+        "id": "ENT_MCK",
+        "column": "K",
+        "ledger": 15100000000.0,
+        "export": 11938599294.0
+      },
+      {
+        "id": "ENT_MCK",
+        "column": "L",
+        "ledger": 15800000000.0,
+        "export": 12800000000.0
+      },
+      {
+        "id": "ENT_NOC",
+        "column": "I",
+        "ledger": 12800000000.0,
+        "export": 15891269537.0
+      },
+      {
+        "id": "ENT_NOC",
+        "column": "J",
+        "ledger": 13295831953.0,
+        "export": 11864437850.0
+      },
+      {
+        "id": "ENT_NOC",
+        "column": "K",
+        "ledger": 14100000000.0,
+        "export": 9763138991.0
+      },
+      {
+        "id": "ENT_NOC",
+        "column": "L",
+        "ledger": 14800000000.0,
+        "export": 12500000000.0
+      },
+      {
+        "id": "ENT_PERATON",
+        "column": "I",
+        "ledger": 2800000000.0,
+        "export": 3841649740.0
+      },
+      {
+        "id": "ENT_PERATON",
+        "column": "J",
+        "ledger": 3100000000.0,
+        "export": 3600000000.0
+      },
+      {
+        "id": "ENT_PERATON",
+        "column": "L",
+        "ledger": 3700000000.0,
+        "export": 3500000000.0
+      },
+      {
+        "id": "ENT_PIP",
+        "column": "I",
+        "ledger": 9800000000.0,
+        "export": 0.0
+      },
+      {
+        "id": "ENT_PIP",
+        "column": "J",
+        "ledger": 10500000000.0,
+        "export": 1562508642.0
+      },
+      {
+        "id": "ENT_PIP",
+        "column": "K",
+        "ledger": 11200000000.0,
+        "export": 6868423877.0
+      },
+      {
+        "id": "ENT_PIP",
+        "column": "L",
+        "ledger": 11900000000.0,
+        "export": 3500000000.0
+      },
+      {
+        "id": "ENT_PLTR",
+        "column": "I",
+        "ledger": 320000000.0,
+        "export": 750000000.0
+      },
+      {
+        "id": "ENT_PLTR",
+        "column": "J",
+        "ledger": 390000000.0,
+        "export": 900000000.0
+      },
+      {
+        "id": "ENT_PLTR",
+        "column": "K",
+        "ledger": 470000000.0,
+        "export": 1020566209.0
+      },
+      {
+        "id": "ENT_PLTR",
+        "column": "L",
+        "ledger": 580000000.0,
+        "export": 2800000000.0
+      },
+      {
+        "id": "ENT_RKLB",
+        "column": "I",
+        "ledger": 45000000.0,
+        "export": 120000000.0
+      },
+      {
+        "id": "ENT_RKLB",
+        "column": "J",
+        "ledger": 98000000.0,
+        "export": 48000000.0
+      },
+      {
+        "id": "ENT_RKLB",
+        "column": "L",
+        "ledger": 372000000.0,
+        "export": 295000000.0
+      },
+      {
+        "id": "ENT_RTX",
+        "column": "I",
+        "ledger": 25400000000.0,
+        "export": 27820000000.0
+      },
+      {
+        "id": "ENT_RTX",
+        "column": "J",
+        "ledger": 26800000000.0,
+        "export": 24817000000.0
+      },
+      {
+        "id": "ENT_RTX",
+        "column": "K",
+        "ledger": 28500000000.0,
+        "export": 26500000000.0
+      },
+      {
+        "id": "ENT_RTX",
+        "column": "L",
+        "ledger": 30100000000.0,
+        "export": 28900000000.0
+      },
+      {
+        "id": "ENT_SAIC",
+        "column": "I",
+        "ledger": 4900000000.0,
+        "export": 3300000000.0
+      },
+      {
+        "id": "ENT_SAIC",
+        "column": "J",
+        "ledger": 5100000000.0,
+        "export": 4940744689.0
+      },
+      {
+        "id": "ENT_SAIC",
+        "column": "K",
+        "ledger": 5300000000.0,
+        "export": 4698756512.0
+      },
+      {
+        "id": "ENT_SAIC",
+        "column": "L",
+        "ledger": 5500000000.0,
+        "export": 4800000000.0
+      },
+      {
+        "id": "ENT_SPACEX",
+        "column": "I",
+        "ledger": 1800000000.0,
+        "export": "CA / TX / FL"
+      },
+      {
+        "id": "ENT_SPACEX",
+        "column": "J",
+        "ledger": 2100000000.0,
+        "export": 3110000000.0
+      },
+      {
+        "id": "ENT_SPACEX",
+        "column": "K",
+        "ledger": 2500000000.0,
+        "export": 3810000000.0
+      },
+      {
+        "id": "ENT_SPACEX",
+        "column": "L",
+        "ledger": 3100000000.0,
+        "export": 3810000000.0
+      },
+      {
+        "id": "ENT_TRIAD",
+        "column": "I",
+        "ledger": 4100000000.0,
+        "export": 4578543066.0
+      },
+      {
+        "id": "ENT_TRIAD",
+        "column": "J",
+        "ledger": 4500000000.0,
+        "export": 5162951247.0
+      },
+      {
+        "id": "ENT_TRIAD",
+        "column": "K",
+        "ledger": 4900000000.0,
+        "export": 5199738723.0
+      },
+      {
+        "id": "ENT_TRIAD",
+        "column": "L",
+        "ledger": 5300000000.0,
+        "export": 5400000000.0
+      },
+      {
+        "id": "ENT_TRIWEST",
+        "column": "I",
+        "ledger": 8200000000.0,
+        "export": 7984754268.0
+      },
+      {
+        "id": "ENT_TRIWEST",
+        "column": "J",
+        "ledger": 14787995171.0,
+        "export": 8383006981.0
+      },
+      {
+        "id": "ENT_TRIWEST",
+        "column": "K",
+        "ledger": 15400000000.0,
+        "export": 13374744670.0
+      },
+      {
+        "id": "ENT_TRIWEST",
+        "column": "L",
+        "ledger": 16100000000.0,
+        "export": 14500000000.0
+      },
+      {
+        "id": "ENT_UNH",
+        "column": "I",
+        "ledger": 15400000000.0,
+        "export": 876549394.0
+      },
+      {
+        "id": "ENT_UNH",
+        "column": "J",
+        "ledger": 17800000000.0,
+        "export": 18783397371.0
+      },
+      {
+        "id": "ENT_UNH",
+        "column": "K",
+        "ledger": 41800000000.0,
+        "export": 25405430794.0
+      },
+      {
+        "id": "ENT_UNH",
+        "column": "L",
+        "ledger": 44000000000.0,
+        "export": 27200000000.0
+      }
+    ],
+    "malformed_export_rows": [
+      {
+        "row": 20,
+        "nonempty_columns": 21,
+        "id": "ENT_TRIAD"
+      },
+      {
+        "row": 24,
+        "nonempty_columns": 20,
+        "id": "ENT_DELOITTE"
+      },
+      {
+        "row": 25,
+        "nonempty_columns": 20,
+        "id": "ENT_SPACEX"
+      },
+      {
+        "row": 26,
+        "nonempty_columns": 21,
+        "id": "ENT_PLTR"
+      },
+      {
+        "row": 27,
+        "nonempty_columns": 23,
+        "id": "ENT_ANDURIL"
+      }
+    ],
+    "formulas_checked": 107,
+    "formula_failures": [],
+    "formula_checks": [
+      {
+        "sheet": "coverage",
+        "cell": "G2",
+        "calculated": 1.0,
+        "cached": 1,
+        "pass": true
+      },
+      {
+        "sheet": "coverage",
+        "cell": "G3",
+        "calculated": 1.0,
+        "cached": 1,
+        "pass": true
+      },
+      {
+        "sheet": "coverage",
+        "cell": "G4",
+        "calculated": 1.0,
+        "cached": 1,
+        "pass": true
+      },
+      {
+        "sheet": "coverage",
+        "cell": "G5",
+        "calculated": 1.0,
+        "cached": 1,
+        "pass": true
+      },
+      {
+        "sheet": "coverage",
+        "cell": "G6",
+        "calculated": 0.5248946259220232,
+        "cached": 0.5248946259,
+        "pass": true
+      },
+      {
+        "sheet": "coverage",
+        "cell": "G7",
+        "calculated": 0.5330291630384106,
+        "cached": 0.533029163,
+        "pass": true
+      },
+      {
+        "sheet": "coverage",
+        "cell": "G8",
+        "calculated": 0.7120349947700411,
+        "cached": 0.7120349948,
+        "pass": true
+      },
+      {
+        "sheet": "coverage",
+        "cell": "G9",
+        "calculated": 0.7100373953819671,
+        "cached": 0.7100373954,
+        "pass": true
+      },
+      {
+        "sheet": "coverage",
+        "cell": "G10",
+        "calculated": 0.03561290322580645,
+        "cached": 0.03561290323,
+        "pass": true
+      },
+      {
+        "sheet": "coverage",
+        "cell": "G11",
+        "calculated": 1.0,
+        "cached": 1,
+        "pass": true
+      },
+      {
+        "sheet": "coverage",
+        "cell": "G12",
+        "calculated": 1.0,
+        "cached": 1,
+        "pass": true
+      },
+      {
+        "sheet": "coverage",
+        "cell": "G13",
+        "calculated": 0.3005464480874317,
+        "cached": 0.3005464481,
+        "pass": true
+      },
+      {
+        "sheet": "coverage",
+        "cell": "G14",
+        "calculated": 0.20913107511045656,
+        "cached": 0.2091310751,
+        "pass": true
+      },
+      {
+        "sheet": "coverage",
+        "cell": "G15",
+        "calculated": 1.0,
+        "cached": 1,
+        "pass": true
+      },
+      {
+        "sheet": "coverage",
+        "cell": "G16",
+        "calculated": 1.0,
+        "cached": 1,
+        "pass": true
+      },
+      {
+        "sheet": "coverage",
+        "cell": "G17",
+        "calculated": 1.0,
+        "cached": 1,
+        "pass": true
+      },
+      {
+        "sheet": "coverage",
+        "cell": "E18",
+        "calculated": 27269000000000.0,
+        "cached": 27269000000000,
+        "pass": true
+      },
+      {
+        "sheet": "coverage",
+        "cell": "F18",
+        "calculated": 27269000000000.0,
+        "cached": 27269000000000,
+        "pass": true
+      },
+      {
+        "sheet": "coverage",
+        "cell": "G18",
+        "calculated": 1.0,
+        "cached": 1,
+        "pass": true
+      },
+      {
+        "sheet": "coverage",
+        "cell": "H18",
+        "calculated": 599000.0,
+        "cached": 599000,
+        "pass": true
+      },
+      {
+        "sheet": "coverage",
+        "cell": "K18",
+        "calculated": 1797400000000.0,
+        "cached": 1797400000000,
+        "pass": true
+      },
+      {
+        "sheet": "coverage",
+        "cell": "L18",
+        "calculated": 1337550000000.0,
+        "cached": 1337550000000,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M2",
+        "calculated": 197584656149.0,
+        "cached": 197584656149,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M3",
+        "calculated": 75000000000.0,
+        "cached": 75000000000,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M4",
+        "calculated": 90778619623.0,
+        "cached": 90778619623,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M5",
+        "calculated": 45609062092.0,
+        "cached": 45609062092,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M6",
+        "calculated": 38387995171.0,
+        "cached": 38387995171,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M7",
+        "calculated": 29050197184.0,
+        "cached": 29050197184,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M8",
+        "calculated": 39719634796.0,
+        "cached": 39719634796,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M9",
+        "calculated": 40195831953.0,
+        "cached": 40195831953,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M10",
+        "calculated": 33345248232.0,
+        "cached": 33345248232,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M11",
+        "calculated": 68500000000.0,
+        "cached": 68500000000,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M12",
+        "calculated": 80700000000.0,
+        "cached": 80700000000,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M13",
+        "calculated": 22300000000.0,
+        "cached": 22300000000,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M14",
+        "calculated": 28600000000.0,
+        "cached": 28600000000,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M15",
+        "calculated": 31500000000.0,
+        "cached": 31500000000,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M16",
+        "calculated": 25500000000.0,
+        "cached": 25500000000,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M17",
+        "calculated": 17400000000.0,
+        "cached": 17400000000,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M18",
+        "calculated": 10300000000.0,
+        "cached": 10300000000,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M19",
+        "calculated": 14400000000.0,
+        "cached": 14400000000,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M20",
+        "calculated": 13500000000.0,
+        "cached": 13500000000,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M21",
+        "calculated": 12600000000.0,
+        "cached": 12600000000,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M22",
+        "calculated": 20100000000.0,
+        "cached": 20100000000,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M23",
+        "calculated": 15300000000.0,
+        "cached": 15300000000,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M24",
+        "calculated": 10800000000.0,
+        "cached": 10800000000,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M25",
+        "calculated": 6400000000.0,
+        "cached": 6400000000,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M26",
+        "calculated": 1180000000.0,
+        "cached": 1180000000,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M27",
+        "calculated": 880000000.0,
+        "cached": 880000000,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M28",
+        "calculated": 311500000.0,
+        "cached": 311500000,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M29",
+        "calculated": 9300000000.0,
+        "cached": 9300000000,
+        "pass": true
+      },
+      {
+        "sheet": "recipients",
+        "cell": "M30",
+        "calculated": 11200000000.0,
+        "cached": 11200000000,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "H2",
+        "calculated": 1050000000.0,
+        "cached": 1050000000,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "I2",
+        "calculated": -277200000.0,
+        "cached": -277200000,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "G3",
+        "calculated": 57400000.0,
+        "cached": 57400000,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "H3",
+        "calculated": 2420000000.0,
+        "cached": 2420000000,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "I3",
+        "calculated": 198440000.0,
+        "cached": 198440000,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "G4",
+        "calculated": 305879200.0,
+        "cached": 305879200,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "H4",
+        "calculated": 11750000.0,
+        "cached": 11750000,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "I4",
+        "calculated": 1938750.0,
+        "cached": 1938750,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "G5",
+        "calculated": 383973491.55,
+        "cached": 383973491.6,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "H5",
+        "calculated": 9400000.0,
+        "cached": 9400000,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "I5",
+        "calculated": 1551000.0,
+        "cached": 1551000,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "G6",
+        "calculated": 189005348.4,
+        "cached": 189005348.4,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "H6",
+        "calculated": 3760000.0,
+        "cached": 3760000,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "I6",
+        "calculated": 620400.0,
+        "cached": 620400,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "H7",
+        "calculated": 30550000.0,
+        "cached": 30550000,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "I7",
+        "calculated": 5040750.0,
+        "cached": 5040750,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "G8",
+        "calculated": 180432000.42,
+        "cached": 180432000.4,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "H8",
+        "calculated": 12637500.0,
+        "cached": 12637500,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "I8",
+        "calculated": -3247837.5,
+        "cached": -3247837.5,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "G9",
+        "calculated": 142100000.0,
+        "cached": 142100000,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "H9",
+        "calculated": 3230000000.0,
+        "cached": 3230000000,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "I9",
+        "calculated": 145350000.0,
+        "cached": 145350000,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "G10",
+        "calculated": 17120914.84,
+        "cached": 17120914.84,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "H10",
+        "calculated": 34200000.0,
+        "cached": 34200000,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "I10",
+        "calculated": 2804400.0,
+        "cached": 2804400,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "G11",
+        "calculated": 12719000.0,
+        "cached": 12719000,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "H11",
+        "calculated": 8550000.0,
+        "cached": 8550000,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "I11",
+        "calculated": 752399.9999999999,
+        "cached": 752400,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "G12",
+        "calculated": 18146857.4,
+        "cached": 18146857.4,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "H12",
+        "calculated": 36300000.0,
+        "cached": 36300000,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "I12",
+        "calculated": 2976600.0,
+        "cached": 2976600,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "G13",
+        "calculated": 21807400.98,
+        "cached": 21807400.98,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "H13",
+        "calculated": 11280000.0,
+        "cached": 11280000,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "I13",
+        "calculated": 1173120.0,
+        "cached": 1173120,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "G14",
+        "calculated": 8253486.149999999,
+        "cached": 8253486.15,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "H14",
+        "calculated": 6760000.0,
+        "cached": 6760000,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "I14",
+        "calculated": 169000.0,
+        "cached": 169000,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "G15",
+        "calculated": 21328321.7,
+        "cached": 21328321.7,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "H15",
+        "calculated": 50159999.99999999,
+        "cached": 50160000,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "I15",
+        "calculated": 2808959.9999999995,
+        "cached": 2808960,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "G16",
+        "calculated": 1089586.98,
+        "cached": 1089586.98,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "H16",
+        "calculated": 12080000.0,
+        "cached": 12080000,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "I16",
+        "calculated": 108720.0,
+        "cached": 108720,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "G17",
+        "calculated": 13524761.459999999,
+        "cached": 13524761.46,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "H17",
+        "calculated": 20250000.0,
+        "cached": 20250000,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "I17",
+        "calculated": 1255500.0,
+        "cached": 1255500,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "G18",
+        "calculated": 19077627.6,
+        "cached": 19077627.6,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "H18",
+        "calculated": 16200000.0,
+        "cached": 16200000,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "I18",
+        "calculated": 615600.0,
+        "cached": 615600,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "G19",
+        "calculated": 17423743.849999998,
+        "cached": 17423743.85,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "H20",
+        "calculated": 112500000.0,
+        "cached": 112500000,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "I20",
+        "calculated": -20250000.0,
+        "cached": -20250000,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "F22",
+        "calculated": 2556729531.0,
+        "cached": 2556729531,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "G22",
+        "calculated": 1412226207.33,
+        "cached": 1412226207,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "H22",
+        "calculated": 7091577500.0,
+        "cached": 7091577500,
+        "pass": true
+      },
+      {
+        "sheet": "benefit_estimates",
+        "cell": "I22",
+        "calculated": 65439362.5,
+        "cached": 65439362.5,
+        "pass": true
+      }
+    ]
+  },
+  "input_manifest": [
+    {
+      "file": "SignalGraph Executive Brief & Case Studies (Nov 2026).pdf",
+      "sha256": "b8a69fc33ef49e9e647ff3777826a77a6acb012807424d7d121402b07338b090",
+      "bytes": 684080
+    },
+    {
+      "file": "signalgraph_relationships_v1_1_audited.json",
+      "sha256": "5a762318768ad143cf16ed0d4d978d941173293d64cea616088b6142ae3cf222",
+      "bytes": 16257
+    },
+    {
+      "file": "SignalGraph Claim, Source & Quantitative Register-2.xlsx",
+      "sha256": "ea5a28529a1a7a6f822f966e667a383e377d1e57930c9343656366f876d23963",
+      "bytes": 45770
+    },
+    {
+      "file": "SignalGraph — The People Behind Government Spending (FY2023–FY2026 Master Report).pdf",
+      "sha256": "a79f7f24c76163f7e7e8f8ce0162a63a45c17a273827453dc2377da6fde6c108",
+      "bytes": 764222
+    },
+    {
+      "file": "SignalGraph Beneficiaries & Ownership Ledger (FY2023–FY2026).xlsx",
+      "sha256": "648f9c6122f4b4708e3fcb74227564e9fd1fd3b4dba30dddeb498599aac63221",
+      "bytes": 53313
+    },
+    {
+      "file": "recipients.xlsx",
+      "sha256": "cce41abe43ceac5ec546d3cf6a9bd3f04c255eb78e1ee98b87d01ee517f29941",
+      "bytes": 14644
+    },
+    {
+      "file": "annual_rankings.xlsx",
+      "sha256": "d84f6020813627f83a767447bdabca1c65d3b7ba674247dd71f8cc9e9eb021d3",
+      "bytes": 10258
+    }
+  ]
+}

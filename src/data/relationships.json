@@ -1,0 +1,1233 @@
+{
+  "schema_version": "2.2-reviewed",
+  "review_date": "2026-11-12",
+  "window": {
+    "start": "2022-10-01",
+    "end": "2026-09-30"
+  },
+  "scope": "Selected company-to-person research relationships; not a complete spending/ownership graph. Node presence does not verify the financial amounts in supplied reports.",
+  "nodes": [
+    {
+      "id": "ENT_AMTM",
+      "type": "company",
+      "label": "Amentum Holdings, Inc.",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_ANDURIL",
+      "type": "company",
+      "label": "Anduril Industries, Inc.",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_ADS",
+      "type": "company",
+      "label": "Atlantic Diving Supply, Inc.",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_BAE",
+      "type": "company",
+      "label": "BAE Systems plc",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_BECHTEL",
+      "type": "company",
+      "label": "Bechtel Group, Inc.",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_BLK",
+      "type": "company",
+      "label": "BlackRock",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_BAH",
+      "type": "company",
+      "label": "Booz Allen Hamilton Holding Corporation",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_CACI",
+      "type": "company",
+      "label": "CACI International Inc",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_CARAHSOFT",
+      "type": "company",
+      "label": "Carahsoft Technology Corp.",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_CENCORA",
+      "type": "company",
+      "label": "Cencora, Inc.",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_CNC",
+      "type": "company",
+      "label": "Centene Corporation",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_COPT_DEFENSE",
+      "type": "company",
+      "label": "COPT Defense Properties",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_DELOITTE",
+      "type": "company",
+      "label": "Deloitte LLP",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_EASTERLY_GOV",
+      "type": "company",
+      "label": "Easterly Government Properties, Inc.",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_GD_EB",
+      "type": "company",
+      "label": "Electric Boat Corporation",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_FISHER_SAND",
+      "type": "company",
+      "label": "Fisher Sand & Gravel Co.",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_FLR",
+      "type": "company",
+      "label": "Fluor Corporation",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_GD",
+      "type": "company",
+      "label": "General Dynamics Corporation",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_HUM",
+      "type": "company",
+      "label": "Humana Inc.",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_HII",
+      "type": "company",
+      "label": "Huntington Ingalls Industries, Inc.",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_INTEL",
+      "type": "company",
+      "label": "Intel Corporation",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_LHX",
+      "type": "company",
+      "label": "L3Harris Technologies, Inc.",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_LDOS",
+      "type": "company",
+      "label": "Leidos Holdings, Inc.",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_LMT",
+      "type": "company",
+      "label": "Lockheed Martin Corporation",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_MCK",
+      "type": "company",
+      "label": "McKesson Corporation",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_MOH",
+      "type": "company",
+      "label": "Molina Healthcare",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_NOC",
+      "type": "company",
+      "label": "Northrop Grumman Corporation",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_PLTR",
+      "type": "company",
+      "label": "Palantir Technologies Inc.",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_PERATON",
+      "type": "company",
+      "label": "Peraton Inc.",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_PFE",
+      "type": "company",
+      "label": "Pfizer Inc.",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_PIP",
+      "type": "company",
+      "label": "PIP Manufacturing Inc.",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_RKLB",
+      "type": "company",
+      "label": "Rocket Lab USA, Inc.",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_RTX",
+      "type": "company",
+      "label": "RTX Corporation",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_SAIC",
+      "type": "company",
+      "label": "Science Applications International Corporation",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_SPACEX",
+      "type": "company",
+      "label": "Space Exploration Technologies Corp.",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_BA",
+      "type": "company",
+      "label": "The Boeing Company",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_TRIAD",
+      "type": "company",
+      "label": "Triad National Security, LLC",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_TRIWEST",
+      "type": "company",
+      "label": "TriWest Healthcare Alliance Corp.",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "ENT_UNH",
+      "type": "company",
+      "label": "UnitedHealth Group Incorporated",
+      "scope": "Named in the research cohort; see company-index.json for financial limits."
+    },
+    {
+      "id": "IND_ELON_MUSK",
+      "type": "person_or_family",
+      "label": "Elon Musk",
+      "profile_url": "people/elon-musk.html"
+    },
+    {
+      "id": "IND_CROWN_FAMILY",
+      "type": "person_or_family",
+      "label": "Crown family (Lester Crown / Henry Crown descendants)",
+      "profile_url": "people/crown-family.html"
+    },
+    {
+      "id": "IND_ALEX_KARP",
+      "type": "person_or_family",
+      "label": "Alexander Karp",
+      "profile_url": "people/alexander-karp.html"
+    },
+    {
+      "id": "IND_STEPHEN_COHEN",
+      "type": "person_or_family",
+      "label": "Stephen Cohen",
+      "profile_url": "people/stephen-cohen.html"
+    },
+    {
+      "id": "IND_PETER_THIEL",
+      "type": "person_or_family",
+      "label": "Peter Thiel",
+      "profile_url": "people/peter-thiel.html"
+    },
+    {
+      "id": "IND_SHYAM_SANKAR",
+      "type": "person_or_family",
+      "label": "Shyam Sankar",
+      "profile_url": "people/shyam-sankar.html"
+    },
+    {
+      "id": "IND_LUKE_HILLIER",
+      "type": "person_or_family",
+      "label": "Luke Hillier",
+      "profile_url": "people/luke-hillier.html"
+    },
+    {
+      "id": "IND_PETER_BECK",
+      "type": "person_or_family",
+      "label": "Sir Peter Beck",
+      "profile_url": "people/sir-peter-beck.html"
+    },
+    {
+      "id": "IND_ADAM_SPICE",
+      "type": "person_or_family",
+      "label": "Adam Spice",
+      "profile_url": "people/adam-spice.html"
+    },
+    {
+      "id": "IND_PALMER_LUCKEY",
+      "type": "person_or_family",
+      "label": "Palmer Luckey",
+      "profile_url": "people/palmer-luckey.html"
+    },
+    {
+      "id": "IND_BRIAN_SCHIMPF",
+      "type": "person_or_family",
+      "label": "Brian Schimpf",
+      "profile_url": "people/brian-schimpf.html"
+    },
+    {
+      "id": "IND_JAMES_TAICLET",
+      "type": "person_or_family",
+      "label": "James D. Taiclet",
+      "profile_url": "people/james-d-taiclet.html"
+    },
+    {
+      "id": "IND_FRANK_ST_JOHN",
+      "type": "person_or_family",
+      "label": "Frank A. St. John",
+      "profile_url": "people/frank-a-st-john.html"
+    },
+    {
+      "id": "IND_CHRIS_CALIO",
+      "type": "person_or_family",
+      "label": "Christopher T. Calio",
+      "profile_url": "people/christopher-t-calio.html"
+    },
+    {
+      "id": "IND_PHEBE_NOVAKOVIC",
+      "type": "person_or_family",
+      "label": "Phebe N. Novakovic",
+      "profile_url": "people/phebe-n-novakovic.html"
+    },
+    {
+      "id": "IND_KATHY_WARDEN",
+      "type": "person_or_family",
+      "label": "Kathy J. Warden",
+      "profile_url": "people/kathy-j-warden.html"
+    },
+    {
+      "id": "IND_KELLY_ORTBERG",
+      "type": "person_or_family",
+      "label": "Robert K. (Kelly) Ortberg",
+      "profile_url": "people/robert-k-kelly-ortberg.html"
+    },
+    {
+      "id": "IND_STEPHEN_HEMSLEY",
+      "type": "person_or_family",
+      "label": "Stephen J. Hemsley",
+      "profile_url": "people/stephen-j-hemsley.html"
+    },
+    {
+      "id": "IND_ANDREW_WITTY",
+      "type": "person_or_family",
+      "label": "Andrew Witty",
+      "profile_url": "people/andrew-witty.html"
+    },
+    {
+      "id": "IND_BRIAN_TYLER",
+      "type": "person_or_family",
+      "label": "Brian S. Tyler",
+      "profile_url": "people/brian-s-tyler.html"
+    },
+    {
+      "id": "IND_HORACIO_ROZANSKI",
+      "type": "person_or_family",
+      "label": "Horacio D. Rozanski",
+      "profile_url": "people/horacio-d-rozanski.html"
+    },
+    {
+      "id": "IND_JOHN_HELLER",
+      "type": "person_or_family",
+      "label": "John Heller",
+      "profile_url": "people/john-heller.html"
+    },
+    {
+      "id": "IND_JOSEPH_ZUBRETSKY",
+      "type": "person_or_family",
+      "label": "Joseph M. Zubretsky",
+      "profile_url": "people/joseph-m-zubretsky.html"
+    },
+    {
+      "id": "IND_LARRY_FINK",
+      "type": "person_or_family",
+      "label": "Laurence D. (Larry) Fink",
+      "profile_url": "people/laurence-d-larry-fink.html"
+    },
+    {
+      "id": "IND_RAMZI_MUSALLAM",
+      "type": "person_or_family",
+      "label": "Ramzi Musallam",
+      "profile_url": "people/ramzi-musallam.html"
+    },
+    {
+      "id": "IND_BRENDAN_BECHTEL",
+      "type": "person_or_family",
+      "label": "Brendan Bechtel and the Bechtel family",
+      "profile_url": "people/brendan-bechtel.html"
+    },
+    {
+      "id": "IND_TRAE_STEPHENS",
+      "type": "person_or_family",
+      "label": "Trae Stephens",
+      "profile_url": "people/trae-stephens.html"
+    },
+    {
+      "id": "IND_NEIL_MITCHILL",
+      "type": "person_or_family",
+      "label": "Neil G. Mitchill Jr.",
+      "profile_url": "people/neil-g-mitchill-jr.html"
+    },
+    {
+      "id": "IND_PHILIP_JASPER",
+      "type": "person_or_family",
+      "label": "Philip J. Jasper",
+      "profile_url": "people/philip-j-jasper.html"
+    },
+    {
+      "id": "IND_KEVIN_OCONNOR",
+      "type": "person_or_family",
+      "label": "Kevin J. O'Connor",
+      "profile_url": "people/kevin-j-o-connor.html"
+    },
+    {
+      "id": "IND_JESUS_MALAVE",
+      "type": "person_or_family",
+      "label": "Jesus Malave Jr.",
+      "profile_url": "people/jesus-malave-jr.html"
+    },
+    {
+      "id": "IND_JOHN_REX",
+      "type": "person_or_family",
+      "label": "John Rex",
+      "profile_url": "people/john-rex.html"
+    },
+    {
+      "id": "IND_TIMOTHY_NOEL",
+      "type": "person_or_family",
+      "label": "Timothy Noel",
+      "profile_url": "people/timothy-noel.html"
+    },
+    {
+      "id": "IND_PATRICK_CONWAY",
+      "type": "person_or_family",
+      "label": "Patrick Conway, M.D.",
+      "profile_url": "people/patrick-conway-m-d.html"
+    },
+    {
+      "id": "IND_ROBERT_MAUCH",
+      "type": "person_or_family",
+      "label": "Robert P. Mauch",
+      "profile_url": "people/robert-p-mauch.html"
+    },
+    {
+      "id": "IND_STEVEN_COLLIS",
+      "type": "person_or_family",
+      "label": "Steven H. Collis",
+      "profile_url": "people/steven-h-collis.html"
+    },
+    {
+      "id": "IND_STEPHEN_BUDORICK",
+      "type": "person_or_family",
+      "label": "Stephen E. Budorick",
+      "profile_url": "people/stephen-e-budorick.html"
+    },
+    {
+      "id": "IND_DARRELL_CRATE",
+      "type": "person_or_family",
+      "label": "Darrell W. Crate",
+      "profile_url": "people/darrell-w-crate.html"
+    },
+    {
+      "id": "IND_PAT_GELSINGER",
+      "type": "person_or_family",
+      "label": "Patrick P. Gelsinger",
+      "profile_url": "people/patrick-p-gelsinger.html"
+    },
+    {
+      "id": "IND_DANNY_DEEP",
+      "type": "person_or_family",
+      "label": "Danny Deep",
+      "profile_url": "people/danny-deep.html"
+    },
+    {
+      "id": "IND_TOMMY_FISHER",
+      "type": "person_or_family",
+      "label": "Tommy Fisher",
+      "profile_url": "people/tommy-fisher.html"
+    },
+    {
+      "id": "IND_CRAIG_ABOD",
+      "type": "person_or_family",
+      "label": "Craig Abod",
+      "profile_url": "people/craig-abod.html"
+    }
+  ],
+  "edges": [
+    {
+      "id": "REL_ENT_SPACEX_IND_ELON_MUSK",
+      "source": "ENT_SPACEX",
+      "target": "IND_ELON_MUSK",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Founder and controlling shareholder",
+      "source_ids": [
+        "SPACEX_424B4_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1181412/000162828026042639/spaceexplorationtechnologi.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_GD_IND_CROWN_FAMILY",
+      "source": "ENT_GD",
+      "target": "IND_CROWN_FAMILY",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Ownership, family or sponsor connection",
+      "source_ids": [
+        "SGOWN_GD_PROXY_2026",
+        "SGOWN_GD_PROXY_2023",
+        "SGOWN_GD_CROWN_2023",
+        "LONGVIEW_20260828_13DA",
+        "LONGVIEW_20260903_FORM4",
+        "LONGVIEW_20261006_13DA",
+        "LONGVIEW_20261006_EXHIBIT_A"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/40533/000130817926000168/gd014595-def14a.htm",
+        "https://www.sec.gov/Archives/edgar/data/40533/000130817923000367/lgd2023_def14a.pdf",
+        "https://investorrelations.gd.com/news/press-release-details/2023/Statement-from-Chairman-and-CEO-Phebe-Novakovic-on-the-death-of-James-Crown/default.aspx",
+        "https://www.sec.gov/Archives/edgar/data/40533/000119312526374975/xslSCHEDULE_13D_X02/primary_doc.xml",
+        "https://www.sec.gov/Archives/edgar/data/40533/000119312526383979/xslF345X06/ownership.xml",
+        "https://www.sec.gov/Archives/edgar/data/40533/000119312526415880/xslSCHEDULE_13D_X02/primary_doc.xml",
+        "https://www.sec.gov/Archives/edgar/data/40533/000119312526415880/ck0000000000-ex99_a.pdf"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_PLTR_IND_ALEX_KARP",
+      "source": "ENT_PLTR",
+      "target": "IND_ALEX_KARP",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Co-founder and executive",
+      "source_ids": [
+        "PLTR_PROXY_2026",
+        "PLTR_10K_2025"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000019/pltr-20260423.htm",
+        "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000011/pltr-20251231.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_PLTR_IND_STEPHEN_COHEN",
+      "source": "ENT_PLTR",
+      "target": "IND_STEPHEN_COHEN",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Co-founder and executive",
+      "source_ids": [
+        "PLTR_PROXY_2026",
+        "PLTR_10K_2025"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000019/pltr-20260423.htm",
+        "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000011/pltr-20251231.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_PLTR_IND_PETER_THIEL",
+      "source": "ENT_PLTR",
+      "target": "IND_PETER_THIEL",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Co-founder and chairman",
+      "source_ids": [
+        "PLTR_PROXY_2026",
+        "THIEL_20260304_FORM4"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000019/pltr-20260423.htm",
+        "https://www.sec.gov/Archives/edgar/data/1321655/000121106026000007/xslF345X05/form4-03042026_090310.xml"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_PLTR_IND_SHYAM_SANKAR",
+      "source": "ENT_PLTR",
+      "target": "IND_SHYAM_SANKAR",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Company executive",
+      "source_ids": [
+        "PLTR_PROXY_2026",
+        "PLTR_10K_2025"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000019/pltr-20260423.htm",
+        "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000011/pltr-20251231.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_ADS_IND_LUKE_HILLIER",
+      "source": "ENT_ADS",
+      "target": "IND_LUKE_HILLIER",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Ownership, family or sponsor connection",
+      "source_ids": [
+        "SGOWN_ADS_LEADERSHIP_2025",
+        "SGOWN_ADS_HISTORY",
+        "SGOWN_HILLIER_DOJ_2019"
+      ],
+      "source_urls": [
+        "https://www.adsinc.com/community/ads-announces-new-board-member-and-executive-team-structure",
+        "https://www.adsinc.com/company-history",
+        "https://www.justice.gov/archives/opa/pr/former-ceo-virginia-based-defense-contractor-agrees-pay-20-million-settle-false-claims-act"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_RKLB_IND_PETER_BECK",
+      "source": "ENT_RKLB",
+      "target": "IND_PETER_BECK",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Company executive",
+      "source_ids": [
+        "SGOWN_RKLB_PROXY_2026",
+        "SGOWN_RKLB_BECK_AMENDMENT",
+        "BECK_20260304_FORM4",
+        "BECK_20260708_FORM4"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1819994/000162828026023922/rklb-20260406.htm",
+        "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000028/rklb-20260331xex101.htm",
+        "https://www.sec.gov/Archives/edgar/data/1819994/000200101126000019/xslF345X05/edgardoc.xml",
+        "https://www.sec.gov/Archives/edgar/data/1819994/000200101126000109/xslF345X06/edgardoc.xml"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_RKLB_IND_ADAM_SPICE",
+      "source": "ENT_RKLB",
+      "target": "IND_ADAM_SPICE",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Company executive",
+      "source_ids": [
+        "SGOWN_RKLB_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1819994/000162828026023922/rklb-20260406.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_ANDURIL_IND_PALMER_LUCKEY",
+      "source": "ENT_ANDURIL",
+      "target": "IND_PALMER_LUCKEY",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Ownership, family or sponsor connection",
+      "source_ids": [
+        "SGOWN_ANDURIL_ROLES_2025"
+      ],
+      "source_urls": [
+        "https://www.anduril.com/news/dsta-and-the-rsaf-partner-with-anduril-to-explore-mission-autonomy-for-manned-unmanned-teaming"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_ANDURIL_IND_BRIAN_SCHIMPF",
+      "source": "ENT_ANDURIL",
+      "target": "IND_BRIAN_SCHIMPF",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Ownership, family or sponsor connection",
+      "source_ids": [
+        "SGOWN_ANDURIL_ROLES_2025"
+      ],
+      "source_urls": [
+        "https://www.anduril.com/news/dsta-and-the-rsaf-partner-with-anduril-to-explore-mission-autonomy-for-manned-unmanned-teaming"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_LMT_IND_JAMES_TAICLET",
+      "source": "ENT_LMT",
+      "target": "IND_JAMES_TAICLET",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Company executive",
+      "source_ids": [
+        "LMT_PROXY_2026",
+        "LMT_10K_2025"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/936468/000093646826000004/lmt-20260326.htm",
+        "https://www.sec.gov/Archives/edgar/data/936468/000162828026004195/lmt-20251231.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_LMT_IND_FRANK_ST_JOHN",
+      "source": "ENT_LMT",
+      "target": "IND_FRANK_ST_JOHN",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Company executive",
+      "source_ids": [
+        "LMT_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/936468/000093646826000004/lmt-20260326.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_RTX_IND_CHRIS_CALIO",
+      "source": "ENT_RTX",
+      "target": "IND_CHRIS_CALIO",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Company executive",
+      "source_ids": [
+        "RTX_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://investors.rtx.com/static-files/a494e9b4-834a-4d49-9a17-66a0cdd690fd"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_GD_IND_PHEBE_NOVAKOVIC",
+      "source": "ENT_GD",
+      "target": "IND_PHEBE_NOVAKOVIC",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Company executive",
+      "source_ids": [
+        "GD_PROXY_2026",
+        "GD_10K_2025"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/40533/000130817926000168/gd014595-def14a.htm",
+        "https://s22.q4cdn.com/891946778/files/doc_financials/2025/q4/GD-2025-10-K.pdf"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_NOC_IND_KATHY_WARDEN",
+      "source": "ENT_NOC",
+      "target": "IND_KATHY_WARDEN",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Company executive",
+      "source_ids": [
+        "NOC_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1133421/000113342126000007/noc-20260401.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_BA_IND_KELLY_ORTBERG",
+      "source": "ENT_BA",
+      "target": "IND_KELLY_ORTBERG",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Company executive",
+      "source_ids": [
+        "BA_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/12927/000119312526096787/d39411ddef14a.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_UNH_IND_STEPHEN_HEMSLEY",
+      "source": "ENT_UNH",
+      "target": "IND_STEPHEN_HEMSLEY",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Company executive",
+      "source_ids": [
+        "UNH_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/731766/000110465926046125/tm261387-6_def14a.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_UNH_IND_ANDREW_WITTY",
+      "source": "ENT_UNH",
+      "target": "IND_ANDREW_WITTY",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Company executive",
+      "source_ids": [
+        "UNH_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/731766/000110465926046125/tm261387-6_def14a.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_MCK_IND_BRIAN_TYLER",
+      "source": "ENT_MCK",
+      "target": "IND_BRIAN_TYLER",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Company executive",
+      "source_ids": [
+        "MCK_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/927653/000092765326000169/mck-20260612.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_BAH_IND_HORACIO_ROZANSKI",
+      "source": "ENT_BAH",
+      "target": "IND_HORACIO_ROZANSKI",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Company executive",
+      "source_ids": [
+        "BAH_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://investors.boozallen.com/static-files/4ff42eea-3524-4cfb-ba7f-1114ee46a2ce"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_AMTM_IND_JOHN_HELLER",
+      "source": "ENT_AMTM",
+      "target": "IND_JOHN_HELLER",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Company executive",
+      "source_ids": [
+        "AMTM_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/2011286/000110465925123111/tm2523471-2_def14a.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_MOH_IND_JOSEPH_ZUBRETSKY",
+      "source": "ENT_MOH",
+      "target": "IND_JOSEPH_ZUBRETSKY",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Company executive",
+      "source_ids": [
+        "MOH_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1179929/000117992926000008/moh-20260313.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_BLK_IND_LARRY_FINK",
+      "source": "ENT_BLK",
+      "target": "IND_LARRY_FINK",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Company executive",
+      "source_ids": [
+        "BLK_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/2012383/000130817926000262/ny-20260410.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_PERATON_IND_RAMZI_MUSALLAM",
+      "source": "ENT_PERATON",
+      "target": "IND_RAMZI_MUSALLAM",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Ownership, family or sponsor connection",
+      "source_ids": [
+        "SGOWN_VERITAS_TEAM",
+        "SGOWN_PERATON_SPONSOR",
+        "PERSPECTA_2021"
+      ],
+      "source_urls": [
+        "https://www.veritascapital.com/team/",
+        "https://www.peraton.com/news/peraton-appoints-steve-schorer-as-chief-executive-officer",
+        "https://www.sec.gov/Archives/edgar/data/1724670/000114036121011429/nt10019457x7_defm14a.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_BECHTEL_IND_BRENDAN_BECHTEL",
+      "source": "ENT_BECHTEL",
+      "target": "IND_BRENDAN_BECHTEL",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Ownership, family or sponsor connection",
+      "source_ids": [
+        "SGOWN_BECHTEL_BIO",
+        "HANFORD_CY2024"
+      ],
+      "source_urls": [
+        "https://www.bechtel.com/people/leadership/brendan-bechtel/",
+        "https://www.hanford.gov/files.cfm/HANFORD_BNI-WTP_CY_24_SCORECARD.pdf"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_ANDURIL_IND_TRAE_STEPHENS",
+      "source": "ENT_ANDURIL",
+      "target": "IND_TRAE_STEPHENS",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Ownership, family or sponsor connection",
+      "source_ids": [
+        "SGOWN_TRAE_BIO"
+      ],
+      "source_urls": [
+        "https://foundersfund.com/team/trae-stephens/"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_RTX_IND_NEIL_MITCHILL",
+      "source": "ENT_RTX",
+      "target": "IND_NEIL_MITCHILL",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Company executive",
+      "source_ids": [
+        "RTX_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://investors.rtx.com/static-files/a494e9b4-834a-4d49-9a17-66a0cdd690fd"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_RTX_IND_PHILIP_JASPER",
+      "source": "ENT_RTX",
+      "target": "IND_PHILIP_JASPER",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Company executive",
+      "source_ids": [
+        "RTX_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://investors.rtx.com/static-files/a494e9b4-834a-4d49-9a17-66a0cdd690fd"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_LMT_IND_KEVIN_OCONNOR",
+      "source": "ENT_LMT",
+      "target": "IND_KEVIN_OCONNOR",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Company executive",
+      "source_ids": [
+        "LMT_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/936468/000093646826000004/lmt-20260326.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_LMT_IND_JESUS_MALAVE",
+      "source": "ENT_LMT",
+      "target": "IND_JESUS_MALAVE",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Company executive",
+      "source_ids": [
+        "LMT_PROXY_2026",
+        "BA_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/936468/000093646826000004/lmt-20260326.htm",
+        "https://www.sec.gov/Archives/edgar/data/12927/000119312526096787/d39411ddef14a.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_BA_IND_JESUS_MALAVE",
+      "source": "ENT_BA",
+      "target": "IND_JESUS_MALAVE",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Company executive",
+      "source_ids": [
+        "LMT_PROXY_2026",
+        "BA_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/936468/000093646826000004/lmt-20260326.htm",
+        "https://www.sec.gov/Archives/edgar/data/12927/000119312526096787/d39411ddef14a.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_UNH_IND_JOHN_REX",
+      "source": "ENT_UNH",
+      "target": "IND_JOHN_REX",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Company executive",
+      "source_ids": [
+        "UNH_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/731766/000110465926046125/tm261387-6_def14a.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_UNH_IND_TIMOTHY_NOEL",
+      "source": "ENT_UNH",
+      "target": "IND_TIMOTHY_NOEL",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Company executive",
+      "source_ids": [
+        "UNH_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/731766/000110465926046125/tm261387-6_def14a.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_UNH_IND_PATRICK_CONWAY",
+      "source": "ENT_UNH",
+      "target": "IND_PATRICK_CONWAY",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Company executive",
+      "source_ids": [
+        "UNH_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/731766/000110465926046125/tm261387-6_def14a.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_CENCORA_IND_ROBERT_MAUCH",
+      "source": "ENT_CENCORA",
+      "target": "IND_ROBERT_MAUCH",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "President and CEO",
+      "source_ids": [
+        "cencora_proxy_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1140859/000162828026003061/cor-20260122.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_CENCORA_IND_STEVEN_COLLIS",
+      "source": "ENT_CENCORA",
+      "target": "IND_STEVEN_COLLIS",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Former Executive Chairman; previously President and CEO",
+      "source_ids": [
+        "cencora_proxy_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1140859/000162828026003061/cor-20260122.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_COPT_DEFENSE_IND_STEPHEN_BUDORICK",
+      "source": "ENT_COPT_DEFENSE",
+      "target": "IND_STEPHEN_BUDORICK",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "President and CEO",
+      "source_ids": [
+        "copt_proxy_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/860546/000086054626000017/cdp-20260327.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_EASTERLY_GOV_IND_DARRELL_CRATE",
+      "source": "ENT_EASTERLY_GOV",
+      "target": "IND_DARRELL_CRATE",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "President and CEO",
+      "source_ids": [
+        "easterly_proxy_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1622194/000162219426000008/dea-20260323.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_INTEL_IND_PAT_GELSINGER",
+      "source": "ENT_INTEL",
+      "target": "IND_PAT_GELSINGER",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "Former CEO",
+      "source_ids": [
+        "intel_proxy_2025"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/50863/000005086325000054/intc-20250327.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_GD_IND_DANNY_DEEP",
+      "source": "ENT_GD",
+      "target": "IND_DANNY_DEEP",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "President; earlier operating executive roles during FY2025",
+      "source_ids": [
+        "GD_PROXY_2026"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/40533/000130817926000168/gd014595-def14a.htm"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_FISHER_SAND_IND_TOMMY_FISHER",
+      "source": "ENT_FISHER_SAND",
+      "target": "IND_TOMMY_FISHER",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "President and CEO, as identified in the 2025 company newsletter",
+      "source_ids": [
+        "FISHER_2025",
+        "FISHER_ABOUT"
+      ],
+      "source_urls": [
+        "https://www.fisherind.com/newsletter",
+        "https://www.fisherind.com/about-us"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "REL_ENT_CARAHSOFT_IND_CRAIG_ABOD",
+      "source": "ENT_CARAHSOFT",
+      "target": "IND_CRAIG_ABOD",
+      "relationship_type": "documented_leadership_or_ownership_connection",
+      "description": "President, documented in the company’s November 2022 announcement",
+      "source_ids": [
+        "CARAHSOFT_AWS_2022"
+      ],
+      "source_urls": [
+        "https://www.carahsoft.com/news/carahsoft-signs-strategic-collaboration-agreemeent-with-AWS"
+      ],
+      "temporal_scope": "Dated records as described in the linked profile; not assumed continuous for the entire window.",
+      "evidence_status": "relationship_supported_personal_government_receipts_unquantified",
+      "government_attributed_personal_receipts_usd": null
+    }
+  ]
+}

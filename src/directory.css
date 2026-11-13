@@ -1,0 +1,59 @@
+/* The directory is the entry point; context stays close to the records. */
+.directory-intro { padding-block: 25px 18px; }
+.directory-title { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; }
+.directory-title > span { font-size: .8125rem; color: var(--muted); white-space: nowrap; }
+.directory-intro .eyebrow-line { border: 0; padding-bottom: 0; }
+.directory-intro h1 { font-size: clamp(2.4rem, 2rem + 2vw, 3.8rem); margin: 0 0 12px; font-family: var(--serif); font-weight: 400; letter-spacing: -.045em; line-height: 1.15; }
+.directory-intro .deck { font-size: 1rem; color: var(--muted); }
+.directory-section { padding-top: 24px; }
+.directory-heading, .directory-context { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.directory-heading h2 { font-size: 1.6rem; }
+.directory-links { display: flex; gap: 24px; font-size: .875rem; }
+.directory-links a { padding-block: 10px; text-underline-offset: 5px; }
+.directory-controls { display: grid; grid-template-columns: minmax(0,1fr) minmax(200px,.55fr); gap: 18px 24px; margin: 20px 0 14px; }
+.directory-controls label, .directory-controls legend { display: block; font-size: .8125rem; font-weight: 700; margin-bottom: 8px; }
+.directory-controls input[type=search], .directory-controls select { width: 100%; min-width: 0; min-height: 48px; padding: 11px 14px; border: 1px solid var(--control-border); border-radius: 12px; background: #0e1914; color: var(--ink); font: inherit; font-size: 1rem; }
+.directory-categories { display: flex; flex-wrap: wrap; gap: 8px; grid-column: 1/-1; border: 0; margin: 0; padding: 0; }
+.directory-categories legend { float: left; align-self: center; margin: 0 12px 0 0; padding: 14px 0; }
+.directory-choice { position: relative; }
+.directory-choice input { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; border: 0; clip-path: inset(50%); overflow: hidden; }
+.directory-choice label { display: flex; gap: 14px; align-items: center; min-height: 48px; padding: 10px 18px; margin: 0; border: 1px solid var(--line); border-radius: 999px; cursor: pointer; font-size: .875rem; font-weight: 400; }
+.directory-choice label span { font-size: .75rem; font-variant-numeric: tabular-nums; }
+.directory-choice input:checked + label { background: var(--lime); color: #172019; border-color: var(--lime); font-weight: 700; }
+.directory-choice input:focus-visible + label { outline: 3px solid var(--accent); outline-offset: 4px; }
+.directory-choice label:hover { border-color: var(--teal); }
+.directory-context { align-items: start; margin: 8px 0 16px; }
+.directory-context .results-count { margin: 0; padding-top: 4px; }
+.directory-key { padding: 0; border: 0; margin: 0; max-width: 60ch; font-size: .8125rem; text-align: right; }
+.directory-key summary { padding: 4px 0; margin: 0; min-height: 30px; cursor: pointer; color: var(--muted); }
+.directory-key p { text-align: left; margin-top: 10px; line-height: 1.6; }
+.directory-section .people-grid { gap: 18px; }
+.directory-section .person-card { border-radius: 18px; padding: 22px; }
+.directory-section .person-card .role { min-height: 0; }
+.directory-section .person-value { margin-top: 18px; font-size: 2rem; }
+.directory-section .person-card.unquantified .person-value { font-size: 1.4rem; }
+.directory-section .person-card .card-link { padding-top: 18px; }
+.directory-section .person-card:focus-within { border-color: var(--teal); }
+.directory-section .person-card [data-status] { color: var(--muted); font-size: .75rem; }
+.no-results h3 { font: 400 1.6rem var(--serif); margin-bottom: 12px; }
+.no-results button { margin-top: 18px; }
+@media(max-width:700px) {
+  .directory-intro { padding-block: 22px 18px; }
+  .directory-intro h1 { margin-top: 0; }
+  .directory-title { flex-wrap: wrap; gap: 0 18px; }
+  .directory-title > span { margin-bottom: 12px; }
+  .directory-section { padding-top: 20px; }
+  .directory-heading { align-items: start; flex-wrap: wrap; gap: 6px; }
+  .directory-links { gap: 22px; }
+  .directory-controls { grid-template-columns: minmax(0,1fr); gap: 14px; }
+  .directory-categories { grid-column: 1; gap: 7px; }
+  .directory-categories legend { width: 100%; padding: 0; margin: 0 0 8px; }
+  .directory-choice label { padding: 9px 13px; gap: 10px; }
+  .directory-context { gap: 12px; }
+  .directory-section .people-grid { grid-template-columns: minmax(0,1fr); }
+}
+@media(forced-colors:active) {
+  .directory-choice input:checked + label { border: 3px solid Highlight; }
+  .directory-choice input:focus-visible + label { outline-color: Highlight; }
+}
+@media print { .directory-controls, .directory-links, .directory-context { display: none; } }

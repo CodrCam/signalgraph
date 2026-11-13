@@ -1,0 +1,261 @@
+{
+  "scope": "39 named companies from the original and reconciliation research; amounts retain recipient, channel and period scope. Not a consolidated contractor ranking.",
+  "companies": [
+    {
+      "id": "ENT_AMTM",
+      "name": "Amentum Holdings, Inc.",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "amentum-holdings-inc"
+    },
+    {
+      "id": "ENT_ANDURIL",
+      "name": "Anduril Industries, Inc.",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "anduril-industries-inc"
+    },
+    {
+      "id": "ENT_ADS",
+      "name": "Atlantic Diving Supply, Inc.",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "atlantic-diving-supply-inc"
+    },
+    {
+      "id": "ENT_BAE",
+      "name": "BAE Systems plc",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "bae-systems-plc"
+    },
+    {
+      "id": "ENT_BECHTEL",
+      "name": "Bechtel Group, Inc.",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "bechtel-group-inc"
+    },
+    {
+      "id": "ENT_BLK",
+      "name": "BlackRock",
+      "note": "Named in the people analysis. Managed-care or asset-management connections differ from direct federal procurement.",
+      "slug": "blackrock"
+    },
+    {
+      "id": "ENT_BAH",
+      "name": "Booz Allen Hamilton Holding Corporation",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "booz-allen-hamilton-holding-corporation"
+    },
+    {
+      "id": "ENT_CACI",
+      "name": "CACI International Inc",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "caci-international-inc"
+    },
+    {
+      "id": "ENT_CARAHSOFT",
+      "name": "Carahsoft Technology Corp.",
+      "slug": "carahsoft-technology-corp",
+      "note": "Public-sector technology aggregator and reseller. Gross bookings, federal obligations, vendor pass-throughs and retained margin require separate reconciliation.",
+      "source_ids": [
+        "CARAHSOFT_AWS_2022"
+      ]
+    },
+    {
+      "id": "ENT_CENCORA",
+      "name": "Cencora, Inc.",
+      "slug": "cencora-inc",
+      "note": "Parent of AmerisourceBergen Drug Corporation. FY2025 recipient UEI KABZK8W6PQT3: $7,442,279,749.80 net obligations. This is the subsidiary record, not a consolidated parent total.",
+      "source_ids": [
+        "USASPENDING_SNAPSHOT",
+        "cencora_ex21_2025"
+      ]
+    },
+    {
+      "id": "ENT_CNC",
+      "name": "Centene Corporation",
+      "note": "Named in the separate recipient export; supplied totals have not been validated as consolidated group amounts.",
+      "slug": "centene-corporation"
+    },
+    {
+      "id": "ENT_COPT_DEFENSE",
+      "name": "COPT Defense Properties",
+      "slug": "copt-defense-properties",
+      "note": "Property ownership and leasing connected to government and defense customers. Direct federal tenant rent must be separated from contractor tenant rent.",
+      "source_ids": [
+        "copt_proxy_2026"
+      ]
+    },
+    {
+      "id": "ENT_DELOITTE",
+      "name": "Deloitte LLP",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "deloitte-llp"
+    },
+    {
+      "id": "ENT_EASTERLY_GOV",
+      "name": "Easterly Government Properties, Inc.",
+      "slug": "easterly-government-properties-inc",
+      "note": "Government-oriented real estate landlord. Lease receipts, property-level entities, costs and executive compensation are different measures.",
+      "source_ids": [
+        "easterly_proxy_2026"
+      ]
+    },
+    {
+      "id": "ENT_GD_EB",
+      "name": "Electric Boat Corporation",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "electric-boat-corporation"
+    },
+    {
+      "id": "ENT_FISHER_SAND",
+      "name": "Fisher Sand & Gravel Co.",
+      "slug": "fisher-sand-gravel-co",
+      "note": "FY2026 recipient UEI XAVBDA4D13N7: $13,353,127,851.70 observed net prime contract obligations. One recipient record, not owner income.",
+      "source_ids": [
+        "USASPENDING_SNAPSHOT",
+        "FISHER_ABOUT"
+      ]
+    },
+    {
+      "id": "ENT_FLR",
+      "name": "Fluor Corporation",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "fluor-corporation"
+    },
+    {
+      "id": "ENT_GD",
+      "name": "General Dynamics Corporation",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "general-dynamics-corporation"
+    },
+    {
+      "id": "ENT_HUM",
+      "name": "Humana Inc.",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "humana-inc"
+    },
+    {
+      "id": "ENT_HII",
+      "name": "Huntington Ingalls Industries, Inc.",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "huntington-ingalls-industries-inc"
+    },
+    {
+      "id": "ENT_INTEL",
+      "name": "Intel Corporation",
+      "slug": "intel-corporation",
+      "note": "Semiconductor incentives include amended CHIPS funding, government equity and tax-credit recognition. These are not an additive federal-contract total.",
+      "source_ids": [
+        "gao_intel_2026",
+        "intel_10k_2025"
+      ]
+    },
+    {
+      "id": "ENT_LHX",
+      "name": "L3Harris Technologies, Inc.",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "l3harris-technologies-inc"
+    },
+    {
+      "id": "ENT_LDOS",
+      "name": "Leidos Holdings, Inc.",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "leidos-holdings-inc"
+    },
+    {
+      "id": "ENT_LMT",
+      "name": "Lockheed Martin Corporation",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "lockheed-martin-corporation"
+    },
+    {
+      "id": "ENT_MCK",
+      "name": "McKesson Corporation",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "mckesson-corporation"
+    },
+    {
+      "id": "ENT_MOH",
+      "name": "Molina Healthcare",
+      "note": "Named in the people analysis. Managed-care or asset-management connections differ from direct federal procurement.",
+      "slug": "molina-healthcare"
+    },
+    {
+      "id": "ENT_NOC",
+      "name": "Northrop Grumman Corporation",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "northrop-grumman-corporation"
+    },
+    {
+      "id": "ENT_PLTR",
+      "name": "Palantir Technologies Inc.",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "palantir-technologies-inc"
+    },
+    {
+      "id": "ENT_PERATON",
+      "name": "Peraton Inc.",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "peraton-inc"
+    },
+    {
+      "id": "ENT_PFE",
+      "name": "Pfizer Inc.",
+      "note": "Pfizer in the main ledger shares an identifier with PIP Manufacturing in the separate export. Kept separate; identity and totals require verification.",
+      "slug": "pfizer-inc"
+    },
+    {
+      "id": "ENT_PIP",
+      "name": "PIP Manufacturing Inc.",
+      "note": "PIP Manufacturing in the separate export shares an identifier with Pfizer in the main ledger. Kept separate; identity and totals require verification.",
+      "slug": "pip-manufacturing-inc"
+    },
+    {
+      "id": "ENT_RKLB",
+      "name": "Rocket Lab USA, Inc.",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "rocket-lab-usa-inc"
+    },
+    {
+      "id": "ENT_RTX",
+      "name": "RTX Corporation",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "rtx-corporation"
+    },
+    {
+      "id": "ENT_SAIC",
+      "name": "Science Applications International Corporation",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "science-applications-international-corporation"
+    },
+    {
+      "id": "ENT_SPACEX",
+      "name": "Space Exploration Technologies Corp.",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "space-exploration-technologies-corp"
+    },
+    {
+      "id": "ENT_BA",
+      "name": "The Boeing Company",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "the-boeing-company"
+    },
+    {
+      "id": "ENT_TRIAD",
+      "name": "Triad National Security, LLC",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "triad-national-security-llc"
+    },
+    {
+      "id": "ENT_TRIWEST",
+      "name": "TriWest Healthcare Alliance Corp.",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "triwest-healthcare-alliance-corp"
+    },
+    {
+      "id": "ENT_UNH",
+      "name": "UnitedHealth Group Incorporated",
+      "note": "Named in the supplied recipient research. Group totals require entity and period reconciliation.",
+      "slug": "unitedhealth-group-incorporated"
+    }
+  ],
+  "review_date": "2026-11-12"
+}

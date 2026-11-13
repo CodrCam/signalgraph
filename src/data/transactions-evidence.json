@@ -1,0 +1,693 @@
+{
+  "audit_date": "2026-11-12",
+  "status": "complete",
+  "research_window": {
+    "start": "2022-10-01",
+    "end": "2026-09-30"
+  },
+  "methodology": [
+    "StockTitan pages were navigation leads only; substantive verification uses original SEC filings and their indexed XML documents.",
+    "Raw XML links are listed from SEC filing indexes. The web reader could not parse raw XML; the SEC's styled rendering of the same XML was used for transaction rows and footnotes.",
+    "Amounts are exact decimal sums of disclosed shares multiplied by reported prices, computed with integer arithmetic at four decimal places. Actual trade proceeds can differ slightly because weighted-average prices are rounded.",
+    "Rounded-to-cents values round the aggregate once, not each trade row. No tax, cost basis, fee, realized gain, or personal distribution is invented.",
+    "Transactions, ownership snapshots, and company compensation must not be added as though they were the same measure."
+  ],
+  "sources": {
+    "THIEL_20260304_FORM4": {
+      "form": "4",
+      "filed": "2026-03-04",
+      "accession": "0001211060-26-000007",
+      "url": "https://www.sec.gov/Archives/edgar/data/1321655/000121106026000007/xslF345X05/form4-03042026_090310.xml",
+      "original_xml_url": "https://www.sec.gov/Archives/edgar/data/1321655/000121106026000007/form4-03042026_090310.xml",
+      "index_url": "https://www.sec.gov/Archives/edgar/data/1321655/000121106026000007/0001211060-26-000007-index.htm",
+      "locator": "Table I, seven sales dated March 2; footnotes 1–9; especially footnote 3"
+    },
+    "BECK_20260304_FORM4": {
+      "form": "4",
+      "filed": "2026-03-04",
+      "accession": "0002001011-26-000019",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819994/000200101126000019/xslF345X05/edgardoc.xml",
+      "original_xml_url": "https://www.sec.gov/Archives/edgar/data/1819994/000200101126000019/edgardoc.xml",
+      "index_url": "https://www.sec.gov/Archives/edgar/data/1819994/000200101126000019/0002001011-26-000019-index.htm",
+      "locator": "Table I, five sales dated March 2; footnote 1"
+    },
+    "BECK_20260708_FORM4": {
+      "form": "4",
+      "filed": "2026-07-08",
+      "accession": "0002001011-26-000109",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819994/000200101126000109/xslF345X06/edgardoc.xml",
+      "original_xml_url": "https://www.sec.gov/Archives/edgar/data/1819994/000200101126000109/edgardoc.xml",
+      "index_url": "https://www.sec.gov/Archives/edgar/data/1819994/000200101126000109/0002001011-26-000109-index.htm",
+      "locator": "Table I, 24 sales dated July 6–8; footnotes 1 and 3"
+    },
+    "LONGVIEW_20260903_FORM4": {
+      "form": "4",
+      "filed": "2026-09-03",
+      "accession": "0001193125-26-383979",
+      "url": "https://www.sec.gov/Archives/edgar/data/40533/000119312526383979/xslF345X06/ownership.xml",
+      "original_xml_url": "https://www.sec.gov/Archives/edgar/data/40533/000119312526383979/ownership.xml",
+      "locator": "Remarks; empty Table I; former 10% owner box"
+    },
+    "LONGVIEW_20261006_13DA": {
+      "form": "SCHEDULE 13D/A",
+      "amendment": 31,
+      "filed": "2026-10-06",
+      "accession": "0001193125-26-415880",
+      "url": "https://www.sec.gov/Archives/edgar/data/40533/000119312526415880/xslSCHEDULE_13D_X02/primary_doc.xml",
+      "original_xml_url": "https://www.sec.gov/Archives/edgar/data/1086477/000119312526415880/primary_doc.xml",
+      "index_url": "https://www.sec.gov/Archives/edgar/data/40533/000119312526415880/0001193125-26-415880-index.htm",
+      "locator": "Cover and Item 5(a)–(c), as of October 1, 2026"
+    },
+    "LONGVIEW_20261006_EXHIBIT_A": {
+      "form": "EX-99.A",
+      "filed": "2026-10-06",
+      "accession": "0001193125-26-415880",
+      "url": "https://www.sec.gov/Archives/edgar/data/40533/000119312526415880/ck0000000000-ex99_a.pdf",
+      "locator": "Single page, 25 dated share/price rows from September 1 through October 1, 2026"
+    },
+    "LONGVIEW_20260828_13DA": {
+      "form": "SCHEDULE 13D/A",
+      "amendment": 30,
+      "filed": "2026-08-28",
+      "accession": "0001193125-26-374975",
+      "url": "https://www.sec.gov/Archives/edgar/data/40533/000119312526374975/xslSCHEDULE_13D_X02/primary_doc.xml",
+      "original_xml_url": "https://www.sec.gov/Archives/edgar/data/40533/000119312526374975/primary_doc.xml",
+      "locator": "Item 4 planned portfolio sales; Item 5(a) shares as of August 26; Item 4 references August 28"
+    }
+  },
+  "findings": [
+    {
+      "id": "thiel-march-2026",
+      "person": "Peter Thiel",
+      "company": "Palantir Technologies",
+      "holder_of_record": "STS Holdings II LLC",
+      "dates": [
+        "2026-03-02"
+      ],
+      "source_id": "THIEL_20260304_FORM4",
+      "confidence": "high",
+      "verdict": "Amount and sole-beneficial-owner link supported; net personal cash and government attribution not established",
+      "transaction_code": "S",
+      "ownership_form": "I",
+      "calculation": {
+        "shares": 2000000,
+        "gross_from_reported_prices_usd_decimal": "289707507.0393",
+        "gross_from_reported_prices_usd_rounded_to_cents": 289707507.04
+      },
+      "rows": [
+        {
+          "date": "2026-03-02",
+          "shares": 50026,
+          "transaction_code": "S",
+          "reported_price_usd": "140.9739",
+          "gross_from_reported_price_usd_decimal": "7052360.3214"
+        },
+        {
+          "date": "2026-03-02",
+          "shares": 46722,
+          "transaction_code": "S",
+          "reported_price_usd": "142.2131",
+          "gross_from_reported_price_usd_decimal": "6644480.4582"
+        },
+        {
+          "date": "2026-03-02",
+          "shares": 222837,
+          "transaction_code": "S",
+          "reported_price_usd": "143.2751",
+          "gross_from_reported_price_usd_decimal": "31926993.4587"
+        },
+        {
+          "date": "2026-03-02",
+          "shares": 419113,
+          "transaction_code": "S",
+          "reported_price_usd": "144.1774",
+          "gross_from_reported_price_usd_decimal": "60426622.6462"
+        },
+        {
+          "date": "2026-03-02",
+          "shares": 721136,
+          "transaction_code": "S",
+          "reported_price_usd": "145.1654",
+          "gross_from_reported_price_usd_decimal": "104683995.8944"
+        },
+        {
+          "date": "2026-03-02",
+          "shares": 488783,
+          "transaction_code": "S",
+          "reported_price_usd": "146.1385",
+          "gross_from_reported_price_usd_decimal": "71430014.4455"
+        },
+        {
+          "date": "2026-03-02",
+          "shares": 51383,
+          "transaction_code": "S",
+          "reported_price_usd": "146.8003",
+          "gross_from_reported_price_usd_decimal": "7543039.8149"
+        }
+      ],
+      "inside_research_window": true,
+      "recommended_display": "$289.71M gross share-sale value through STS Holdings II LLC, March 2, 2026",
+      "qualifications": [
+        "Footnote 3 identifies Thiel as sole beneficial owner of the selling LLC.",
+        "Sales occurred under a Rule 10b5-1 trading plan adopted November 14, 2025.",
+        "Calculated value uses disclosed weighted-average prices, which are rounded. It is not exact net proceeds, capital gain, compensation, or a government payment.",
+        "Other holdings rows have no transaction and must not be counted as additional sales."
+      ],
+      "personal_net_proceeds_usd": null,
+      "government_funded_personal_receipts_usd": null
+    },
+    {
+      "id": "beck-march-2026-tax-cover",
+      "person": "Peter Beck",
+      "company": "Rocket Lab",
+      "holder_of_record": "Peter Beck (direct)",
+      "dates": [
+        "2026-03-02"
+      ],
+      "source_id": "BECK_20260304_FORM4",
+      "confidence": "high",
+      "verdict": "Supported as tax-cover sales; describing this filing as code F or unrestricted cash-out is incorrect",
+      "transaction_code": "S",
+      "ownership_form": "D",
+      "calculation": {
+        "shares": 18857,
+        "gross_from_reported_prices_usd_decimal": "1312257.1249",
+        "gross_from_reported_prices_usd_rounded_to_cents": 1312257.12
+      },
+      "rows": [
+        {
+          "date": "2026-03-02",
+          "shares": 1349,
+          "transaction_code": "S",
+          "reported_price_usd": "66.8288",
+          "gross_from_reported_price_usd_decimal": "90152.0512"
+        },
+        {
+          "date": "2026-03-02",
+          "shares": 951,
+          "transaction_code": "S",
+          "reported_price_usd": "67.9207",
+          "gross_from_reported_price_usd_decimal": "64592.5857"
+        },
+        {
+          "date": "2026-03-02",
+          "shares": 3465,
+          "transaction_code": "S",
+          "reported_price_usd": "69.1034",
+          "gross_from_reported_price_usd_decimal": "239443.2810"
+        },
+        {
+          "date": "2026-03-02",
+          "shares": 11010,
+          "transaction_code": "S",
+          "reported_price_usd": "70.0313",
+          "gross_from_reported_price_usd_decimal": "771044.6130"
+        },
+        {
+          "date": "2026-03-02",
+          "shares": 2082,
+          "transaction_code": "S",
+          "reported_price_usd": "70.617",
+          "gross_from_reported_price_usd_decimal": "147024.5940"
+        }
+      ],
+      "inside_research_window": true,
+      "recommended_display": "$1.31M share sales to cover tax withholding on vested RSUs, March 2, 2026",
+      "qualifications": [
+        "All five transaction rows use code S; there are no code F rows in this filing.",
+        "Footnote 1 explicitly identifies sell-to-cover transactions under a Rule 10b5-1 election to satisfy withholding obligations associated with RSU vesting and settlement.",
+        "Do not present the calculated gross as discretionary personal cash received or add it to vesting-value totals without checking double counting."
+      ],
+      "personal_discretionary_cash_received_usd": null,
+      "government_funded_personal_receipts_usd": null
+    },
+    {
+      "id": "beck-equatorial-july-2026",
+      "person": "Peter Beck",
+      "company": "Rocket Lab",
+      "holder_of_record": "Equatorial Trust",
+      "dates": [
+        "2026-07-06",
+        "2026-07-07",
+        "2026-07-08"
+      ],
+      "source_id": "BECK_20260708_FORM4",
+      "confidence": "high",
+      "verdict": "Trust sale amount supported; assigning all proceeds personally to Beck is unsupported",
+      "transaction_code": "S",
+      "ownership_form": "I",
+      "calculation": {
+        "shares": 3275779,
+        "gross_from_reported_prices_usd_decimal": "286410195.5797",
+        "gross_from_reported_prices_usd_rounded_to_cents": 286410195.58
+      },
+      "by_date": [
+        {
+          "date": "2026-07-06",
+          "shares": 986197,
+          "gross_from_reported_prices_usd_decimal": "94015922.3095",
+          "gross_from_reported_prices_usd_rounded_to_cents": 94015922.31
+        },
+        {
+          "date": "2026-07-07",
+          "shares": 1298622,
+          "gross_from_reported_prices_usd_decimal": "110278981.2092",
+          "gross_from_reported_prices_usd_rounded_to_cents": 110278981.21
+        },
+        {
+          "date": "2026-07-08",
+          "shares": 990960,
+          "gross_from_reported_prices_usd_decimal": "82115292.0610",
+          "gross_from_reported_prices_usd_rounded_to_cents": 82115292.06
+        }
+      ],
+      "rows": [
+        {
+          "date": "2026-07-06",
+          "shares": 213106,
+          "transaction_code": "S",
+          "reported_price_usd": "92.8118",
+          "gross_from_reported_price_usd_decimal": "19778751.4508"
+        },
+        {
+          "date": "2026-07-06",
+          "shares": 198726,
+          "transaction_code": "S",
+          "reported_price_usd": "93.7391",
+          "gross_from_reported_price_usd_decimal": "18628396.3866"
+        },
+        {
+          "date": "2026-07-06",
+          "shares": 84387,
+          "transaction_code": "S",
+          "reported_price_usd": "94.6872",
+          "gross_from_reported_price_usd_decimal": "7990368.7464"
+        },
+        {
+          "date": "2026-07-06",
+          "shares": 138478,
+          "transaction_code": "S",
+          "reported_price_usd": "95.8913",
+          "gross_from_reported_price_usd_decimal": "13278835.4414"
+        },
+        {
+          "date": "2026-07-06",
+          "shares": 169457,
+          "transaction_code": "S",
+          "reported_price_usd": "96.7767",
+          "gross_from_reported_price_usd_decimal": "16399489.2519"
+        },
+        {
+          "date": "2026-07-06",
+          "shares": 77684,
+          "transaction_code": "S",
+          "reported_price_usd": "97.7041",
+          "gross_from_reported_price_usd_decimal": "7590045.3044"
+        },
+        {
+          "date": "2026-07-06",
+          "shares": 76178,
+          "transaction_code": "S",
+          "reported_price_usd": "98.6982",
+          "gross_from_reported_price_usd_decimal": "7518631.4796"
+        },
+        {
+          "date": "2026-07-06",
+          "shares": 8202,
+          "transaction_code": "S",
+          "reported_price_usd": "99.6155",
+          "gross_from_reported_price_usd_decimal": "817046.3310"
+        },
+        {
+          "date": "2026-07-06",
+          "shares": 14266,
+          "transaction_code": "S",
+          "reported_price_usd": "100.525",
+          "gross_from_reported_price_usd_decimal": "1434089.6500"
+        },
+        {
+          "date": "2026-07-06",
+          "shares": 5713,
+          "transaction_code": "S",
+          "reported_price_usd": "101.5698",
+          "gross_from_reported_price_usd_decimal": "580268.2674"
+        },
+        {
+          "date": "2026-07-07",
+          "shares": 342190,
+          "transaction_code": "S",
+          "reported_price_usd": "83.5758",
+          "gross_from_reported_price_usd_decimal": "28598803.0020"
+        },
+        {
+          "date": "2026-07-07",
+          "shares": 458494,
+          "transaction_code": "S",
+          "reported_price_usd": "84.3064",
+          "gross_from_reported_price_usd_decimal": "38653978.5616"
+        },
+        {
+          "date": "2026-07-07",
+          "shares": 257803,
+          "transaction_code": "S",
+          "reported_price_usd": "85.3307",
+          "gross_from_reported_price_usd_decimal": "21998510.4521"
+        },
+        {
+          "date": "2026-07-07",
+          "shares": 88548,
+          "transaction_code": "S",
+          "reported_price_usd": "86.1218",
+          "gross_from_reported_price_usd_decimal": "7625913.1464"
+        },
+        {
+          "date": "2026-07-07",
+          "shares": 41554,
+          "transaction_code": "S",
+          "reported_price_usd": "87.3099",
+          "gross_from_reported_price_usd_decimal": "3628075.5846"
+        },
+        {
+          "date": "2026-07-07",
+          "shares": 74874,
+          "transaction_code": "S",
+          "reported_price_usd": "88.3966",
+          "gross_from_reported_price_usd_decimal": "6618607.0284"
+        },
+        {
+          "date": "2026-07-07",
+          "shares": 20593,
+          "transaction_code": "S",
+          "reported_price_usd": "89.3679",
+          "gross_from_reported_price_usd_decimal": "1840353.1647"
+        },
+        {
+          "date": "2026-07-07",
+          "shares": 14566,
+          "transaction_code": "S",
+          "reported_price_usd": "90.2609",
+          "gross_from_reported_price_usd_decimal": "1314740.2694"
+        },
+        {
+          "date": "2026-07-08",
+          "shares": 265958,
+          "transaction_code": "S",
+          "reported_price_usd": "81.5895",
+          "gross_from_reported_price_usd_decimal": "21699380.2410"
+        },
+        {
+          "date": "2026-07-08",
+          "shares": 354128,
+          "transaction_code": "S",
+          "reported_price_usd": "82.4841",
+          "gross_from_reported_price_usd_decimal": "29209929.3648"
+        },
+        {
+          "date": "2026-07-08",
+          "shares": 156666,
+          "transaction_code": "S",
+          "reported_price_usd": "83.3256",
+          "gross_from_reported_price_usd_decimal": "13054288.4496"
+        },
+        {
+          "date": "2026-07-08",
+          "shares": 142390,
+          "transaction_code": "S",
+          "reported_price_usd": "84.4316",
+          "gross_from_reported_price_usd_decimal": "12022215.5240"
+        },
+        {
+          "date": "2026-07-08",
+          "shares": 67773,
+          "transaction_code": "S",
+          "reported_price_usd": "85.3012",
+          "gross_from_reported_price_usd_decimal": "5781118.2276"
+        },
+        {
+          "date": "2026-07-08",
+          "shares": 4045,
+          "transaction_code": "S",
+          "reported_price_usd": "86.1212",
+          "gross_from_reported_price_usd_decimal": "348360.2540"
+        }
+      ],
+      "inside_research_window": true,
+      "recommended_display": "$286.41M gross share-sale value by Equatorial Trust, July 6–8, 2026",
+      "qualifications": [
+        "Sales were automatic under a trust Rule 10b5-1 plan adopted March 27, 2026.",
+        "Footnote 3 identifies a family trust settled by Peter Beck and Kerryn Beck. Peek Street Equatorial Trustee Limited is trustee; Beck, Kerryn Beck, and Warren Butler are directors with shared voting and investment control.",
+        "Beck disclaims beneficial ownership except to the extent of his pecuniary interest. The filing does not quantify his economic share or trust distributions.",
+        "The 491,930 directly held shares shown after the sale rows have no transaction and must not be added to sales.",
+        "Gross value is derived from rounded weighted-average prices, before fees/taxes, and is not profit or personal net cash."
+      ],
+      "personal_allocation_of_trust_sale_usd": null,
+      "government_funded_personal_receipts_usd": null
+    },
+    {
+      "id": "longview-gd-september-october-2026",
+      "person_or_entity": "Longview Asset Management, LLC",
+      "company": "General Dynamics",
+      "holder_scope": "Managed client accounts",
+      "source_ids": [
+        "LONGVIEW_20260828_13DA",
+        "LONGVIEW_20260903_FORM4",
+        "LONGVIEW_20261006_13DA",
+        "LONGVIEW_20261006_EXHIBIT_A"
+      ],
+      "confidence": "high",
+      "verdict": "2,546,119 is a valid snapshot reduction, not full Exhibit A volume or a personal payout",
+      "snapshots": [
+        {
+          "as_of": "2026-08-26",
+          "shares": 27096788,
+          "reported_approximate_percentage": 10,
+          "source_id": "LONGVIEW_20260828_13DA",
+          "note": "Item 5 uses August 26; Item 4 references the same count as of August 28."
+        },
+        {
+          "as_of": "2026-09-01",
+          "shares": 26935036,
+          "reported_approximate_percentage": 9.9,
+          "source_id": "LONGVIEW_20260903_FORM4"
+        },
+        {
+          "as_of": "2026-10-01",
+          "shares": 24388917,
+          "reported_approximate_percentage": 9,
+          "source_id": "LONGVIEW_20261006_13DA"
+        }
+      ],
+      "snapshot_reduction_sep1_to_oct1_shares": 2546119,
+      "exhibit_all": {
+        "shares": 2707871,
+        "gross_from_reported_prices_usd_decimal": "953920142.4405",
+        "gross_from_reported_prices_usd_rounded_to_cents": 953920142.44
+      },
+      "exhibit_inside_cutoff": {
+        "period_start": "2026-09-01",
+        "period_end": "2026-09-30",
+        "shares": 2638137,
+        "gross_from_reported_prices_usd_decimal": "930689703.8343",
+        "gross_from_reported_prices_usd_rounded_to_cents": 930689703.83
+      },
+      "exhibit_outside_cutoff": {
+        "date": "2026-10-01",
+        "shares": 69734,
+        "gross_from_reported_prices_usd_decimal": "23230438.6062",
+        "gross_from_reported_prices_usd_rounded_to_cents": 23230438.61
+      },
+      "sep1_snapshot_to_sep30_reduction_shares": 2476385,
+      "derived_september30_holdings_shares": 24458651,
+      "rows": [
+        {
+          "date": "2026-09-01",
+          "shares": 20000,
+          "transaction_code": null,
+          "reported_price_usd": "369.0000",
+          "gross_from_reported_price_usd_decimal": "7380000.0000"
+        },
+        {
+          "date": "2026-09-01",
+          "shares": 141752,
+          "transaction_code": null,
+          "reported_price_usd": "369.7213",
+          "gross_from_reported_price_usd_decimal": "52408733.7176"
+        },
+        {
+          "date": "2026-09-02",
+          "shares": 31250,
+          "transaction_code": null,
+          "reported_price_usd": "364.2522",
+          "gross_from_reported_price_usd_decimal": "11382881.2500"
+        },
+        {
+          "date": "2026-09-02",
+          "shares": 169398,
+          "transaction_code": null,
+          "reported_price_usd": "364.3396",
+          "gross_from_reported_price_usd_decimal": "61718399.5608"
+        },
+        {
+          "date": "2026-09-03",
+          "shares": 18750,
+          "transaction_code": null,
+          "reported_price_usd": "361.5000",
+          "gross_from_reported_price_usd_decimal": "6778125.0000"
+        },
+        {
+          "date": "2026-09-03",
+          "shares": 183650,
+          "transaction_code": null,
+          "reported_price_usd": "364.5827",
+          "gross_from_reported_price_usd_decimal": "66955612.8550"
+        },
+        {
+          "date": "2026-09-04",
+          "shares": 113094,
+          "transaction_code": null,
+          "reported_price_usd": "359.3275",
+          "gross_from_reported_price_usd_decimal": "40637784.2850"
+        },
+        {
+          "date": "2026-09-08",
+          "shares": 115269,
+          "transaction_code": null,
+          "reported_price_usd": "356.8775",
+          "gross_from_reported_price_usd_decimal": "41136912.5475"
+        },
+        {
+          "date": "2026-09-09",
+          "shares": 89178,
+          "transaction_code": null,
+          "reported_price_usd": "352.9564",
+          "gross_from_reported_price_usd_decimal": "31475945.8392"
+        },
+        {
+          "date": "2026-09-10",
+          "shares": 100117,
+          "transaction_code": null,
+          "reported_price_usd": "354.0449",
+          "gross_from_reported_price_usd_decimal": "35445913.2533"
+        },
+        {
+          "date": "2026-09-11",
+          "shares": 124701,
+          "transaction_code": null,
+          "reported_price_usd": "355.9235",
+          "gross_from_reported_price_usd_decimal": "44384016.3735"
+        },
+        {
+          "date": "2026-09-14",
+          "shares": 102039,
+          "transaction_code": null,
+          "reported_price_usd": "357.1211",
+          "gross_from_reported_price_usd_decimal": "36440279.9229"
+        },
+        {
+          "date": "2026-09-15",
+          "shares": 148556,
+          "transaction_code": null,
+          "reported_price_usd": "357.9377",
+          "gross_from_reported_price_usd_decimal": "53173792.9612"
+        },
+        {
+          "date": "2026-09-16",
+          "shares": 131056,
+          "transaction_code": null,
+          "reported_price_usd": "360.0672",
+          "gross_from_reported_price_usd_decimal": "47188966.9632"
+        },
+        {
+          "date": "2026-09-17",
+          "shares": 112511,
+          "transaction_code": null,
+          "reported_price_usd": "356.1930",
+          "gross_from_reported_price_usd_decimal": "40075630.6230"
+        },
+        {
+          "date": "2026-09-18",
+          "shares": 143674,
+          "transaction_code": null,
+          "reported_price_usd": "352.4995",
+          "gross_from_reported_price_usd_decimal": "50645013.1630"
+        },
+        {
+          "date": "2026-09-21",
+          "shares": 95237,
+          "transaction_code": null,
+          "reported_price_usd": "353.9793",
+          "gross_from_reported_price_usd_decimal": "33711926.5941"
+        },
+        {
+          "date": "2026-09-22",
+          "shares": 107255,
+          "transaction_code": null,
+          "reported_price_usd": "344.4158",
+          "gross_from_reported_price_usd_decimal": "36940316.6290"
+        },
+        {
+          "date": "2026-09-23",
+          "shares": 108566,
+          "transaction_code": null,
+          "reported_price_usd": "344.8985",
+          "gross_from_reported_price_usd_decimal": "37444250.5510"
+        },
+        {
+          "date": "2026-09-24",
+          "shares": 128467,
+          "transaction_code": null,
+          "reported_price_usd": "339.5116",
+          "gross_from_reported_price_usd_decimal": "43616036.7172"
+        },
+        {
+          "date": "2026-09-25",
+          "shares": 136891,
+          "transaction_code": null,
+          "reported_price_usd": "337.4948",
+          "gross_from_reported_price_usd_decimal": "46200000.6668"
+        },
+        {
+          "date": "2026-09-28",
+          "shares": 125589,
+          "transaction_code": null,
+          "reported_price_usd": "334.7620",
+          "gross_from_reported_price_usd_decimal": "42042424.8180"
+        },
+        {
+          "date": "2026-09-29",
+          "shares": 146189,
+          "transaction_code": null,
+          "reported_price_usd": "332.2014",
+          "gross_from_reported_price_usd_decimal": "48564190.4646"
+        },
+        {
+          "date": "2026-09-30",
+          "shares": 44948,
+          "transaction_code": null,
+          "reported_price_usd": "332.4408",
+          "gross_from_reported_price_usd_decimal": "14942549.0784"
+        },
+        {
+          "date": "2026-10-01",
+          "shares": 69734,
+          "transaction_code": null,
+          "reported_price_usd": "333.1293",
+          "gross_from_reported_price_usd_decimal": "23230438.6062"
+        }
+      ],
+      "recommended_display": "Longview-managed client accounts reduced their GD holding; 2,638,137 shares were transacted in September, followed by 69,734 on October 1.",
+      "qualifications": [
+        "The September Form 4 explicitly says Longview has no pecuniary interest in the shares it beneficially owns for Section 13(d) purposes; it manages client accounts. No Crown-family personal distribution or profit is established.",
+        "The September Form 4 has no individual transaction rows; use its Remarks for the September 1 snapshot, and the later Schedule 13D Exhibit A for dated transactions.",
+        "Exhibit A totals 2,707,871 shares, reconciling 27,096,788 before September sales to 24,388,917 on October 1. September 1's 161,752 shares are already reflected in the September 1 Form 4 snapshot.",
+        "Therefore the 2,546,119-share September 1–October 1 snapshot decrease excludes the September 1 sales and includes October 1.",
+        "October 1's 69,734 shares and approximately $23.23M sale value are outside the September 30 cutoff. The October 6 filing can still document September transactions that occurred inside the window.",
+        "Exhibit A labels columns Date, GD Shares, Price and supplies no Form 4 codes; transaction_code is null rather than inventing code S.",
+        "September 30 holdings are derived by adding back October 1 shares; they are not a separately stated snapshot in these filings.",
+        "Share-sale value from the listed prices is gross portfolio transaction value, not Longview income, Crown-family proceeds, or taxpayer transfers."
+      ],
+      "personal_proceeds_usd": null,
+      "government_funded_personal_receipts_usd": null
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+/* Dark editorial palette; audited values and source records are unchanged. */
+:root {
+  color-scheme: dark;
+  --paper: #0d1413;
+  --ink: #eeeade;
+  --muted: #b1beb4;
+  --line: #35443e;
+  --white: #18231f;
+  --dark: #111d19;
+  --pale: #192a23;
+  --accent: #e7b38e;
+  --teal: #9bcdb5;
+  --lime: #d3dfaf;
+  --surface: #17231e;
+  --surface-raised: #1d2d25;
+  --surface-warm: #29261f;
+  --control-border: #829386;
+}
+::selection { background: var(--lime); color: var(--paper); }
+:where(a, button, input, select, summary):focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+body { background: var(--paper); color: var(--ink); }
+.topbar, footer { background: #101a16; color: var(--ink); border-color: var(--line); }
+.toprow { gap: 20px; padding-block: 14px; }
+.nav { gap: 22px; margin-left: auto; }
+.nav a { padding-block: 8px; }
+.site-search { flex: 0 1 285px; min-width: 0; }
+.site-search form { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 5px 8px; }
+.site-search label { grid-column: 1/-1; font-size: .75rem; color: var(--muted); }
+.site-search input, .filters input, .filters select {
+  background: #0e1914; color: var(--ink); border: 1px solid var(--control-border);
+  font: inherit; font-size: 1rem; min-height: 46px; min-width: 0; width: 100%; border-radius: 12px; padding: 10px 12px;
+}
+input::placeholder { color: #aab7ac; opacity: 1; }
+.site-search button, .clear-search {
+  font: inherit; font-size: .875rem; font-weight: 700; min-height: 46px; padding: 10px 15px;
+  border: 1px solid var(--control-border); border-radius: 12px; cursor: pointer;
+  color: var(--ink); background: var(--surface-raised);
+}
+.site-search button:hover, .clear-search:hover { background: #344736; }
+.page-intro h1 { font-size: clamp(2.4rem, 2rem + 3vw, 5rem); letter-spacing: -.045em; }
+.page-intro { padding-block: 38px; }
+.page-intro h1 { margin-top: 28px; }
+.landing-card, .metric-box, .profile-spotlight, .research-download,
+.recipient-insight, .discovery-card, .pay-panel, .hero-ledger { background: var(--surface); }
+.landing-card.people-landing, .metric-box.warm, .discovery-card.warm,
+.profile-route, .blindspot, .no-results, .transaction-card { background: var(--surface-warm); }
+.person-card, .table-scroll { background: #131f1a; border-color: #435348; }
+.person-card.unquantified { background: #24251e; border-color: #56594a; }
+.person-card { transition: border-color .16s ease; }
+.person-card:hover { border-color: var(--teal); }
+.filters { background: var(--surface-raised); }
+.filter-search { display: flex; gap: 10px; }
+.clear-search { flex: 0 0 auto; }
+.filters > div:first-child { flex-basis: 400px; }
+.filters label { color: var(--ink); }
+.results-count { min-height: 1.6em; }
+.inline-note, .audit-note, .audit-status { background: var(--pale); }
+.records-table thead th { background: var(--surface-raised); }
+.records-table th, .records-table td, .change-entry, .discovery-question,
+.blindspot .next-evidence { border-color: var(--line); }
+.insight-band, .unknown-field, .dark-section, .visibility-section { background: var(--dark); color: var(--ink); }
+.unknown-field .blindspot, .sample-panel { background: var(--surface-raised); border-color: #52674f; }
+.discovery-card.dark { background: #1a2c23; color: var(--ink); }
+.insight-band p, .unknown-field .small-note, .unknown-field .blindspot .next-evidence,
+.dark-section .chapter-heading p, .dark-section .note, .dark-section .meta, .dark-section .small-note,
+.visibility-section .chapter-heading p, .visibility-section .note, .visibility-section .small-note,
+.edition-note p, .value-breakdown, .status-heading { color: var(--muted); }
+.oversight, .beneficiary-section { background: #141f19; }
+.blindspot .gap-index, .year-point.provisional, .recipient-entry .company-marker { color: var(--accent); }
+.audit-decision { color: var(--teal); }
+.bar-track, .rank-line, .fraction-bar, .control-track, .equity-track { background: #35473a; }
+.fraction-bar .other { background: #a7aa87; }
+.warm .rank-line span, .control-track.votes span { background: var(--accent); }
+.mini-bars span { background: #86aa8d; }
+.mini-bars .tentative { background: #ccaa7e; }
+.control-track span, .equity-track .vesting { background: var(--teal); }
+.equity-track .exercise { background: var(--accent); }
+.journey span { border-color: #5f745f; }
+.year-point:before { background: var(--teal); }
+.route-arrow { color: var(--muted); }
+.research-download, .hero-ledger { border: 1px solid #4a614b; }
+.action-link { background: var(--lime); color: #172019; }
+.action-link:hover { background: #e3ebc8; }
+.downloads a, .downloads button { border-color: #829386; }
+.downloads a:hover, .downloads button:hover { background: var(--lime); color: var(--paper); }
+#directory, #companies { scroll-margin-top: 132px; }
+.people-grid { align-items: stretch; }
+.company-filters { margin-top: 22px; }
+.profile-breadcrumbs [aria-current=page] { color: var(--teal); }
+@media (max-width: 1000px) {
+  .toprow { gap: 12px 20px; }
+  .nav { gap: 18px; }
+  .site-search { flex: 1 1 100%; max-width: none; }
+  .site-search form { grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 12px; }
+  .site-search label { grid-column: auto; }
+  #directory, #companies { scroll-margin-top: 182px; }
+}
+@media (max-width: 700px) {
+  .toprow { gap: 8px; }
+  .nav { margin-left: 0; gap: 8px 22px; }
+  .nav a { padding-block: 7px; }
+  .site-search { padding-top: 5px; }
+  .site-search form { grid-template-columns: minmax(0,1fr) auto; gap: 5px 8px; }
+  .site-search label { grid-column: 1/-1; }
+  .page-intro { padding-block: 30px; }
+  .page-intro h1 { font-size: clamp(2.1rem, 8vw, 3.2rem); overflow-wrap: anywhere; }
+  .filters { padding: 20px; gap: 20px; }
+  .filters > div { flex: 1 1 100%; }
+  #directory, #companies { scroll-margin-top: 20px; }
+}
+@media (prefers-reduced-motion: reduce) { .person-card { transition: none; } }
+@media (forced-colors: active) {
+  :root { --paper: Canvas; --ink: CanvasText; --muted: CanvasText; --line: CanvasText; --teal: LinkText; --lime: Highlight; --accent: Highlight; }
+  .person-card, .landing-card, .discovery-card, .filters { border: 1px solid CanvasText; }
+  :where(a, button, input, select, summary):focus-visible { outline-color: Highlight; }
+}
+@media print {
+  :root { color-scheme: light; --paper: #fff; --ink: #111; --muted: #333; --line: #aaa; --teal: #234637; --accent: #653d22; }
+  .site-search, .filters, .clear-search { display: none !important; }
+  .landing-card, .person-card, .person-card.unquantified, .metric-box, .metric-box.warm,
+  .discovery-card, .discovery-card.warm, .discovery-card.dark, .transaction-card, .blindspot,
+  .profile-spotlight, .profile-route, .research-download, .inline-note, .audit-note,
+  .insight-band, .unknown-field, .unknown-field .blindspot, .table-scroll, .records-table thead th,
+  .sample-panel, .recipient-insight, .audit-status, .oversight, .visibility-section { background: #fff; color: #111; border-color: #aaa; }
+  .discovery-card.dark *, .insight-band *, .unknown-field * { color: #111 !important; }
+  footer { color: #111; background: #fff; }
+}
