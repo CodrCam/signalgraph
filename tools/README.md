@@ -23,8 +23,9 @@ export checks pass. Review that diff before publishing.
 
 ## Inputs and outputs
 
-The six inputs are `src/data/relationships.json`, `people.json`, `companies.json`,
-`trump-cases.json`, `crossparty-cases.json` and `fisher-case.json`. The first three
+The seven inputs are `src/data/relationships.json`, `people.json`, `companies.json`,
+`trump-cases.json`, `crossparty-cases.json`, `fisher-case.json` and
+`beneficiary-stories-cases.json`. The first three
 retain the accepted company and beneficiary baseline. The case files add reviewed
 political, family, business and financial relationships. The script's explicit
 alias map joins identical entities across cases while preserving baseline IDs.
@@ -38,9 +39,9 @@ There is no fuzzy identity matching.
 | `load/edges.csv` | Substantive relationships, case membership and provenance edges |
 | `validation.json` | Counts, checks, input hashes and load-file hashes |
 
-The November 13, 2026 dataset contains **170 entity nodes and 145 substantive
-relationships**. The Neptune files contain **299 vertices and 299 edges** because
-they also represent eight cases, 99 sources, 22 financial records and their
+The November 13, 2026 dataset contains **217 entity nodes and 204 substantive
+relationships**. The Neptune files contain **412 vertices and 487 edges** because
+they also represent 11 cases, 141 sources, 43 financial records and their
 provenance connections. A case-membership or source edge is not a financial,
 ownership or family connection. These counts describe the reviewed dataset;
 they are not coverage estimates for all government spending.
@@ -101,3 +102,14 @@ hashes, S3 version IDs and the exact export used.
 
 No credentials, source archives, deployment account identifiers or generated
 bulk files are required in the public repository.
+
+For an existing dataset, prepare safe upserts with:
+
+```sh
+python3 tools/build_delta.py --previous path/to/last-loaded/load --current build/neptune/load --output build/release-delta/load
+```
+
+The delta builder rejects removed IDs, changed labels/endpoints, duplicate IDs and
+property clearing. It emits only added or changed rows and a separate validation
+manifest. Reconcile the final database counts against the full export, not the
+number of rows in the delta.

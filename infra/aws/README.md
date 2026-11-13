@@ -21,7 +21,7 @@ Use an authenticated profile for the intended account and region. Review a Cloud
 
 ## Import
 
-Keep original inputs, primary records, review findings and canonical JSON outside the CSV loader prefix. Upload only the vertex and edge CSV files to `neptune/2026-11-13/` for this initial import. Hash and version each source archive. Change the fixed import prefix in `graph_service.py` for a new reviewed release, then regenerate and update the template.
+Keep original inputs, primary records, review findings and canonical JSON outside the CSV loader prefix. Upload only the vertex and edge CSV files to `neptune/2026-11-13/` for this initial import. Hash and version each source archive. For subsequent releases, pass `release_prefix` as a single versioned directory under `neptune/`, for example `neptune/2026-11-13-stories-batch1/`. The service validates the prefix and cannot load another bucket or arbitrary paths. Use `tools/build_delta.py` to compare against the last loaded CSVs; it rejects deletions, label/endpoint changes and property clearing that require an explicit migration. Archive the full snapshot separately and load only the reviewed delta CSVs.
 
 The Lambda function supports `load`, `status`, `health`, `counts` and `connections`. Invoke through AWS IAM; there is no unauthenticated function URL. `connections` accepts an entity ID as a bound query parameter and returns at most 100 adjacent records. It does not accept arbitrary query text.
 

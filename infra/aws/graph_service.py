@@ -1,5 +1,6 @@
 import json
 import os
+import re
 
 import boto3
 from botocore.config import Config
@@ -11,8 +12,11 @@ def handler(event, context):
         config=Config(connect_timeout=10, read_timeout=90, retries={'max_attempts': 2}))
     action = event.get('action', 'counts')
     if action == 'load':
+        prefix = event.get('release_prefix', 'neptune/2026-11-13/')
+        if not isinstance(prefix, str) or not re.fullmatch(r'neptune/[a-zA-Z0-9][a-zA-Z0-9_-]{0,95}/', prefix):
+            raise ValueError('A reviewed Neptune release prefix is required')
         result = client.start_loader_job(
-            source='s3://' + os.environ['SOURCE_BUCKET'] + '/neptune/2026-11-13/',
+            source='s3://' + os.environ['SOURCE_BUCKET'] + '/' + prefix,
             format='csv', s3BucketRegion=os.environ['AWS_REGION'],
             iamRoleArn=os.environ['LOADER_ROLE'], mode='AUTO', failOnError=True,
             parallelism='LOW', updateSingleCardinalityProperties=True,

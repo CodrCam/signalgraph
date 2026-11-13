@@ -2,7 +2,7 @@
 
 Follow public spending into companies, people and ownership structures.
 
-SignalGraph is a static, source-linked research website covering federal spending, disclosed financial benefits and political influence. The Influence section follows named officials, families, businesses and foreign counterparties, with dated financial measures, reporting, subject responses and source-linked connection trees. Site-wide search spans people, family members, companies and investigations.
+SignalGraph is a static, source-linked research website covering federal spending, disclosed financial benefits and political influence. The Influence section follows named officials, families, businesses and foreign counterparties, with dated financial measures, reporting and subject responses. The Web connects these records through an interactive map with draggable names, relationship filters, search and concise evidence panels. Site-wide search spans people, family members, companies and investigations.
 
 ## Run locally
 
@@ -22,6 +22,8 @@ Open `http://localhost:8080`.
 - `src/pages.js` — browser search and filters.
 - `src/influence.py`, `src/influence.js`, `src/influence.css` — investigations, searchable cases, site-wide search and relationship explorers.
 - `src/data/influence-graph.json` — canonical relationships, source references and financial meaning for the wider network.
+- `src/network-web.js` and `src/network-web.css` — spatial network, navigation, filters and keyboard interaction.
+- `src/web_evidence.py` and `src/web-evidence.js` — internal source briefs and selected-relationship explanations.
 - `src/pages.css`, `src/theme.css`, `src/directory.css` — layout and typography.
 - `src/static/assets/` — logo, fonts and font licenses.
 - `vercel.json` — deployment configuration.
@@ -35,6 +37,8 @@ Financial entries use a $50,000 threshold for a sourced measure in its stated pe
 Source URLs, dates and limitations accompany the relevant figures. Check the Evidence page and downloadable data before drawing comparisons. Changes to a financial record should retain its stable identifier and update the associated source, period and explanation.
 
 Influence profiles distinguish disclosures, attributed reporting, allegations and adjudicated findings. Historical payments remain visible when later investigations fall within the period, but are excluded from the four-year receipt window. Relationship paths are not summed into personal-income estimates. The site builds without database access; its connection views use the reviewed public snapshot.
+
+The map distinguishes ownership, financial, family and political relationships. Selecting a node or line reveals its supporting records. Nearby and Wider views prioritize readable labels; Fit shows the complete visible network. A text relationship list remains available without JavaScript. Source briefs link to the original records and retain their qualifications.
 
 ## Deployment
 

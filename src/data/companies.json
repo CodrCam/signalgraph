@@ -71,8 +71,11 @@
     {
       "id": "ENT_CNC",
       "name": "Centene Corporation",
-      "note": "Named in the separate recipient export; supplied totals have not been validated as consolidated group amounts.",
-      "slug": "centene-corporation"
+      "note": "Centene reported $174.581B in 2025 premium and service revenue across Medicaid, Medicare, Commercial and Other. This total does not isolate government cash receipts or retained profit.",
+      "slug": "centene-corporation",
+      "source_ids": [
+        "CNC_10K_2025"
+      ]
     },
     {
       "id": "ENT_COPT_DEFENSE",

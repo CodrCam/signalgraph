@@ -6,7 +6,7 @@
     "end": "2026-09-30",
     "label": "FY2023–FY2026"
   },
-  "scope": "Accepted baseline plus eight independently reviewed Influence cases. Historical context and subsequent legal/source events are labeled. Neither sums nor infers personal government receipts.",
+  "scope": "Accepted baseline plus 11 independently reviewed cases. Historical context and subsequent legal/source events are labeled. Neither sums nor infers personal government receipts.",
   "semantics": {
     "is_money_flow": "Asserted financial route, including obligations, commitments, estimates or alleged payments; cash_status distinguishes actual receipt. False for disclosed-investment links because the issuer is not identified as cash counterparty.",
     "amount_usd": "Only an amount explicitly assigned to the edge. Case totals are never copied to component edges.",
@@ -185,14 +185,18 @@
       "label": "Centene Corporation",
       "scope": "Named in the research cohort; see company-index.json for financial limits.",
       "source_ids": [
-        "BASELINE_REGISTER"
+        "CNC_10K_2025",
+        "CNC_PROXY_2026"
       ],
-      "case_ids": [],
+      "case_ids": [
+        "BEN_LONDON_CENTENE"
+      ],
       "origin": "accepted_baseline",
       "alias_ids": [],
-      "evidence_status": "identity_in_research_cohort_only",
+      "evidence_status": "source_linked_relationships",
       "source_urls": [
-        "https://signalgraph-accountability.vercel.app/relationships.json"
+        "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000049/cnc-20251231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000077/cnc-20260326.htm"
       ]
     },
     {
@@ -387,14 +391,18 @@
       "label": "L3Harris Technologies, Inc.",
       "scope": "Named in the research cohort; see company-index.json for financial limits.",
       "source_ids": [
-        "BASELINE_REGISTER"
+        "MULLIN_OGE_2026",
+        "MULLIN_JUNE24_PTR"
       ],
-      "case_ids": [],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
       "origin": "accepted_baseline",
       "alias_ids": [],
-      "evidence_status": "identity_in_research_cohort_only",
+      "evidence_status": "source_linked_relationships",
       "source_urls": [
-        "https://signalgraph-accountability.vercel.app/relationships.json"
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/038F222E7B084F8C85258E3F002DB296/$FILE/Markwayne-Mullin-06.24.2026-278T.pdf"
       ]
     },
     {
@@ -574,13 +582,20 @@
       "label": "RTX Corporation",
       "scope": "Named in the research cohort; see company-index.json for financial limits.",
       "source_ids": [
-        "RTX_PROXY_2026"
+        "RTX_PROXY_2026",
+        "MULLIN_OGE_2026",
+        "MULLIN_JUNE24_PTR"
       ],
-      "case_ids": [],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
       "origin": "accepted_baseline",
       "alias_ids": [],
+      "evidence_status": "source_linked_relationships",
       "source_urls": [
-        "https://investors.rtx.com/static-files/a494e9b4-834a-4d49-9a17-66a0cdd690fd"
+        "https://investors.rtx.com/static-files/a494e9b4-834a-4d49-9a17-66a0cdd690fd",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/038F222E7B084F8C85258E3F002DB296/$FILE/Markwayne-Mullin-06.24.2026-278T.pdf"
       ]
     },
     {
@@ -669,13 +684,20 @@
       "label": "UnitedHealth Group Incorporated",
       "scope": "Named in the research cohort; see company-index.json for financial limits.",
       "source_ids": [
-        "UNH_PROXY_2026"
+        "UNH_PROXY_2026",
+        "MULLIN_OGE_2026",
+        "MULLIN_JUNE24_PTR"
       ],
-      "case_ids": [],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
       "origin": "accepted_baseline",
       "alias_ids": [],
+      "evidence_status": "source_linked_relationships",
       "source_urls": [
-        "https://www.sec.gov/Archives/edgar/data/731766/000110465926046125/tm261387-6_def14a.htm"
+        "https://www.sec.gov/Archives/edgar/data/731766/000110465926046125/tm261387-6_def14a.htm",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/038F222E7B084F8C85258E3F002DB296/$FILE/Markwayne-Mullin-06.24.2026-278T.pdf"
       ]
     },
     {
@@ -4878,6 +4900,933 @@
       "origin": "independently_reviewed_case",
       "source_urls": [
         "https://www.oversight.gov/sites/default/files/documents/reports/2021-11/DODIG-2022-034.pdf"
+      ]
+    },
+    {
+      "id": "GOV_FEDERAL_MEDICAID",
+      "label": "Federal Medicaid financing",
+      "type": "government_program",
+      "source_ids": [
+        "CMS_MEDICAID_FINANCE"
+      ],
+      "case_ids": [
+        "BEN_LONDON_CENTENE"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://www.medicaid.gov/medicaid/financial-management"
+      ]
+    },
+    {
+      "id": "GROUP_STATE_MEDICAID_AGENCIES",
+      "label": "State Medicaid agencies",
+      "type": "agency_group",
+      "source_ids": [
+        "CMS_MEDICAID_FINANCE",
+        "CNC_10K_2025",
+        "CMS_MANAGED_CARE"
+      ],
+      "case_ids": [
+        "BEN_LONDON_CENTENE"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://www.medicaid.gov/medicaid/financial-management",
+        "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000049/cnc-20251231.htm",
+        "https://www.medicaid.gov/medicaid/managed-care"
+      ]
+    },
+    {
+      "id": "GROUP_CENTENE_HEALTH_PLANS",
+      "label": "Centene regulated health plans",
+      "type": "subsidiary_group",
+      "source_ids": [
+        "CNC_10K_2025",
+        "CMS_MANAGED_CARE",
+        "CMS_SUBCAPITATION"
+      ],
+      "case_ids": [
+        "BEN_LONDON_CENTENE"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000049/cnc-20251231.htm",
+        "https://www.medicaid.gov/medicaid/managed-care",
+        "https://www.medicaid.gov/tmsis/dataguide/v4/technical-instructions/cms-technical-instructions-reporting-sub-capitation-payments-and-encounters-associated-with-sub-capitation-payments-from-managed-care-plans/"
+      ]
+    },
+    {
+      "id": "IND_SARAH_LONDON",
+      "label": "Sarah M. London",
+      "type": "person",
+      "source_ids": [
+        "CNC_PROXY_2026",
+        "CNC_10K_2025"
+      ],
+      "case_ids": [
+        "BEN_LONDON_CENTENE"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "measurements": [
+        {
+          "kind": "compensation",
+          "label": "Reported annual compensation · SCT",
+          "amount": 19506298,
+          "period": "Centene FY2025 · ended 2025-12-31",
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "source_id": "CNC_PROXY_2026",
+          "components": [
+            [
+              "Salary",
+              1473077
+            ],
+            [
+              "Stock awards · grant-date value",
+              15537733
+            ],
+            [
+              "Annual cash incentive",
+              2109446
+            ],
+            [
+              "All other compensation",
+              386042
+            ]
+          ],
+          "note": "Includes grant-date equity values; not all cash received or taxpayer payments traced to London.",
+          "currency": "USD",
+          "source_locator": "Printed p.95, Summary Compensation Table, Sarah M. London 2025 row",
+          "government_attributable_usd": null
+        }
+      ],
+      "role": "Chief Executive Officer",
+      "measurement_qualification": "Disclosed personal measures are not automatically government-attributed receipts.",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000077/cnc-20260326.htm",
+        "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000049/cnc-20251231.htm"
+      ]
+    },
+    {
+      "id": "GROUP_HEALTHCARE_PROVIDERS",
+      "label": "Healthcare providers",
+      "type": "provider_group",
+      "source_ids": [
+        "CNC_10K_2025",
+        "CMS_SUBCAPITATION"
+      ],
+      "case_ids": [
+        "BEN_LONDON_CENTENE"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000049/cnc-20251231.htm",
+        "https://www.medicaid.gov/tmsis/dataguide/v4/technical-instructions/cms-technical-instructions-reporting-sub-capitation-payments-and-encounters-associated-with-sub-capitation-payments-from-managed-care-plans/"
+      ]
+    },
+    {
+      "id": "IND_MARKWAYNE_MULLIN",
+      "label": "Markwayne Mullin",
+      "type": "person",
+      "source_ids": [
+        "MULLIN_2024_SENATE",
+        "MULLIN_OGE_2026",
+        "MULLIN_SWEARING",
+        "MULLIN_CONFIRMATION",
+        "MULLIN_ETHICS_2026",
+        "MULLIN_DDF_COMPLAINT",
+        "MULLIN_CNN_VOGEL"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://static.notus.org/41/2c/b1759251424eaf9f018c1cbee112/efd-annual-report-for-2024-mullin-markwayne.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://www.whitehouse.gov/releases/2026/03/secretary-markwayne-mullin-is-ready-to-deliver-on-president-trumps-agenda/",
+        "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00063.htm",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/4FF5BEC82674CDCB85258DBE005422C5/$FILE/Mullin,%20Markwayne%20%20finalEA.pdf",
+        "https://www.democracydefendersfund.org/wp-content/uploads/2026/06/2026-04-20-ddf-dhs-secretary-mullins-financial-holdings-warrant.pdf",
+        "https://transcripts.cnn.com/show/cg/date/2026-06-16/segment/01"
+      ]
+    },
+    {
+      "id": "IND_CHRISTIE_MULLIN",
+      "label": "Christie Renee Mullin",
+      "type": "person",
+      "source_ids": [
+        "MULLIN_2024_SENATE",
+        "MULLIN_OGE_2026"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://static.notus.org/41/2c/b1759251424eaf9f018c1cbee112/efd-annual-report-for-2024-mullin-markwayne.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ]
+    },
+    {
+      "id": "GROUP_MULLIN_HOUSEHOLD",
+      "label": "Mullin household",
+      "type": "family",
+      "source_ids": [
+        "MULLIN_2024_SENATE",
+        "MULLIN_OGE_2026"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://static.notus.org/41/2c/b1759251424eaf9f018c1cbee112/efd-annual-report-for-2024-mullin-markwayne.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ]
+    },
+    {
+      "id": "GOV_DHS",
+      "label": "Department of Homeland Security",
+      "type": "government",
+      "source_ids": [
+        "MULLIN_SWEARING",
+        "MULLIN_CONFIRMATION"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://www.whitehouse.gov/releases/2026/03/secretary-markwayne-mullin-is-ready-to-deliver-on-president-trumps-agenda/",
+        "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00063.htm"
+      ]
+    },
+    {
+      "id": "GOV_US_SENATE",
+      "label": "U.S. Senate",
+      "type": "government",
+      "source_ids": [
+        "MULLIN_OGE_2026",
+        "MULLIN_SWEARING"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://www.whitehouse.gov/releases/2026/03/secretary-markwayne-mullin-is-ready-to-deliver-on-president-trumps-agenda/"
+      ]
+    },
+    {
+      "id": "GOV_FDA",
+      "label": "Food and Drug Administration",
+      "type": "government",
+      "source_ids": [
+        "MULLIN_CNN_VOGEL",
+        "FDA_7OH_2025",
+        "WYDEN_BOTANIC_LETTER"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://transcripts.cnn.com/show/cg/date/2026-06-16/segment/01",
+        "https://www.fda.gov/news-events/press-announcements/fda-takes-steps-restrict-7-oh-opioid-products-threatening-american-consumers",
+        "https://www.finance.senate.gov/wp-content/uploads/media/doc/20260803lettertobotanictonics.pdf"
+      ]
+    },
+    {
+      "id": "ENT_MULLIN_LIVING_TRUST",
+      "label": "Mullin Living Trust",
+      "type": "trust",
+      "source_ids": [
+        "MULLIN_OGE_2026",
+        "MULLIN_ETHICS_2026"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/4FF5BEC82674CDCB85258DBE005422C5/$FILE/Mullin,%20Markwayne%20%20finalEA.pdf"
+      ]
+    },
+    {
+      "id": "ENT_MULLIN_PROPERTIES",
+      "label": "Mullin Properties LLC",
+      "type": "company",
+      "source_ids": [
+        "MULLIN_OGE_2026",
+        "MULLIN_ETHICS_2026"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/4FF5BEC82674CDCB85258DBE005422C5/$FILE/Mullin,%20Markwayne%20%20finalEA.pdf"
+      ]
+    },
+    {
+      "id": "ENT_MULLIN_REALTY",
+      "label": "Mullin Realty LLC",
+      "type": "company",
+      "source_ids": [
+        "MULLIN_OGE_2026",
+        "MULLIN_ETHICS_2026"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/4FF5BEC82674CDCB85258DBE005422C5/$FILE/Mullin,%20Markwayne%20%20finalEA.pdf"
+      ]
+    },
+    {
+      "id": "ENT_MULLIN_RANCH",
+      "label": "Mullin Ranch LLC",
+      "type": "company",
+      "source_ids": [
+        "MULLIN_OGE_2026",
+        "MULLIN_ETHICS_2026"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/4FF5BEC82674CDCB85258DBE005422C5/$FILE/Mullin,%20Markwayne%20%20finalEA.pdf"
+      ]
+    },
+    {
+      "id": "ENT_MULLIN_PROPERTIES_WEST",
+      "label": "Mullin Properties West Division LLC",
+      "type": "company",
+      "source_ids": [
+        "MULLIN_OGE_2026",
+        "MULLIN_ETHICS_2026"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/4FF5BEC82674CDCB85258DBE005422C5/$FILE/Mullin,%20Markwayne%20%20finalEA.pdf"
+      ]
+    },
+    {
+      "id": "ENT_ALLOTMENT_SERVICES",
+      "label": "Allotment Services LLC",
+      "type": "company",
+      "source_ids": [
+        "MULLIN_OGE_2026",
+        "MULLIN_ETHICS_2026",
+        "MULLIN_DDF_COMPLAINT"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/4FF5BEC82674CDCB85258DBE005422C5/$FILE/Mullin,%20Markwayne%20%20finalEA.pdf",
+        "https://www.democracydefendersfund.org/wp-content/uploads/2026/06/2026-04-20-ddf-dhs-secretary-mullins-financial-holdings-warrant.pdf"
+      ]
+    },
+    {
+      "id": "ENT_APRES_SPECTRUM",
+      "label": "Apres Spectrum LLC",
+      "type": "company",
+      "source_ids": [
+        "MULLIN_OGE_2026",
+        "MULLIN_ETHICS_2026"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/4FF5BEC82674CDCB85258DBE005422C5/$FILE/Mullin,%20Markwayne%20%20finalEA.pdf"
+      ]
+    },
+    {
+      "id": "ENT_MULLIN_FAMILY_HOLDCO",
+      "label": "Mullin Family HoldCo LLC",
+      "type": "company",
+      "source_ids": [
+        "MULLIN_OGE_2026",
+        "MULLIN_ETHICS_2026",
+        "MULLIN_2024_SENATE"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/4FF5BEC82674CDCB85258DBE005422C5/$FILE/Mullin,%20Markwayne%20%20finalEA.pdf",
+        "https://static.notus.org/41/2c/b1759251424eaf9f018c1cbee112/efd-annual-report-for-2024-mullin-markwayne.pdf"
+      ]
+    },
+    {
+      "id": "ENT_COP_HOMETOWN_PARENT",
+      "label": "COP Hometown Parent LLC",
+      "type": "company",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ]
+    },
+    {
+      "id": "ENT_HOMETOWN_SERVICES",
+      "label": "HomeTown Services",
+      "type": "company",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ]
+    },
+    {
+      "id": "ENT_BOTANIC_TONICS",
+      "label": "Botanic Tonics LLC",
+      "type": "company",
+      "source_ids": [
+        "MULLIN_OGE_2026",
+        "MULLIN_CNN_VOGEL",
+        "FDA_7OH_2025",
+        "WYDEN_BOTANIC_LETTER"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://transcripts.cnn.com/show/cg/date/2026-06-16/segment/01",
+        "https://www.fda.gov/news-events/press-announcements/fda-takes-steps-restrict-7-oh-opioid-products-threatening-american-consumers",
+        "https://www.finance.senate.gov/wp-content/uploads/media/doc/20260803lettertobotanictonics.pdf"
+      ]
+    },
+    {
+      "id": "ENT_XTREME_BOAT_RV",
+      "label": "Xtreme Boat & RV LLC",
+      "type": "company",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ]
+    },
+    {
+      "id": "ENT_TC4_INVESTMENTS",
+      "label": "TC 4 Investments LLC",
+      "type": "company",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ]
+    },
+    {
+      "id": "ENT_MULLIN_FAMILY_INVESTMENTS",
+      "label": "Mullin Family Investments LLC",
+      "type": "company",
+      "source_ids": [
+        "MULLIN_OGE_2026",
+        "MULLIN_JUNE24_PTR"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/038F222E7B084F8C85258E3F002DB296/$FILE/Markwayne-Mullin-06.24.2026-278T.pdf"
+      ]
+    },
+    {
+      "id": "ENT_K5_HS_HOLDCO",
+      "label": "K 5 HS Holdco LLC",
+      "type": "company",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ]
+    },
+    {
+      "id": "ENT_HISTOSONICS",
+      "label": "HistoSonics, Inc.",
+      "type": "company",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ]
+    },
+    {
+      "id": "TRUST_MULLIN_FAMILY_1",
+      "label": "Mullin Family Trust #1",
+      "type": "trust",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ]
+    },
+    {
+      "id": "TRUST_MULLIN_FAMILY_2",
+      "label": "Mullin Family Trust #2",
+      "type": "trust",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ]
+    },
+    {
+      "id": "TRUST_MULLIN_FAMILY_3",
+      "label": "Mullin Family Trust #3",
+      "type": "trust",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ]
+    },
+    {
+      "id": "TRUST_MULLIN_FAMILY_4",
+      "label": "Mullin Family Trust #4",
+      "type": "trust",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ]
+    },
+    {
+      "id": "TRUST_MULLIN_FAMILY_5",
+      "label": "Mullin Family Trust #5",
+      "type": "trust",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ]
+    },
+    {
+      "id": "TRUST_MULLIN_FAMILY_6",
+      "label": "Mullin Family Trust #6",
+      "type": "trust",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ]
+    },
+    {
+      "id": "ENT_ROWANS_RESTAURANT",
+      "label": "Rowan’s Restaurant LLC",
+      "type": "company",
+      "source_ids": [
+        "MULLIN_2024_SENATE"
+      ],
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://static.notus.org/41/2c/b1759251424eaf9f018c1cbee112/efd-annual-report-for-2024-mullin-markwayne.pdf"
+      ]
+    },
+    {
+      "id": "IND_ERIC_SCHMIDT",
+      "label": "Eric Schmidt",
+      "type": "person",
+      "source_ids": [
+        "ES_WSJMARCH",
+        "ES_SCOOP_MAY",
+        "ES_FORBES_JAN",
+        "ES_FORBES_JUN",
+        "ES_UKRAINE_2025",
+        "ES_ESTONIA",
+        "ES_WENDY",
+        "ES_DIB_2016",
+        "ES_DIB_EXIT",
+        "ES_NSCAI_2021"
+      ],
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://www.wsj.com/public/resources/documents/QJ6zlUXnDhtW4Z0Fs51B-WSJNewsPaper-3-10-2026.pdf",
+        "https://defensescoop.com/2026/05/19/pentagon-awards-500-million-contract-to-perennial-autonomy-for-counter-drone-systems/",
+        "https://www.forbes.com/sites/sarahemerson/2024/01/23/eric-schmidts-secret-white-stork-project-aims-to-build-ai-combat-drones/",
+        "https://www.forbes.com/sites/sarahemerson/2024/06/06/eric-schmidt-is-secretly-testing-ai-military-drones-in-a-wealthy-silicon-valley-suburb/",
+        "https://www.president.gov.ua/en/news/memorandum-mizh-ukrayinoyu-ta-amerikanskoyu-kompaniyeyu-swif-98817",
+        "https://ariregister.rik.ee/eng/company/16817849/Volya-Robotics-O%C3%9C",
+        "https://wendyschmidt.com/about/",
+        "https://www.defense.gov/News/News-Stories/Article/Article/684366/pentagon-to-establish-defense-innovation-advisory-board/",
+        "https://fedscoop.com/eric-schmidt-departments-leading-roll-in-defense-innovation-board/",
+        "https://armedservices.house.gov/calendar/eventsingle.aspx?EventID=3746"
+      ]
+    },
+    {
+      "id": "IND_WENDY_SCHMIDT",
+      "label": "Wendy Schmidt",
+      "type": "person",
+      "source_ids": [
+        "ES_ESTONIA",
+        "ES_WENDY"
+      ],
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://ariregister.rik.ee/eng/company/16817849/Volya-Robotics-O%C3%9C",
+        "https://wendyschmidt.com/about/"
+      ]
+    },
+    {
+      "id": "ENT_PERENNIAL_AUTONOMY",
+      "label": "Perennial Autonomy",
+      "type": "company",
+      "entity_resolution": "Official awardee name in announcements; legal continuity and UEI not yet established",
+      "source_ids": [
+        "ES_WSJMARCH",
+        "ES_SCOOP_MAY",
+        "ES_MILTIMES",
+        "ES_FORBES_JUN",
+        "ES_ARMY_JAN",
+        "ES_JBSA_MAY",
+        "ES_ISSUER_MAY",
+        "ES_IUS_JUL",
+        "ES_API_A009"
+      ],
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://www.wsj.com/public/resources/documents/QJ6zlUXnDhtW4Z0Fs51B-WSJNewsPaper-3-10-2026.pdf",
+        "https://defensescoop.com/2026/05/19/pentagon-awards-500-million-contract-to-perennial-autonomy-for-counter-drone-systems/",
+        "https://www.militarytimes.com/industry/techwatch/2026/05/19/pentagon-inks-500-million-deal-with-perennial-autonomy-for-counter-drone-tech/",
+        "https://www.forbes.com/sites/sarahemerson/2024/06/06/eric-schmidt-is-secretly-testing-ai-military-drones-in-a-wealthy-silicon-valley-suburb/",
+        "https://www.army.mil/article/290392/jiatf_401_acquires_advanced_kinetic_counter_drone_system_to_enhance_warfighter_lethality",
+        "https://www.jbsa.mil/News/News/Article/4496078/joint-interagency-task-force-401-awards-500-million-counter-uas-contract/",
+        "https://www.perennialautonomy.com/news/idiq",
+        "https://insideunmannedsystems.com/19-companies-out-of-49-contenders-qualify-for-drone-dominance-gauntlet-2-trial/",
+        "https://api.usaspending.gov/api/v2/awards/CONT_AWD_W912CH26CA009_9700_-NONE-_-NONE-/"
+      ]
+    },
+    {
+      "id": "ORG_WHITE_STORK_PROJECT",
+      "label": "White Stork / Project Eagle",
+      "type": "business_project",
+      "entity_resolution": "Reported project names; do not collapse affiliated LLCs into a single legal recipient",
+      "source_ids": [
+        "ES_FORBES_JAN",
+        "ES_FORBES_JUN",
+        "ES_MILTIMES"
+      ],
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://www.forbes.com/sites/sarahemerson/2024/01/23/eric-schmidts-secret-white-stork-project-aims-to-build-ai-combat-drones/",
+        "https://www.forbes.com/sites/sarahemerson/2024/06/06/eric-schmidt-is-secretly-testing-ai-military-drones-in-a-wealthy-silicon-valley-suburb/",
+        "https://www.militarytimes.com/industry/techwatch/2026/05/19/pentagon-inks-500-million-deal-with-perennial-autonomy-for-counter-drone-tech/"
+      ]
+    },
+    {
+      "id": "ENT_SWIFT_BEAT",
+      "label": "Swift Beat, LLC",
+      "type": "company",
+      "source_ids": [
+        "ES_UKRAINE_2025",
+        "ES_FORBES_JAN",
+        "ES_FORBES_JUN"
+      ],
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://www.president.gov.ua/en/news/memorandum-mizh-ukrayinoyu-ta-amerikanskoyu-kompaniyeyu-swif-98817",
+        "https://www.forbes.com/sites/sarahemerson/2024/01/23/eric-schmidts-secret-white-stork-project-aims-to-build-ai-combat-drones/",
+        "https://www.forbes.com/sites/sarahemerson/2024/06/06/eric-schmidt-is-secretly-testing-ai-military-drones-in-a-wealthy-silicon-valley-suburb/"
+      ]
+    },
+    {
+      "id": "ENT_VOLYA_ROBOTICS",
+      "label": "Volya Robotics OÜ",
+      "type": "holding_company",
+      "registry_id": "16817849",
+      "jurisdiction": "Estonia",
+      "source_ids": [
+        "ES_FORBES_JAN",
+        "ES_FORBES_JUN",
+        "ES_ESTONIA"
+      ],
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://www.forbes.com/sites/sarahemerson/2024/01/23/eric-schmidts-secret-white-stork-project-aims-to-build-ai-combat-drones/",
+        "https://www.forbes.com/sites/sarahemerson/2024/06/06/eric-schmidt-is-secretly-testing-ai-military-drones-in-a-wealthy-silicon-valley-suburb/",
+        "https://ariregister.rik.ee/eng/company/16817849/Volya-Robotics-O%C3%9C"
+      ]
+    },
+    {
+      "id": "ENT_NT_ISLAND_HOLDINGS",
+      "label": "NT Island Holdings, LLC",
+      "type": "holding_company",
+      "registry_id_as_recorded_in_estonia": "10189440",
+      "source_ids": [
+        "ES_ESTONIA"
+      ],
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://ariregister.rik.ee/eng/company/16817849/Volya-Robotics-O%C3%9C"
+      ]
+    },
+    {
+      "id": "ENT_NAPATREE_TECHNOLOGY",
+      "label": "Napatree Technology LLC",
+      "type": "company",
+      "uei": "H87XAJ4YQJ15",
+      "source_ids": [
+        "ES_API_A009",
+        "ES_API_A009_TX",
+        "ES_IUS_JUL",
+        "ES_ARMY_JAN",
+        "ES_ARMY_SEP"
+      ],
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://api.usaspending.gov/api/v2/awards/CONT_AWD_W912CH26CA009_9700_-NONE-_-NONE-/",
+        "https://signalgraph-accountability.vercel.app/sources/napatree-transactions.json",
+        "https://insideunmannedsystems.com/19-companies-out-of-49-contenders-qualify-for-drone-dominance-gauntlet-2-trial/",
+        "https://www.army.mil/article/290392/jiatf_401_acquires_advanced_kinetic_counter_drone_system_to_enhance_warfighter_lethality",
+        "https://www.army.mil/article/295771/jiatf_401_advances_domestic_shield_with_counter_uas_contract_awards"
+      ]
+    },
+    {
+      "id": "ORG_JIATF_401",
+      "label": "Joint Interagency Task Force 401",
+      "type": "federal_task_force",
+      "source_ids": [
+        "ES_ARMY_JAN",
+        "ES_JBSA_MAY",
+        "ES_ISSUER_MAY",
+        "ES_ARMY_SEP"
+      ],
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://www.army.mil/article/290392/jiatf_401_acquires_advanced_kinetic_counter_drone_system_to_enhance_warfighter_lethality",
+        "https://www.jbsa.mil/News/News/Article/4496078/joint-interagency-task-force-401-awards-500-million-counter-uas-contract/",
+        "https://www.perennialautonomy.com/news/idiq",
+        "https://www.army.mil/article/295771/jiatf_401_advances_domestic_shield_with_counter_uas_contract_awards"
+      ]
+    },
+    {
+      "id": "ORG_US_ARMY",
+      "label": "U.S. Department of the Army",
+      "type": "federal_agency",
+      "source_ids": [
+        "ES_API_A009",
+        "ES_API_A009_TX"
+      ],
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://api.usaspending.gov/api/v2/awards/CONT_AWD_W912CH26CA009_9700_-NONE-_-NONE-/",
+        "https://signalgraph-accountability.vercel.app/sources/napatree-transactions.json"
+      ]
+    },
+    {
+      "id": "ORG_DEFENSE_INNOVATION_BOARD",
+      "label": "Defense Innovation Board",
+      "type": "government_advisory_board",
+      "source_ids": [
+        "ES_DIB_2016",
+        "ES_DIB_EXIT",
+        "ES_DIB_2024"
+      ],
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://www.defense.gov/News/News-Stories/Article/Article/684366/pentagon-to-establish-defense-innovation-advisory-board/",
+        "https://fedscoop.com/eric-schmidt-departments-leading-roll-in-defense-innovation-board/",
+        "https://www.defense.gov/News/News-Stories/Article/Article/3680921/defense-innovation-board-scaling-innovation-forward/"
+      ]
+    },
+    {
+      "id": "ORG_NSCAI",
+      "label": "National Security Commission on Artificial Intelligence",
+      "type": "government_commission",
+      "source_ids": [
+        "ES_NSCAI_2021"
+      ],
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://armedservices.house.gov/calendar/eventsingle.aspx?EventID=3746"
+      ]
+    },
+    {
+      "id": "IND_WILL_ROPER",
+      "label": "Will Roper",
+      "type": "person",
+      "source_ids": [
+        "ES_FORBES_JUN",
+        "ES_DIB_2024"
+      ],
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "alias_ids": [],
+      "origin": "independently_reviewed_case",
+      "source_urls": [
+        "https://www.forbes.com/sites/sarahemerson/2024/06/06/eric-schmidt-is-secretly-testing-ai-military-drones-in-a-wealthy-silicon-valley-suburb/",
+        "https://www.defense.gov/News/News-Stories/Article/Article/3680921/defense-innovation-board-scaling-innovation-forward/"
       ]
     }
   ],
@@ -9548,6 +10497,2199 @@
       "outside_window": true,
       "window_status": "historical_context",
       "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "LON_E1",
+      "source": "GOV_FEDERAL_MEDICAID",
+      "target": "GROUP_STATE_MEDICAID_AGENCIES",
+      "type": "program_financing",
+      "label": "Federal matching funds",
+      "source_ids": [
+        "CMS_MEDICAID_FINANCE"
+      ],
+      "amount_usd": null,
+      "qualification": "Program mechanism; not a Centene-specific dollar total Relationship only; no personal payment or causal influence inferred from this edge.",
+      "evidence_status": "documented",
+      "window_status": "mixed_boundary_or_not_dated",
+      "relationship_type": "program_financing",
+      "period": "Date not established; see cited relationship record",
+      "case_ids": [
+        "BEN_LONDON_CENTENE"
+      ],
+      "source_urls": [
+        "https://www.medicaid.gov/medicaid/financial-management"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "is_money_flow": false,
+      "cash_status": "not_established",
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "outside_window": null,
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "LON_E2",
+      "source": "GROUP_STATE_MEDICAID_AGENCIES",
+      "target": "GROUP_CENTENE_HEALTH_PLANS",
+      "type": "managed_care_capitation",
+      "label": "State contracts and monthly payments",
+      "source_ids": [
+        "CNC_10K_2025",
+        "CMS_MANAGED_CARE"
+      ],
+      "period": "2025",
+      "amount_usd": null,
+      "qualification": "Individual state payments and subsidiary reconciliation not supplied Relationship only; no personal payment or causal influence inferred from this edge.",
+      "evidence_status": "documented",
+      "window_status": "within_window",
+      "relationship_type": "managed_care_capitation",
+      "case_ids": [
+        "BEN_LONDON_CENTENE"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000049/cnc-20251231.htm",
+        "https://www.medicaid.gov/medicaid/managed-care"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "is_money_flow": false,
+      "cash_status": "not_established",
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "outside_window": false,
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "LON_E3",
+      "source": "GROUP_CENTENE_HEALTH_PLANS",
+      "target": "ENT_CNC",
+      "type": "consolidated_subsidiaries",
+      "label": "Consolidated into parent reporting",
+      "source_ids": [
+        "CNC_10K_2025"
+      ],
+      "period": "2025",
+      "is_money_flow": false,
+      "qualification": "Consolidation relationship; no intercompany cash transfer implied Relationship only; no personal payment or causal influence inferred from this edge.",
+      "evidence_status": "documented",
+      "window_status": "within_window",
+      "relationship_type": "consolidated_subsidiaries",
+      "case_ids": [
+        "BEN_LONDON_CENTENE"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000049/cnc-20251231.htm"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "outside_window": false,
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "LON_E4",
+      "source": "GROUP_CENTENE_HEALTH_PLANS",
+      "target": "GROUP_HEALTHCARE_PROVIDERS",
+      "type": "healthcare_service_payments",
+      "label": "Medical services and provider payments",
+      "source_ids": [
+        "CNC_10K_2025",
+        "CMS_SUBCAPITATION"
+      ],
+      "period": "2025",
+      "amount_usd": null,
+      "qualification": "Downstream spending, not additional government obligations Relationship only; no personal payment or causal influence inferred from this edge.",
+      "evidence_status": "documented",
+      "window_status": "within_window",
+      "relationship_type": "healthcare_service_payments",
+      "case_ids": [
+        "BEN_LONDON_CENTENE"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000049/cnc-20251231.htm",
+        "https://www.medicaid.gov/tmsis/dataguide/v4/technical-instructions/cms-technical-instructions-reporting-sub-capitation-payments-and-encounters-associated-with-sub-capitation-payments-from-managed-care-plans/"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "is_money_flow": false,
+      "cash_status": "not_established",
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "outside_window": false,
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "LON_E5",
+      "source": "IND_SARAH_LONDON",
+      "target": "ENT_CNC",
+      "type": "chief_executive_of",
+      "label": "Chief Executive Officer",
+      "source_ids": [
+        "CNC_PROXY_2026"
+      ],
+      "since": "2022-03",
+      "evidence_status": "documented",
+      "window_status": "mixed_boundary_or_not_dated",
+      "relationship_type": "chief_executive_of",
+      "period": "2022-03",
+      "case_ids": [
+        "BEN_LONDON_CENTENE"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000077/cnc-20260326.htm"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "is_money_flow": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "qualification": "Relationship only; no personal payment or causal influence inferred from this edge.",
+      "outside_window": null,
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "LON_E6",
+      "source": "ENT_CNC",
+      "target": "IND_SARAH_LONDON",
+      "type": "reported_compensation",
+      "label": "2025 SCT: $19.51M",
+      "source_ids": [
+        "CNC_PROXY_2026"
+      ],
+      "period": "2025",
+      "amount_usd": 19506298,
+      "money_id": "LON_M1",
+      "cash_status": "Includes equity valuation; not all cash",
+      "government_attributed_personal_receipts_usd": null,
+      "evidence_status": "documented",
+      "window_status": "within_window",
+      "relationship_type": "reported_compensation",
+      "case_ids": [
+        "BEN_LONDON_CENTENE"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000077/cnc-20260326.htm"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": {
+        "id": "LON_M1",
+        "label": "Reported CEO compensation",
+        "amount_usd": 19506298,
+        "currency": "USD",
+        "type": "summary_compensation_table",
+        "recipient": "Sarah M. London",
+        "period": "2025",
+        "source_ids": [
+          "CNC_PROXY_2026"
+        ],
+        "components": [
+          [
+            "Salary",
+            1473077
+          ],
+          [
+            "Stock awards · grant-date value",
+            15537733
+          ],
+          [
+            "Annual cash incentive",
+            2109446
+          ],
+          [
+            "All other compensation",
+            386042
+          ]
+        ],
+        "locator": "p.95, London 2025 row",
+        "cash_status": "Mix of salary, incentive, grant-date equity valuation and benefits",
+        "personal_allocation": "Personal compensation is disclosed; government-funded portion is not traced",
+        "government_attributed_personal_receipts_usd": null,
+        "case_id": "BEN_LONDON_CENTENE",
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000077/cnc-20260326.htm"
+        ],
+        "graph_vertex_id": "MONEY_LON_M1",
+        "aggregate_personal_income_eligible": false
+      },
+      "is_financial_relationship": true,
+      "is_money_flow": true,
+      "amount_recipient_id": "IND_SARAH_LONDON",
+      "amount_semantics": "summary_compensation_table",
+      "qualification": "Personal compensation is disclosed; government-funded portion is not traced Mix of salary, incentive, grant-date equity valuation and benefits",
+      "outside_window": false
+    },
+    {
+      "id": "MULLIN_E001",
+      "source": "IND_MARKWAYNE_MULLIN",
+      "target": "IND_CHRISTIE_MULLIN",
+      "type": "spouse",
+      "label": "Spouses",
+      "source_ids": [
+        "MULLIN_2024_SENATE",
+        "MULLIN_OGE_2026"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "qualification": "Named spouse; shared financial interests do not establish shared political activity. Relationship only; no personal payment or causal influence inferred from this edge.",
+      "relationship_type": "spouse",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://static.notus.org/41/2c/b1759251424eaf9f018c1cbee112/efd-annual-report-for-2024-mullin-markwayne.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E002",
+      "source": "IND_MARKWAYNE_MULLIN",
+      "target": "GROUP_MULLIN_HOUSEHOLD",
+      "type": "household_member",
+      "label": "Household disclosure",
+      "source_ids": [
+        "MULLIN_2024_SENATE",
+        "MULLIN_OGE_2026"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "relationship_type": "household_member",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://static.notus.org/41/2c/b1759251424eaf9f018c1cbee112/efd-annual-report-for-2024-mullin-markwayne.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "qualification": "Relationship only; no personal payment or causal influence inferred from this edge.",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E003",
+      "source": "IND_CHRISTIE_MULLIN",
+      "target": "GROUP_MULLIN_HOUSEHOLD",
+      "type": "household_member",
+      "label": "Household disclosure",
+      "source_ids": [
+        "MULLIN_2024_SENATE",
+        "MULLIN_OGE_2026"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "relationship_type": "household_member",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://static.notus.org/41/2c/b1759251424eaf9f018c1cbee112/efd-annual-report-for-2024-mullin-markwayne.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "qualification": "Relationship only; no personal payment or causal influence inferred from this edge.",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E004",
+      "source": "IND_MARKWAYNE_MULLIN",
+      "target": "GOV_DHS",
+      "type": "public_office",
+      "label": "Homeland Security Secretary",
+      "source_ids": [
+        "MULLIN_SWEARING",
+        "MULLIN_CONFIRMATION"
+      ],
+      "is_money_flow": false,
+      "since": "2026-03-24",
+      "period": "March 24, 2026 onward",
+      "relationship_type": "public_office",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://www.whitehouse.gov/releases/2026/03/secretary-markwayne-mullin-is-ready-to-deliver-on-president-trumps-agenda/",
+        "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00063.htm"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "qualification": "Relationship only; no personal payment or causal influence inferred from this edge.",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E005",
+      "source": "IND_MARKWAYNE_MULLIN",
+      "target": "GOV_US_SENATE",
+      "type": "former_public_office",
+      "label": "Former Oklahoma senator",
+      "source_ids": [
+        "MULLIN_OGE_2026",
+        "MULLIN_SWEARING"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "period": "January 2023–March 2026",
+      "relationship_type": "former_public_office",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://www.whitehouse.gov/releases/2026/03/secretary-markwayne-mullin-is-ready-to-deliver-on-president-trumps-agenda/"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "qualification": "Relationship only; no personal payment or causal influence inferred from this edge.",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E006",
+      "source": "IND_MARKWAYNE_MULLIN",
+      "target": "ENT_MULLIN_LIVING_TRUST",
+      "type": "trustee",
+      "label": "Trustee retained under ethics agreement",
+      "source_ids": [
+        "MULLIN_OGE_2026",
+        "MULLIN_ETHICS_2026"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "qualification": "Agreement says no trustee fees; does not independently establish Christie as co-trustee. Relationship only; no personal payment or causal influence inferred from this edge.",
+      "relationship_type": "trustee",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/4FF5BEC82674CDCB85258DBE005422C5/$FILE/Mullin,%20Markwayne%20%20finalEA.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E007",
+      "source": "IND_MARKWAYNE_MULLIN",
+      "target": "ENT_MULLIN_PROPERTIES",
+      "type": "disclosed_management_role",
+      "label": "Managing member at nomination",
+      "source_ids": [
+        "MULLIN_OGE_2026",
+        "MULLIN_ETHICS_2026"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "qualification": "March 17 agreement requires resignation upon confirmation while retaining a passive financial interest. Completion not independently verified here. Relationship only; no personal payment or causal influence inferred from this edge.",
+      "relationship_type": "disclosed_management_role",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/4FF5BEC82674CDCB85258DBE005422C5/$FILE/Mullin,%20Markwayne%20%20finalEA.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E008",
+      "source": "IND_MARKWAYNE_MULLIN",
+      "target": "ENT_MULLIN_REALTY",
+      "type": "disclosed_management_role",
+      "label": "Managing member at nomination",
+      "source_ids": [
+        "MULLIN_OGE_2026",
+        "MULLIN_ETHICS_2026"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "qualification": "March 17 agreement requires resignation upon confirmation while retaining a passive financial interest. Completion not independently verified here. Relationship only; no personal payment or causal influence inferred from this edge.",
+      "relationship_type": "disclosed_management_role",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/4FF5BEC82674CDCB85258DBE005422C5/$FILE/Mullin,%20Markwayne%20%20finalEA.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E009",
+      "source": "IND_MARKWAYNE_MULLIN",
+      "target": "ENT_MULLIN_RANCH",
+      "type": "disclosed_management_role",
+      "label": "Managing member at nomination",
+      "source_ids": [
+        "MULLIN_OGE_2026",
+        "MULLIN_ETHICS_2026"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "qualification": "March 17 agreement requires resignation upon confirmation while retaining a passive financial interest. Completion not independently verified here. Relationship only; no personal payment or causal influence inferred from this edge.",
+      "relationship_type": "disclosed_management_role",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/4FF5BEC82674CDCB85258DBE005422C5/$FILE/Mullin,%20Markwayne%20%20finalEA.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E010",
+      "source": "IND_MARKWAYNE_MULLIN",
+      "target": "ENT_MULLIN_PROPERTIES_WEST",
+      "type": "disclosed_management_role",
+      "label": "Managing member at nomination",
+      "source_ids": [
+        "MULLIN_OGE_2026",
+        "MULLIN_ETHICS_2026"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "qualification": "March 17 agreement requires resignation upon confirmation while retaining a passive financial interest. Completion not independently verified here. Relationship only; no personal payment or causal influence inferred from this edge.",
+      "relationship_type": "disclosed_management_role",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/4FF5BEC82674CDCB85258DBE005422C5/$FILE/Mullin,%20Markwayne%20%20finalEA.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E011",
+      "source": "IND_MARKWAYNE_MULLIN",
+      "target": "ENT_MULLIN_FAMILY_HOLDCO",
+      "type": "disclosed_management_role",
+      "label": "Managing member at nomination",
+      "source_ids": [
+        "MULLIN_OGE_2026",
+        "MULLIN_ETHICS_2026"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "qualification": "March 17 agreement requires resignation upon confirmation while retaining a passive financial interest. Completion not independently verified here. Relationship only; no personal payment or causal influence inferred from this edge.",
+      "relationship_type": "disclosed_management_role",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/4FF5BEC82674CDCB85258DBE005422C5/$FILE/Mullin,%20Markwayne%20%20finalEA.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E012",
+      "source": "IND_MARKWAYNE_MULLIN",
+      "target": "ENT_ALLOTMENT_SERVICES",
+      "type": "managing_member",
+      "label": "Managing member; retained position",
+      "source_ids": [
+        "MULLIN_OGE_2026",
+        "MULLIN_ETHICS_2026",
+        "MULLIN_DDF_COMPLAINT"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "since": "2022-11",
+      "qualification": "Ethics agreement expressly permits retention with recusal commitments; DDF subsequently questioned outside earned income. Relationship only; no personal payment or causal influence inferred from this edge.",
+      "relationship_type": "managing_member",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/4FF5BEC82674CDCB85258DBE005422C5/$FILE/Mullin,%20Markwayne%20%20finalEA.pdf",
+        "https://www.democracydefendersfund.org/wp-content/uploads/2026/06/2026-04-20-ddf-dhs-secretary-mullins-financial-holdings-warrant.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E013",
+      "source": "ENT_ALLOTMENT_SERVICES",
+      "target": "ENT_APRES_SPECTRUM",
+      "type": "ownership_interest",
+      "label": "Owns wastewater-company interest",
+      "source_ids": [
+        "MULLIN_OGE_2026",
+        "MULLIN_ETHICS_2026"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "qualification": "Disclosed interest $1,000,001–$5,000,000; percentage not disclosed. Relationship only; no personal payment or causal influence inferred from this edge.",
+      "relationship_type": "ownership_interest",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/4FF5BEC82674CDCB85258DBE005422C5/$FILE/Mullin,%20Markwayne%20%20finalEA.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E014",
+      "source": "ENT_MULLIN_FAMILY_HOLDCO",
+      "target": "ENT_COP_HOMETOWN_PARENT",
+      "type": "minority_ownership",
+      "label": "Minority owner",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "qualification": "Part 6 row 13.1 names Inc.; footnote 13 names LLC. Same underlying interest as described in the filing, corporate suffix remains a reconciliation task; $5,000,001–$25,000,000 value. Relationship only; no personal payment or causal influence inferred from this edge.",
+      "relationship_type": "minority_ownership",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E015",
+      "source": "ENT_COP_HOMETOWN_PARENT",
+      "target": "ENT_HOMETOWN_SERVICES",
+      "type": "ownership",
+      "label": "Owns HomeTown Services",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "qualification": "Part 6 endnote 13; ownership percentage not specified. Relationship only; no personal payment or causal influence inferred from this edge.",
+      "relationship_type": "ownership",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E016",
+      "source": "TRUST_MULLIN_FAMILY_1",
+      "target": "ENT_MULLIN_FAMILY_HOLDCO",
+      "type": "ownership_interest",
+      "label": "3.2% holding-company interest",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "ownership_percent": 3.2,
+      "qualification": "Trust beneficiaries and trustees not identified in this filing; value and income already included at line 13, not a separate asset total. Relationship only; no personal payment or causal influence inferred from this edge.",
+      "relationship_type": "ownership_interest",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E017",
+      "source": "TRUST_MULLIN_FAMILY_2",
+      "target": "ENT_MULLIN_FAMILY_HOLDCO",
+      "type": "ownership_interest",
+      "label": "3.2% holding-company interest",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "ownership_percent": 3.2,
+      "qualification": "Trust beneficiaries and trustees not identified in this filing; value and income already included at line 13, not a separate asset total. Relationship only; no personal payment or causal influence inferred from this edge.",
+      "relationship_type": "ownership_interest",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E018",
+      "source": "TRUST_MULLIN_FAMILY_3",
+      "target": "ENT_MULLIN_FAMILY_HOLDCO",
+      "type": "ownership_interest",
+      "label": "3.2% holding-company interest",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "ownership_percent": 3.2,
+      "qualification": "Trust beneficiaries and trustees not identified in this filing; value and income already included at line 13, not a separate asset total. Relationship only; no personal payment or causal influence inferred from this edge.",
+      "relationship_type": "ownership_interest",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E019",
+      "source": "TRUST_MULLIN_FAMILY_4",
+      "target": "ENT_MULLIN_FAMILY_HOLDCO",
+      "type": "ownership_interest",
+      "label": "3.2% holding-company interest",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "ownership_percent": 3.2,
+      "qualification": "Trust beneficiaries and trustees not identified in this filing; value and income already included at line 13, not a separate asset total. Relationship only; no personal payment or causal influence inferred from this edge.",
+      "relationship_type": "ownership_interest",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E020",
+      "source": "TRUST_MULLIN_FAMILY_5",
+      "target": "ENT_MULLIN_FAMILY_HOLDCO",
+      "type": "ownership_interest",
+      "label": "3.2% holding-company interest",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "ownership_percent": 3.2,
+      "qualification": "Trust beneficiaries and trustees not identified in this filing; value and income already included at line 13, not a separate asset total. Relationship only; no personal payment or causal influence inferred from this edge.",
+      "relationship_type": "ownership_interest",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E021",
+      "source": "TRUST_MULLIN_FAMILY_6",
+      "target": "ENT_MULLIN_FAMILY_HOLDCO",
+      "type": "ownership_interest",
+      "label": "3.2% holding-company interest",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "ownership_percent": 3.2,
+      "qualification": "Trust beneficiaries and trustees not identified in this filing; value and income already included at line 13, not a separate asset total. Relationship only; no personal payment or causal influence inferred from this edge.",
+      "relationship_type": "ownership_interest",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E022",
+      "source": "GROUP_MULLIN_HOUSEHOLD",
+      "target": "ENT_MULLIN_FAMILY_HOLDCO",
+      "type": "disclosed_household_interest",
+      "label": "Family holding-company interest",
+      "source_ids": [
+        "MULLIN_2024_SENATE",
+        "MULLIN_OGE_2026"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "qualification": "2024 Senate filing distinguishes joint and dependent-child interests; 2026 filing consolidates values. Do not assign every trust to a named family member. Relationship only; no personal payment or causal influence inferred from this edge.",
+      "relationship_type": "disclosed_household_interest",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://static.notus.org/41/2c/b1759251424eaf9f018c1cbee112/efd-annual-report-for-2024-mullin-markwayne.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E023",
+      "source": "GROUP_MULLIN_HOUSEHOLD",
+      "target": "ENT_TC4_INVESTMENTS",
+      "type": "disclosed_household_interest",
+      "label": "Property investment interest",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "qualification": "Part 6 includes filer, spouse and dependent-child interests; holder split unspecified. Relationship only; no personal payment or causal influence inferred from this edge.",
+      "relationship_type": "disclosed_household_interest",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E024",
+      "source": "ENT_XTREME_BOAT_RV",
+      "target": "ENT_MULLIN_PROPERTIES",
+      "type": "loan_obligation",
+      "label": "Owes note principal and interest",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "qualification": "Note value $1,000,001–$5,000,000; reported interest $100,001–$1,000,000. Note principal is an asset, not new income. Household or entity interest; exact individual allocation not supplied by this row. Non-additive with aggregate assets, underlying assets or separate income measures.",
+      "money_id": "MULLIN_NOTE_INTEREST",
+      "relationship_type": "loan_obligation",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": {
+        "id": "MULLIN_NOTE_INTEREST",
+        "label": "Xtreme Boat & RV note interest",
+        "amount_usd": null,
+        "currency": "USD",
+        "type": "interest income",
+        "recipient": "Mullin Properties LLC / household disclosed interest",
+        "period": "2026 nominee report; generally CY 2025 through filing on March 10, 2026; not a four-year total",
+        "source_ids": [
+          "MULLIN_OGE_2026"
+        ],
+        "locator": "p.10 Part 6 row 10.1",
+        "personal_allocation": "Household or entity interest; exact individual allocation not supplied by this row.",
+        "aggregation": "Non-additive with aggregate assets, underlying assets or separate income measures.",
+        "min_usd": 100001,
+        "max_usd": 1000000,
+        "case_id": "INF_MULLIN_FAMILY",
+        "source_urls": [
+          "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+        ],
+        "graph_vertex_id": "MONEY_MULLIN_NOTE_INTEREST",
+        "aggregate_personal_income_eligible": false
+      },
+      "is_financial_relationship": true,
+      "cash_status": "interest income",
+      "amount_usd": null,
+      "amount_recipient_id": "ENT_MULLIN_PROPERTIES",
+      "amount_semantics": "interest income",
+      "evidence_status": "documented_relationship",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E025",
+      "source": "GROUP_MULLIN_HOUSEHOLD",
+      "target": "ENT_MULLIN_FAMILY_INVESTMENTS",
+      "type": "disclosed_household_interest",
+      "label": "Family investment portfolio",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "qualification": "Part 6 row 16. No precise split between family members. Relationship only; no personal payment or causal influence inferred from this edge.",
+      "relationship_type": "disclosed_household_interest",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E026",
+      "source": "ENT_MULLIN_FAMILY_INVESTMENTS",
+      "target": "ENT_LHX",
+      "type": "historical_security_holding",
+      "label": "Disclosed shares; later sale reported",
+      "source_ids": [
+        "MULLIN_OGE_2026",
+        "MULLIN_JUNE24_PTR"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "qualification": "Historical March 2026 holding. OGE PTR reports May/June sales; this is not a current holdings assertion or personal allocation of the issuer’s government contracts. Relationship only; no personal payment or causal influence inferred from this edge.",
+      "relationship_type": "historical_security_holding",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/038F222E7B084F8C85258E3F002DB296/$FILE/Markwayne-Mullin-06.24.2026-278T.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E027",
+      "source": "ENT_MULLIN_FAMILY_INVESTMENTS",
+      "target": "ENT_RTX",
+      "type": "historical_security_holding",
+      "label": "Disclosed shares; later sale reported",
+      "source_ids": [
+        "MULLIN_OGE_2026",
+        "MULLIN_JUNE24_PTR"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "qualification": "Historical March 2026 holding. OGE PTR reports May/June sales; this is not a current holdings assertion or personal allocation of the issuer’s government contracts. Relationship only; no personal payment or causal influence inferred from this edge.",
+      "relationship_type": "historical_security_holding",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/038F222E7B084F8C85258E3F002DB296/$FILE/Markwayne-Mullin-06.24.2026-278T.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E028",
+      "source": "ENT_MULLIN_FAMILY_INVESTMENTS",
+      "target": "ENT_UNH",
+      "type": "historical_security_holding",
+      "label": "Disclosed shares; later sale reported",
+      "source_ids": [
+        "MULLIN_OGE_2026",
+        "MULLIN_JUNE24_PTR"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "qualification": "Historical March 2026 holding. OGE PTR reports May/June sales; this is not a current holdings assertion or personal allocation of the issuer’s government contracts. Relationship only; no personal payment or causal influence inferred from this edge.",
+      "relationship_type": "historical_security_holding",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/038F222E7B084F8C85258E3F002DB296/$FILE/Markwayne-Mullin-06.24.2026-278T.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E029",
+      "source": "GROUP_MULLIN_HOUSEHOLD",
+      "target": "ENT_K5_HS_HOLDCO",
+      "type": "disclosed_household_interest",
+      "label": "Healthcare investment vehicle",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "qualification": "Part 6 row 22; exact household ownership split not stated. Relationship only; no personal payment or causal influence inferred from this edge.",
+      "relationship_type": "disclosed_household_interest",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E030",
+      "source": "ENT_K5_HS_HOLDCO",
+      "target": "ENT_HISTOSONICS",
+      "type": "ownership_interest",
+      "label": "Healthcare technology stake",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "qualification": "Part 6 row 22.1; value $100,001–$250,000; income none or below $201. Relationship only; no personal payment or causal influence inferred from this edge.",
+      "relationship_type": "ownership_interest",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "evidence_status": "documented_relationship",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E031",
+      "source": "IND_MARKWAYNE_MULLIN",
+      "target": "ENT_BOTANIC_TONICS",
+      "type": "disclosed_financial_interest",
+      "label": "Disclosed kratom-company stake",
+      "source_ids": [
+        "MULLIN_OGE_2026",
+        "MULLIN_CNN_VOGEL"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "qualification": "$500,001–$1,000,000 March 2026 reported value; acquisition date and exact ownership percentage unknown; no material income reported. Household or entity interest; exact individual allocation not supplied by this row. Non-additive with aggregate assets, underlying assets or separate income measures. Asset value; no material income reported (none or under $201). No quantified policy-caused gain.",
+      "money_id": "MULLIN_BOTANIC_VALUE",
+      "amount_recipient_id": "IND_MARKWAYNE_MULLIN",
+      "relationship_type": "disclosed_financial_interest",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://transcripts.cnn.com/show/cg/date/2026-06-16/segment/01"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": {
+        "id": "MULLIN_BOTANIC_VALUE",
+        "label": "Botanic Tonics investment value",
+        "amount_usd": null,
+        "currency": "USD",
+        "type": "asset value",
+        "recipient": "Mullin disclosed interest in Botanic Tonics LLC",
+        "period": "2026 nominee report; generally CY 2025 through filing on March 10, 2026; not a four-year total",
+        "source_ids": [
+          "MULLIN_OGE_2026"
+        ],
+        "locator": "p.24 Part 6 row 25",
+        "personal_allocation": "Household or entity interest; exact individual allocation not supplied by this row.",
+        "aggregation": "Non-additive with aggregate assets, underlying assets or separate income measures.",
+        "cash_status": "Asset value; no material income reported (none or under $201). No quantified policy-caused gain.",
+        "min_usd": 500001,
+        "max_usd": 1000000,
+        "case_id": "INF_MULLIN_FAMILY",
+        "source_urls": [
+          "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+        ],
+        "graph_vertex_id": "MONEY_MULLIN_BOTANIC_VALUE",
+        "aggregate_personal_income_eligible": false
+      },
+      "is_financial_relationship": true,
+      "cash_status": "Asset value; no material income reported (none or under $201). No quantified policy-caused gain.",
+      "amount_usd": null,
+      "amount_semantics": "asset value",
+      "evidence_status": "documented_relationship",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E032",
+      "source": "IND_MARKWAYNE_MULLIN",
+      "target": "GOV_FDA",
+      "type": "reported_policy_advocacy",
+      "label": "Reported requests to soften kratom warnings",
+      "source_ids": [
+        "MULLIN_CNN_VOGEL"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "period": "Reported June 16, 2026; advocacy described during Senate and DHS service",
+      "evidence_status": "reported",
+      "qualification": "Original NYT reporter described the finding on CNN. DHS says he has not lobbied for any individual or company. No cash transfer or adjudicated quid pro quo established. Relationship only; no personal payment or causal influence inferred from this edge.",
+      "relationship_type": "reported_policy_advocacy",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://transcripts.cnn.com/show/cg/date/2026-06-16/segment/01"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E033",
+      "source": "GOV_FDA",
+      "target": "ENT_BOTANIC_TONICS",
+      "type": "potential_policy_benefit",
+      "label": "Policy could reduce rival competition",
+      "source_ids": [
+        "FDA_7OH_2025",
+        "MULLIN_CNN_VOGEL",
+        "WYDEN_BOTANIC_LETTER"
+      ],
+      "as_of": "2026-03-10",
+      "is_money_flow": false,
+      "period": "July 29, 2025 proposal; 2026 reporting/inquiry",
+      "evidence_status": "supported inference",
+      "qualification": "FDA targeted concentrated 7-OH, not natural leaf. Competitive benefit is the reporting’s mechanism, not a measured personal gain. FDA cites a medical/scientific basis; DEA has scheduling authority. Relationship only; no personal payment or causal influence inferred from this edge.",
+      "relationship_type": "potential_policy_benefit",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://www.fda.gov/news-events/press-announcements/fda-takes-steps-restrict-7-oh-opioid-products-threatening-american-consumers",
+        "https://transcripts.cnn.com/show/cg/date/2026-06-16/segment/01",
+        "https://www.finance.senate.gov/wp-content/uploads/media/doc/20260803lettertobotanictonics.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "MULLIN_E034",
+      "source": "IND_CHRISTIE_MULLIN",
+      "target": "ENT_ROWANS_RESTAURANT",
+      "type": "disclosed_spouse_interest",
+      "label": "Spouse interest; capital gain disclosed",
+      "source_ids": [
+        "MULLIN_2024_SENATE"
+      ],
+      "period": "CY2024",
+      "as_of": "2024-12-31",
+      "is_money_flow": false,
+      "money_id": "CHRISTIE_ROWANS_GAIN",
+      "qualification": "Senate annual report identifies the owner as Spouse, capital gains $1,000,001–$5,000,000 and remaining asset value below $1,001. Not a government payment or evidence of political causation. Spouse attribution expressly disclosed; associated full sale dated February 27, 2024; buyer, cost basis and precise amounts not provided. Separate CY2024 gain; do not add to 2026 asset values. Capital gain category as reported; not gross sale proceeds, company revenue or a government payment.",
+      "date": "2024-02-27",
+      "amount_recipient_id": "IND_CHRISTIE_MULLIN",
+      "relationship_type": "disclosed_spouse_interest",
+      "case_ids": [
+        "INF_MULLIN_FAMILY"
+      ],
+      "source_urls": [
+        "https://static.notus.org/41/2c/b1759251424eaf9f018c1cbee112/efd-annual-report-for-2024-mullin-markwayne.pdf"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": {
+        "id": "CHRISTIE_ROWANS_GAIN",
+        "label": "Christie’s Rowan’s Restaurant capital gain",
+        "amount_usd": null,
+        "currency": "USD",
+        "type": "disclosed capital gains range",
+        "recipient": "Christie Renee Mullin (Spouse owner on Senate disclosure)",
+        "period": "CY2024",
+        "source_ids": [
+          "MULLIN_2024_SENATE"
+        ],
+        "locator": "Part3, asset11, PDF p.3; associated full sale in Part4b, PDF p.29. Amounts are independently labeled gain and sale on their respective rows; do not add them.",
+        "personal_allocation": "Spouse attribution expressly disclosed; associated full sale dated February 27, 2024; buyer, cost basis and precise amounts not provided.",
+        "cash_status": "Capital gain category as reported; not gross sale proceeds, company revenue or a government payment.",
+        "aggregation": "Separate CY2024 gain; do not add to 2026 asset values.",
+        "threshold_status": "Exceeds $50,000 as a disclosed spouse income range; no attribution to government spending.",
+        "min_usd": 1000001,
+        "max_usd": 5000000,
+        "case_id": "INF_MULLIN_FAMILY",
+        "source_urls": [
+          "https://static.notus.org/41/2c/b1759251424eaf9f018c1cbee112/efd-annual-report-for-2024-mullin-markwayne.pdf"
+        ],
+        "graph_vertex_id": "MONEY_CHRISTIE_ROWANS_GAIN",
+        "aggregate_personal_income_eligible": false
+      },
+      "is_financial_relationship": true,
+      "cash_status": "Capital gain category as reported; not gross sale proceeds, company revenue or a government payment.",
+      "amount_usd": null,
+      "amount_semantics": "disclosed capital gains range",
+      "evidence_status": "documented_relationship",
+      "outside_window": false,
+      "window_status": "within_window",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "ES_E1",
+      "source": "IND_ERIC_SCHMIDT",
+      "target": "ENT_PERENNIAL_AUTONOMY",
+      "type": "equity_investor",
+      "label": "Investor; stake and return undisclosed",
+      "source_ids": [
+        "ES_WSJMARCH",
+        "ES_SCOOP_MAY"
+      ],
+      "as_of": "2026-03-10",
+      "ownership_percent": null,
+      "evidence_status": "reported",
+      "relationship_type": "equity_investor",
+      "period": "2026-03-10",
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "source_urls": [
+        "https://www.wsj.com/public/resources/documents/QJ6zlUXnDhtW4Z0Fs51B-WSJNewsPaper-3-10-2026.pdf",
+        "https://defensescoop.com/2026/05/19/pentagon-awards-500-million-contract-to-perennial-autonomy-for-counter-drone-systems/"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "is_money_flow": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "qualification": "Relationship only; no personal payment or causal influence inferred from this edge.",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "ES_E2",
+      "source": "IND_ERIC_SCHMIDT",
+      "target": "ORG_WHITE_STORK_PROJECT",
+      "type": "founder_of",
+      "label": "Founded drone project in 2023",
+      "source_ids": [
+        "ES_FORBES_JAN",
+        "ES_FORBES_JUN"
+      ],
+      "since": "2023",
+      "evidence_status": "reported",
+      "relationship_type": "founder_of",
+      "period": "2023",
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "source_urls": [
+        "https://www.forbes.com/sites/sarahemerson/2024/01/23/eric-schmidts-secret-white-stork-project-aims-to-build-ai-combat-drones/",
+        "https://www.forbes.com/sites/sarahemerson/2024/06/06/eric-schmidt-is-secretly-testing-ai-military-drones-in-a-wealthy-silicon-valley-suburb/"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "is_money_flow": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "qualification": "Relationship only; no personal payment or causal influence inferred from this edge.",
+      "outside_window": false,
+      "window_status": "within_window",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "ES_E3",
+      "source": "ORG_WHITE_STORK_PROJECT",
+      "target": "ENT_PERENNIAL_AUTONOMY",
+      "type": "reported_project_origin",
+      "label": "Project continuity reported; legal identity not equated",
+      "source_ids": [
+        "ES_MILTIMES",
+        "ES_FORBES_JUN"
+      ],
+      "evidence_status": "reported",
+      "ownership_percent": null,
+      "relationship_type": "reported_project_origin",
+      "period": "Date not established; see cited relationship record",
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "source_urls": [
+        "https://www.militarytimes.com/industry/techwatch/2026/05/19/pentagon-inks-500-million-deal-with-perennial-autonomy-for-counter-drone-tech/",
+        "https://www.forbes.com/sites/sarahemerson/2024/06/06/eric-schmidt-is-secretly-testing-ai-military-drones-in-a-wealthy-silicon-valley-suburb/"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "is_money_flow": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "qualification": "Relationship only; no personal payment or causal influence inferred from this edge.",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "ES_E4",
+      "source": "IND_ERIC_SCHMIDT",
+      "target": "ENT_SWIFT_BEAT",
+      "type": "chief_executive_of",
+      "label": "CEO at Ukraine memorandum signing",
+      "source_ids": [
+        "ES_UKRAINE_2025"
+      ],
+      "as_of": "2025-07-03",
+      "evidence_status": "documented",
+      "relationship_type": "chief_executive_of",
+      "period": "2025-07-03",
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "source_urls": [
+        "https://www.president.gov.ua/en/news/memorandum-mizh-ukrayinoyu-ta-amerikanskoyu-kompaniyeyu-swif-98817"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "is_money_flow": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "qualification": "Relationship only; no personal payment or causal influence inferred from this edge.",
+      "outside_window": false,
+      "window_status": "within_window",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "ES_E5",
+      "source": "ENT_SWIFT_BEAT",
+      "target": "ORG_WHITE_STORK_PROJECT",
+      "type": "reported_project_affiliation",
+      "label": "Related project entity; legal structure unresolved",
+      "source_ids": [
+        "ES_FORBES_JAN",
+        "ES_FORBES_JUN"
+      ],
+      "as_of": "2024-06-06",
+      "evidence_status": "reported",
+      "relationship_type": "reported_project_affiliation",
+      "period": "2024-06-06",
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "source_urls": [
+        "https://www.forbes.com/sites/sarahemerson/2024/01/23/eric-schmidts-secret-white-stork-project-aims-to-build-ai-combat-drones/",
+        "https://www.forbes.com/sites/sarahemerson/2024/06/06/eric-schmidt-is-secretly-testing-ai-military-drones-in-a-wealthy-silicon-valley-suburb/"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "is_money_flow": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "qualification": "Relationship only; no personal payment or causal influence inferred from this edge.",
+      "outside_window": false,
+      "window_status": "within_window",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "ES_E6",
+      "source": "ENT_VOLYA_ROBOTICS",
+      "target": "ORG_WHITE_STORK_PROJECT",
+      "type": "reported_project_affiliation",
+      "label": "Related Estonian entity; not verified Perennial parent",
+      "source_ids": [
+        "ES_FORBES_JAN",
+        "ES_FORBES_JUN"
+      ],
+      "as_of": "2024-06-06",
+      "evidence_status": "reported",
+      "relationship_type": "reported_project_affiliation",
+      "period": "2024-06-06",
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "source_urls": [
+        "https://www.forbes.com/sites/sarahemerson/2024/01/23/eric-schmidts-secret-white-stork-project-aims-to-build-ai-combat-drones/",
+        "https://www.forbes.com/sites/sarahemerson/2024/06/06/eric-schmidt-is-secretly-testing-ai-military-drones-in-a-wealthy-silicon-valley-suburb/"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "is_money_flow": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "qualification": "Relationship only; no personal payment or causal influence inferred from this edge.",
+      "outside_window": false,
+      "window_status": "within_window",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "ES_E7",
+      "source": "ENT_NT_ISLAND_HOLDINGS",
+      "target": "ENT_VOLYA_ROBOTICS",
+      "type": "equity_owner",
+      "label": "100% registered shareholder",
+      "source_ids": [
+        "ES_ESTONIA"
+      ],
+      "ownership_percent": 100,
+      "since": "2026-02-25",
+      "as_of": "2026-11-13",
+      "evidence_status": "documented_registry",
+      "date_note": "Live registry observation with effective date inside window",
+      "period": "Since 2026-02-25; observed 2026-11-13",
+      "relationship_type": "equity_owner",
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "source_urls": [
+        "https://ariregister.rik.ee/eng/company/16817849/Volya-Robotics-O%C3%9C"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "is_money_flow": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "qualification": "Relationship only; no personal payment or causal influence inferred from this edge.",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "ES_E8",
+      "source": "IND_ERIC_SCHMIDT",
+      "target": "ENT_VOLYA_ROBOTICS",
+      "type": "indirect_beneficial_owner",
+      "label": "Registered indirect beneficial owner; percentage unstated",
+      "source_ids": [
+        "ES_ESTONIA"
+      ],
+      "ownership_percent": null,
+      "since": "2023-09-19",
+      "as_of": "2026-11-13",
+      "evidence_status": "documented_registry",
+      "period": "Since 2023-09-19; observed 2026-11-13",
+      "relationship_type": "indirect_beneficial_owner",
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "source_urls": [
+        "https://ariregister.rik.ee/eng/company/16817849/Volya-Robotics-O%C3%9C"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "is_money_flow": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "qualification": "Relationship only; no personal payment or causal influence inferred from this edge.",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "ES_E9",
+      "source": "IND_WENDY_SCHMIDT",
+      "target": "ENT_VOLYA_ROBOTICS",
+      "type": "indirect_beneficial_owner",
+      "label": "Registered indirect beneficial owner; percentage unstated",
+      "source_ids": [
+        "ES_ESTONIA"
+      ],
+      "ownership_percent": null,
+      "since": "2026-02-17",
+      "as_of": "2026-11-13",
+      "evidence_status": "documented_registry",
+      "limitation": "No verified ownership path to Perennial or Napatree and no personal proceeds quantified",
+      "period": "Since 2026-02-17; observed 2026-11-13",
+      "relationship_type": "indirect_beneficial_owner",
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "source_urls": [
+        "https://ariregister.rik.ee/eng/company/16817849/Volya-Robotics-O%C3%9C"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "is_money_flow": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "qualification": "Relationship only; no personal payment or causal influence inferred from this edge.",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "ES_E10",
+      "source": "IND_ERIC_SCHMIDT",
+      "target": "IND_WENDY_SCHMIDT",
+      "type": "spouse_of",
+      "label": "Spouses",
+      "source_ids": [
+        "ES_WENDY"
+      ],
+      "evidence_status": "documented",
+      "relationship_type": "spouse_of",
+      "period": "Date not established; see cited relationship record",
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "source_urls": [
+        "https://wendyschmidt.com/about/"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "is_money_flow": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "qualification": "Relationship only; no personal payment or causal influence inferred from this edge.",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "ES_E11",
+      "source": "IND_ERIC_SCHMIDT",
+      "target": "ORG_DEFENSE_INNOVATION_BOARD",
+      "type": "former_chair_of",
+      "label": "Chair 2016–September 2020",
+      "source_ids": [
+        "ES_DIB_2016",
+        "ES_DIB_EXIT"
+      ],
+      "period_start": "2016-03-02",
+      "period_end": "2020-09-15",
+      "window_status": "historical_context",
+      "outside_window": true,
+      "evidence_status": "documented_and_reported",
+      "decision_link": "No role in the 2026 awards established",
+      "period": "2016-03-02 – 2020-09-15",
+      "relationship_type": "former_chair_of",
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "source_urls": [
+        "https://www.defense.gov/News/News-Stories/Article/Article/684366/pentagon-to-establish-defense-innovation-advisory-board/",
+        "https://fedscoop.com/eric-schmidt-departments-leading-roll-in-defense-innovation-board/"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "is_money_flow": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "qualification": "Relationship only; no personal payment or causal influence inferred from this edge.",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "ES_E12",
+      "source": "IND_ERIC_SCHMIDT",
+      "target": "ORG_NSCAI",
+      "type": "chair_of",
+      "label": "Commission chair in 2021 hearing",
+      "source_ids": [
+        "ES_NSCAI_2021"
+      ],
+      "as_of": "2021-03-12",
+      "window_status": "historical_context",
+      "outside_window": true,
+      "evidence_status": "documented",
+      "decision_link": "No role in the 2026 awards established",
+      "relationship_type": "chair_of",
+      "period": "2021-03-12",
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "source_urls": [
+        "https://armedservices.house.gov/calendar/eventsingle.aspx?EventID=3746"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "is_money_flow": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "qualification": "Relationship only; no personal payment or causal influence inferred from this edge.",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "ES_E13",
+      "source": "IND_WILL_ROPER",
+      "target": "ORG_WHITE_STORK_PROJECT",
+      "type": "reported_project_participant",
+      "label": "Project participant reported in 2024",
+      "source_ids": [
+        "ES_FORBES_JUN"
+      ],
+      "as_of": "2024-06-06",
+      "evidence_status": "reported",
+      "ownership_percent": null,
+      "relationship_type": "reported_project_participant",
+      "period": "2024-06-06",
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "source_urls": [
+        "https://www.forbes.com/sites/sarahemerson/2024/06/06/eric-schmidt-is-secretly-testing-ai-military-drones-in-a-wealthy-silicon-valley-suburb/"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "is_money_flow": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "qualification": "Relationship only; no personal payment or causal influence inferred from this edge.",
+      "outside_window": false,
+      "window_status": "within_window",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "ES_E14",
+      "source": "IND_WILL_ROPER",
+      "target": "ORG_DEFENSE_INNOVATION_BOARD",
+      "type": "member_of",
+      "label": "Board member in February 2024",
+      "source_ids": [
+        "ES_DIB_2024"
+      ],
+      "as_of": "2024-02-20",
+      "evidence_status": "documented",
+      "decision_link": "Advisory role; participation in 2026 contract decisions not established",
+      "relationship_type": "member_of",
+      "period": "2024-02-20",
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "source_urls": [
+        "https://www.defense.gov/News/News-Stories/Article/Article/3680921/defense-innovation-board-scaling-innovation-forward/"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "is_money_flow": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "qualification": "Relationship only; no personal payment or causal influence inferred from this edge.",
+      "outside_window": false,
+      "window_status": "within_window",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "ES_E15",
+      "source": "ORG_JIATF_401",
+      "target": "ENT_PERENNIAL_AUTONOMY",
+      "type": "agreement_award",
+      "label": "Bumblebee agreement: $5.2M",
+      "source_ids": [
+        "ES_ARMY_JAN"
+      ],
+      "date": "2026-01-30",
+      "amount_usd": 5200000,
+      "money_id": "ES_M1",
+      "evidence_status": "documented",
+      "window_status": "within_window",
+      "cash_status": "Award amount; disbursement not verified",
+      "relationship_type": "agreement_award",
+      "period": "2026-01-30",
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "source_urls": [
+        "https://www.army.mil/article/290392/jiatf_401_acquires_advanced_kinetic_counter_drone_system_to_enhance_warfighter_lethality"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": {
+        "id": "ES_M1",
+        "label": "Bumblebee V2 agreement",
+        "amount_usd": 5200000,
+        "currency": "USD",
+        "type": "government_agreement_award",
+        "recipient": "Perennial Autonomy",
+        "date": "2026-01-30",
+        "source_ids": [
+          "ES_ARMY_JAN"
+        ],
+        "cash_status": "Award announced; disbursements and precise award identifier not reconciled",
+        "personal_allocation": "Schmidt personal proceeds not disclosed",
+        "aggregation": "Separate evidence item; not added to other vehicles or obligations without award-level reconciliation",
+        "window_status": "within_window",
+        "evidence_status": "documented",
+        "outside_window": false,
+        "case_id": "INF_SCHMIDT_AUTONOMY",
+        "source_urls": [
+          "https://www.army.mil/article/290392/jiatf_401_acquires_advanced_kinetic_counter_drone_system_to_enhance_warfighter_lethality"
+        ],
+        "graph_vertex_id": "MONEY_ES_M1",
+        "aggregate_personal_income_eligible": false
+      },
+      "is_financial_relationship": true,
+      "is_money_flow": true,
+      "amount_recipient_id": "ENT_PERENNIAL_AUTONOMY",
+      "amount_semantics": "government_agreement_award",
+      "qualification": "Schmidt personal proceeds not disclosed Separate evidence item; not added to other vehicles or obligations without award-level reconciliation Award announced; disbursements and precise award identifier not reconciled",
+      "outside_window": false,
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "ES_E16",
+      "source": "ORG_JIATF_401",
+      "target": "ENT_PERENNIAL_AUTONOMY",
+      "type": "idiq_ceiling",
+      "label": "Three-year ordering ceiling: $500M",
+      "source_ids": [
+        "ES_JBSA_MAY",
+        "ES_ISSUER_MAY"
+      ],
+      "announced_date": "2026-05-18",
+      "amount_usd": 500000000,
+      "money_id": "ES_M2",
+      "evidence_status": "documented",
+      "window_status": "within_window",
+      "cash_status": "Ceiling, not obligated or paid amount",
+      "date_precision": "Announcement date; exact execution date not stated",
+      "period": "Announced 2026-05-18",
+      "relationship_type": "idiq_ceiling",
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "source_urls": [
+        "https://www.jbsa.mil/News/News/Article/4496078/joint-interagency-task-force-401-awards-500-million-counter-uas-contract/",
+        "https://www.perennialautonomy.com/news/idiq"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": {
+        "id": "ES_M2",
+        "label": "May three-year IDIQ ceiling",
+        "amount_usd": 500000000,
+        "currency": "USD",
+        "type": "idiq_ceiling",
+        "recipient": "Perennial Autonomy",
+        "announced_date": "2026-05-18",
+        "period": "Announced May 2026; three-year ordering vehicle extends beyond FY2026",
+        "source_ids": [
+          "ES_JBSA_MAY",
+          "ES_ISSUER_MAY"
+        ],
+        "cash_status": "Maximum ordering capacity, not verified obligations or outlays",
+        "personal_allocation": "No personal allocation; company stake and distributions undisclosed",
+        "aggregation": "Exclude from spending totals and personal-benefit totals",
+        "date_precision": "Original exact execution date and contract number not stated in announcements",
+        "window_status": "within_window",
+        "evidence_status": "documented",
+        "outside_window": false,
+        "case_id": "INF_SCHMIDT_AUTONOMY",
+        "source_urls": [
+          "https://www.jbsa.mil/News/News/Article/4496078/joint-interagency-task-force-401-awards-500-million-counter-uas-contract/",
+          "https://www.perennialautonomy.com/news/idiq"
+        ],
+        "graph_vertex_id": "MONEY_ES_M2",
+        "aggregate_personal_income_eligible": false
+      },
+      "is_financial_relationship": true,
+      "is_money_flow": true,
+      "amount_recipient_id": "ENT_PERENNIAL_AUTONOMY",
+      "amount_semantics": "idiq_ceiling",
+      "qualification": "No personal allocation; company stake and distributions undisclosed Exclude from spending totals and personal-benefit totals Maximum ordering capacity, not verified obligations or outlays",
+      "outside_window": false,
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "ES_E17",
+      "source": "ORG_US_ARMY",
+      "target": "ENT_NAPATREE_TECHNOLOGY",
+      "type": "contract_obligations",
+      "label": "Net in-window obligations: $265.38M",
+      "source_ids": [
+        "ES_API_A009",
+        "ES_API_A009_TX"
+      ],
+      "period_start": "2026-03-09",
+      "period_end": "2026-06-18",
+      "amount_usd": 265382200,
+      "money_id": "ES_M3",
+      "evidence_status": "documented",
+      "window_status": "within_window",
+      "award_id": "W912CH26CA009",
+      "cash_status": "Obligations, not personal income or verified outlays",
+      "period": "2026-03-09 – 2026-06-18",
+      "relationship_type": "contract_obligations",
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "source_urls": [
+        "https://api.usaspending.gov/api/v2/awards/CONT_AWD_W912CH26CA009_9700_-NONE-_-NONE-/",
+        "https://signalgraph-accountability.vercel.app/sources/napatree-transactions.json"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": {
+        "id": "ES_M3",
+        "label": "Napatree net contract obligations",
+        "amount_usd": 265382200,
+        "currency": "USD",
+        "type": "net_federal_contract_obligations",
+        "recipient": "Napatree Technology LLC",
+        "recipient_uei": "H87XAJ4YQJ15",
+        "award_id": "W912CH26CA009",
+        "period_start": "2026-03-09",
+        "period_end": "2026-06-18",
+        "source_ids": [
+          "ES_API_A009",
+          "ES_API_A009_TX"
+        ],
+        "cash_status": "Five in-window actions net to $265,382,200; API total_account_outlay=0 and total_outlay=null do not establish that no payments occurred",
+        "personal_allocation": "Napatree legal recipient; pass-through to Perennial and Schmidt returns unquantified",
+        "aggregation": "Do not add to IDIQ ceilings or the $5.2M agreement until overlaps and legal identity are reconciled",
+        "formula": "26940857+238441343-47807500+47807500+0",
+        "window_status": "within_window",
+        "evidence_status": "documented",
+        "outside_window": false,
+        "case_id": "INF_SCHMIDT_AUTONOMY",
+        "source_urls": [
+          "https://api.usaspending.gov/api/v2/awards/CONT_AWD_W912CH26CA009_9700_-NONE-_-NONE-/",
+          "https://signalgraph-accountability.vercel.app/sources/napatree-transactions.json"
+        ],
+        "graph_vertex_id": "MONEY_ES_M3",
+        "aggregate_personal_income_eligible": false
+      },
+      "is_financial_relationship": true,
+      "is_money_flow": true,
+      "amount_recipient_id": "ENT_NAPATREE_TECHNOLOGY",
+      "amount_semantics": "net_federal_contract_obligations",
+      "qualification": "Napatree legal recipient; pass-through to Perennial and Schmidt returns unquantified Do not add to IDIQ ceilings or the $5.2M agreement until overlaps and legal identity are reconciled Five in-window actions net to $265,382,200; API total_account_outlay=0 and total_outlay=null do not establish that no payments occurred",
+      "outside_window": false,
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "ES_E18",
+      "source": "ENT_NAPATREE_TECHNOLOGY",
+      "target": "ENT_PERENNIAL_AUTONOMY",
+      "type": "reported_product_program_continuity",
+      "label": "Bumblebee supplier continuity; corporate chain unverified",
+      "source_ids": [
+        "ES_IUS_JUL",
+        "ES_API_A009",
+        "ES_ARMY_JAN"
+      ],
+      "evidence_status": "reported_association",
+      "ownership_percent": null,
+      "limitation": "Not an alias, subsidiary or ownership edge",
+      "relationship_type": "reported_product_program_continuity",
+      "period": "Date not established; see cited relationship record",
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "source_urls": [
+        "https://insideunmannedsystems.com/19-companies-out-of-49-contenders-qualify-for-drone-dominance-gauntlet-2-trial/",
+        "https://api.usaspending.gov/api/v2/awards/CONT_AWD_W912CH26CA009_9700_-NONE-_-NONE-/",
+        "https://www.army.mil/article/290392/jiatf_401_acquires_advanced_kinetic_counter_drone_system_to_enhance_warfighter_lethality"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": null,
+      "is_financial_relationship": false,
+      "is_money_flow": false,
+      "cash_status": "not_established",
+      "amount_usd": null,
+      "amount_recipient_id": null,
+      "amount_semantics": "No amount assigned",
+      "qualification": "Relationship only; no personal payment or causal influence inferred from this edge.",
+      "outside_window": null,
+      "window_status": "mixed_boundary_or_not_dated",
+      "government_attributed_personal_receipts_usd": null
+    },
+    {
+      "id": "ES_E19",
+      "source": "ORG_JIATF_401",
+      "target": "ENT_NAPATREE_TECHNOLOGY",
+      "type": "idiq_ceiling",
+      "label": "September base IDIQ ceiling: $500M",
+      "source_ids": [
+        "ES_ARMY_SEP"
+      ],
+      "announced_date": "2026-09-29",
+      "amount_usd": 500000000,
+      "money_id": "ES_M4",
+      "evidence_status": "documented",
+      "window_status": "within_window",
+      "cash_status": "Ordering capacity; not payments",
+      "date_precision": "Announcement date; original agreement not retrieved",
+      "period": "Announced 2026-09-29",
+      "relationship_type": "idiq_ceiling",
+      "case_ids": [
+        "INF_SCHMIDT_AUTONOMY"
+      ],
+      "source_urls": [
+        "https://www.army.mil/article/295771/jiatf_401_advances_domestic_shield_with_counter_uas_contract_awards"
+      ],
+      "origin": "independently_reviewed_case",
+      "money_record": {
+        "id": "ES_M4",
+        "label": "September Napatree IDIQ ceiling",
+        "amount_usd": 500000000,
+        "currency": "USD",
+        "type": "idiq_ceiling",
+        "recipient": "Napatree Technology LLC",
+        "announced_date": "2026-09-29",
+        "source_ids": [
+          "ES_ARMY_SEP"
+        ],
+        "cash_status": "Base IDIQ ordering capacity; orders/funding not quantified here",
+        "personal_allocation": "No verified ownership chain or individual allocation",
+        "aggregation": "Do not combine with May ceiling; distinct announcement and recipient; original instruments needed to determine relationship",
+        "window_status": "within_window",
+        "evidence_status": "documented",
+        "outside_window": false,
+        "case_id": "INF_SCHMIDT_AUTONOMY",
+        "source_urls": [
+          "https://www.army.mil/article/295771/jiatf_401_advances_domestic_shield_with_counter_uas_contract_awards"
+        ],
+        "graph_vertex_id": "MONEY_ES_M4",
+        "aggregate_personal_income_eligible": false
+      },
+      "is_financial_relationship": true,
+      "is_money_flow": true,
+      "amount_recipient_id": "ENT_NAPATREE_TECHNOLOGY",
+      "amount_semantics": "idiq_ceiling",
+      "qualification": "No verified ownership chain or individual allocation Do not combine with May ceiling; distinct announcement and recipient; original instruments needed to determine relationship Base IDIQ ordering capacity; orders/funding not quantified here",
+      "outside_window": false,
+      "government_attributed_personal_receipts_usd": null
     }
   ],
   "sources": {
@@ -10264,6 +13406,28 @@
       "id": "JBGS_10K_2025",
       "source_vertex_id": "SOURCE_JBGS_10K_2025"
     },
+    "CNC_PROXY_2026": {
+      "title": "Centene 2026 definitive proxy",
+      "url": "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000077/cnc-20260326.htm",
+      "published": "2026-03-26",
+      "filed": "2026-03-26",
+      "type": "primary_proxy",
+      "locator": "Printed pp.63, 80–84, 95–96, 105; London SCT row, incentive calculation and CAP reconciliation",
+      "access": "SEC original HTML inspected with web tool; direct archive download returned 403",
+      "id": "CNC_PROXY_2026",
+      "source_vertex_id": "SOURCE_CNC_PROXY_2026"
+    },
+    "CNC_10K_2025": {
+      "title": "Centene FY2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000049/cnc-20251231.htm",
+      "published": "2026-02-17",
+      "filed": "2026-02-17",
+      "type": "primary_annual_report",
+      "locator": "Printed pp.2–5, 14, 59, 75 and107; Note 19 segment rows; state capitation and Medicare/Marketplace payment channels",
+      "access": "SEC original HTML inspected with web tool; direct archive download returned 403",
+      "id": "CNC_10K_2025",
+      "source_vertex_id": "SOURCE_CNC_10K_2025"
+    },
     "TR_OGE_2026": {
       "title": "Donald J. Trump — 2026 annual financial disclosure",
       "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/69AEAA9D7455ACD585258E27002DDEE1/$FILE/Donald-J-Trump-2026-278ANNUAL.pdf",
@@ -10659,6 +13823,434 @@
       "id": "FISHER_BLOOMBERG",
       "source_vertex_id": "SOURCE_FISHER_BLOOMBERG"
     },
+    "CMS_MEDICAID_FINANCE": {
+      "title": "CMS Medicaid financial management",
+      "url": "https://www.medicaid.gov/medicaid/financial-management",
+      "type": "primary_government_explanation",
+      "accessed": "2026-11-13",
+      "locator": "Opening paragraphs: federal/state financing and payment models",
+      "id": "CMS_MEDICAID_FINANCE",
+      "source_vertex_id": "SOURCE_CMS_MEDICAID_FINANCE"
+    },
+    "CMS_MANAGED_CARE": {
+      "title": "CMS Medicaid managed care",
+      "url": "https://www.medicaid.gov/medicaid/managed-care",
+      "type": "primary_government_explanation",
+      "accessed": "2026-11-13",
+      "locator": "Opening paragraphs: state contracts and monthly capitation",
+      "id": "CMS_MANAGED_CARE",
+      "source_vertex_id": "SOURCE_CMS_MANAGED_CARE"
+    },
+    "CMS_SUBCAPITATION": {
+      "title": "CMS T-MSIS instructions for sub-capitation",
+      "url": "https://www.medicaid.gov/tmsis/dataguide/v4/technical-instructions/cms-technical-instructions-reporting-sub-capitation-payments-and-encounters-associated-with-sub-capitation-payments-from-managed-care-plans/",
+      "type": "primary_government_methodology",
+      "accessed": "2026-11-13",
+      "locator": "Challenge section: state capitation versus downstream plan payments; avoiding expenditure double counting",
+      "id": "CMS_SUBCAPITATION",
+      "source_vertex_id": "SOURCE_CMS_SUBCAPITATION"
+    },
+    "MULLIN_OGE_2026": {
+      "title": "Markwayne Mullin — nominee financial disclosure",
+      "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+      "published": "2026-03-10",
+      "type": "primary disclosure",
+      "locator": "OGE Form 278 e, signed March 10; certified March 17, 2026; pp.3–7, 10–12, 15–26",
+      "publisher": "U.S. Office of Government Ethics",
+      "access": "Official PDF archived; text identical to ProPublica/DocumentCloud copy; key pages visually checked.",
+      "id": "MULLIN_OGE_2026",
+      "source_vertex_id": "SOURCE_MULLIN_OGE_2026"
+    },
+    "MULLIN_ETHICS_2026": {
+      "title": "Markwayne Mullin — ethics agreement",
+      "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/4FF5BEC82674CDCB85258DBE005422C5/$FILE/Mullin,%20Markwayne%20%20finalEA.pdf",
+      "published": "2026-03-17",
+      "type": "primary ethics agreement",
+      "locator": "Sections 2–4, pp.2–4; Attachment A pp.5–6",
+      "publisher": "U.S. Office of Government Ethics",
+      "id": "MULLIN_ETHICS_2026",
+      "source_vertex_id": "SOURCE_MULLIN_ETHICS_2026"
+    },
+    "MULLIN_2024_SENATE": {
+      "title": "Markwayne Mullin — 2024 Senate annual disclosure",
+      "url": "https://static.notus.org/41/2c/b1759251424eaf9f018c1cbee112/efd-annual-report-for-2024-mullin-markwayne.pdf",
+      "published": "2025-08-13",
+      "type": "primary disclosure (newsroom mirror)",
+      "locator": "Part 3, pp.1–4 and p.18 row 183.1; official report UUID 1536 b 22 a-9260-4 cc 9-9 d 88-736 a 81 dfd 3 e 7",
+      "publisher": "U.S. Senate / NOTUS mirror",
+      "official_url": "https://efdsearch.senate.gov/search/view/annual/1536b22a-9260-4cc9-9d88-736a81dfd3e7/",
+      "id": "MULLIN_2024_SENATE",
+      "source_vertex_id": "SOURCE_MULLIN_2024_SENATE"
+    },
+    "MULLIN_PROPUBLICA": {
+      "title": "Markwayne Mullin financial disclosure explorer",
+      "url": "https://projects.propublica.org/trump-team-financial-disclosures/appointees/mullin-markwayne/",
+      "published": null,
+      "type": "newsroom data extraction",
+      "locator": "Reported Asset Values and Parts 1,3,6",
+      "publisher": "ProPublica",
+      "access": "Read November 13, 2026; independent original-PDF review performed.",
+      "id": "MULLIN_PROPUBLICA",
+      "source_vertex_id": "SOURCE_MULLIN_PROPUBLICA"
+    },
+    "MULLIN_CNN_VOGEL": {
+      "title": "Kenneth Vogel explains the New York Times kratom investigation",
+      "url": "https://transcripts.cnn.com/show/cg/date/2026-06-16/segment/01",
+      "published": "2026-06-16",
+      "type": "original reporter interview",
+      "locator": "The Lead, 17:33:53–17:39 segment; Vogel on Mullin contacts; DHS response",
+      "publisher": "CNN",
+      "reporting_origin": "NYT reporters Kenneth P. Vogel and Christina Jewett; interview is not an independent second investigation.",
+      "id": "MULLIN_CNN_VOGEL",
+      "source_vertex_id": "SOURCE_MULLIN_CNN_VOGEL"
+    },
+    "MULLIN_NYT_KRATOM": {
+      "title": "How an Addictive Gas Station Drug Found Allies in Trump’s Cabinet",
+      "url": "https://www.nytimes.com/2026/06/15/us/politics/kratom-trump-administration.html",
+      "published": "2026-06-15",
+      "type": "original investigative reporting",
+      "locator": "Mullin investment and efforts concerning FDA warnings",
+      "publisher": "The New York Times",
+      "access": "Direct article inaccessible in this audit; core finding checked through original reporter’s CNN interview and Senate letter. Do not count as independently read full text.",
+      "id": "MULLIN_NYT_KRATOM",
+      "source_vertex_id": "SOURCE_MULLIN_NYT_KRATOM"
+    },
+    "MULLIN_HHS_EVENT": {
+      "title": "HHS announcement of July 29, 2025 press conference",
+      "url": "https://www.hhs.gov/press-room/hhs-opioid-7oh-press-conference-kennedy.html",
+      "published": "2025-07-28",
+      "type": "primary government announcement",
+      "locator": "Participants and event date",
+      "publisher": "U.S. Department of Health and Human Services",
+      "id": "MULLIN_HHS_EVENT",
+      "source_vertex_id": "SOURCE_MULLIN_HHS_EVENT"
+    },
+    "FDA_7OH_2025": {
+      "title": "FDA Takes Steps to Restrict 7-OH Opioid Products",
+      "url": "https://www.fda.gov/news-events/press-announcements/fda-takes-steps-restrict-7-oh-opioid-products-threatening-american-consumers",
+      "published": "2025-07-29",
+      "type": "primary government policy",
+      "locator": "Opening paragraphs: concentrated 7-OH targeted, natural leaf not targeted; scientific rationale; DEA has final scheduling authority",
+      "publisher": "U.S. Food and Drug Administration",
+      "id": "FDA_7OH_2025",
+      "source_vertex_id": "SOURCE_FDA_7OH_2025"
+    },
+    "WYDEN_BOTANIC_LETTER": {
+      "title": "Wyden letter to Botanic Tonics",
+      "url": "https://www.finance.senate.gov/wp-content/uploads/media/doc/20260803lettertobotanictonics.pdf",
+      "published": "2026-08-03",
+      "type": "primary oversight allegation",
+      "locator": "pp.2–3 concerns; p.5 questions 11–12 on Mullin meeting and acquisition timing",
+      "publisher": "Senate Finance Committee ranking member Ron Wyden",
+      "perspective": "Democratic oversight letter; allegations and questions, not adjudicated findings.",
+      "id": "WYDEN_BOTANIC_LETTER",
+      "source_vertex_id": "SOURCE_WYDEN_BOTANIC_LETTER"
+    },
+    "MULLIN_DDF_COMPLAINT": {
+      "title": "DDF complaint concerning Mullin’s outside income and disclosures",
+      "url": "https://www.democracydefendersfund.org/wp-content/uploads/2026/06/2026-04-20-ddf-dhs-secretary-mullins-financial-holdings-warrant.pdf",
+      "published": "2026-04-20",
+      "type": "advocacy complaint (primary to allegation)",
+      "locator": "pp.1–4; outside-income and transaction-report allegations",
+      "publisher": "Democracy Defenders Fund",
+      "perspective": "Outside advocacy complaint; no ethics ruling established by this audit.",
+      "id": "MULLIN_DDF_COMPLAINT",
+      "source_vertex_id": "SOURCE_MULLIN_DDF_COMPLAINT"
+    },
+    "MULLIN_JUNE24_PTR": {
+      "title": "Mullin June 24 periodic transaction report",
+      "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/038F222E7B084F8C85258E3F002DB296/$FILE/Markwayne-Mullin-06.24.2026-278T.pdf",
+      "published": "2026-06-24",
+      "type": "primary disclosure",
+      "locator": "p.1 45-day extension; p.4 row 35 L 3 Harris; p.5 row 53 RTX; p.6 row 63 UnitedHealth; May 18/June 10 sales",
+      "publisher": "U.S. Office of Government Ethics",
+      "id": "MULLIN_JUNE24_PTR",
+      "source_vertex_id": "SOURCE_MULLIN_JUNE24_PTR"
+    },
+    "MULLIN_JUNE26_PTR": {
+      "title": "Mullin June 26 periodic transaction report",
+      "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/E856C1C9F19C67C785258E3F002DB290/$FILE/Markwayne-Mullin-06.26.2026-278T.pdf",
+      "published": "2026-06-26",
+      "type": "primary disclosure",
+      "locator": "Additional April–June 2026 sales; page 1 extension notation",
+      "publisher": "U.S. Office of Government Ethics",
+      "id": "MULLIN_JUNE26_PTR",
+      "source_vertex_id": "SOURCE_MULLIN_JUNE26_PTR"
+    },
+    "MULLIN_CONFIRMATION": {
+      "title": "Senate confirmation vote for Markwayne Mullin",
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00063.htm",
+      "published": "2026-03-23",
+      "type": "primary government record",
+      "locator": "Vote 63; 54–45; nominationPN 858",
+      "publisher": "U.S. Senate",
+      "id": "MULLIN_CONFIRMATION",
+      "source_vertex_id": "SOURCE_MULLIN_CONFIRMATION"
+    },
+    "MULLIN_SWEARING": {
+      "title": "Markwayne Mullin sworn in as Homeland Security Secretary",
+      "url": "https://www.whitehouse.gov/releases/2026/03/secretary-markwayne-mullin-is-ready-to-deliver-on-president-trumps-agenda/",
+      "published": "2026-03-24",
+      "type": "primary government announcement",
+      "locator": "Photo caption: sworn in March 24, 2026",
+      "publisher": "The White House",
+      "id": "MULLIN_SWEARING",
+      "source_vertex_id": "SOURCE_MULLIN_SWEARING"
+    },
+    "OGE_NOMINEE_PERIODS": {
+      "title": "OGE definitions and nominee reporting periods",
+      "url": "https://extapps2.oge.gov/web/278eGuide.nsf/Definitions",
+      "published": null,
+      "type": "primary reporting guidance",
+      "locator": "Reporting Periods: Nominee Report; Part 6 covers preceding calendar year to filing date; assets can use recent valuation date",
+      "publisher": "U.S. Office of Government Ethics",
+      "id": "OGE_NOMINEE_PERIODS",
+      "source_vertex_id": "SOURCE_OGE_NOMINEE_PERIODS"
+    },
+    "MULLIN_CONTRACT_SEARCH": {
+      "title": "Limited USAspending prime-contract name searches",
+      "url": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+      "published": "2026-11-13",
+      "type": "reproducible research query",
+      "locator": "Archived request/response pairs: MULLIN, APRES, ALLOTMENT SERVICES, BOTANIC TONICS; award types A–D; Oct 1, 2022–Sep 30, 2026",
+      "publisher": "USAspending.gov",
+      "access": "See source-archive/contract-search-log.json; no family company match in these four searches, not an exhaustive absence finding.",
+      "id": "MULLIN_CONTRACT_SEARCH",
+      "source_vertex_id": "SOURCE_MULLIN_CONTRACT_SEARCH"
+    },
+    "ES_ARMY_JAN": {
+      "title": "JIATF-401 acquires advanced kinetic counter-drone system",
+      "url": "https://www.army.mil/article/290392/jiatf_401_acquires_advanced_kinetic_counter_drone_system_to_enhance_warfighter_lethality",
+      "published": "2026-02-06",
+      "type": "primary_government_announcement",
+      "locator": "Opening two paragraphs; agreement awarded January 30, deliveries scheduled March",
+      "access": "Original page and local HTML inspected",
+      "id": "ES_ARMY_JAN",
+      "source_vertex_id": "SOURCE_ES_ARMY_JAN"
+    },
+    "ES_JBSA_MAY": {
+      "title": "Joint Interagency Task Force 401 awards $500 million counter-UAS contract",
+      "url": "https://www.jbsa.mil/News/News/Article/4496078/joint-interagency-task-force-401-awards-500-million-counter-uas-contract/",
+      "published": "2026-05-19",
+      "type": "primary_government_announcement",
+      "locator": "Opening three paragraphs: three-year IDIQ with $500M ceiling",
+      "access": "Indexed official text inspected; direct archive request returned 403",
+      "original_url": "https://www.war.gov/News/News-Stories/Article/Article/4495165/joint-interagency-task-force-401-awards-500-million-counter-uas-contract/",
+      "original_publication_date": "2026-05-18",
+      "id": "ES_JBSA_MAY",
+      "source_vertex_id": "SOURCE_ES_JBSA_MAY"
+    },
+    "ES_ISSUER_MAY": {
+      "title": "Perennial Autonomy Awarded $500 Million IDIQ Contract",
+      "url": "https://www.perennialautonomy.com/news/idiq",
+      "published": "2026-05-19",
+      "type": "primary_company_release",
+      "locator": "Opening paragraph and About Perennial Autonomy",
+      "access": "Original HTML inspected and archived",
+      "id": "ES_ISSUER_MAY",
+      "source_vertex_id": "SOURCE_ES_ISSUER_MAY"
+    },
+    "ES_ARMY_JUL": {
+      "title": "Rangers assess Bumblebee V2 at Fort Benning for homeland defense",
+      "url": "https://www.army.mil/article/293826/rangers_assess_bumblebee_v2_at_fort_benning_for_homeland_defense",
+      "published": "2026-07-10",
+      "type": "primary_government_announcement",
+      "locator": "July 8 training and assessment at Fort Benning; initial $5.2M and later contract context",
+      "access": "Original HTML inspected and archived",
+      "id": "ES_ARMY_JUL",
+      "source_vertex_id": "SOURCE_ES_ARMY_JUL"
+    },
+    "ES_WSJMARCH": {
+      "title": "Army Deploys Ukraine-Tested Counterdrones",
+      "url": "https://www.wsj.com/public/resources/documents/QJ6zlUXnDhtW4Z0Fs51B-WSJNewsPaper-3-10-2026.pdf",
+      "published": "2026-03-10",
+      "type": "original_reporting",
+      "locator": "Printed front page: article by Michael R. Gordon, Daniel Michaels and Alistair MacDonald identifies Schmidt as investor in Perennial",
+      "access": "Publisher-hosted newspaper PDF inspected; full copyrighted PDF not copied into publication archive",
+      "word_limit": 100,
+      "id": "ES_WSJMARCH",
+      "source_vertex_id": "SOURCE_ES_WSJMARCH"
+    },
+    "ES_SCOOP_MAY": {
+      "title": "Pentagon awards $500 million contract to Perennial Autonomy for counter-drone systems",
+      "url": "https://defensescoop.com/2026/05/19/pentagon-awards-500-million-contract-to-perennial-autonomy-for-counter-drone-systems/",
+      "published": "2026-05-19",
+      "type": "original_reporting",
+      "locator": "Company backed by Schmidt; spokesperson declines unit quantity/performance details",
+      "access": "Original reporting inspected",
+      "id": "ES_SCOOP_MAY",
+      "source_vertex_id": "SOURCE_ES_SCOOP_MAY"
+    },
+    "ES_MILTIMES": {
+      "title": "Pentagon inks $500 million deal with Perennial Autonomy for counter-drone tech",
+      "url": "https://www.militarytimes.com/industry/techwatch/2026/05/19/pentagon-inks-500-million-deal-with-perennial-autonomy-for-counter-drone-tech/",
+      "published": "2026-05-19",
+      "type": "original_reporting",
+      "locator": "Project Eagle origin and Schmidt connection",
+      "access": "Original reporting inspected",
+      "id": "ES_MILTIMES",
+      "source_vertex_id": "SOURCE_ES_MILTIMES"
+    },
+    "ES_FORBES_JAN": {
+      "title": "Eric Schmidt’s Secret Military Project Revealed: Attack Drones",
+      "url": "https://www.forbes.com/sites/sarahemerson/2024/01/23/eric-schmidts-secret-white-stork-project-aims-to-build-ai-combat-drones/",
+      "published": "2024-01-23",
+      "type": "original_investigative_reporting",
+      "locator": "Delaware LLC renaming; Volya and Swift Beat links",
+      "access": "Publisher source via web extract inspected",
+      "updated": "2025-08-27",
+      "qualification": "Historical entity reporting; not a verified current cap table or ownership chain",
+      "id": "ES_FORBES_JAN",
+      "source_vertex_id": "SOURCE_ES_FORBES_JAN"
+    },
+    "ES_FORBES_JUN": {
+      "title": "Eric Schmidt Is Secretly Testing AI Military Drones In A Wealthy Silicon Valley Suburb",
+      "url": "https://www.forbes.com/sites/sarahemerson/2024/06/06/eric-schmidt-is-secretly-testing-ai-military-drones-in-a-wealthy-silicon-valley-suburb/",
+      "published": "2024-06-06",
+      "type": "original_investigative_reporting",
+      "locator": "Project Eagle renaming; Volya/Swift Beat entities; Will Roper connection; Schmidt declined comment",
+      "access": "Publisher source via web extract inspected",
+      "updated": "2025-08-27",
+      "id": "ES_FORBES_JUN",
+      "source_vertex_id": "SOURCE_ES_FORBES_JUN"
+    },
+    "ES_ESTONIA": {
+      "title": "Volya Robotics OÜ — Estonian e-Business Register",
+      "url": "https://ariregister.rik.ee/eng/company/16817849/Volya-Robotics-O%C3%9C",
+      "published": null,
+      "type": "primary_company_registry",
+      "locator": "Registry 16817849; Shareholders and Beneficial owners sections",
+      "access": "Original registry HTML inspected and archived",
+      "retrieved": "2026-11-13",
+      "qualification": "Live registry observation with stated effective dates; register labels beneficial-owner entries informative. Do not publish birth dates or contact fields.",
+      "id": "ES_ESTONIA",
+      "source_vertex_id": "SOURCE_ES_ESTONIA"
+    },
+    "ES_UKRAINE_2025": {
+      "title": "Memorandum Between Ukraine and Swift Beat, LLC",
+      "url": "https://www.president.gov.ua/en/news/memorandum-mizh-ukrayinoyu-ta-amerikanskoyu-kompaniyeyu-swif-98817",
+      "published": "2025-07-03",
+      "type": "primary_government_announcement",
+      "locator": "Opening paragraphs identify Eric Schmidt as Swift Beat CEO at memorandum signing",
+      "access": "Official web text inspected; direct archive returned 403",
+      "id": "ES_UKRAINE_2025",
+      "source_vertex_id": "SOURCE_ES_UKRAINE_2025"
+    },
+    "ES_WENDY": {
+      "title": "Wendy Schmidt — About",
+      "url": "https://wendyschmidt.com/about/",
+      "published": null,
+      "type": "primary_personal_biography",
+      "locator": "Opening biography identifies Eric as her husband",
+      "access": "Original HTML inspected and archived",
+      "retrieved": "2026-11-13",
+      "id": "ES_WENDY",
+      "source_vertex_id": "SOURCE_ES_WENDY"
+    },
+    "ES_DIB_2016": {
+      "title": "Pentagon to Establish Defense Innovation Advisory Board",
+      "url": "https://www.defense.gov/News/News-Stories/Article/Article/684366/pentagon-to-establish-defense-innovation-advisory-board/",
+      "published": "2016-03-02",
+      "type": "primary_government_announcement",
+      "locator": "Schmidt appointment as chair; independent advisory mandate",
+      "access": "Indexed official text inspected; direct archive returned 403",
+      "window_status": "pre_window_context",
+      "id": "ES_DIB_2016",
+      "source_vertex_id": "SOURCE_ES_DIB_2016"
+    },
+    "ES_DIB_EXIT": {
+      "title": "Eric Schmidt and other founding Defense Innovation Board members depart",
+      "url": "https://fedscoop.com/eric-schmidt-departments-leading-roll-in-defense-innovation-board/",
+      "published": "2020-09-15",
+      "type": "original_reporting",
+      "locator": "Opening reports end of four-year terms",
+      "access": "Original reporting web extract inspected",
+      "window_status": "pre_window_context",
+      "id": "ES_DIB_EXIT",
+      "source_vertex_id": "SOURCE_ES_DIB_EXIT"
+    },
+    "ES_NSCAI_2021": {
+      "title": "Final Recommendations of the National Security Commission on Artificial Intelligence — hearing",
+      "url": "https://armedservices.house.gov/calendar/eventsingle.aspx?EventID=3746",
+      "published": "2021-03-12",
+      "type": "primary_congressional_record",
+      "locator": "Witness list: Eric Schmidt, chairman",
+      "access": "Original HTML inspected and archived",
+      "window_status": "pre_window_context",
+      "id": "ES_NSCAI_2021",
+      "source_vertex_id": "SOURCE_ES_NSCAI_2021"
+    },
+    "ES_DIB_2024": {
+      "title": "Defense Innovation Board: Scaling Innovation Forward",
+      "url": "https://www.defense.gov/News/News-Stories/Article/Article/3680921/defense-innovation-board-scaling-innovation-forward/",
+      "published": "2024-02-20",
+      "type": "primary_government_announcement",
+      "locator": "Membership paragraph names Will Roper; mandate is advice and recommendations",
+      "access": "Official web text inspected; direct archive returned 403",
+      "id": "ES_DIB_2024",
+      "source_vertex_id": "SOURCE_ES_DIB_2024"
+    },
+    "ES_API_A009": {
+      "title": "USAspending award W912CH26CA009 — Napatree Technology LLC",
+      "url": "https://api.usaspending.gov/api/v2/awards/CONT_AWD_W912CH26CA009_9700_-NONE-_-NONE-/",
+      "published": null,
+      "type": "primary_procurement_api",
+      "locator": "total_obligation; date_signed; recipient; latest_transaction_contract_data; executive_details",
+      "access": "Original API JSON downloaded and inspected",
+      "retrieved": "2026-11-13",
+      "public_award_url": "https://www.usaspending.gov/award/CONT_AWD_W912CH26CA009_9700_-NONE-_-NONE-",
+      "archive_file": "source-archive/napatree-a009-detail-response.json",
+      "id": "ES_API_A009",
+      "source_vertex_id": "SOURCE_ES_API_A009"
+    },
+    "ES_API_A009_TX": {
+      "title": "USAspending transactions for W912CH26CA009, frozen FY2023–FY2026 window",
+      "url": "https://signalgraph-accountability.vercel.app/sources/napatree-transactions.json",
+      "published": null,
+      "type": "primary_procurement_api",
+      "locator": "Archived API response and exact POST request; five action dates March 9–June 18,2026; hasNext=false",
+      "access": "POST request and original JSON response archived",
+      "retrieved": "2026-11-13",
+      "request_file": "source-archive/napatree-a009-transactions-request.json",
+      "archive_file": "source-archive/napatree-a009-transactions-response.json",
+      "formula": "26,940,857 + 238,441,343 - 47,807,500 + 47,807,500 + 0 = 265,382,200",
+      "original_api_url": "https://api.usaspending.gov/api/v2/search/spending_by_transaction/",
+      "id": "ES_API_A009_TX",
+      "source_vertex_id": "SOURCE_ES_API_A009_TX"
+    },
+    "ES_IUS_JUL": {
+      "title": "19 Companies Out of 49 Contenders Qualify For Drone Dominance Gauntlet 2 Trial",
+      "url": "https://insideunmannedsystems.com/19-companies-out-of-49-contenders-qualify-for-drone-dominance-gauntlet-2-trial/",
+      "published": null,
+      "type": "specialist_reporting",
+      "locator": "Section identifies Perennial’s Bumblebee previously submitted by Napatree; associates both with Schmidt",
+      "access": "Original article extract inspected",
+      "retrieved": "2026-11-13",
+      "qualification": "Product/program continuity and reported association; not corporate merger or ownership proof",
+      "id": "ES_IUS_JUL",
+      "source_vertex_id": "SOURCE_ES_IUS_JUL"
+    },
+    "ES_ARMY_SEP": {
+      "title": "JIATF-401 advances Domestic Shield with counter-UAS contract awards",
+      "url": "https://www.army.mil/article/295771/jiatf_401_advances_domestic_shield_with_counter_uas_contract_awards",
+      "published": "2026-09-29",
+      "type": "primary_government_announcement",
+      "locator": "Award list: Napatree Technology LLC $500 million base IDIQ; multi-vendor marketplace",
+      "access": "Original official HTML inspected and archived",
+      "id": "ES_ARMY_SEP",
+      "source_vertex_id": "SOURCE_ES_ARMY_SEP"
+    },
+    "ES_HIGHERGOV_SEP": {
+      "title": "Napatree Technology Wins $500 Million Army Counter-Drone Contract",
+      "url": "https://www.highergov.com/news/napatree-technology-wins-500-million-army-counter-6490120/",
+      "published": "2026-09-30",
+      "type": "secondary_procurement_reporting",
+      "locator": "Identifies W912CH26DA070, September 28 award and 50 bids",
+      "access": "Original page inspected; cited government daily release returned 403",
+      "qualification": "Award identifier/date are a lead until original contract record is obtained; Army corroborates amount and recipient",
+      "id": "ES_HIGHERGOV_SEP",
+      "source_vertex_id": "SOURCE_ES_HIGHERGOV_SEP"
+    },
     "BASELINE_REGISTER": {
       "id": "BASELINE_REGISTER",
       "title": "SignalGraph accepted entity and relationship register",
@@ -10956,6 +14548,194 @@
       ],
       "money_ids": [
         "fisher-contracts_M1"
+      ]
+    },
+    {
+      "id": "BEN_LONDON_CENTENE",
+      "title": "Public Premiums",
+      "person": "Sarah M. London",
+      "summary": "Centene reported $19.51 million in 2025 compensation for CEO Sarah London. The insurer’s Medicaid business brought in $90.24 billion in premium and service revenue. Its pay formula still produced a cash incentive after the earnings metric missed its target, making the board’s balance of growth, care quality and executive rewards worth examining.",
+      "source_ids": [
+        "CNC_PROXY_2026",
+        "CNC_10K_2025",
+        "CMS_MEDICAID_FINANCE",
+        "CMS_MANAGED_CARE",
+        "CMS_SUBCAPITATION"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000077/cnc-20260326.htm",
+        "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000049/cnc-20251231.htm",
+        "https://www.medicaid.gov/medicaid/financial-management",
+        "https://www.medicaid.gov/medicaid/managed-care",
+        "https://www.medicaid.gov/tmsis/dataguide/v4/technical-instructions/cms-technical-instructions-reporting-sub-capitation-payments-and-encounters-associated-with-sub-capitation-payments-from-managed-care-plans/"
+      ],
+      "node_ids": [
+        "GOV_FEDERAL_MEDICAID",
+        "GROUP_STATE_MEDICAID_AGENCIES",
+        "GROUP_CENTENE_HEALTH_PLANS",
+        "ENT_CNC",
+        "IND_SARAH_LONDON",
+        "GROUP_HEALTHCARE_PROVIDERS"
+      ],
+      "evidence_status": "Disclosed compensation; public-program business exposure",
+      "qualification": "Payer-specific cash reconciliation; contract-level retained margins; comparable care-access and outcome measures; vesting/sale records; any direct political or family relationship supported by independent evidence.",
+      "money_ids": [
+        "LON_M1",
+        "LON_M2",
+        "LON_M3",
+        "LON_M4"
+      ]
+    },
+    {
+      "id": "INF_MULLIN_FAMILY",
+      "title": "Family Stakes",
+      "person": "Markwayne Mullin",
+      "summary": "Markwayne Mullin disclosed a $500,001–$1 million stake in Botanic Tonics, a kratom seller, alongside family real estate and private-company interests. Reporting linked him to efforts that could help the kratom industry; his separate wastewater-company income was estimated at $89,498. DHS says he follows ethics rules and has not lobbied for any individual or company.",
+      "source_ids": [
+        "MULLIN_2024_SENATE",
+        "MULLIN_OGE_2026",
+        "MULLIN_SWEARING",
+        "MULLIN_CONFIRMATION",
+        "MULLIN_ETHICS_2026",
+        "MULLIN_DDF_COMPLAINT",
+        "MULLIN_JUNE24_PTR",
+        "MULLIN_CNN_VOGEL",
+        "FDA_7OH_2025",
+        "WYDEN_BOTANIC_LETTER"
+      ],
+      "source_urls": [
+        "https://static.notus.org/41/2c/b1759251424eaf9f018c1cbee112/efd-annual-report-for-2024-mullin-markwayne.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf",
+        "https://www.whitehouse.gov/releases/2026/03/secretary-markwayne-mullin-is-ready-to-deliver-on-president-trumps-agenda/",
+        "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00063.htm",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/4FF5BEC82674CDCB85258DBE005422C5/$FILE/Mullin,%20Markwayne%20%20finalEA.pdf",
+        "https://www.democracydefendersfund.org/wp-content/uploads/2026/06/2026-04-20-ddf-dhs-secretary-mullins-financial-holdings-warrant.pdf",
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/038F222E7B084F8C85258E3F002DB296/$FILE/Markwayne-Mullin-06.24.2026-278T.pdf",
+        "https://transcripts.cnn.com/show/cg/date/2026-06-16/segment/01",
+        "https://www.fda.gov/news-events/press-announcements/fda-takes-steps-restrict-7-oh-opioid-products-threatening-american-consumers",
+        "https://www.finance.senate.gov/wp-content/uploads/media/doc/20260803lettertobotanictonics.pdf"
+      ],
+      "node_ids": [
+        "IND_MARKWAYNE_MULLIN",
+        "IND_CHRISTIE_MULLIN",
+        "GROUP_MULLIN_HOUSEHOLD",
+        "GOV_DHS",
+        "GOV_US_SENATE",
+        "GOV_FDA",
+        "ENT_MULLIN_LIVING_TRUST",
+        "ENT_MULLIN_PROPERTIES",
+        "ENT_MULLIN_REALTY",
+        "ENT_MULLIN_RANCH",
+        "ENT_MULLIN_PROPERTIES_WEST",
+        "ENT_ALLOTMENT_SERVICES",
+        "ENT_APRES_SPECTRUM",
+        "ENT_MULLIN_FAMILY_HOLDCO",
+        "ENT_COP_HOMETOWN_PARENT",
+        "ENT_HOMETOWN_SERVICES",
+        "ENT_BOTANIC_TONICS",
+        "ENT_XTREME_BOAT_RV",
+        "ENT_TC4_INVESTMENTS",
+        "ENT_MULLIN_FAMILY_INVESTMENTS",
+        "ENT_K5_HS_HOLDCO",
+        "ENT_HISTOSONICS",
+        "ENT_LHX",
+        "ENT_RTX",
+        "ENT_UNH",
+        "TRUST_MULLIN_FAMILY_1",
+        "TRUST_MULLIN_FAMILY_2",
+        "TRUST_MULLIN_FAMILY_3",
+        "TRUST_MULLIN_FAMILY_4",
+        "TRUST_MULLIN_FAMILY_5",
+        "TRUST_MULLIN_FAMILY_6",
+        "ENT_ROWANS_RESTAURANT"
+      ],
+      "evidence_status": "Disclosed interests; reported influence concerns",
+      "qualification": "Botanic Tonics acquisition instrument, percentage, ownership vehicle, distributions and divestiture status; ethics-compliance certification and recusals; Apres actual 2025 K-1 and cash distributions; customer/tenant identities and public-sector payments; trust beneficiary/trustee identities where appropriate. Rowan’s Restaurant buyer, sale agreement and any public-sector relationship.",
+      "money_ids": [
+        "MULLIN_APRES_INCOME",
+        "MULLIN_APRES_VALUE",
+        "MULLIN_BOTANIC_VALUE",
+        "MULLIN_HOMETOWN_VALUE",
+        "MULLIN_NOTE_PRINCIPAL",
+        "MULLIN_NOTE_INTEREST",
+        "MULLIN_RENT_BA",
+        "MULLIN_RENT_MOORE",
+        "MULLIN_RENT_DC",
+        "MULLIN_RENT_BIXBY",
+        "MULLIN_RENT_TC4",
+        "MULLIN_BNY_DEBT",
+        "CHRISTIE_ROWANS_GAIN"
+      ]
+    },
+    {
+      "id": "INF_SCHMIDT_AUTONOMY",
+      "title": "Drone Capital",
+      "person": "Eric Schmidt",
+      "summary": "Schmidt invests in Perennial Autonomy, which received a $5.2 million Bumblebee agreement and a $500 million ordering ceiling. Napatree Technology received $265.38 million in net federal obligations for AS3, Bumblebee and Hornet systems. The U.S. government record identifies Napatree as the recipient; public reporting links the products and companies, but their ownership and payment chain remain incomplete.",
+      "source_ids": [
+        "ES_WSJMARCH",
+        "ES_SCOOP_MAY",
+        "ES_FORBES_JAN",
+        "ES_FORBES_JUN",
+        "ES_MILTIMES",
+        "ES_UKRAINE_2025",
+        "ES_ESTONIA",
+        "ES_WENDY",
+        "ES_DIB_2016",
+        "ES_DIB_EXIT",
+        "ES_NSCAI_2021",
+        "ES_DIB_2024",
+        "ES_ARMY_JAN",
+        "ES_JBSA_MAY",
+        "ES_ISSUER_MAY",
+        "ES_API_A009",
+        "ES_API_A009_TX",
+        "ES_IUS_JUL",
+        "ES_ARMY_SEP"
+      ],
+      "source_urls": [
+        "https://www.wsj.com/public/resources/documents/QJ6zlUXnDhtW4Z0Fs51B-WSJNewsPaper-3-10-2026.pdf",
+        "https://defensescoop.com/2026/05/19/pentagon-awards-500-million-contract-to-perennial-autonomy-for-counter-drone-systems/",
+        "https://www.forbes.com/sites/sarahemerson/2024/01/23/eric-schmidts-secret-white-stork-project-aims-to-build-ai-combat-drones/",
+        "https://www.forbes.com/sites/sarahemerson/2024/06/06/eric-schmidt-is-secretly-testing-ai-military-drones-in-a-wealthy-silicon-valley-suburb/",
+        "https://www.militarytimes.com/industry/techwatch/2026/05/19/pentagon-inks-500-million-deal-with-perennial-autonomy-for-counter-drone-tech/",
+        "https://www.president.gov.ua/en/news/memorandum-mizh-ukrayinoyu-ta-amerikanskoyu-kompaniyeyu-swif-98817",
+        "https://ariregister.rik.ee/eng/company/16817849/Volya-Robotics-O%C3%9C",
+        "https://wendyschmidt.com/about/",
+        "https://www.defense.gov/News/News-Stories/Article/Article/684366/pentagon-to-establish-defense-innovation-advisory-board/",
+        "https://fedscoop.com/eric-schmidt-departments-leading-roll-in-defense-innovation-board/",
+        "https://armedservices.house.gov/calendar/eventsingle.aspx?EventID=3746",
+        "https://www.defense.gov/News/News-Stories/Article/Article/3680921/defense-innovation-board-scaling-innovation-forward/",
+        "https://www.army.mil/article/290392/jiatf_401_acquires_advanced_kinetic_counter_drone_system_to_enhance_warfighter_lethality",
+        "https://www.jbsa.mil/News/News/Article/4496078/joint-interagency-task-force-401-awards-500-million-counter-uas-contract/",
+        "https://www.perennialautonomy.com/news/idiq",
+        "https://api.usaspending.gov/api/v2/awards/CONT_AWD_W912CH26CA009_9700_-NONE-_-NONE-/",
+        "https://signalgraph-accountability.vercel.app/sources/napatree-transactions.json",
+        "https://insideunmannedsystems.com/19-companies-out-of-49-contenders-qualify-for-drone-dominance-gauntlet-2-trial/",
+        "https://www.army.mil/article/295771/jiatf_401_advances_domestic_shield_with_counter_uas_contract_awards"
+      ],
+      "node_ids": [
+        "IND_ERIC_SCHMIDT",
+        "IND_WENDY_SCHMIDT",
+        "ENT_PERENNIAL_AUTONOMY",
+        "ORG_WHITE_STORK_PROJECT",
+        "ENT_SWIFT_BEAT",
+        "ENT_VOLYA_ROBOTICS",
+        "ENT_NT_ISLAND_HOLDINGS",
+        "ENT_NAPATREE_TECHNOLOGY",
+        "ORG_JIATF_401",
+        "ORG_US_ARMY",
+        "ORG_DEFENSE_INNOVATION_BOARD",
+        "ORG_NSCAI",
+        "IND_WILL_ROPER"
+      ],
+      "evidence_status": "Named investor and supplier network; individual proceeds unpriced",
+      "qualification": "The U.S. legal-entity chain and cap tables; May IDIQ identifier; Napatree/Perennial intercompany payments; award justifications and decision contacts; delivery acceptance; Schmidt distributions and Wendy’s economic interest in the U.S. recipient.",
+      "money_ids": [
+        "ES_M1",
+        "ES_M2",
+        "ES_M3",
+        "ES_M4"
       ]
     }
   ],
@@ -11455,6 +15235,544 @@
         "https://signalgraph-accountability.vercel.app/spending-snapshot.json"
       ],
       "graph_vertex_id": "MONEY_fisher-contracts_M1",
+      "aggregate_personal_income_eligible": false
+    },
+    {
+      "id": "LON_M1",
+      "label": "Reported CEO compensation",
+      "amount_usd": 19506298,
+      "currency": "USD",
+      "type": "summary_compensation_table",
+      "recipient": "Sarah M. London",
+      "period": "2025",
+      "source_ids": [
+        "CNC_PROXY_2026"
+      ],
+      "components": [
+        [
+          "Salary",
+          1473077
+        ],
+        [
+          "Stock awards · grant-date value",
+          15537733
+        ],
+        [
+          "Annual cash incentive",
+          2109446
+        ],
+        [
+          "All other compensation",
+          386042
+        ]
+      ],
+      "locator": "p.95, London 2025 row",
+      "cash_status": "Mix of salary, incentive, grant-date equity valuation and benefits",
+      "personal_allocation": "Personal compensation is disclosed; government-funded portion is not traced",
+      "government_attributed_personal_receipts_usd": null,
+      "case_id": "BEN_LONDON_CENTENE",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000077/cnc-20260326.htm"
+      ],
+      "graph_vertex_id": "MONEY_LON_M1",
+      "aggregate_personal_income_eligible": false
+    },
+    {
+      "id": "LON_M2",
+      "label": "Salary plus cash incentive",
+      "amount_usd": 3582523,
+      "currency": "USD",
+      "type": "salary_plus_earned_cash_incentive",
+      "recipient": "Sarah M. London",
+      "period": "2025 compensation year",
+      "source_ids": [
+        "CNC_PROXY_2026"
+      ],
+      "locator": "pp.84,95",
+      "aggregation": "Subset of LON_M1; do not add",
+      "cash_status": "Disclosed salary and annual cash incentive; exact payment dates not established here",
+      "case_id": "BEN_LONDON_CENTENE",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000077/cnc-20260326.htm"
+      ],
+      "graph_vertex_id": "MONEY_LON_M2",
+      "aggregate_personal_income_eligible": false
+    },
+    {
+      "id": "LON_M3",
+      "label": "Compensation Actually Paid · SEC measure",
+      "amount_usd": 4646963,
+      "currency": "USD",
+      "type": "sec_pay_versus_performance_metric",
+      "recipient": "Sarah M. London",
+      "period": "2025",
+      "source_ids": [
+        "CNC_PROXY_2026"
+      ],
+      "locator": "p.105, PEO reconciliation",
+      "aggregation": "Alternative accounting measure, not additional receipts; never add to SCT",
+      "cash_status": "Equity fair-value remeasurement; not literal cash paid",
+      "case_id": "BEN_LONDON_CENTENE",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000077/cnc-20260326.htm"
+      ],
+      "graph_vertex_id": "MONEY_LON_M3",
+      "aggregate_personal_income_eligible": false
+    },
+    {
+      "id": "LON_M4",
+      "label": "Centene premium/service revenue",
+      "amount_usd": 174581000000,
+      "currency": "USD",
+      "type": "consolidated_premium_service_revenue",
+      "recipient": "Centene consolidated group",
+      "period": "2025",
+      "source_ids": [
+        "CNC_10K_2025"
+      ],
+      "locator": "p.107, Note 19, premium and service revenues row",
+      "government_receipts_usd": null,
+      "personal_allocation": "No personal allocation",
+      "channels": [
+        {
+          "channel": "Medicaid",
+          "amount_usd": 90238000000
+        },
+        {
+          "channel": "Medicare",
+          "amount_usd": 37210000000
+        },
+        {
+          "channel": "Commercial",
+          "amount_usd": 42003000000
+        },
+        {
+          "channel": "Other",
+          "amount_usd": 5130000000
+        }
+      ],
+      "case_id": "BEN_LONDON_CENTENE",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000049/cnc-20251231.htm"
+      ],
+      "graph_vertex_id": "MONEY_LON_M4",
+      "aggregate_personal_income_eligible": false
+    },
+    {
+      "id": "MULLIN_APRES_INCOME",
+      "label": "Apres business income and interest",
+      "amount_usd": 89498,
+      "currency": "USD",
+      "type": "estimated business income and interest",
+      "recipient": "Markwayne Mullin through Allotment Services LLC",
+      "period": "March 2026 nominee disclosure estimate based on 2024 Schedule K-1; 2025 K-1 pending",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "locator": "p.24 Part 6 row 23.1; p.26 endnote 23.1",
+      "personal_allocation": "2024 Senate filing labels Allotment/Apres Self; 2026 agreement acknowledges Mullin’s own financial interest. Exact cash paid to him is unknown.",
+      "aggregation": "Non-additive with aggregate assets, underlying assets or separate income measures.",
+      "cash_status": "Estimated from 2024 K-1; 2025 K-1 not received. K-1 allocation does not itself establish cash distribution.",
+      "threshold_status": "Exceeds $50,000 as a disclosed estimate, not verified cash",
+      "min_usd": 89498,
+      "max_usd": 89498,
+      "case_id": "INF_MULLIN_FAMILY",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "graph_vertex_id": "MONEY_MULLIN_APRES_INCOME",
+      "aggregate_personal_income_eligible": false
+    },
+    {
+      "id": "MULLIN_APRES_VALUE",
+      "label": "Apres Spectrum interest value",
+      "amount_usd": null,
+      "currency": "USD",
+      "type": "asset value",
+      "recipient": "Allotment Services LLC / Mullin interest",
+      "period": "2026 nominee report; generally CY 2025 through filing on March 10, 2026; not a four-year total",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "locator": "p.24 Part 6 row 23.1",
+      "personal_allocation": "Household or entity interest; exact individual allocation not supplied by this row.",
+      "aggregation": "Non-additive with aggregate assets, underlying assets or separate income measures.",
+      "min_usd": 1000001,
+      "max_usd": 5000000,
+      "case_id": "INF_MULLIN_FAMILY",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "graph_vertex_id": "MONEY_MULLIN_APRES_VALUE",
+      "aggregate_personal_income_eligible": false
+    },
+    {
+      "id": "MULLIN_BOTANIC_VALUE",
+      "label": "Botanic Tonics investment value",
+      "amount_usd": null,
+      "currency": "USD",
+      "type": "asset value",
+      "recipient": "Mullin disclosed interest in Botanic Tonics LLC",
+      "period": "2026 nominee report; generally CY 2025 through filing on March 10, 2026; not a four-year total",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "locator": "p.24 Part 6 row 25",
+      "personal_allocation": "Household or entity interest; exact individual allocation not supplied by this row.",
+      "aggregation": "Non-additive with aggregate assets, underlying assets or separate income measures.",
+      "cash_status": "Asset value; no material income reported (none or under $201). No quantified policy-caused gain.",
+      "min_usd": 500001,
+      "max_usd": 1000000,
+      "case_id": "INF_MULLIN_FAMILY",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "graph_vertex_id": "MONEY_MULLIN_BOTANIC_VALUE",
+      "aggregate_personal_income_eligible": false
+    },
+    {
+      "id": "MULLIN_HOMETOWN_VALUE",
+      "label": "COP Hometown investment value",
+      "amount_usd": null,
+      "currency": "USD",
+      "type": "asset value",
+      "recipient": "Mullin Family HoldCo LLC, including reported trust interests",
+      "period": "2026 nominee report; generally CY 2025 through filing on March 10, 2026; not a four-year total",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "locator": "p.12 Part 6 row 13.1; p.26 endnote 13",
+      "personal_allocation": "Household or entity interest; exact individual allocation not supplied by this row.",
+      "aggregation": "Non-additive with aggregate assets, underlying assets or separate income measures.",
+      "cash_status": "No material income reported (none or under $201). Six trusts’ interests included; do not add again.",
+      "min_usd": 5000001,
+      "max_usd": 25000000,
+      "case_id": "INF_MULLIN_FAMILY",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "graph_vertex_id": "MONEY_MULLIN_HOMETOWN_VALUE",
+      "aggregate_personal_income_eligible": false
+    },
+    {
+      "id": "MULLIN_NOTE_PRINCIPAL",
+      "label": "Xtreme Boat & RV note value",
+      "amount_usd": null,
+      "currency": "USD",
+      "type": "note receivable asset",
+      "recipient": "Mullin Properties LLC",
+      "period": "2026 nominee report; generally CY 2025 through filing on March 10, 2026; not a four-year total",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "locator": "p.10 Part 6 row 10.1",
+      "personal_allocation": "Household or entity interest; exact individual allocation not supplied by this row.",
+      "aggregation": "Non-additive with aggregate assets, underlying assets or separate income measures.",
+      "min_usd": 1000001,
+      "max_usd": 5000000,
+      "case_id": "INF_MULLIN_FAMILY",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "graph_vertex_id": "MONEY_MULLIN_NOTE_PRINCIPAL",
+      "aggregate_personal_income_eligible": false
+    },
+    {
+      "id": "MULLIN_NOTE_INTEREST",
+      "label": "Xtreme Boat & RV note interest",
+      "amount_usd": null,
+      "currency": "USD",
+      "type": "interest income",
+      "recipient": "Mullin Properties LLC / household disclosed interest",
+      "period": "2026 nominee report; generally CY 2025 through filing on March 10, 2026; not a four-year total",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "locator": "p.10 Part 6 row 10.1",
+      "personal_allocation": "Household or entity interest; exact individual allocation not supplied by this row.",
+      "aggregation": "Non-additive with aggregate assets, underlying assets or separate income measures.",
+      "min_usd": 100001,
+      "max_usd": 1000000,
+      "case_id": "INF_MULLIN_FAMILY",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "graph_vertex_id": "MONEY_MULLIN_NOTE_INTEREST",
+      "aggregate_personal_income_eligible": false
+    },
+    {
+      "id": "MULLIN_RENT_BA",
+      "label": "Broken Arrow commercial rent",
+      "amount_usd": null,
+      "currency": "USD",
+      "type": "rent or royalties",
+      "recipient": "Mullin Properties LLC",
+      "period": "2026 nominee report; generally CY 2025 through filing on March 10, 2026; not a four-year total",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "locator": "p.10 Part 6 row 10.3",
+      "personal_allocation": "Household or entity interest; exact individual allocation not supplied by this row.",
+      "aggregation": "Non-additive with aggregate assets, underlying assets or separate income measures.",
+      "cash_status": "Reported income band; expenses, taxes, ultimate household distributions and tenant identities not established by this row.",
+      "min_usd": 100001,
+      "max_usd": 1000000,
+      "case_id": "INF_MULLIN_FAMILY",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "graph_vertex_id": "MONEY_MULLIN_RENT_BA",
+      "aggregate_personal_income_eligible": false
+    },
+    {
+      "id": "MULLIN_RENT_MOORE",
+      "label": "Moore commercial rent",
+      "amount_usd": null,
+      "currency": "USD",
+      "type": "rent or royalties",
+      "recipient": "Mullin Properties LLC",
+      "period": "2026 nominee report; generally CY 2025 through filing on March 10, 2026; not a four-year total",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "locator": "p.10 Part 6 row 10.5",
+      "personal_allocation": "Household or entity interest; exact individual allocation not supplied by this row.",
+      "aggregation": "Non-additive with aggregate assets, underlying assets or separate income measures.",
+      "cash_status": "Reported income band; expenses, taxes, ultimate household distributions and tenant identities not established by this row.",
+      "min_usd": 50001,
+      "max_usd": 100000,
+      "case_id": "INF_MULLIN_FAMILY",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "graph_vertex_id": "MONEY_MULLIN_RENT_MOORE",
+      "aggregate_personal_income_eligible": false
+    },
+    {
+      "id": "MULLIN_RENT_DC",
+      "label": "Washington DC residential rent",
+      "amount_usd": null,
+      "currency": "USD",
+      "type": "rent or royalties",
+      "recipient": "Mullin Realty LLC",
+      "period": "2026 nominee report; generally CY 2025 through filing on March 10, 2026; not a four-year total",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "locator": "p.11 Part 6 row 11.1",
+      "personal_allocation": "Household or entity interest; exact individual allocation not supplied by this row.",
+      "aggregation": "Non-additive with aggregate assets, underlying assets or separate income measures.",
+      "cash_status": "Reported income band; expenses, taxes, ultimate household distributions and tenant identities not established by this row.",
+      "min_usd": 50001,
+      "max_usd": 100000,
+      "case_id": "INF_MULLIN_FAMILY",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "graph_vertex_id": "MONEY_MULLIN_RENT_DC",
+      "aggregate_personal_income_eligible": false
+    },
+    {
+      "id": "MULLIN_RENT_BIXBY",
+      "label": "Bixby residential rent",
+      "amount_usd": null,
+      "currency": "USD",
+      "type": "rent or royalties",
+      "recipient": "Mullin Realty LLC",
+      "period": "2026 nominee report; generally CY 2025 through filing on March 10, 2026; not a four-year total",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "locator": "p.11 Part 6 row 11.2",
+      "personal_allocation": "Household or entity interest; exact individual allocation not supplied by this row.",
+      "aggregation": "Non-additive with aggregate assets, underlying assets or separate income measures.",
+      "cash_status": "Reported income band; expenses, taxes, ultimate household distributions and tenant identities not established by this row.",
+      "min_usd": 100001,
+      "max_usd": 1000000,
+      "case_id": "INF_MULLIN_FAMILY",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "graph_vertex_id": "MONEY_MULLIN_RENT_BIXBY",
+      "aggregate_personal_income_eligible": false
+    },
+    {
+      "id": "MULLIN_RENT_TC4",
+      "label": "Pryor residential rent",
+      "amount_usd": null,
+      "currency": "USD",
+      "type": "rent or royalties",
+      "recipient": "TC 4 Investments LLC",
+      "period": "2026 nominee report; generally CY 2025 through filing on March 10, 2026; not a four-year total",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "locator": "p.15 Part 6 row 15.1",
+      "personal_allocation": "Household or entity interest; exact individual allocation not supplied by this row.",
+      "aggregation": "Non-additive with aggregate assets, underlying assets or separate income measures.",
+      "cash_status": "Reported income band; expenses, taxes, ultimate household distributions and tenant identities not established by this row.",
+      "min_usd": 50001,
+      "max_usd": 100000,
+      "case_id": "INF_MULLIN_FAMILY",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "graph_vertex_id": "MONEY_MULLIN_RENT_TC4",
+      "aggregate_personal_income_eligible": false
+    },
+    {
+      "id": "MULLIN_BNY_DEBT",
+      "label": "Bank of NY line of credit",
+      "amount_usd": null,
+      "currency": "USD",
+      "type": "liability",
+      "recipient": "Mullin disclosed household liability",
+      "period": "2026 nominee report; generally CY 2025 through filing on March 10, 2026; not a four-year total",
+      "source_ids": [
+        "MULLIN_OGE_2026"
+      ],
+      "locator": "p.25 Part 8 row 2",
+      "personal_allocation": "Household or entity interest; exact individual allocation not supplied by this row.",
+      "aggregation": "Non-additive with aggregate assets, underlying assets or separate income measures.",
+      "cash_status": "Debt, not benefit; year incurred 2024; not netted against a different-date asset value.",
+      "min_usd": 5000001,
+      "max_usd": 25000000,
+      "case_id": "INF_MULLIN_FAMILY",
+      "source_urls": [
+        "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/6DC06006E0C3364C85258DBE00531737/$FILE/Mullin,%20Markwayne%20final278.pdf"
+      ],
+      "graph_vertex_id": "MONEY_MULLIN_BNY_DEBT",
+      "aggregate_personal_income_eligible": false
+    },
+    {
+      "id": "CHRISTIE_ROWANS_GAIN",
+      "label": "Christie’s Rowan’s Restaurant capital gain",
+      "amount_usd": null,
+      "currency": "USD",
+      "type": "disclosed capital gains range",
+      "recipient": "Christie Renee Mullin (Spouse owner on Senate disclosure)",
+      "period": "CY2024",
+      "source_ids": [
+        "MULLIN_2024_SENATE"
+      ],
+      "locator": "Part3, asset11, PDF p.3; associated full sale in Part4b, PDF p.29. Amounts are independently labeled gain and sale on their respective rows; do not add them.",
+      "personal_allocation": "Spouse attribution expressly disclosed; associated full sale dated February 27, 2024; buyer, cost basis and precise amounts not provided.",
+      "cash_status": "Capital gain category as reported; not gross sale proceeds, company revenue or a government payment.",
+      "aggregation": "Separate CY2024 gain; do not add to 2026 asset values.",
+      "threshold_status": "Exceeds $50,000 as a disclosed spouse income range; no attribution to government spending.",
+      "min_usd": 1000001,
+      "max_usd": 5000000,
+      "case_id": "INF_MULLIN_FAMILY",
+      "source_urls": [
+        "https://static.notus.org/41/2c/b1759251424eaf9f018c1cbee112/efd-annual-report-for-2024-mullin-markwayne.pdf"
+      ],
+      "graph_vertex_id": "MONEY_CHRISTIE_ROWANS_GAIN",
+      "aggregate_personal_income_eligible": false
+    },
+    {
+      "id": "ES_M1",
+      "label": "Bumblebee V2 agreement",
+      "amount_usd": 5200000,
+      "currency": "USD",
+      "type": "government_agreement_award",
+      "recipient": "Perennial Autonomy",
+      "date": "2026-01-30",
+      "source_ids": [
+        "ES_ARMY_JAN"
+      ],
+      "cash_status": "Award announced; disbursements and precise award identifier not reconciled",
+      "personal_allocation": "Schmidt personal proceeds not disclosed",
+      "aggregation": "Separate evidence item; not added to other vehicles or obligations without award-level reconciliation",
+      "window_status": "within_window",
+      "evidence_status": "documented",
+      "outside_window": false,
+      "case_id": "INF_SCHMIDT_AUTONOMY",
+      "source_urls": [
+        "https://www.army.mil/article/290392/jiatf_401_acquires_advanced_kinetic_counter_drone_system_to_enhance_warfighter_lethality"
+      ],
+      "graph_vertex_id": "MONEY_ES_M1",
+      "aggregate_personal_income_eligible": false
+    },
+    {
+      "id": "ES_M2",
+      "label": "May three-year IDIQ ceiling",
+      "amount_usd": 500000000,
+      "currency": "USD",
+      "type": "idiq_ceiling",
+      "recipient": "Perennial Autonomy",
+      "announced_date": "2026-05-18",
+      "period": "Announced May 2026; three-year ordering vehicle extends beyond FY2026",
+      "source_ids": [
+        "ES_JBSA_MAY",
+        "ES_ISSUER_MAY"
+      ],
+      "cash_status": "Maximum ordering capacity, not verified obligations or outlays",
+      "personal_allocation": "No personal allocation; company stake and distributions undisclosed",
+      "aggregation": "Exclude from spending totals and personal-benefit totals",
+      "date_precision": "Original exact execution date and contract number not stated in announcements",
+      "window_status": "within_window",
+      "evidence_status": "documented",
+      "outside_window": false,
+      "case_id": "INF_SCHMIDT_AUTONOMY",
+      "source_urls": [
+        "https://www.jbsa.mil/News/News/Article/4496078/joint-interagency-task-force-401-awards-500-million-counter-uas-contract/",
+        "https://www.perennialautonomy.com/news/idiq"
+      ],
+      "graph_vertex_id": "MONEY_ES_M2",
+      "aggregate_personal_income_eligible": false
+    },
+    {
+      "id": "ES_M3",
+      "label": "Napatree net contract obligations",
+      "amount_usd": 265382200,
+      "currency": "USD",
+      "type": "net_federal_contract_obligations",
+      "recipient": "Napatree Technology LLC",
+      "recipient_uei": "H87XAJ4YQJ15",
+      "award_id": "W912CH26CA009",
+      "period_start": "2026-03-09",
+      "period_end": "2026-06-18",
+      "source_ids": [
+        "ES_API_A009",
+        "ES_API_A009_TX"
+      ],
+      "cash_status": "Five in-window actions net to $265,382,200; API total_account_outlay=0 and total_outlay=null do not establish that no payments occurred",
+      "personal_allocation": "Napatree legal recipient; pass-through to Perennial and Schmidt returns unquantified",
+      "aggregation": "Do not add to IDIQ ceilings or the $5.2M agreement until overlaps and legal identity are reconciled",
+      "formula": "26940857+238441343-47807500+47807500+0",
+      "window_status": "within_window",
+      "evidence_status": "documented",
+      "outside_window": false,
+      "case_id": "INF_SCHMIDT_AUTONOMY",
+      "source_urls": [
+        "https://api.usaspending.gov/api/v2/awards/CONT_AWD_W912CH26CA009_9700_-NONE-_-NONE-/",
+        "https://signalgraph-accountability.vercel.app/sources/napatree-transactions.json"
+      ],
+      "graph_vertex_id": "MONEY_ES_M3",
+      "aggregate_personal_income_eligible": false
+    },
+    {
+      "id": "ES_M4",
+      "label": "September Napatree IDIQ ceiling",
+      "amount_usd": 500000000,
+      "currency": "USD",
+      "type": "idiq_ceiling",
+      "recipient": "Napatree Technology LLC",
+      "announced_date": "2026-09-29",
+      "source_ids": [
+        "ES_ARMY_SEP"
+      ],
+      "cash_status": "Base IDIQ ordering capacity; orders/funding not quantified here",
+      "personal_allocation": "No verified ownership chain or individual allocation",
+      "aggregation": "Do not combine with May ceiling; distinct announcement and recipient; original instruments needed to determine relationship",
+      "window_status": "within_window",
+      "evidence_status": "documented",
+      "outside_window": false,
+      "case_id": "INF_SCHMIDT_AUTONOMY",
+      "source_urls": [
+        "https://www.army.mil/article/295771/jiatf_401_advances_domestic_shield_with_counter_uas_contract_awards"
+      ],
+      "graph_vertex_id": "MONEY_ES_M4",
       "aggregate_personal_income_eligible": false
     }
   ],

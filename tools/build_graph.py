@@ -28,6 +28,7 @@ COMPANIES = READ(BASE / 'companies.json')
 TRUMP = READ(CASE_DIR / 'trump-cases.json')
 CROSS = READ(CASE_DIR / 'crossparty-cases.json')
 FISHER = READ(CASE_DIR / 'fisher-case.json')
+STORIES = READ(CASE_DIR / 'beneficiary-stories-cases.json')
 
 # Explicit identity equivalence only. Investment instruments and grouped interests
 # remain separate from issuers or individuals; no fuzzy identity matching.
@@ -72,7 +73,7 @@ ALIASES = {
 }
 CANON = lambda id_: ALIASES.get(id_, id_)
 sources = dict(PEOPLE['sources'])
-for incoming in [TRUMP['sources'], {x['id']:x for x in CROSS['sources']}, FISHER['sources']]:
+for incoming in [TRUMP['sources'], {x['id']:x for x in CROSS['sources']}, FISHER['sources'], STORIES['sources']]:
  for sid, source in incoming.items():
   assert sid not in sources or sources[sid]['url'] == source['url'], f'Source collision {sid}'
   sources[sid] = dict(source, id=sid)
@@ -100,7 +101,7 @@ for c in COMPANIES['companies']:
  if c['id'] in nodes:
   nodes[c['id']]['source_ids'] += c.get('source_ids', [])
 
-cases = TRUMP['cases'] + CROSS['cases'] + [FISHER]
+cases = TRUMP['cases'] + CROSS['cases'] + [FISHER] + STORIES['cases']
 case_index = {}
 money_records = []
 edges = []
@@ -167,6 +168,11 @@ for case in cases:
   e['qualification'] = ' '.join(str(v) for v in [m.get('personal_allocation'), m.get('cash_counterparty'), m.get('aggregation'), m.get('cash_status'), m.get('reason_excluded')] if v)
   if not e['qualification']:
    e['qualification'] = 'Company net obligations; not outlays, profit or personal proceeds.' if e['relationship_type']=='government_obligation' else 'Relationship only; no personal payment or causal influence inferred from this edge.'
+  if case in STORIES['cases']:
+   e['qualification'] = ' '.join(UNIQ([v for v in [original.get('qualification'), e['qualification']] if v]))
+   if original.get('cash_status'): e['cash_status'] = original['cash_status']
+   if original.get('is_money_flow') is False: e['is_money_flow'] = False
+   if original.get('amount_recipient_id'): e['amount_recipient_id'] = CANON(original['amount_recipient_id'])
   years = [int(y) for y in re.findall(r'(?<!\d)(?:19|20)\d{2}(?!\d)', e['period'])]
   historical = bool(original.get('outside_window') or m.get('include_in_window_total') is False or ('historical context' in e['period']) or (years and max(years)<2022))
   inside = bool(years and min(years)>=2023 and max(years)<=2025)
@@ -186,12 +192,23 @@ for case in cases:
   m['aggregate_personal_income_eligible'] = False
   money_records.append(m)
 
+# Merge personal disclosures after new case nodes have been created.
+for p in PEOPLE['people']:
+ if p['id'] in nodes and nodes[p['id']]['origin'] != 'accepted_baseline':
+  n = nodes[p['id']]
+  n['source_ids'] = UNIQ(n['source_ids'] + p.get('source_ids', []))
+  n['measurements'] = p.get('measurements', [])
+  n['role'] = p.get('role', '')
+  n['measurement_qualification'] = 'Disclosed personal measures are not automatically government-attributed receipts.'
+
 # Populate node evidence from the exact incident claims; an edge carries the
 # claim-level citation and this union is only navigation/provenance metadata.
 for e in edges:
  for nid in [e['source'],e['target']]:
   nodes[nid]['source_ids'] = UNIQ(nodes[nid]['source_ids'] + e['source_ids'])
 for n in nodes.values():
+ if n['origin'] == 'accepted_baseline' and any(cid in {c['id'] for c in STORIES['cases']} for cid in n['case_ids']):
+  n['evidence_status'] = 'source_linked_relationships'
  if not n['source_ids']:
   n['source_ids'] = ['BASELINE_REGISTER']
   n['evidence_status'] = 'identity_in_research_cohort_only'
@@ -200,7 +217,7 @@ for n in nodes.values():
 graph = {
  'schema_version':'signalgraph-canonical-1.0', 'review_date':'2026-11-13',
  'window':{'start':'2022-10-01','end':'2026-09-30','label':'FY2023–FY2026'},
- 'scope':'Accepted baseline plus eight independently reviewed Influence cases. Historical context and subsequent legal/source events are labeled. Neither sums nor infers personal government receipts.',
+ 'scope':f'Accepted baseline plus {len(cases)} independently reviewed cases. Historical context and subsequent legal/source events are labeled. Neither sums nor infers personal government receipts.',
  'semantics':{'is_money_flow':'Asserted financial route, including obligations, commitments, estimates or alleged payments; cash_status distinguishes actual receipt. False for disclosed-investment links because the issuer is not identified as cash counterparty.',
   'amount_usd':'Only an amount explicitly assigned to the edge. Case totals are never copied to component edges.',
   'amount_recipient_id':'Recipient of the described financial measure, not necessarily the arrow target; investment links point from owner to asset.',
@@ -289,7 +306,7 @@ for path, headers, expected in [(LOAD/'vertices.csv',VH,len(vertices)),(LOAD/'ed
 assert not errors, '\n'.join(errors)
 WRITE(OUT/'graph.json',graph)
 WRITE(OUT/'alias-map.json',{'policy':'Explicit same-identity mappings; preserves baseline IDs; no fuzzy matching or ownership inference. Grouped and instrumental entities stay separate.', 'aliases':ALIASES})
-inputs=[BASE/'relationships.json',BASE/'people.json',BASE/'companies.json',CASE_DIR/'trump-cases.json',CASE_DIR/'crossparty-cases.json',CASE_DIR/'fisher-case.json']
+inputs=[BASE/'relationships.json',BASE/'people.json',BASE/'companies.json',CASE_DIR/'trump-cases.json',CASE_DIR/'crossparty-cases.json',CASE_DIR/'fisher-case.json',CASE_DIR/'beneficiary-stories-cases.json']
 validation={
  'status':'PASS', 'review_date':'2026-11-13', 'errors':errors,
  'counts':{'baseline_nodes':len(BASE_GRAPH['nodes']),'baseline_edges':len(BASE_GRAPH['edges']), 'domain_nodes':len(nodes),'domain_edges':len(edges),'sources':len(sources),'cases':len(cases),'money_records':len(money_records),'neptune_vertices':len(vertices),'neptune_edges':len(csv_edges),'financial_relationship_edges':sum(bool(e.get('is_financial_relationship')) for e in edges)},
