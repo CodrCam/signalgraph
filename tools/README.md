@@ -39,8 +39,8 @@ There is no fuzzy identity matching.
 | `validation.json` | Counts, checks, input hashes and load-file hashes |
 
 The November 13, 2026 dataset contains **170 entity nodes and 145 substantive
-relationships**. The Neptune files contain **297 vertices and 295 edges** because
-they also represent eight cases, 97 sources, 22 financial records and their
+relationships**. The Neptune files contain **299 vertices and 299 edges** because
+they also represent eight cases, 99 sources, 22 financial records and their
 provenance connections. A case-membership or source edge is not a financial,
 ownership or family connection. These counts describe the reviewed dataset;
 they are not coverage estimates for all government spending.

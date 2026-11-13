@@ -118,6 +118,25 @@
       "type": "company_announcement",
       "locator": "Opening, production description and expansion targets",
       "access": "Company announcement inspected"
+    },
+    "JR_GAO_2026": {
+      "title": "GAO-26-109121 — Commerce Needs Plan to Meet CHIPS for America R&D Requirements",
+      "url": "https://files.gao.gov/reports/GAO-26-109121/index.html",
+      "published": "2026-08-06",
+      "type": "primary_government_audit",
+      "locator": "Table 1, Vulcan Elements row; following discussion of equity exchanged for awards",
+      "access": "Original GAO HTML inspected",
+      "observation_cutoff": "2026-07-15",
+      "date_note": "July 15 is the reporting cutoff, not a disclosed award execution date."
+    },
+    "JR_VULCAN_FUNDING_2025": {
+      "title": "Vulcan Elements announces government and ReElement financing partnership",
+      "url": "https://vulcanelements.com/company/updates/vulcan-elements-forges-1-4-billion",
+      "published": "2025-11-03",
+      "type": "company_announcement",
+      "locator": "Key features, financing bullets; closing paragraph on finalizing diligence",
+      "access": "Original issuer announcement inspected",
+      "date_note": "Announcement of planned financing; does not verify cash disbursement."
     }
   },
   "cases": [
@@ -980,7 +999,7 @@
       "headline_amount": "$620M",
       "amount_usd": 620000000,
       "amount_label": "Federal loan commitment to a company in his firm’s portfolio",
-      "period": "Investment August 2025; federal announcement November 2025",
+      "period": "Private investment August 2025; OSC announcement November 2025; Commerce award recorded by July 2026",
       "status": "Portfolio financing; individual return unpriced",
       "summary": "1789 Capital, where Donald Trump Jr. is a partner, invested in Vulcan shortly before the government announced a $620 million loan commitment for the magnet producer. The public financing can increase the value of a private investment, but the loan is owed by the company; it is not a $620 million payment to Trump Jr.",
       "accountability": "This is a traceable route from presidential family connection, through an investment firm, to a federal financing decision. The unresolved financial question is his economic stake and the preferential-treatment question concerns how the financing was initiated and approved.",
@@ -1006,6 +1025,23 @@
             "JR_NIST_2025"
           ],
           "type": "company_and_agency_context"
+        },
+        {
+          "text": "GAO records a $50 million Commerce direct-funding award to Vulcan by July 15, 2026, with equity provided in exchange. Its table establishes an award, not that all funds were paid.",
+          "source_ids": [
+            "JR_GAO_2026"
+          ],
+          "type": "government_audit",
+          "repair_id": "B1_VULCAN_AWARD"
+        },
+        {
+          "text": "The announced $700 million OSC financing covered two companies: $620 million for Vulcan and $80 million for ReElement. The combined figure does not replace Vulcan’s amount.",
+          "source_ids": [
+            "JR_VULCAN_FUNDING_2025",
+            "JR_NIST_2025"
+          ],
+          "type": "financing_scope",
+          "repair_id": "B1_OSC_SCOPE"
         }
       ],
       "money": [
@@ -1017,26 +1053,35 @@
           "type": "federal_loan_commitment",
           "recipient": "Vulcan Elements",
           "source_ids": [
-            "JR_HOUSE_2026",
-            "JR_NIST_2025"
+            "JR_VULCAN_FUNDING_2025",
+            "JR_NIST_2025",
+            "JR_HOUSE_2026"
           ],
           "date": "2025-11-03",
           "personal_allocation": "Trump Jr. stake and proceeds not disclosed",
-          "cash_status": "Commitment; actual disbursements and repayment terms not reconciled"
+          "cash_status": "Commitment; actual disbursements and repayment terms not reconciled",
+          "joint_commitment_context": "Vulcan $620 million plus ReElement $80 million made the announced joint $700 million OSC commitment; do not add the joint total to these components."
         },
         {
           "id": "JR_M2",
-          "label": "CHIPS incentives / government equity",
+          "label": "Commerce direct-funding award",
           "amount_usd": 50000000,
           "currency": "USD",
-          "type": "proposed_federal_incentive_for_equity",
+          "type": "federal_direct_funding_award_for_equity",
           "recipient": "Vulcan Elements",
           "source_ids": [
+            "JR_GAO_2026",
             "JR_NIST_2025"
           ],
-          "date": "2025-11-03",
-          "cash_status": "Nonbinding preliminary letter of intent in this source; subsequent award status requires current ledger",
-          "personal_allocation": "Government receives equity; not personal cash"
+          "cash_status": "GAO records a $50 million award; disbursement not established by Table 1",
+          "personal_allocation": "Company award in exchange for Commerce equity; not Trump Jr. personal cash",
+          "period": "Awarded between August 2025 and July 15, 2026",
+          "as_of": "2026-07-15",
+          "announced_date": "2025-11-03",
+          "date_precision": "Award execution date not stated; July 15 is GAO cutoff",
+          "window_status": "within_window",
+          "evidence_status": "documented",
+          "outside_window": false
         },
         {
           "id": "JR_M3",
@@ -1061,7 +1106,7 @@
           "JR_NIST_2025"
         ]
       },
-      "confidence_basis": "Partnership, portfolio investment and the federal commitment establish a financial connection. The magnitude of Trump Jr.’s benefit remains unpriced; a company loan cannot establish his proceeds.",
+      "confidence_basis": "The partnership, portfolio investment, company-specific OSC commitment and later GAO-recorded Commerce award establish the financial connection. Loan and grant disbursements and Trump Jr.’s individual return remain unpriced.",
       "missing_fact": "1789’s Vulcan stake, Trump Jr.’s partnership ownership and carried interest, loan disbursements, decision chronology and conflict reviews.",
       "nodes": [
         {
@@ -1140,8 +1185,9 @@
           "type": "loan_commitment",
           "label": "Federal loan commitment: $620M",
           "source_ids": [
-            "JR_HOUSE_2026",
-            "JR_NIST_2025"
+            "JR_VULCAN_FUNDING_2025",
+            "JR_NIST_2025",
+            "JR_HOUSE_2026"
           ],
           "date": "2025-11-03",
           "amount_usd": 620000000,
@@ -1151,14 +1197,20 @@
           "id": "JR_E5",
           "source": "A_COMMERCE",
           "target": "C_VULCAN",
-          "type": "proposed_equity_financing",
-          "label": "Proposed CHIPS incentives: $50M",
+          "type": "direct_funding_award",
+          "label": "Commerce award: $50M by July 2026",
           "source_ids": [
-            "JR_NIST_2025"
+            "JR_GAO_2026"
           ],
-          "date": "2025-11-03",
           "amount_usd": 50000000,
-          "money_id": "JR_M2"
+          "money_id": "JR_M2",
+          "period": "August 2025–July 15, 2026",
+          "as_of": "2026-07-15",
+          "date_precision": "Exact award date not stated",
+          "cash_status": "Award, not verified disbursement",
+          "window_status": "within_window",
+          "evidence_status": "documented",
+          "outside_window": false
         },
         {
           "id": "JR_E6",

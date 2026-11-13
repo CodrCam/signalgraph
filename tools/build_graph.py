@@ -174,6 +174,10 @@ for case in cases:
   # the frozen fiscal window. Human-readable periods remain authoritative.
   e['outside_window'] = True if historical else False if inside else None
   e['window_status'] = 'historical_context' if historical else 'within_window' if inside else 'mixed_boundary_or_not_dated'
+  if original.get('window_status') is not None:
+   assert original['window_status'] in ('historical_context','within_window','mixed_boundary_or_not_dated'), f"Invalid window status {e['id']}"
+   e['window_status'] = original['window_status']
+   e['outside_window'] = {'historical_context':True,'within_window':False,'mixed_boundary_or_not_dated':None}[e['window_status']]
   e['government_attributed_personal_receipts_usd'] = None
   edges.append(e)
  for m in case_money.values():

@@ -4249,7 +4249,9 @@
       "type": "company",
       "source_ids": [
         "JR_HOUSE_2026",
+        "JR_VULCAN_FUNDING_2025",
         "JR_NIST_2025",
+        "JR_GAO_2026",
         "JR_VULCAN_A"
       ],
       "case_ids": [
@@ -4261,7 +4263,9 @@
       "origin": "independently_reviewed_case",
       "source_urls": [
         "https://oversightdemocrats.house.gov/imo/media/doc/2026-08-11_hnrc__ogr_to_vulcan_elements.pdf",
+        "https://vulcanelements.com/company/updates/vulcan-elements-forges-1-4-billion",
         "https://www.nist.gov/news-events/news/2025/11/department-commerce-announces-chips-incentives-letter-intent-vulcan",
+        "https://files.gao.gov/reports/GAO-26-109121/index.html",
         "https://vulcanelements.com/company/updates/vulcan-elements-announces-65-million-series-a-and-produces-high-performance-rare-earth-magnets-in-the-united-states"
       ]
     },
@@ -4288,8 +4292,9 @@
       "label": "Office of Strategic Capital",
       "type": "federal_agency",
       "source_ids": [
-        "JR_HOUSE_2026",
-        "JR_NIST_2025"
+        "JR_VULCAN_FUNDING_2025",
+        "JR_NIST_2025",
+        "JR_HOUSE_2026"
       ],
       "case_ids": [
         "INF_TRUMPJR_VULCAN"
@@ -4299,8 +4304,9 @@
       ],
       "origin": "independently_reviewed_case",
       "source_urls": [
-        "https://oversightdemocrats.house.gov/imo/media/doc/2026-08-11_hnrc__ogr_to_vulcan_elements.pdf",
-        "https://www.nist.gov/news-events/news/2025/11/department-commerce-announces-chips-incentives-letter-intent-vulcan"
+        "https://vulcanelements.com/company/updates/vulcan-elements-forges-1-4-billion",
+        "https://www.nist.gov/news-events/news/2025/11/department-commerce-announces-chips-incentives-letter-intent-vulcan",
+        "https://oversightdemocrats.house.gov/imo/media/doc/2026-08-11_hnrc__ogr_to_vulcan_elements.pdf"
       ]
     },
     {
@@ -4308,7 +4314,7 @@
       "label": "U.S. Department of Commerce",
       "type": "federal_agency",
       "source_ids": [
-        "JR_NIST_2025"
+        "JR_GAO_2026"
       ],
       "case_ids": [
         "INF_TRUMPJR_VULCAN"
@@ -4318,7 +4324,7 @@
       ],
       "origin": "independently_reviewed_case",
       "source_urls": [
-        "https://www.nist.gov/news-events/news/2025/11/department-commerce-announces-chips-incentives-letter-intent-vulcan"
+        "https://files.gao.gov/reports/GAO-26-109121/index.html"
       ]
     },
     {
@@ -7983,8 +7989,9 @@
       "type": "loan_commitment",
       "label": "Federal loan commitment: $620M",
       "source_ids": [
-        "JR_HOUSE_2026",
-        "JR_NIST_2025"
+        "JR_VULCAN_FUNDING_2025",
+        "JR_NIST_2025",
+        "JR_HOUSE_2026"
       ],
       "date": "2025-11-03",
       "amount_usd": 620000000,
@@ -7995,8 +8002,9 @@
         "INF_TRUMPJR_VULCAN"
       ],
       "source_urls": [
-        "https://oversightdemocrats.house.gov/imo/media/doc/2026-08-11_hnrc__ogr_to_vulcan_elements.pdf",
-        "https://www.nist.gov/news-events/news/2025/11/department-commerce-announces-chips-incentives-letter-intent-vulcan"
+        "https://vulcanelements.com/company/updates/vulcan-elements-forges-1-4-billion",
+        "https://www.nist.gov/news-events/news/2025/11/department-commerce-announces-chips-incentives-letter-intent-vulcan",
+        "https://oversightdemocrats.house.gov/imo/media/doc/2026-08-11_hnrc__ogr_to_vulcan_elements.pdf"
       ],
       "origin": "independently_reviewed_case",
       "money_record": {
@@ -8007,16 +8015,19 @@
         "type": "federal_loan_commitment",
         "recipient": "Vulcan Elements",
         "source_ids": [
-          "JR_HOUSE_2026",
-          "JR_NIST_2025"
+          "JR_VULCAN_FUNDING_2025",
+          "JR_NIST_2025",
+          "JR_HOUSE_2026"
         ],
         "date": "2025-11-03",
         "personal_allocation": "Trump Jr. stake and proceeds not disclosed",
         "cash_status": "Commitment; actual disbursements and repayment terms not reconciled",
+        "joint_commitment_context": "Vulcan $620 million plus ReElement $80 million made the announced joint $700 million OSC commitment; do not add the joint total to these components.",
         "case_id": "INF_TRUMPJR_VULCAN",
         "source_urls": [
-          "https://oversightdemocrats.house.gov/imo/media/doc/2026-08-11_hnrc__ogr_to_vulcan_elements.pdf",
-          "https://www.nist.gov/news-events/news/2025/11/department-commerce-announces-chips-incentives-letter-intent-vulcan"
+          "https://vulcanelements.com/company/updates/vulcan-elements-forges-1-4-billion",
+          "https://www.nist.gov/news-events/news/2025/11/department-commerce-announces-chips-incentives-letter-intent-vulcan",
+          "https://oversightdemocrats.house.gov/imo/media/doc/2026-08-11_hnrc__ogr_to_vulcan_elements.pdf"
         ],
         "graph_vertex_id": "MONEY_JR_M1",
         "aggregate_personal_income_eligible": false
@@ -8036,38 +8047,51 @@
       "id": "JR_E5",
       "source": "GOV_COMMERCE",
       "target": "ENT_VULCAN_ELEMENTS",
-      "type": "proposed_equity_financing",
-      "label": "Proposed CHIPS incentives: $50M",
+      "type": "direct_funding_award",
+      "label": "Commerce award: $50M by July 2026",
       "source_ids": [
-        "JR_NIST_2025"
+        "JR_GAO_2026"
       ],
-      "date": "2025-11-03",
       "amount_usd": 50000000,
       "money_id": "JR_M2",
-      "relationship_type": "proposed_equity_financing",
-      "period": "2025-11-03",
+      "period": "August 2025–July 15, 2026",
+      "as_of": "2026-07-15",
+      "date_precision": "Exact award date not stated",
+      "cash_status": "GAO records a $50 million award; disbursement not established by Table 1",
+      "window_status": "within_window",
+      "evidence_status": "documented",
+      "outside_window": false,
+      "relationship_type": "direct_funding_award",
       "case_ids": [
         "INF_TRUMPJR_VULCAN"
       ],
       "source_urls": [
-        "https://www.nist.gov/news-events/news/2025/11/department-commerce-announces-chips-incentives-letter-intent-vulcan"
+        "https://files.gao.gov/reports/GAO-26-109121/index.html"
       ],
       "origin": "independently_reviewed_case",
       "money_record": {
         "id": "JR_M2",
-        "label": "CHIPS incentives / government equity",
+        "label": "Commerce direct-funding award",
         "amount_usd": 50000000,
         "currency": "USD",
-        "type": "proposed_federal_incentive_for_equity",
+        "type": "federal_direct_funding_award_for_equity",
         "recipient": "Vulcan Elements",
         "source_ids": [
+          "JR_GAO_2026",
           "JR_NIST_2025"
         ],
-        "date": "2025-11-03",
-        "cash_status": "Nonbinding preliminary letter of intent in this source; subsequent award status requires current ledger",
-        "personal_allocation": "Government receives equity; not personal cash",
+        "cash_status": "GAO records a $50 million award; disbursement not established by Table 1",
+        "personal_allocation": "Company award in exchange for Commerce equity; not Trump Jr. personal cash",
+        "period": "Awarded between August 2025 and July 15, 2026",
+        "as_of": "2026-07-15",
+        "announced_date": "2025-11-03",
+        "date_precision": "Award execution date not stated; July 15 is GAO cutoff",
+        "window_status": "within_window",
+        "evidence_status": "documented",
+        "outside_window": false,
         "case_id": "INF_TRUMPJR_VULCAN",
         "source_urls": [
+          "https://files.gao.gov/reports/GAO-26-109121/index.html",
           "https://www.nist.gov/news-events/news/2025/11/department-commerce-announces-chips-incentives-letter-intent-vulcan"
         ],
         "graph_vertex_id": "MONEY_JR_M2",
@@ -8075,13 +8099,9 @@
       },
       "is_financial_relationship": true,
       "is_money_flow": true,
-      "cash_status": "Nonbinding preliminary letter of intent in this source; subsequent award status requires current ledger",
       "amount_recipient_id": "ENT_VULCAN_ELEMENTS",
-      "amount_semantics": "proposed_federal_incentive_for_equity",
-      "evidence_status": "documented_relationship",
-      "qualification": "Government receives equity; not personal cash Nonbinding preliminary letter of intent in this source; subsequent award status requires current ledger",
-      "outside_window": false,
-      "window_status": "within_window",
+      "amount_semantics": "federal_direct_funding_award_for_equity",
+      "qualification": "Company award in exchange for Commerce equity; not Trump Jr. personal cash GAO records a $50 million award; disbursement not established by Table 1",
       "government_attributed_personal_receipts_usd": null
     },
     {
@@ -10383,6 +10403,29 @@
       "id": "JR_VULCAN_A",
       "source_vertex_id": "SOURCE_JR_VULCAN_A"
     },
+    "JR_GAO_2026": {
+      "title": "GAO-26-109121 — Commerce Needs Plan to Meet CHIPS for America R&D Requirements",
+      "url": "https://files.gao.gov/reports/GAO-26-109121/index.html",
+      "published": "2026-08-06",
+      "type": "primary_government_audit",
+      "locator": "Table 1, Vulcan Elements row; following discussion of equity exchanged for awards",
+      "access": "Original GAO HTML inspected",
+      "observation_cutoff": "2026-07-15",
+      "date_note": "July 15 is the reporting cutoff, not a disclosed award execution date.",
+      "id": "JR_GAO_2026",
+      "source_vertex_id": "SOURCE_JR_GAO_2026"
+    },
+    "JR_VULCAN_FUNDING_2025": {
+      "title": "Vulcan Elements announces government and ReElement financing partnership",
+      "url": "https://vulcanelements.com/company/updates/vulcan-elements-forges-1-4-billion",
+      "published": "2025-11-03",
+      "type": "company_announcement",
+      "locator": "Key features, financing bullets; closing paragraph on finalizing diligence",
+      "access": "Original issuer announcement inspected",
+      "date_note": "Announcement of planned financing; does not verify cash disbursement.",
+      "id": "JR_VULCAN_FUNDING_2025",
+      "source_vertex_id": "SOURCE_JR_VULCAN_FUNDING_2025"
+    },
     "PEL-FD25": {
       "id": "PEL-FD25",
       "title": "Nancy Pelosi — 2025 Annual Financial Disclosure, filing 10075701",
@@ -10717,12 +10760,16 @@
       "summary": "1789 Capital, where Donald Trump Jr. is a partner, invested in Vulcan shortly before the government announced a $620 million loan commitment for the magnet producer. The public financing can increase the value of a private investment, but the loan is owed by the company; it is not a $620 million payment to Trump Jr.",
       "source_ids": [
         "JR_HOUSE_2026",
+        "JR_VULCAN_FUNDING_2025",
         "JR_NIST_2025",
+        "JR_GAO_2026",
         "JR_VULCAN_A"
       ],
       "source_urls": [
         "https://oversightdemocrats.house.gov/imo/media/doc/2026-08-11_hnrc__ogr_to_vulcan_elements.pdf",
+        "https://vulcanelements.com/company/updates/vulcan-elements-forges-1-4-billion",
         "https://www.nist.gov/news-events/news/2025/11/department-commerce-announces-chips-incentives-letter-intent-vulcan",
+        "https://files.gao.gov/reports/GAO-26-109121/index.html",
         "https://vulcanelements.com/company/updates/vulcan-elements-announces-65-million-series-a-and-produces-high-performance-rare-earth-magnets-in-the-united-states"
       ],
       "node_ids": [
@@ -11139,35 +11186,46 @@
       "type": "federal_loan_commitment",
       "recipient": "Vulcan Elements",
       "source_ids": [
-        "JR_HOUSE_2026",
-        "JR_NIST_2025"
+        "JR_VULCAN_FUNDING_2025",
+        "JR_NIST_2025",
+        "JR_HOUSE_2026"
       ],
       "date": "2025-11-03",
       "personal_allocation": "Trump Jr. stake and proceeds not disclosed",
       "cash_status": "Commitment; actual disbursements and repayment terms not reconciled",
+      "joint_commitment_context": "Vulcan $620 million plus ReElement $80 million made the announced joint $700 million OSC commitment; do not add the joint total to these components.",
       "case_id": "INF_TRUMPJR_VULCAN",
       "source_urls": [
-        "https://oversightdemocrats.house.gov/imo/media/doc/2026-08-11_hnrc__ogr_to_vulcan_elements.pdf",
-        "https://www.nist.gov/news-events/news/2025/11/department-commerce-announces-chips-incentives-letter-intent-vulcan"
+        "https://vulcanelements.com/company/updates/vulcan-elements-forges-1-4-billion",
+        "https://www.nist.gov/news-events/news/2025/11/department-commerce-announces-chips-incentives-letter-intent-vulcan",
+        "https://oversightdemocrats.house.gov/imo/media/doc/2026-08-11_hnrc__ogr_to_vulcan_elements.pdf"
       ],
       "graph_vertex_id": "MONEY_JR_M1",
       "aggregate_personal_income_eligible": false
     },
     {
       "id": "JR_M2",
-      "label": "CHIPS incentives / government equity",
+      "label": "Commerce direct-funding award",
       "amount_usd": 50000000,
       "currency": "USD",
-      "type": "proposed_federal_incentive_for_equity",
+      "type": "federal_direct_funding_award_for_equity",
       "recipient": "Vulcan Elements",
       "source_ids": [
+        "JR_GAO_2026",
         "JR_NIST_2025"
       ],
-      "date": "2025-11-03",
-      "cash_status": "Nonbinding preliminary letter of intent in this source; subsequent award status requires current ledger",
-      "personal_allocation": "Government receives equity; not personal cash",
+      "cash_status": "GAO records a $50 million award; disbursement not established by Table 1",
+      "personal_allocation": "Company award in exchange for Commerce equity; not Trump Jr. personal cash",
+      "period": "Awarded between August 2025 and July 15, 2026",
+      "as_of": "2026-07-15",
+      "announced_date": "2025-11-03",
+      "date_precision": "Award execution date not stated; July 15 is GAO cutoff",
+      "window_status": "within_window",
+      "evidence_status": "documented",
+      "outside_window": false,
       "case_id": "INF_TRUMPJR_VULCAN",
       "source_urls": [
+        "https://files.gao.gov/reports/GAO-26-109121/index.html",
         "https://www.nist.gov/news-events/news/2025/11/department-commerce-announces-chips-incentives-letter-intent-vulcan"
       ],
       "graph_vertex_id": "MONEY_JR_M2",
